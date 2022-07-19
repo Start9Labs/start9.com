@@ -1,0 +1,55 @@
+#dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    margin: 0;
+    text-align: center;
+  }
+  .cols{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+  }
+  .wrapper{
+    border: var(--b-primary);
+    max-width: 35ch;
+    .content {
+      padding: 1rem;
+      h3{
+        margin: 0;
+        font-family: 'Tusker Grotesk 5500';
+        font-weight: 100;
+        font-size: 3.5rem;
+        line-height: 1.1em;
+        text-transform: uppercase;
+      }
+    }
+    .footer{
+      padding: 1rem;
+      background: var(--c-spacer);
+      display: flex;
+      justify-content: center;
+      border-top: var(--b-primary);
+
+      a{
+        padding: 0.4rem 2rem;
+        background-color: var(--c-text-accent);
+        color: var(--c-text-bright);
+        border-color: var(--c-3d-shadow);
+        border-width: 1px 1px 15px 1px;
+        border-style: solid;
+        font-family: 'Tusker Grotesk 5500';
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-decoration: none;
+      }
+    }
+  }
+  img {
+    width: 20rem;
+  }
+}

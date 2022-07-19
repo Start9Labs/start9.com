@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Open Source",
+        "slug": "open-source"
+    },
+    {
+        "name": "Privacy by default",
+        "slug": "privacy"
+    },
+    {
+        "name": "World-class Customer Support",
+        "slug": "support"
+    },
+    {
+        "name": "Official and Community Marketplaces",
+        "slug": "marketplace"
+    },
+    {
+        "name": "<em>Plug 'n play</em><br>(No technical experience required)",
+        "slug": "plug-n-play"
+    },
+    {
+        "name": "Developer SDK",
+        "slug": "sdk"
+    }
+]

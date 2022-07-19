@@ -1,0 +1,43 @@
+---
+title: Start9 | Sovereign Computing
+layout: layouts/base.njk
+---
+{# 
+<script>
+    
+    // https://yewtu.be/watch?v=FJ44qmE5odc
+
+    let path = document.querySelector('path');
+    let pathLength = path.getTotalLength();
+
+    path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+    path.style.strokeDashoffset = pathLength;
+
+    window.addEventListener('scroll', ()=> {
+
+        // what percent down is it?
+        var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+        // length to offset the dashes
+        var drawLength = pathLength * scrollPercentage;
+
+        // draw in reverse
+        path.style.strokeDashoffset = pathLength - drawLength;
+
+
+
+    }) 
+    
+</script> #}
+
+<link rel="stylesheet" href="assets/styles/landing.css">
+
+{% include "components/landing/hero.njk" %}
+{% include "components/landing/pitch.njk" %}
+{% include "components/landing/highlights.njk" %}
+{% include "components/landing/why.njk" %}
+{% include "components/landing/how.njk" %}
+{% include "components/landing/products.njk" %}
+{% include "components/landing/community.njk" %}
+{% include "components/landing/dev.njk" %}

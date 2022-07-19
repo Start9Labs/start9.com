@@ -1,0 +1,32 @@
+#how{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    margin-bottom: 6rem;
+    h3{
+        font-size: 4rem;
+        font-weight: 100;
+    }
+    h4{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    .cols{
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+        gap: 6rem;
+        .col{
+            max-width: 37vw;
+        }
+    }
+    .path-node{
+        padding:1rem;
+        height: auto;
+    }
+    p{
+        font-family: var(--f-bold);
+        font-size: 3rem;
+    }
+}

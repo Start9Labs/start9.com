@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Our Company",
+    "slug": "company",
+    "order": 0,
+    "size": "full",
+    "items": [
+      {
+        "name": "About",
+        "slug": "about",
+        "url": "",
+        "target": "",
+        "order": 0,
+        "class": ""
+      },
+      {
+        "name": "News/Media",
+        "slug": "news",
+        "url": "",
+        "target": "",
+        "order": 1,
+        "class": ""
+      },
+      {
+        "name": "Contact",
+        "slug": "contact",
+        "url": "",
+        "target": "",
+        "order": 2,
+        "class": ""
+      },
+      {
+        "name": "Team",
+        "slug": "team",
+        "url": "",
+        "target": "",
+        "order": 3,
+        "class": ""
+      },
+      {
+        "name": "Jobs",
+        "slug": "jobs",
+        "url": "",
+        "target": "",
+        "order": 4,
+        "class": ""
+      }
+    ]
+  },
+  {
+    "name": "Our Products",
+    "slug": "products",
+    "order": 1,
+    "size": "full",
+    "items": [
+      {
+        "name": "Embassy ONE",
+        "slug": "embassy-one",
+        "url": "",
+        "target": "",
+        "order": 0,
+        "class": ""
+      },
+      {
+        "name": "Embassy Pro",
+        "slug": "embassy-pro",
+        "url": "",
+        "target": "",
+        "order": 1,
+        "class": ""
+      },
+      {
+        "name": "Store",
+        "slug": "store",
+        "url": "",
+        "target": "",
+        "order": 2,
+        "class": "highlight"
+      }
+    ]
+  },
+  {
+    "name": "EmbassyOS",
+    "slug": "embassyos",
+    "order": 2,
+    "size": "half",
+    "items": [
+      {
+        "name": "Support",
+        "slug": "support",
+        "url": "",
+        "target": "",
+        "order": 0,
+        "class": ""
+      },
+      {
+        "name": "Docs",
+        "slug": "docs",
+        "url": "",
+        "target": "",
+        "order": 1,
+        "class": ""
+      },
+      {
+        "name": "Marketplace",
+        "slug": "marketplace",
+        "url": "",
+        "target": "",
+        "order": 2,
+        "class": ""
+      }
+    ]
+  },
+  {
+    "name": "Developers",
+    "slug": "developers",
+    "order": 3,
+    "size": "half",
+    "items": [
+      {
+        "name": "Contribute",
+        "slug": "contribute",
+        "url": "",
+        "target": "",
+        "order": 0,
+        "class": ""
+      },
+      {
+        "name": "Dev Docs",
+        "slug": "dev-docs",
+        "url": "",
+        "target": "",
+        "order": 1,
+        "class": ""
+      }
+    ]
+  }
+]

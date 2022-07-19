@@ -1,0 +1,97 @@
+#menu{
+    //position: absolute;
+    padding: 0;
+    width: 100vw;
+    height:100vh;
+    transform: translateY(-100vw);
+    .menu-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .header{
+            align-self: flex-start;
+            margin: 5rem 0 0 5rem;
+            img{
+                width: 12rem;
+            }
+        }
+    }
+    background-color: var(--c-bkg);
+    .groups{
+        max-width: 70vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        .half {
+            grid-row: span 1;
+        }
+        .full {
+            grid-row: span 2;
+        }
+        & > li {
+            //margin-top: 5rem;
+            padding: 2.5rem 2.5rem;
+            &:nth-child(-n+2){
+                border-right: var(--b-secondary);
+            }
+        }
+        // & > *{
+        //     outline: 1px solid orange;
+        // }
+    }
+    h1{
+        font-family: var(--f-accent-bold);
+        font-size: 1rem;
+        color: var(--c-text-primary);
+        margin-bottom: 1.7rem;
+    }
+    .groups li > a {
+        font-family: var(--f-accent);
+        font-size: 1.9rem;
+        line-height: 1.5;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: var(--c-text-primary);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        display: inline-block;
+        &::after{
+            content: '';
+            position: absolute;
+            transition: all .2s ease-in-out;
+            display: inline-block;   
+            width:0;
+            height: 85%;
+            left: 50%;
+            opacity: 0;
+        }
+        &:hover {
+
+            &::after{
+                border: var(--b-primary);
+                width: 110%;
+                left: -5%;
+                opacity: 1;
+            }
+        }
+        &.highlight{
+            color: var(--c-text-bright);
+            font-weight: 300;
+            &::before{
+                content: '';
+                z-index: -1;
+                //border: var(--b-primary);
+                background-color: var(--c-text-accent);
+                width: 110%;
+                left: -5%;
+                display: inline-block; 
+                height: 85%; 
+                position: absolute;
+            }
+        }
+
+    }
+}

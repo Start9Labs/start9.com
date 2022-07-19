@@ -1,0 +1,119 @@
+@use 'normalize';
+@use 'fonts';
+@use 'menu';
+/* @use 'post'; */
+
+:root { 
+    background-attachment: fixed; 
+    --viewportWidth: calc(100vw - var(--scrollbarWidth));
+
+    --c-1: rgba(255,255,255,.7);
+    --c-text-primary: var(--c-1);
+    --c-line-primary: var(--c-1);
+
+    --c-2: #EF4B63;
+    --c-text-accent: var(--c-2);
+    --c-line-accent: var(--c-2);
+
+    --c-3: #333;
+    --c-bkg: var(--c-3);
+
+    --c-4: #BA1930;
+    --c-3d-shadow: var(--c-4);
+
+    --c-5: rgba(255,255,255,1);
+    --c-text-bright: var(--c-5);
+
+    --c-spacer: rgba(255,255,255,.05);
+    --s-primary: 0.5;
+    --b-primary: 1px solid var(--c-line-primary);
+    --b-secondary: 1px dashed var(--c-line-primary);
+
+    --f-hero: "Tusker Grotesk 3600";
+    --f-bold: "Tusker Grotesk 5500";
+    --f-accent: 'Arkibal Mono';
+    --f-accent-bold: 'Arkibal Mono Rg';
+    --f-copy: 'Liberation Mono';
+}
+
+html {
+    background-color: lime;
+    font-size: 2vmin;
+    scroll-behavior: smooth;
+    color: var(--c-text-primary);
+    font-family: var(--f-accent);
+    font-weight: 200;
+}
+
+main{
+    transform: translateY(-100vh);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    text-transform: uppercase;
+    em {
+        color: var(--c-text-accent);
+        font-style: normal;
+    }
+}
+
+ul {
+    margin:0;
+    padding:0;
+    li{
+        list-style: none;
+    }
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+nav{
+    --padding: 1rem;
+    width: calc(100% - 2 * var(--padding) - 15px);
+    font-family: var(--f-accent-bold);
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: var(--padding);
+    display: flex;
+    justify-content: end;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+        li {
+            list-style: none;
+            a {
+                color: var(--c-text-bright);
+                font-size: 1.5rem;
+                padding: 0.3em 0.5em 0em 0.5em;
+                &.em{
+                    background-color: var(--c-text-accent);
+                    
+                }
+            }
+        }
+    }
+}
+
+.opened-menu {
+    opacity: 0;
+    width: 0;
+    transform: translateX(3rem);
+    //overflow: hidden;
+    white-space: nowrap;
+}
+.closed-menu {
+    //overflow: hidden;
+    white-space: nowrap;
+}

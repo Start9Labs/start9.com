@@ -1,0 +1,7 @@
+# Dependencies
+/node_modules
+
+# Output directories
+/_site
+
+.env

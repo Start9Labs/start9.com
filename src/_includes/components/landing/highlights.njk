@@ -1,0 +1,20 @@
+<section id="highlights">
+    <aside>
+        <h1>Take back control of your digital life</h1>
+        <div class="content">
+            <div class="spacer"></div>
+            <div class="blurb">
+                <p>We built an operating system from the ground up so you can run your own server and own your data.</p>
+                <p><strong>This is your <em>personal cloud</em>.</strong></p>
+            </div>
+        </div>
+    </aside>
+    <ul>
+        {% for highlight in highlights %}
+        <li>
+            <div class="highlight-icon">{% include "components/svg/" + highlight.slug + ".njk" %}</div>
+            <h3>{{highlight.name|safe}}</h3>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
