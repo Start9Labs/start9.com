@@ -1,0 +1,62 @@
+section#bitcoin {
+  background-image: linear-gradient(180deg, #f7931a 0%, #7b1af8 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+
+  #grid-blend-top {
+    // mix-blend-mode: multiply;
+    width: 100vw;
+    rect {
+      fill: #fff;
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+  }
+
+  #grid-blend-bottom {
+    width: 100vw;
+    rect {
+      fill: #222;
+      stroke: #222;
+      stroke-width: 2px;
+    }
+  }
+
+  p {
+    max-width: min(35ch, 50vw);
+    em{
+      color: var(--c-1);
+      font-weight: 700;
+    }
+  }
+
+  .subsection{
+    padding: 0 6rem;
+  }
+
+  .subsection:first-of-type {
+    place-self: flex-start;
+    margin-bottom: 6rem;
+  }
+  .subsection:last-of-type {
+    place-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h1, p{
+      text-align: right;
+    }
+  }
+
+  a.btn{
+    background-color: var(--c-1);
+    color:var(--c-6);
+    border-color: var(--c-6);
+    font-size: 1.2rem;
+  }
+}

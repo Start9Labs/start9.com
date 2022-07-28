@@ -6,12 +6,14 @@
 */
 
 @use 'pitch';
-@use 'highlights';
-@use 'why';
-@use 'how';
 @use 'products';
-@use 'community';
+@use 'infographics';
+@use 'bitcoin';
+@use 'be-your-own';
+@use 'powered-by';
+@use 'support';
 @use 'dev';
+@use 'community';
 
 
 body, .ScrollSmoother-wrapper {
@@ -24,10 +26,49 @@ body, .ScrollSmoother-wrapper {
   width: 100vw;
 }
 
+main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 section {
   --section-padding: 2vh;
-  min-height: calc(100vh - 2 * var(--section-padding));
-  padding: var(--section-padding);
+  // min-height: calc(100vh - 2 * var(--section-padding));
+  // padding: 0 var(--section-padding);
+  // outline: 1px solid orange;
+}
+
+.subsection{
+  
+}
+
+.svg-primary{
+  fill: var(--c-text-primary);
+}
+
+.svg-secondary{
+  fill: var(--c-bkg);
+}
+
+.inverse{
+  h1, p {
+    color: var(--c-bkg);
+  }
+  .svg-primary{
+    fill: var(--c-bkg);
+  }
+  .svg-secondary{
+    fill: var(--c-text-primary);
+  }
+}
+
+
+
+.line svg{
+  width: calc(100vw - (2 * 6rem));
+  max-width: 50vw;
+  max-height: 75vh;
 }
 
 #hero-image img {
@@ -47,6 +88,11 @@ nav {
   img {
     width: 15rem;
   }
+  span{
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1ch;
+  }
 }
 
 #hero {
@@ -58,7 +104,7 @@ nav {
 
 h1 {
   font-family: var(--f-hero);
-  font-size: min(9rem,171px);
+  font-size: min(5rem,171px);
   text-transform: uppercase;
   line-height: 1;
   color: var(--c-text-primary);
@@ -109,9 +155,11 @@ h2 {
 
 p {
   font-family: var(--f-accent);
-  font-weight: 200;
-  font-size: 2rem;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.4;
   color: var(--c-text-primary);
+  max-width: min(50ch, 73vw);
 
   em {
     font-style: normal;
@@ -120,7 +168,19 @@ p {
 }
 
 
-
+a.btn {
+  padding: 0.4rem 2rem;
+  background-color: var(--c-text-accent);
+  color: var(--c-text-bright);
+  border-color: var(--c-3d-shadow);
+  border-width: 1px 1px 15px 1px;
+  border-style: solid;
+  font-family: var(--f-accent);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
 
 
 .nodes {

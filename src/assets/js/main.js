@@ -69,16 +69,49 @@ gsap.from("#pitch h1", {
 //     scrollTrigger: '#xyz'
 // })
 
-gsap.from("#xyz", {
-  drawSVG: 0,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#hero-to-pitch_1",
-    scrub: true,
-    start: "top center",
-    end: "bottom center",
-  },
-});
+gsap.from("#hero-to-pitch path:first-child", {
+    drawSVG: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#hero-to-pitch",
+      scrub: true,
+      start: "top center",
+      end: "bottom center",
+    },
+  });
+
+  gsap.from("#products-to-info path:first-child", {
+    drawSVG: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#products-to-info path:first-child",
+      scrub: true,
+      start: "top center",
+      end: "bottom center",
+    },
+  });
+
+  gsap.from("#products-to-info path:nth-child(2)", {
+    drawSVG: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#products-to-info path:nth-child(2)",
+      scrub: true,
+      start: "top center",
+      end: "bottom center",
+    },
+  });
+
+  gsap.from("#bitcoin-to-be path", {
+    drawSVG: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#bitcoin-to-be path",
+      scrub: true,
+      start: "top center",
+      end: "bottom center",
+    },
+  });
 
 let imgs = gsap.utils.toArray(".pseudoservice"),
     next = 1.5, // time to change

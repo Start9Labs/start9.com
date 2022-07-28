@@ -34,10 +34,34 @@ layout: layouts/base.njk
 <link rel="stylesheet" href="assets/styles/landing.css">
 
 {% include "components/landing/hero.njk" %}
+
+<div class="line" id="hero-to-pitch">
+    {% include "components/landing/lines/hero-to-pitch.svg" %}
+</div>
+
 {% include "components/landing/pitch.njk" %}
-{% include "components/landing/highlights.njk" %}
-{% include "components/landing/why.njk" %}
-{% include "components/landing/how.njk" %}
+
 {% include "components/landing/products.njk" %}
-{% include "components/landing/community.njk" %}
+
+<div class="line" id="products-to-info">
+    {% include "components/landing/lines/products-to-info.svg" %}
+</div>
+
+
+{% include "components/landing/infographics.njk" %}
+
+{% include "components/landing/bitcoin.njk" %}
+
+<div class="line" id="bitcoin-to-be">
+    {% include "components/landing/lines/bitcoin-to-be.svg" %}
+</div>
+
+{% include "components/landing/be-your-own.njk" %}
+
+{% include "components/landing/powered-by.njk" %}
+
+{% include "components/landing/support.njk" %}
+
 {% include "components/landing/dev.njk" %}
+
+{% include "components/landing/community.njk" %}

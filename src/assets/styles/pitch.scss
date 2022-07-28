@@ -1,5 +1,6 @@
-#pitch {
+section#pitch {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   
@@ -7,5 +8,8 @@
       margin: 0;
       display: inline-block;
       max-width: 73vw;
+    }
+    p{
+      max-width: min(50ch, 73vw);
     }
   }

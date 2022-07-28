@@ -1,0 +1,22 @@
+section#infographics{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6rem;
+  .subsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 6rem;
+    svg{
+      width: 100%;
+    }
+    &:first-child{
+      background-color: black;
+    }
+    &:last-child{
+      background-color: white;
+    }
+  }
+}
