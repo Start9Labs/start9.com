@@ -1,3 +1,15 @@
-<svg viewBox="0 0 210 511" width="210" height="511" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M209 0V336.811H1V511" stroke="var(--c-line" stroke-width="1px" vector-effect="non-scaling-stroke" />
+<svg
+   class="line-primary"
+   viewBox="0 0 420 511"
+   width="420"
+   height="511"
+   fill="none"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <path
+     d="M 209,0 V 336.811 H 1 V 511"
+     class="line-primary"
+     stroke-width="1px"
+     vector-effect="non-scaling-stroke"
+     id="path347292" />
 </svg>

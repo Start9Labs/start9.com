@@ -43,6 +43,12 @@ section {
   
 }
 
+.line-primary path{
+  stroke: var(--c-line-primary);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
 .svg-primary{
   fill: var(--c-text-primary);
 }
@@ -52,6 +58,7 @@ section {
 }
 
 .inverse{
+  box-shadow: rgb(0 0 0 / 60%) 0 3rem 3rem;
   h1, p {
     color: var(--c-bkg);
   }
@@ -71,10 +78,22 @@ section {
   max-height: 75vh;
 }
 
-#hero-image img {
-  width: 50rem;
-  max-width: 90vw;
-  margin-top: 4rem;
+.img-shadow {
+  filter: blur(2rem) brightness(0);
+  z-index: -1;
+  position: absolute;
+  top: 5rem;
+  opacity: .5;
+}
+
+#hero-image {
+  position: relative;
+  display: flex;
+  img {
+    width: 50rem;
+    max-width: 90vw;
+    margin-top: 4rem;
+  }
 }
 
 nav {
