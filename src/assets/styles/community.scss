@@ -1,5 +1,41 @@
 #community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 2 * var(--section-padding));
+
+  input[type="email"] {
+    width: 31ch;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px dotted var(--c-line-primary);
+    padding: 0.7em 1em;
+    font-size: 2rem;
+    font-family: var(--f-button);
+    font-weight: 100;
+    color: var(--c-text-primary);
+    margin-top: 7rem;
+  }
+
+  .community__icons {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 31ch;
+    font-size: 2rem;
+    font-family: var(--f-button);
     align-items: center;
+    margin-top: 3rem;
+
+    a {
+      &:hover svg path{
+        fill: var(--c-text-accent);
+      }
+      svg {
+        width: 3rem;
+        path{
+            transition: var(--t-simple);
+        }
+      }
+    }
+  }
 }

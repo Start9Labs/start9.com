@@ -1,0 +1,97 @@
+main{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    --width: 42ch;
+    --side-padding: 3rem;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1rem;
+    width: var(--width);
+    padding: 10rem var(--side-padding);
+    position: relative;
+    overflow:visible;
+    &:nth-of-type(even){
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(-1 * ((100vw - var(--width)) / 2) + var(--side-padding));
+            width: 100vw;
+            background-color: #212121;
+            z-index: -1;
+        }
+    }
+}
+
+h1 {
+    font-family: var(--f-hero);
+    font-size: 4.4rem;
+    width: 110%;
+    line-height: 1;
+}
+
+h2 {
+    font-family: var(--f-hero);
+    font-size: 3.7rem;
+    text-align: center;
+}
+
+section#blurb h2 {
+    font-size: 2.5rem;
+    color: var(--c-text-accent);
+    width: 110%;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-family: var(--f-hero);
+    font-size: 1.8rem;
+    width: 112%;
+}
+
+h4 {
+    font-weight: 800;
+}
+
+h3, h4 {
+    color: var(--c-text-accent);
+}
+
+ul#sub-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 107%;
+    li a{
+        font-family: var(--f-hero);
+        font-size: 1.2rem;
+        color: var(--c-text-primary);
+        text-transform: uppercase;
+        font-weight: 900;
+        white-space: nowrap;
+        transition: var(--t-simple);
+        &:hover{
+            color: var(--c-text-accent);
+        }
+    }
+}
+
+p{
+    font-family: "Montserrat";
+    font-weight: 300;
+    line-height: 1.9rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+
+    strong{
+        font-weight: 700;
+    }
+}

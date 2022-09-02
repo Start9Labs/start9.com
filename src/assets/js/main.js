@@ -1,35 +1,67 @@
 gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(CustomEase);
 
+var bodyRect = document.body.getBoundingClientRect();
+
+var sections = [
+    "pitch",
+    "products",
+    "infographics",
+    "bitcoin",
+    "be-your-own",
+    "powered-by",
+    "support",
+    "dev",
+    "community"
+]
+
+//////////////////////////////////////////
+// AUTO APPLY URL ANCHORS
+
+setTimeout(function() {
+
+    // timeout to allow initial load to redirect to anchor
+    // TODO: maybe apply the scroll-behavior: smooth to HTML after a timeout
+
+    sections.forEach(slug => {
+        ScrollTrigger.create({
+            trigger: "#" + slug,
+            start: "top center",
+            end: "bottom center",
+            markers: {startColor: "white", endColor: "white"},
+            onEnter: () => { window.location.href = "#" + slug; },
+            onEnterBack: () => { window.location.href = "#" + slug; }
+          });
+    });
+    
+  }, 2000);
+
+
 //////////////////////////////////////////
 // MENU
 
-let menuOpen = document.getElementById('menu-open'),
-    menuClose = document.getElementById('menu-close'),
-    openedMenuArray = gsap.utils.toArray(".opened-menu"),
-    closedMenuArray = gsap.utils.toArray(".closed-menu");
+let menuOpen = document.getElementById("menu-open"),
+  menuClose = document.getElementById("menu-close"),
+  openedMenuArray = gsap.utils.toArray(".opened-menu"),
+  closedMenuArray = gsap.utils.toArray(".closed-menu");
 
 menuOpen.addEventListener("click", () => openMenu());
 menuClose.addEventListener("click", () => closeMenu());
 
-
-
 function openMenu() {
-    gsap.to('#menu', { y: "0vh" });
-    gsap.to('main', { y: "0vh" });
-    gsap.to(openedMenuArray, { x: '0', opacity: 1, width: 'auto'});
-    gsap.to(closedMenuArray, { x: '3rem', opacity: 0, width: 0});
+  gsap.to("#menu", { y: "0vh" });
+  gsap.to("main", { y: "0vh" });
+  gsap.to(openedMenuArray, { x: "0", opacity: 1, width: "auto" });
+  gsap.to(closedMenuArray, { x: "3rem", opacity: 0, width: 0 });
+  gsap.to("html", { overflow: "hidden"});
 }
 function closeMenu() {
-    gsap.to('#menu', { y: "-100vh" });
-    gsap.to('main', { y: "-100vh" });
-    gsap.to(closedMenuArray, { x: '0', opacity: 1, width: 'auto'});
-    gsap.to(openedMenuArray, { x: '3rem', opacity: 0, width: 0});
+  gsap.to("#menu", { y: "-100vh" });
+  gsap.to("main", { y: "-100vh" });
+  gsap.to(closedMenuArray, { x: "0", opacity: 1, width: "auto" });
+  gsap.to(openedMenuArray, { x: "3rem", opacity: 0, width: 0 });
+  gsap.to("html", { overflow: "overlay"});
 }
-
-
-
-
 
 //////////////////////////////////////////
 // HERO
@@ -51,6 +83,23 @@ gsap.from("#logo", { duration: 0.5, y: "-5rem", opacity: 0, delay: 0.75 });
 // 	content: '.scroll_track_content'
 //   });
 
+// backdrop-filter: blur(10px);
+//background-color: rgba(0,0,0,0.1);
+
+gsap.to(
+  "header",
+  {
+    duration: 0.5,
+    backgroundColor: "rgba(0,0,0,0.1)",
+    backdropFilter: "blur(10px)",
+    scrollTrigger: {
+        trigger: "#hero-image",
+        scrub: true,
+        start: "center top", // "triggerElement page"
+        end: "bottom top", // "triggerElement page"
+    },
+  }
+);
 
 //////////////////////////////////////////
 // PITCH
@@ -70,56 +119,66 @@ gsap.from("#pitch h1", {
 // })
 
 gsap.from("#hero-to-pitch path:first-child", {
-    drawSVG: 0,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#hero-to-pitch",
-      scrub: true,
-      start: "top center",
-      end: "bottom center",
-    },
-  });
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#hero-to-pitch",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
 
-  gsap.from("#products-to-info path:first-child", {
-    drawSVG: 0,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#products-to-info path:first-child",
-      scrub: true,
-      start: "top center",
-      end: "bottom center",
-    },
-  });
+gsap.from("#products-to-info path:first-child", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#products-to-info path:first-child",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
 
-  gsap.from("#products-to-info path:nth-child(2)", {
-    drawSVG: 0,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#products-to-info path:nth-child(2)",
-      scrub: true,
-      start: "top center",
-      end: "bottom center",
-    },
-  });
+gsap.from("#products-to-info path:nth-child(2)", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#products-to-info path:nth-child(2)",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
 
-  gsap.from("#bitcoin-to-be path", {
-    drawSVG: 0,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#bitcoin-to-be path",
-      scrub: true,
-      start: "top center",
-      end: "bottom center",
-    },
-  });
+gsap.from("#bitcoin-to-be path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#bitcoin-to-be path",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
 
 let imgs = gsap.utils.toArray(".pseudoservice"),
-    next = 1.5, // time to change
-    itemHeight = document.querySelector(".pseudoservice").getBoundingClientRect().height,
-    listHeight = document.querySelector(".pseudoservices").getBoundingClientRect().height,
-    windowHeight = document.getElementById("ticker__window").clientHeight,
-    kerplunk = CustomEase.create("custom", "M0,0 C0.126,0.382 0.066,0.863 0.198,1.036 0.25,1.104 0.264,0.982 0.326,0.982 0.344,0.982 0.489,0.998 0.516,1 0.65,1.007 0.863,1 1,1 "),
-    kerplunk2 = CustomEase.create("custom", "M0,0 C0.126,0.382 0.178,0.802 0.288,1.052 0.303,1.088 0.372,0.99 0.434,0.99 0.502,0.99 0.497,1 0.524,1 0.664,1 0.863,1 1,1 ");
+  next = 1.5, // time to change
+  itemHeight = document
+    .querySelector(".pseudoservice")
+    .getBoundingClientRect().height,
+  listHeight = document
+    .querySelector(".pseudoservices")
+    .getBoundingClientRect().height,
+  windowHeight = document.getElementById("ticker__window").clientHeight,
+  kerplunk = CustomEase.create(
+    "custom",
+    "M0,0 C0.126,0.382 0.066,0.863 0.198,1.036 0.25,1.104 0.264,0.982 0.326,0.982 0.344,0.982 0.489,0.998 0.516,1 0.65,1.007 0.863,1 1,1 "
+  ),
+  kerplunk2 = CustomEase.create(
+    "custom",
+    "M0,0 C0.126,0.382 0.178,0.802 0.288,1.052 0.303,1.088 0.372,0.99 0.434,0.99 0.502,0.99 0.497,1 0.524,1 0.664,1 0.863,1 1,1 "
+  );
 
 function crossfade() {
   var action = gsap

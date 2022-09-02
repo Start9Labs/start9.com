@@ -4,4 +4,22 @@ section#support {
   align-items: center;
   padding: 6rem;
   background: var(--c-1);
+  margin-bottom: 6rem;
+  .cols {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    .col {
+      max-width: 37vw;
+    }
+  }
+  img {
+    max-height: 40vh;
+  }
+  @media only screen and (max-width: 1200px) {
+    .cols{
+      flex-direction: column;
+    }
+  }
 }

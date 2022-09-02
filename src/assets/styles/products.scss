@@ -10,7 +10,7 @@ section#products {
       text-transform: uppercase;
     }
     img {
-      transition: all ease-in-out .2s;
+      transition: var(--t-simple);
       width: 42vw;
     }
     a {
@@ -18,7 +18,7 @@ section#products {
       flex-direction: column;
       position: relative;
       padding: 2rem;
-      transition: all ease-in-out .2s;
+      transition: var(--t-simple);
       .heading h1 {
         line-height: .8;
       }

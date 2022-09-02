@@ -1,6 +1,7 @@
 @use 'normalize';
 @use 'fonts';
 @use 'menu';
+@use 'footer';
 /* @use 'post'; */
 
 :root { 
@@ -38,10 +39,13 @@
     --f-accent-bold: 'Montserrat';
     --f-accent2-bold: 'Arkibal Mono Rg';
     --f-copy: 'Liberation Mono';
+    --f-button: 'Basis Grotesque Mono Pro';
+
+    --t-simple: all .2s ease-in-out;
 }
 
 html {
-    background-color: lime;
+    //background-color: lime;
     font-size: 2vmin;
     scroll-behavior: smooth;
     color: var(--c-text-primary);
@@ -68,6 +72,10 @@ html {
   ::-webkit-scrollbar-thumb:hover {
     background: var(--c-1);
   }
+}
+
+body{
+    background: #333333;
 }
 
 main{
@@ -103,8 +111,8 @@ header{
 nav{
     --padding: 1rem;
     width: calc(100% - 2 * var(--padding) - 15px);
-    font-family: var(--f-accent-bold);
-    font-weight: 400;
+    font-family: var(--f-accent);
+    font-weight: 300;
     line-height: 1;
     text-transform: uppercase;
     padding: var(--padding);
@@ -128,6 +136,20 @@ nav{
                 }
             }
         }
+    }
+    &.scrolled-menu{
+        backdrop-filter: blur(10px);
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+
+#menu-open{
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    svg{
+        height: .7em;
+        margin-top: -2px;
     }
 }
 

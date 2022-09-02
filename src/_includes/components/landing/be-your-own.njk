@@ -1,20 +1,35 @@
 <section id="be-your-own">
-    <h1>be <em>your own</em> everything</h1>
-    <p>Anything you can do in the permissioned, subscription-based, privacy-invading, insecure model of cloud computing, you can also do in the open, free, private, secure model of sovereign computing</p>
+    <h1>be
+        <em>your own</em>
+        everything</h1>
+    <p>Anything you can do in the permissioned, subscription-based, privacy-invading, insecure model of cloud computing, you
+        can also do in the open, free, private, secure model of sovereign computing</p>
     <div id='ticker'>
         <div id="ticker__selected-frame">
             <span>be your own</span>
-            <div id="services">
-
-            </div>
+            {# <div id="services"></div> #}
         </div>
         <div id="ticker__window">
             <ul class='pseudoservices'>
                 {% for pseudoservice in pseudoservices %}
-                <li class="pseudoservice">{{pseudoservice.name}}</li>
+                    <li class="pseudoservice">{{ pseudoservice.name }}</li>
                 {% endfor %}
             </ul>
         </div>
-    </div>
-    <a href="https://marketplace.start9.com/" class="btn">browse the start9 marketplace</a>
-</section>
+        <ul class="services">
+            {% for service in services %}
+                {# |selectattr("pseudoservices",pseudoservice.name) #}
+                <li class="service">
+                    <a href="">{% include "components/svg/chevron-left.svg" %}</a>
+                    <a href="">
+                        <img class="service__image" src="{{ service.slug }}.png" alt="">
+                            <div class="service__name">{{ service.name }}</div>
+                            <div class="service__desc">{{ service.description }}</div>
+                        </a>
+                        <a href="">{% include "components/svg/chevron-right.svg" %}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="https://marketplace.start9.com/" class="btn">browse the start9 marketplace</a>
+    </section>

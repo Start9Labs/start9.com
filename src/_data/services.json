@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Matrix",
+        "slug": "matrix",
+        "description": "asfsdf",
+        "pseudoservices": [
+            "whatsapp"
+        ]
+    },
+    {
+        "name": "Mastadon",
+        "slug": "mastadon",
+        "description": "asfsdf",
+        "pseudoservices": [
+            "twitter"
+        ]
+    },
+    {
+        "name": "BitWarden",
+        "slug": "bitwarden",
+        "description": "asfsdf",
+        "pseudoservices": [
+            "lastpass"
+        ]
+    }
+]
