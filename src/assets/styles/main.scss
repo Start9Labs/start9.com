@@ -52,6 +52,7 @@ html {
     font-family: var(--f-accent);
     font-weight: 200;
     overflow: overlay;
+    display: flex;
 
     /* width */
 ::-webkit-scrollbar {
@@ -107,6 +108,7 @@ header{
     position: fixed;
     width: 100vw;
     z-index: 2;
+    top:0;
 }
 nav{
     --padding: 1rem;
