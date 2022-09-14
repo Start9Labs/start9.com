@@ -79,7 +79,7 @@ body{
 }
 
 main{
-    transform: translateY(-100vh);
+    //transform: translateY(-100vh);
 }
 
 a {
@@ -106,7 +106,7 @@ ul {
 header{
     position: fixed;
     width: 100vw;
-    z-index: 1;
+    z-index: 2;
 }
 nav{
     --padding: 1rem;
@@ -130,9 +130,16 @@ nav{
                 color: var(--c-text-bright);
                 font-size: 1.5rem;
                 padding: 0em 0.5em 0em 0.5em;
+
                 &.em{
                     background-color: var(--c-text-accent);
-                    
+                    &:hover{
+                        color: var(--c-text-accent);
+                        background-color: var(--c-text-bright);
+                    }
+                }
+                &:hover{
+                    color: var(--c-text-accent);
                 }
             }
         }
@@ -164,3 +171,21 @@ nav{
     //overflow: hidden;
     white-space: nowrap;
 }
+
+#hero-image {
+    position: relative;
+    display: flex;
+    img {
+      width: 50rem;
+      max-width: 90vw;
+      margin-top: 4rem;
+    }
+  }
+
+.img-shadow {
+    filter: blur(2rem) brightness(0);
+    z-index: -1;
+    position: absolute;
+    top: 5rem;
+    opacity: .5;
+  }

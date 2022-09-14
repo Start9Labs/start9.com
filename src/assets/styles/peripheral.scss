@@ -1,97 +1,172 @@
-main{
-    margin-top: 10rem;
+main {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: clip;
+}
+
+section {
+  --width: 42ch;
+  --side-padding: 3rem;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 1rem;
+  width: var(--width);
+  padding: 7rem var(--side-padding);
+  position: relative;
+  overflow: visible;
+  &:nth-of-type(2n + 3) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(-1 * ((100vw - var(--width)) / 2) + var(--side-padding));
+      width: 100vw;
+      background-color: #212121;
+      z-index: -1;
+    }
+  }
+  .section__image {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 2rem 0;
+    position: relative;
+    img {
+      width: 50%;
+    }
+    .img-shadow {
+      top: 3rem;
+      filter: blur(1rem) brightness(0);
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  //outline: 1px solid orange;
 }
 
-section{
-    --width: 42ch;
-    --side-padding: 3rem;
-    font-family: "Montserrat";
-    font-weight: 300;
-    font-size: 1rem;
-    width: var(--width);
-    padding: 10rem var(--side-padding);
-    position: relative;
-    overflow:visible;
-    &:nth-of-type(even){
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: calc(-1 * ((100vw - var(--width)) / 2) + var(--side-padding));
-            width: 100vw;
-            background-color: #212121;
-            z-index: -1;
-        }
+section#hero {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: 5rem;
+  width: calc(100vw - (2 * var(--side-padding)));
+  justify-content: center;
+  flex-direction: row;
+
+  &::before {
+    content: none;
+  }
+
+  h1 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1245px) {
+    section#hero {
+        flex-direction: column;
     }
+  }
+
+section#virtues {
+  .section__image img {
+    width: 75%;
+  }
+}
+
+.section__double-image {
+  position: relative;
+  .section__image{
+    position: absolute;
+    top:-140%;
+    width:100%;
+  }
+  .section__image--left{
+    left:-105%;
+    align-items: flex-end;
+  }
+  .section__image--right{
+    right:-105%;
+
+    align-items: flex-start;
+  }
+}
+
+#hero-image img {
+  margin-top: 0;
+  width: 28rem;
 }
 
 h1 {
-    font-family: var(--f-hero);
-    font-size: 4.4rem;
-    width: 110%;
-    line-height: 1;
+  font-family: var(--f-hero);
+  font-size: 4.2rem;
+  width: 110%;
+  line-height: 1;
 }
 
 h2 {
-    font-family: var(--f-hero);
-    font-size: 3.7rem;
-    text-align: center;
+  font-family: var(--f-hero);
+  font-size: 3.7rem;
+  text-align: center;
 }
 
 section#blurb h2 {
-    font-size: 2.5rem;
-    color: var(--c-text-accent);
-    width: 110%;
-    line-height: 1;
-    text-align: left;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--c-text-accent);
+  width: 110%;
+  line-height: 1;
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 h3 {
-    font-family: var(--f-hero);
-    font-size: 1.8rem;
-    width: 112%;
+  font-family: var(--f-hero);
+  font-size: 1.8rem;
+  width: 112%;
 }
 
 h4 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
-h3, h4 {
-    color: var(--c-text-accent);
+h3,
+h4 {
+  color: var(--c-text-accent);
 }
 
-ul#sub-menu{
-    display: flex;
-    justify-content: space-between;
-    width: 107%;
-    li a{
-        font-family: var(--f-hero);
-        font-size: 1.2rem;
-        color: var(--c-text-primary);
-        text-transform: uppercase;
-        font-weight: 900;
-        white-space: nowrap;
-        transition: var(--t-simple);
-        &:hover{
-            color: var(--c-text-accent);
-        }
+ul#sub-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 33rem;
+  li a {
+    font-family: var(--f-hero);
+    font-size: 1.2rem;
+    color: var(--c-text-primary);
+    text-transform: uppercase;
+    font-weight: 900;
+    white-space: nowrap;
+    transition: var(--t-simple);
+    &:hover {
+      color: var(--c-text-accent);
     }
+  }
 }
 
-p{
-    font-family: "Montserrat";
-    font-weight: 300;
-    line-height: 1.9rem;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 2.5rem;
+p {
+  font-family: "Montserrat";
+  font-weight: 300;
+  line-height: 1.9rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
 
-    strong{
-        font-weight: 700;
-    }
+  strong {
+    font-weight: 700;
+  }
 }

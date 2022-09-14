@@ -10,13 +10,16 @@ section#infographics{
     gap: 3rem;
     padding: 6rem;
     svg{
-      width: 100%;
+      width: 110%;
     }
     &:first-child{
       background-color: black;
     }
     &:last-child{
       background-color: white;
+      svg{
+        width: 80%;
+      }
     }
   }
 }

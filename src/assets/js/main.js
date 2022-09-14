@@ -3,39 +3,59 @@ gsap.registerPlugin(CustomEase);
 
 var bodyRect = document.body.getBoundingClientRect();
 
-var sections = [
-    "pitch",
-    "products",
-    "infographics",
-    "bitcoin",
-    "be-your-own",
-    "powered-by",
-    "support",
-    "dev",
-    "community"
-]
+const sections = [
+  "pitch",
+  "products",
+  "infographics",
+  "bitcoin",
+  "be-your-own",
+  "powered-by",
+  "support",
+  "dev",
+  "community",
+];
+
+const bitcoinServices = [
+  "balanceofsatoshis",
+  "bitcoind",
+  "btc-rpc-proxy",
+  "btcpayserver",
+  "c-lightning",
+  "electrs",
+  "lightning-jet",
+  "lnd",
+  "lightning-terminal",
+  "lndg",
+  "mempool",
+  "ride-the-lightning",
+  "spark-wallet",
+  "specter",
+  "sphinx-relay",
+  "thunderhub",
+];
 
 //////////////////////////////////////////
 // AUTO APPLY URL ANCHORS
 
-setTimeout(function() {
+// setTimeout(function () {
+//   // timeout to allow initial load to redirect to anchor
+//   // TODO: maybe apply the scroll-behavior: smooth to HTML after a timeout
 
-    // timeout to allow initial load to redirect to anchor
-    // TODO: maybe apply the scroll-behavior: smooth to HTML after a timeout
-
-    sections.forEach(slug => {
-        ScrollTrigger.create({
-            trigger: "#" + slug,
-            start: "top center",
-            end: "bottom center",
-            markers: {startColor: "white", endColor: "white"},
-            onEnter: () => { window.location.href = "#" + slug; },
-            onEnterBack: () => { window.location.href = "#" + slug; }
-          });
-    });
-    
-  }, 2000);
-
+//   sections.forEach((slug) => {
+//     ScrollTrigger.create({
+//       trigger: "#" + slug,
+//       start: "top center",
+//       end: "bottom center",
+//       //markers: { startColor: "white", endColor: "white" },
+//       onEnter: () => {
+//         window.location.href = "#" + slug;
+//       },
+//       onEnterBack: () => {
+//         window.location.href = "#" + slug;
+//       },
+//     });
+//   });
+// }, 2000);
 
 //////////////////////////////////////////
 // MENU
@@ -45,22 +65,24 @@ let menuOpen = document.getElementById("menu-open"),
   openedMenuArray = gsap.utils.toArray(".opened-menu"),
   closedMenuArray = gsap.utils.toArray(".closed-menu");
 
-menuOpen.addEventListener("click", () => openMenu());
-menuClose.addEventListener("click", () => closeMenu());
+menuOpen.addEventListener("click", (e) => openMenu(e));
+menuClose.addEventListener("click", (e) => closeMenu(e));
 
-function openMenu() {
+function openMenu(e) {
+  e.preventDefault();
   gsap.to("#menu", { y: "0vh" });
-  gsap.to("main", { y: "0vh" });
+  gsap.to("main", { y: "100vh" });
   gsap.to(openedMenuArray, { x: "0", opacity: 1, width: "auto" });
   gsap.to(closedMenuArray, { x: "3rem", opacity: 0, width: 0 });
-  gsap.to("html", { overflow: "hidden"});
+  gsap.to("html", { overflow: "hidden" });
 }
-function closeMenu() {
+function closeMenu(e) {
+  e.preventDefault();
   gsap.to("#menu", { y: "-100vh" });
-  gsap.to("main", { y: "-100vh" });
+  gsap.to("main", { y: "0vh" });
   gsap.to(closedMenuArray, { x: "0", opacity: 1, width: "auto" });
   gsap.to(openedMenuArray, { x: "3rem", opacity: 0, width: 0 });
-  gsap.to("html", { overflow: "overlay"});
+  gsap.to("html", { overflow: "overlay" });
 }
 
 //////////////////////////////////////////
@@ -86,20 +108,17 @@ gsap.from("#logo", { duration: 0.5, y: "-5rem", opacity: 0, delay: 0.75 });
 // backdrop-filter: blur(10px);
 //background-color: rgba(0,0,0,0.1);
 
-gsap.to(
-  "header",
-  {
-    duration: 0.5,
-    backgroundColor: "rgba(0,0,0,0.1)",
-    backdropFilter: "blur(10px)",
-    scrollTrigger: {
-        trigger: "#hero-image",
-        scrub: true,
-        start: "center top", // "triggerElement page"
-        end: "bottom top", // "triggerElement page"
-    },
-  }
-);
+gsap.to("header", {
+  duration: 0.5,
+  backgroundColor: "rgba(0,0,0,0.1)",
+  backdropFilter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#hero-image",
+    scrub: true,
+    start: "center top", // "triggerElement page"
+    end: "bottom top", // "triggerElement page"
+  },
+});
 
 //////////////////////////////////////////
 // PITCH
@@ -124,8 +143,8 @@ gsap.from("#hero-to-pitch path:first-child", {
   scrollTrigger: {
     trigger: "#hero-to-pitch",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top center", // "triggerElement page"
+    end: "bottom center", // "triggerElement page"
   },
 });
 
@@ -135,8 +154,8 @@ gsap.from("#products-to-info path:first-child", {
   scrollTrigger: {
     trigger: "#products-to-info path:first-child",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top center", // "triggerElement page"
+    end: "bottom center", // "triggerElement page"
   },
 });
 
@@ -146,9 +165,79 @@ gsap.from("#products-to-info path:nth-child(2)", {
   scrollTrigger: {
     trigger: "#products-to-info path:nth-child(2)",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top center", // "triggerElement page"
+    end: "bottom center", // "triggerElement page"
   },
+});
+
+gsap.from("#products-to-info path:nth-child(3)", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#products-to-info path:nth-child(3)",
+    scrub: true,
+    start: "top center", // "triggerElement page"
+    end: "bottom center", // "triggerElement page"
+  },
+});
+
+// BITCOIN
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+bitcoinServices.forEach((service) => {
+  const serviceElement = document.querySelector(".service-icon--" + service);
+  const bitcoinSectionElement = document.querySelector("#bitcoin");
+  const upOrDown = getRandomInt(0, 1);
+  const bitcoinHeight = bitcoinSectionElement.clientHeight;
+
+  serviceElement
+    ? (serviceElement.style.left = getRandomInt(5, 90) + "vw")
+    : "";
+
+  if (upOrDown) {
+    gsap.set(".service-icon--" + service, {
+      y: getRandomInt(0, bitcoinHeight / 2) + "px",
+    });
+    gsap.to(".service-icon--" + service, {
+      y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
+      //x: getRandomInt(0, 100) + "vw",
+      ease: "in",
+      delay: getRandomNumber(0, 1),
+      scrollTrigger: {
+        trigger: "#bitcoin",
+        scrub: true,
+        start: "top 25%", // "triggerElement page"
+        end: "90% center", // "triggerElement page"
+        //markers: { startColor: "lime", endColor: "lime" },
+      },
+    });
+  } else {
+    gsap.set(".service-icon--" + service, {
+      y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
+    });
+    gsap.to(".service-icon--" + service, {
+      y: getRandomInt(0, bitcoinHeight / 2) + "px",
+      //x: getRandomInt(0, 100) + "vw",
+      ease: "in",
+      delay: getRandomNumber(0, 1),
+      scrollTrigger: {
+        trigger: "#bitcoin",
+        scrub: true,
+        start: "top bottom", // "triggerElement page"
+        end: "90% center", // "triggerElement page"
+        //markers: { startColor: "orange", endColor: "orange" },
+      },
+    });
+  }
 });
 
 gsap.from("#bitcoin-to-be path", {
@@ -162,8 +251,10 @@ gsap.from("#bitcoin-to-be path", {
   },
 });
 
-let imgs = gsap.utils.toArray(".pseudoservice"),
-  next = 1.5, // time to change
+// BE YOUR OWN
+
+let pseudoserviceArray = gsap.utils.toArray(".pseudoservice"),
+  next = 3, // time to change
   itemHeight = document
     .querySelector(".pseudoservice")
     .getBoundingClientRect().height,
@@ -183,19 +274,186 @@ let imgs = gsap.utils.toArray(".pseudoservice"),
 function crossfade() {
   var action = gsap
     .timeline()
-    .to(imgs, { y: "-=" + itemHeight, duration: 1, ease: kerplunk2 })
-    .to(imgs[0], { y: "+=" + listHeight, duration: 0 }); // the first to the end
+    .to(pseudoserviceArray, {
+      y: "-=" + itemHeight,
+      duration: 1,
+      ease: kerplunk2,
+    })
+    .to(pseudoserviceArray[0], { y: "+=" + listHeight, duration: 0 }); // the first to the end
 
-  imgs.push(imgs.shift()); // the first (shift) to the end (push) from the array
-  //console.log(imgs);
+  pseudoserviceArray.push(pseudoserviceArray.shift()); // the first (shift) to the end (push) from the array
+  //console.log(pseudoserviceArray);
   //console.log(itemHeight);
 
   // start endless run
   gsap.delayedCall(next, crossfade);
+
+  var thisPseudoservice = pseudoserviceArray[2].innerHTML,
+    thisElement = document.querySelector(
+      ".slides-container--" + thisPseudoservice.toLowerCase()
+    );
+
+  var slidesContainerArray = document.querySelectorAll(".slides-container");
+  slidesContainerArray.forEach((thisContainer) => {
+    thisContainer.style.display = "none";
+  });
+
+  if (thisElement) {
+    thisElement.style.display = "flex";
+  }
 }
 
 // start the crossfade after next = 3 sec
 gsap.delayedCall(next, crossfade);
+
+// CAROUSEL
+
+var slideDelay = 1.5;
+var slideDuration = 0.3;
+var wrap = true;
+
+var slides = document.querySelectorAll(".slide");
+var prevButton = document.querySelector("#prevButton");
+var nextButton = document.querySelector("#nextButton");
+var progressWrap = gsap.utils.wrap(0, 1);
+
+var numSlides = slides.length;
+
+gsap.set(slides, {
+  xPercent: (i) => i * 100,
+});
+
+var wrapX = gsap.utils.wrap(-100, (numSlides - 1) * 100);
+
+var animation = gsap.to(slides, {
+  xPercent: "+=" + numSlides * 100,
+  duration: 1,
+  ease: "none",
+  paused: true,
+  repeat: -1,
+  modifiers: {
+    xPercent: wrapX,
+  },
+});
+
+var proxy = document.createElement("div");
+var slideAnimation = gsap.to({}, {});
+var slideWidth = 0;
+var wrapWidth = 0;
+
+resize();
+
+window.addEventListener("resize", resize);
+
+prevButton.addEventListener("click", function () {
+  animateSlides(1);
+});
+
+nextButton.addEventListener("click", function () {
+  animateSlides(-1);
+});
+
+function updateDraggable() {
+  slideAnimation.kill();
+  this.update();
+}
+
+function animateSlides(direction) {
+  slideAnimation.kill();
+  var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
+
+  slideAnimation = gsap.to(proxy, {
+    x: x,
+    duration: slideDuration,
+    onUpdate: updateProgress,
+  });
+}
+
+function updateProgress() {
+  animation.progress(progressWrap(gsap.getProperty(proxy, "x") / wrapWidth));
+}
+
+function snapX(value) {
+  let snapped = gsap.utils.snap(slideWidth, value);
+  return wrap
+    ? snapped
+    : gsap.utils.clamp(-slideWidth * (numSlides - 1), 0, snapped);
+}
+
+function resize() {
+  var norm = gsap.getProperty(proxy, "x") / wrapWidth || 0;
+
+  slideWidth = slides[0].offsetWidth;
+  wrapWidth = slideWidth * numSlides;
+
+  wrap; // || draggable.applyBounds({minX: -slideWidth * (numSlides - 1), maxX: 0});
+
+  gsap.set(proxy, {
+    x: norm * wrapWidth,
+  });
+
+  animateSlides(0);
+  slideAnimation.progress(1);
+}
+
+
+
+gsap.from("#bitcoin-to-be path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#bitcoin-to-be path",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
+
+gsap.from("#be-to-powered path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#be-to-powered path",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
+
+gsap.from("#powered-to-support path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#powered-to-support path",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
+
+gsap.from("#support-to-dev path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#support-to-dev path",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
+
+gsap.from("#dev-to-contact path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#dev-to-contact path",
+    scrub: true,
+    start: "top center",
+    end: "bottom center",
+  },
+});
+
+
 
 //Librarys
 

@@ -1,3 +1,3 @@
-<svg class="line-primary" width="158" height="600" viewBox="0 0 158 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0V302.19H156.737V600" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<svg class="line-primary" viewBox="0 0 158 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 0V302.19H156.737V600" vector-effect="non-scaling-stroke"/>
 </svg>

@@ -1,7 +1,9 @@
 footer{
     //position: absolute;
     padding: 0;
-    .footer-content{
+    font-weight: 400;
+    color: gray;
+    .footer__content{
         display: flex;
         .header{
             align-self: flex-start;
@@ -89,6 +91,11 @@ footer{
         }
 
     }
+}
+
+.footer__canary{
+    text-align: center;
+    padding: 2rem;
 }
 
 @media only screen and (max-width: 1200px) {

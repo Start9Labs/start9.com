@@ -13,6 +13,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets/images/**/*.jpg');
   eleventyConfig.addPassthroughCopy('src/assets/images/**/*.gif');
 
+  //eleventyConfig.addNunjucksFilter('bitcoin', arr => arr.filter(e => e.name == 'Synapse'));
+
   //plugins
   eleventyConfig.addPlugin(eleventySass);
 

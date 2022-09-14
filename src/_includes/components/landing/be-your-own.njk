@@ -16,20 +16,31 @@
                 {% endfor %}
             </ul>
         </div>
-        <ul class="services">
-            {% for service in services %}
-                {# |selectattr("pseudoservices",pseudoservice.name) #}
-                <li class="service">
-                    <a href="">{% include "components/svg/chevron-left.svg" %}</a>
-                    <a href="">
-                        <img class="service__image" src="{{ service.slug }}.png" alt="">
-                            <div class="service__name">{{ service.name }}</div>
-                            <div class="service__desc">{{ service.description }}</div>
-                        </a>
-                        <a href="">{% include "components/svg/chevron-right.svg" %}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+        <div class="services">
+            {% for pseudoservice in pseudoservices %}
+            <div class="slides-container slides-container--{{ pseudoservice.name.toLowerCase() }}">
+                <ul class="slides-inner">
+                    {% for service in services %}
+                        {% if pseudoservice.name.toLowerCase() in service.pseudoservices %}
+                        <li class="service slide">
+                            {# <a href="">{% include "components/svg/chevron-left.svg" %}</a> #}
+                            <a class="service__link" href="https://marketplace.start9.com/{{service.slug}}" target="_blank">
+                                <img class="service__image" src="../assets/images/service-icons/{{ service.slug }}.png" alt=""/>
+                                <div class="service__name">{{ service.name }}</div>
+                                {# <div class="service__desc">{{ service.description }}</div> #}
+                            </a>
+                            {# <a href="">{% include "components/svg/chevron-right.svg" %}</a> #}
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+            <div class="slides-controls">
+                <button id="prevButton">{% include "components/svg/chevron-left.svg" %}</button>
+                <button id="nextButton">{% include "components/svg/chevron-right.svg" %}</button>
+            </div>
         </div>
-        <a href="https://marketplace.start9.com/" class="btn">browse the start9 marketplace</a>
-    </section>
+    </div>
+    <a href="https://marketplace.start9.com/" class="btn">browse the start9 marketplace</a>
+</section>

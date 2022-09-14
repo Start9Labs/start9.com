@@ -4,7 +4,7 @@ section#support {
   align-items: center;
   padding: 6rem;
   background: var(--c-1);
-  margin-bottom: 6rem;
+  //margin-bottom: 6rem;
   .cols {
     display: flex;
     align-items: center;
@@ -16,10 +16,18 @@ section#support {
   }
   img {
     max-height: 40vh;
+    max-width: 100%;
+    transform: rotateZ(5deg);
   }
   @media only screen and (max-width: 1200px) {
     .cols{
       flex-direction: column;
+      .col:nth-child(1){
+        order: 2;
+      }
+      .col:nth-child(2){
+        order: 1;
+      }
     }
   }
 }

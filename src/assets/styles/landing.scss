@@ -78,24 +78,6 @@ section {
   max-height: 75vh;
 }
 
-.img-shadow {
-  filter: blur(2rem) brightness(0);
-  z-index: -1;
-  position: absolute;
-  top: 5rem;
-  opacity: .5;
-}
-
-#hero-image {
-  position: relative;
-  display: flex;
-  img {
-    width: 50rem;
-    max-width: 90vw;
-    margin-top: 4rem;
-  }
-}
-
 nav {
   color: var(--c-text-primary);
 }
@@ -183,6 +165,7 @@ p {
   em {
     font-style: normal;
     color: var(--c-text-accent);
+    font-weight: 400;
   }
 }
 

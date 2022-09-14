@@ -11,20 +11,20 @@ section#bitcoin {
   z-index: -1;
   margin-bottom: -10rem;
 
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(#33333300,var(--c-bkg));
+    background-image: linear-gradient(#33333300, var(--c-bkg));
     position: absolute;
     top: -100vh;
   }
 
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(var(--c-bkg),#33333300);
+    background-image: linear-gradient(var(--c-bkg), #33333300);
     position: absolute;
     bottom: -100vh;
   }
@@ -50,13 +50,13 @@ section#bitcoin {
 
   p {
     max-width: min(35ch, 50vw);
-    em{
+    em {
       color: var(--c-1);
       font-weight: 700;
     }
   }
 
-  .subsection{
+  .subsection {
     padding: 0 6rem;
   }
 
@@ -69,15 +69,94 @@ section#bitcoin {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    h1, p{
+    h1,
+    p {
       text-align: right;
     }
   }
 
-  a.btn{
+  a.btn {
     background-color: var(--c-1);
-    color:var(--c-6);
+    color: var(--c-6);
     border-color: var(--c-6);
     font-size: 1.2rem;
+  }
+
+  #flying-icons{
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .service-icon {
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -2;
+    backdrop-filter: blur(48px);
+    mix-blend-mode: soft-light;
+    box-shadow: 0 37px 50px rgb(0 0 0 / 20%);
+
+    &.service-icon--spectre {
+      background-color: var(--c-1);
+    }
+
+    &.service-icon--electrs {
+      background-color: var(--c-1);
+      padding: 1rem;
+    }
+
+    &.service-icon--balanceofsatoshis {
+      width: 5rem;
+    }
+    &.service-icon--bitcoind {
+      width: auto;
+    }
+    &.service-icon--btc-rpc-proxy {
+      width: 9rem;
+    }
+    &.service-icon--btcpay-server {
+      width: 6rem;
+    }
+    &.service-icon--c-lightning {
+      width: auto;
+    }
+    &.service-icon--electrs {
+      width: 7rem;
+    }
+    &.service-icon--lightning-jet {
+      width: 6rem;
+    }
+    &.service-icon--lnd {
+      width: 10rem;
+    }
+    &.service-icon--lightning-terminal {
+      width: 7rem;
+    }
+    &.service-icon--lndg {
+      width: 9rem;
+    }
+    &.service-icon--mempool {
+      width: 8rem;
+    }
+    &.service-icon--ride-the-lightning {
+      width: 8rem;
+    }
+    &.service-icon--spark-wallet {
+      width: 7rem;
+    }
+    &.service-icon--specter {
+      width: 5rem;
+    }
+    &.service-icon--sphinx-relay {
+      width: 6rem;
+    }
+    &.service-icon--thunderhub {
+      width: 5rem;
+    }
   }
 }
