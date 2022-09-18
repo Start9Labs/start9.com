@@ -6,6 +6,11 @@ main {
   overflow-x: clip;
 }
 
+.header__logo{
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+}
+
 section {
   --width: 42ch;
   --side-padding: 3rem;

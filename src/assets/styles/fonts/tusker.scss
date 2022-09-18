@@ -1,0 +1,539 @@
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-1700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-1500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-1600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 1500';
+    src: url('../fonts/TuskerGrotesk-1500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 1600';
+    src: url('../fonts/TuskerGrotesk-1600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 1800 Super';
+    src: url('../fonts/TuskerGrotesk-1800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-1800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-2600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 1700';
+    src: url('../fonts/TuskerGrotesk-1700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-1700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-2500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-3500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-3600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-2800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 2800 Super';
+    src: url('../fonts/TuskerGrotesk-2800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 2600';
+    src: url('../fonts/TuskerGrotesk-2600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 2700';
+    src: url('../fonts/TuskerGrotesk-2700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 2500';
+    src: url('../fonts/TuskerGrotesk-2500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-2700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-2700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 3600';
+    src: url('../fonts/TuskerGrotesk-3600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-3800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 3500';
+    src: url('../fonts/TuskerGrotesk-3500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-3700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 3700';
+    src: url('../fonts/TuskerGrotesk-3700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-4700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 4600';
+    src: url('../fonts/TuskerGrotesk-4600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-4500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 4500';
+    src: url('../fonts/TuskerGrotesk-4500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-4600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 3800 Super';
+    src: url('../fonts/TuskerGrotesk-3800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-3800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 4700';
+    src: url('../fonts/TuskerGrotesk-4700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-4800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-5500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-5800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 5600';
+    src: url('../fonts/TuskerGrotesk-5600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-5700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 5500';
+    src: url('../fonts/TuskerGrotesk-5500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 4800 Super';
+    src: url('../fonts/TuskerGrotesk-4800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-4800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-5600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-6600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-6700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-6800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 5700';
+    src: url('../fonts/TuskerGrotesk-5700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 6600';
+    src: url('../fonts/TuskerGrotesk-6600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 5800 Super';
+    src: url('../fonts/TuskerGrotesk-5800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-5800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 6500';
+    src: url('../fonts/TuskerGrotesk-6500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-6500Medium.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6500Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 6700';
+    src: url('../fonts/TuskerGrotesk-6700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 7600';
+    src: url('../fonts/TuskerGrotesk-7600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-7600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 6800 Super';
+    src: url('../fonts/TuskerGrotesk-6800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-6800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-7700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-7700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-7600Semibold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-7600Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-7800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-7800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-8800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-8800Super.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 8700';
+    src: url('../fonts/TuskerGrotesk-8700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-8700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-8700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-8700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 7700';
+    src: url('../fonts/TuskerGrotesk-7700Bold.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-7700Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 7800 Super';
+    src: url('../fonts/TuskerGrotesk-7800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-7800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 9800 Super';
+    src: url('../fonts/TuskerGrotesk-9800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-9800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../fonts/TuskerGrotesk-9800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-9800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk 8800 Super';
+    src: url('../fonts/TuskerGrotesk-8800Super.woff2') format('woff2'),
+        url('../fonts/TuskerGrotesk-8800Super.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

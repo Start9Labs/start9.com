@@ -34,6 +34,10 @@ const bitcoinServices = [
   "thunderhub",
 ];
 
+//const defaultActions = "restart none none reverse";
+const defaultActions = "play none none none"; //onEnter, onLeave, onEnterBack, and onLeaveBack
+// "play", "pause", "resume", "reset", "restart", "complete", "reverse", and "none".
+
 //////////////////////////////////////////
 // AUTO APPLY URL ANCHORS
 
@@ -89,12 +93,20 @@ function closeMenu(e) {
 // HERO
 
 gsap.from("#hero-image", {
-  duration: 0.5,
-  y: "-10rem",
+  duration: 1,
+  //y: "-10rem",
+  scale: 0.95,
   opacity: 0,
+  filter: "blur(10px)",
   delay: 0.5,
 });
-gsap.from("#logo", { duration: 0.5, y: "-5rem", opacity: 0, delay: 0.75 });
+gsap.from("#logo", { 
+  duration: 0.5, 
+  y: "-5rem", 
+  opacity: 0, 
+  delay: 1.25,
+  //ease: "in-out"
+});
 //gsap.config({trialWarn: false});
 
 // create the smooth scroller FIRST!
@@ -108,6 +120,10 @@ gsap.from("#logo", { duration: 0.5, y: "-5rem", opacity: 0, delay: 0.75 });
 // backdrop-filter: blur(10px);
 //background-color: rgba(0,0,0,0.1);
 
+
+//////////////////////////////////////////
+// HEADER
+
 gsap.to("header", {
   duration: 0.5,
   backgroundColor: "rgba(0,0,0,0.1)",
@@ -120,22 +136,17 @@ gsap.to("header", {
   },
 });
 
-//////////////////////////////////////////
-// PITCH
-
-gsap.from("#pitch h1", {
+gsap.to(".header__logo", {
   duration: 0.5,
-  y: "5rem",
-  scale: 0.8,
-  opacity: 0,
-  delay: 0.75,
-  scrollTrigger: "#pitch h1",
+  opacity: "1",
+  filter: "blur(0px)",
+  scrollTrigger: {
+    trigger: "#hero-image",
+    scrub: true,
+    start: "center top", // "triggerElement page"
+    end: "bottom top", // "triggerElement page"
+  },
 });
-
-// gsap.from("#xyz", {
-//     duration: 1, drawSVG: "false",
-//     scrollTrigger: '#xyz'
-// })
 
 gsap.from("#hero-to-pitch path:first-child", {
   drawSVG: 0,
@@ -145,6 +156,51 @@ gsap.from("#hero-to-pitch path:first-child", {
     scrub: true,
     start: "top center", // "triggerElement page"
     end: "bottom center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+//////////////////////////////////////////
+// PITCH
+
+gsap.from("#pitch", {
+  duration: 0.5,
+  y: "5rem",
+  scale: 0.9,
+  opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#pitch",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+//////////////////////////////////////////
+// PRODUCTS
+
+gsap.from("#products .subsection:nth-child(1)", {
+  duration: 0.5,
+  opacity: 0,
+  outline: "1px solid rgba(255,255,255,1)",
+  //filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#products",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+gsap.from("#products .subsection:nth-child(2)", {
+  duration: 0.5,
+  delay: 0.25,
+  opacity: 0,
+  outline: "1px solid rgba(255,255,255,1)",
+  //filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#products",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
   },
 });
 
@@ -181,7 +237,69 @@ gsap.from("#products-to-info path:nth-child(3)", {
   },
 });
 
+//////////////////////////////////////////
+// INFOGRAPHICS
+
+gsap.from("#infographics .subsection:nth-child(1)", {
+  duration: 0.5,
+  //y: "5rem",
+  //scale: 0.8,
+  //rotateX: 15,
+  opacity: 0,
+  //delay: 0.75,
+  outline: "1px solid rgba(255,255,255,1)",
+  //filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#infographics .subsection:nth-child(1)",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+gsap.from("#infographics .subsection:nth-child(2)", {
+  duration: 0.5,
+  //y: "5rem",
+  //scale: 0.8,
+  //rotateX: 15,
+  opacity: 0,
+  //delay: 0.75,
+  outline: "1px solid rgba(255,255,255,1)",
+  //filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#infographics .subsection:nth-child(2)",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+//////////////////////////////////////////
 // BITCOIN
+
+gsap.from("#bitcoin .subsection:nth-of-type(1)", {
+  duration: 1,
+  opacity: 0,
+  //outline: "1px solid rgba(255,255,255,1)",
+  filter: "blur(10px)",
+  y: "5rem",
+  scrollTrigger: {
+    trigger: "#bitcoin .subsection:nth-of-type(1)",
+    start: "top bottom", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+gsap.from("#bitcoin .subsection:nth-of-type(2)", {
+  duration: 1,
+  opacity: 0,
+  //outline: "1px solid rgba(255,255,255,1)",
+  filter: "blur(10px)",
+  y: "-5rem",
+  scrollTrigger: {
+    trigger: "#bitcoin .subsection:nth-of-type(2)",
+    start: "top bottom", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -240,18 +358,58 @@ bitcoinServices.forEach((service) => {
   }
 });
 
-gsap.from("#bitcoin-to-be path", {
+gsap.from("#bitcoin-to-be path:first-child", {
   drawSVG: 0,
   ease: "none",
   scrollTrigger: {
-    trigger: "#bitcoin-to-be path",
+    trigger: "#bitcoin-to-be",
     scrub: true,
     start: "top center",
     end: "bottom center",
   },
 });
 
+//////////////////////////////////////////
 // BE YOUR OWN
+
+gsap.from("#be-your-own h1", {
+  duration: 0.5,
+  y: "5rem",
+  //scale: 0.8,
+  opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#be-your-own",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+
+gsap.from("#be-your-own p", {
+  duration: .5,
+  y: "5rem",
+  filter: "blur(10px)",
+  opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#be-your-own h1",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+gsap.from("#be-your-own #ticker", {
+  duration: 1.5,
+  filter: "blur(20px)",
+  opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#be-your-own #ticker",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
 
 let pseudoserviceArray = gsap.utils.toArray(".pseudoservice"),
   next = 3, // time to change
@@ -275,6 +433,7 @@ function crossfade() {
   var action = gsap
     .timeline()
     .to(pseudoserviceArray, {
+      id: "thunk",
       y: "-=" + itemHeight,
       duration: 1,
       ease: kerplunk2,
@@ -305,6 +464,14 @@ function crossfade() {
 
 // start the crossfade after next = 3 sec
 gsap.delayedCall(next, crossfade);
+
+document.querySelector(".services").addEventListener("mouseenter", pauseThunk);
+// TODO: pause not working - Id not found
+function pauseThunk () {
+    console.log('asfd')
+    gsap.getById("thunk").kill();
+}
+
 
 // CAROUSEL
 
@@ -353,10 +520,10 @@ nextButton.addEventListener("click", function () {
   animateSlides(-1);
 });
 
-function updateDraggable() {
-  slideAnimation.kill();
-  this.update();
-}
+// function updateDraggable() {
+//   slideAnimation.kill();
+//   this.update();
+// }
 
 function animateSlides(direction) {
   slideAnimation.kill();
@@ -396,19 +563,6 @@ function resize() {
   slideAnimation.progress(1);
 }
 
-
-
-gsap.from("#bitcoin-to-be path", {
-  drawSVG: 0,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#bitcoin-to-be path",
-    scrub: true,
-    start: "top center",
-    end: "bottom center",
-  },
-});
-
 gsap.from("#be-to-powered path", {
   drawSVG: 0,
   ease: "none",
@@ -417,6 +571,49 @@ gsap.from("#be-to-powered path", {
     scrub: true,
     start: "top center",
     end: "bottom center",
+  },
+});
+
+//////////////////////////////////////////
+// POWERED
+
+gsap.from("#powered-by h1", {
+  duration: 0.5,
+  y: "-5rem",
+  //scale: 0.8,
+  opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#powered-by h1",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+
+gsap.from("#powered-by p", {
+  duration: .5,
+  //y: "-10rem",
+  filter: "blur(10px)",
+  opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#powered-by h1",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+gsap.from("#powered-by svg", {
+  duration: 1,
+  //y: "-10rem",
+  filter: "blur(20px)",
+  opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#powered-by svg",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
   },
 });
 
@@ -431,6 +628,25 @@ gsap.from("#powered-to-support path", {
   },
 });
 
+//////////////////////////////////////////
+// SUPPORT
+
+gsap.from("#support", {
+  duration: 0.5,
+  //y: "5rem",
+  //scale: 0.8,
+  //rotateX: 15,
+  opacity: 0,
+  //delay: 0.75,
+  outline: "1px solid rgba(255,255,255,1)",
+  //filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#support",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
 gsap.from("#support-to-dev path", {
   drawSVG: 0,
   ease: "none",
@@ -439,6 +655,57 @@ gsap.from("#support-to-dev path", {
     scrub: true,
     start: "top center",
     end: "bottom center",
+  },
+});
+
+//////////////////////////////////////////
+// DEV
+
+gsap.from("#dev", {
+  duration: 0.5,
+  //y: "5rem",
+  scale: 0.8,
+  //rotateX: 15,
+  opacity: 0,
+  //delay: 0.75,
+  //outline: "1px solid rgba(255,255,255,1)",
+  filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#dev",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+gsap.from("#dev .col:nth-child(1)", {
+  duration: 0.5,
+  x: "5rem",
+  //scale: 0.8,
+  //rotateX: 15,
+  opacity: 0,
+  delay: 0.5,
+  //outline: "1px solid rgba(255,255,255,1)",
+  filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#dev",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
+
+gsap.from("#dev .col:nth-child(2)", {
+  duration: 0.5,
+  x: "-5rem",
+  scale: 0.5,
+  //rotateX: 15,
+  opacity: 0,
+  delay: .75,
+  //outline: "1px solid rgba(255,255,255,1)",
+  filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#dev",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
   },
 });
 
@@ -453,7 +720,24 @@ gsap.from("#dev-to-contact path", {
   },
 });
 
+//////////////////////////////////////////
+// CONTACT
 
+gsap.from("#community", {
+  duration: 0.5,
+  //y: "5rem",
+  scale: 0.8,
+  //rotateX: 15,
+  opacity: 0,
+  //delay: 0.75,
+  //outline: "1px solid rgba(255,255,255,1)",
+  filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "#community",
+    start: "top center", // "triggerElement page"
+    toggleActions: defaultActions
+  },
+});
 
 //Librarys
 

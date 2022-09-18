@@ -86,7 +86,7 @@
         "name": "Lightning Terminal",
         "slug": "lightning-terminal",
         "description": "",
-        "categories": ["lightning", "plebnet-tools"],
+        "categories": ["lightning"],
         "pseudoservices": []
     },
     {
@@ -135,7 +135,7 @@
         "name": "Thunderhub",
         "slug": "thunderhub",
         "description": "",
-        "categories": ["bitcoin", "lightning"],
+        "categories": ["bitcoin"],
         "pseudoservices": ["paypal","coinbase"]
     }
 ]

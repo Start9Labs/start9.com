@@ -128,4 +128,13 @@ footer{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
+    footer .footer__content {
+        flex-direction: column;
+        .header{
+            margin: 2.5rem 5rem;
+        }
+        .groups > li{
+            padding: 2.5rem 5rem;
+        }
+    }
   }

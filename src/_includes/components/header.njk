@@ -1,5 +1,6 @@
 <header>
   <nav>
+    <a class="header__logo" href="/"><img src="../assets/images/start9_logo.png" alt=""></a>
     <ul>
       {% for group in menu|selectattr("inHeader") %}
         {% for item in group.items %}

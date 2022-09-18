@@ -4,27 +4,27 @@
         <h1>Become Bitcoin</h1>
         <p>
             <em>Don't trust, verify.</em>
-            <br>Run a full Bitcoin node to verify transactions and enforce the consensus rules you choose.</p>
-            <a class="btn" href="">why host a bitcoin node?</a>
-        </div>
-        <div class="subsection">
-            <h1>Become Lightning</h1>
-            <p>
-                <em>Not your keys, not your coins.</em>
-                <br>Run a Lightning node to take full control and custody over your Bitcoin on Lightning.</p>
-                <a class="btn" href="">why host a lightning node?</a>
-            </div>
-            <div id="flying-icons">
-                {% for service in services %}
-                    {% for category in service.categories %}
-                        {% if (category == "bitcoin") or (category == "lightning") or (category == "plebnet-tools") %}
-                            <img
-                                class="service-icon service-icon--{{ service.slug }}"
-                                src="../assets/images/service-icons/{{ service.slug }}.png"
-                                alt="">
-                            {% endif %}
-                        {% endfor %}
-                    {% endfor %}
-                </div>
-                {% include "components/svg/grid_blend_bottom.svg" %}
-            </section>
+            <br/>Run a full Bitcoin node to verify transactions and enforce the consensus rules you choose.</p>
+        <a class="btn btn--subtle" target="_blank" href="https://bitcoinmagazine.com/culture/six-reasons-you-should-run-bitcoin-node">why host a bitcoin node?</a>
+    </div>
+    <div class="subsection">
+        <h1>Become Lightning</h1>
+        <p>
+            <em>Not your keys, not your coins.</em>
+            <br/>Run a Lightning node to take full control and custody over your Bitcoin on Lightning.</p>
+        <a class="btn btn--subtle" target="_blank" href="">why host a lightning node?</a>
+    </div>
+    <div id="flying-icons">
+        {% for service in services %}
+            {% for category in service.categories %}
+                {% if (category == "bitcoin") or (category == "lightning") or (category == "plebnet-tools") %}
+                    <img
+                        class="service-icon service-icon--{{ service.slug }}"
+                        src="../assets/images/service-icons/{{ service.slug }}.png"
+                        alt=""/>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+    {% include "components/svg/grid_blend_bottom.svg" %}
+</section>

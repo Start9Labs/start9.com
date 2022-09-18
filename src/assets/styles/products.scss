@@ -1,9 +1,13 @@
 section#products {
+  transform-style: preserve-3d;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0rem;
+  
   .subsection {
+    transform-style: preserve-3d;
+    position: relative;
     .product__subheader{
       font-weight: 500;
       color: var(--c-text-primary);
@@ -67,5 +71,15 @@ section#products {
       }
       background: linear-gradient(45deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25));
     }
+  }
+  &::after{
+    content: '';
+    left:0;
+    right:0;
+    display: block;
+    background-color: blue;
+    transform: rotateX(90deg);
+    height: 4rem;
+    z-index: -1;
   }
 }

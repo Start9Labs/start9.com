@@ -81,10 +81,12 @@ body{
 
 main{
     //transform: translateY(-100vh);
+    perspective: 1000px;
 }
 
 a {
     text-decoration: none;
+    transition: var(--t-simple);
 }
 
 h1, h2, h3, h4, h5 {
@@ -109,17 +111,31 @@ header{
     width: 100vw;
     z-index: 2;
     top:0;
+
+    .header__logo{
+        opacity: 0;
+        filter: blur(10px);
+        margin-top: -.9rem;
+        margin-bottom: -1rem;
+        margin-left: 1rem;
+        height: fit-content;
+        img{
+           width:8rem; 
+        }
+    }
 }
 nav{
     --padding: 1rem;
-    width: calc(100% - 2 * var(--padding) - 15px);
+    //width: calc(100% - 2 * var(--padding) - 15px);
+    width: 100vw;
+    box-sizing: border-box;
     font-family: var(--f-accent);
     font-weight: 300;
     line-height: 1;
     text-transform: uppercase;
     padding: var(--padding);
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 
     ul {
         margin: 0;
@@ -133,8 +149,14 @@ nav{
                 font-size: 1.5rem;
                 padding: 0em 0.5em 0em 0.5em;
 
+                path {
+                    fill: var(--c-text-bright);
+                    transition: var(--t-simple);
+                }
+
                 &.em{
                     background-color: var(--c-text-accent);
+                    margin-right: 1rem;
                     &:hover{
                         color: var(--c-text-accent);
                         background-color: var(--c-text-bright);
@@ -142,6 +164,9 @@ nav{
                 }
                 &:hover{
                     color: var(--c-text-accent);
+                    path {
+                        fill: var(--c-text-accent);
+                    }
                 }
             }
         }
@@ -168,6 +193,7 @@ nav{
     transform: translateX(3rem);
     //overflow: hidden;
     white-space: nowrap;
+    //margin-left: -1rem;
 }
 .closed-menu {
     //overflow: hidden;
@@ -190,4 +216,21 @@ nav{
     position: absolute;
     top: 5rem;
     opacity: .5;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .header__logo img{
+        width: 11rem !important;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    nav ul li a {
+        font-size: 2.5rem;
+    }
+  }
+
+  .image-with-shadow{
+    display: flex;
+    position: relative;
   }

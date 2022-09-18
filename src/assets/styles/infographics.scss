@@ -9,14 +9,15 @@ section#infographics{
     align-items: center;
     gap: 3rem;
     padding: 6rem;
+    outline: 1px solid rgba(255,255,255,0);
     svg{
       width: 110%;
     }
     &:first-child{
-      background-color: black;
+      
     }
     &:last-child{
-      background-color: white;
+      margin-top: 3rem;
       svg{
         width: 80%;
       }

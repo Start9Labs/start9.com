@@ -17,7 +17,7 @@
         "url": "https://start9.com/latest/contribute/index",
         "target": "",
         "order": 1,
-        "class": ""
+        "class": "hide-on-mobile"
       }
     ]
   },
@@ -120,6 +120,14 @@
         "name": "Support",
         "slug": "support",
         "url": "https://start9.com/latest/support/",
+        "target": "",
+        "order": 0,
+        "class": ""
+      },
+      {
+        "name": "FAQ",
+        "slug": "faq",
+        "url": "https://start9.com/latest/support/faq/",
         "target": "",
         "order": 0,
         "class": ""

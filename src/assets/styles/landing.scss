@@ -57,8 +57,13 @@ section {
   fill: var(--c-bkg);
 }
 
-.inverse{
-  box-shadow: rgb(0 0 0 / 60%) 0 3rem 3rem;
+[class*="section--"]{
+  box-shadow: rgb(0 0 0 / 50%) 0 3rem 3rem;
+}
+
+.section--inverse{
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(1rem);
   h1, p {
     color: var(--c-bkg);
   }
@@ -68,6 +73,16 @@ section {
   .svg-secondary{
     fill: var(--c-text-primary);
   }
+}
+
+.section--subtle{
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(1rem);
+}
+
+.section--bold{
+  background-color: rgba(239,75,99,0.2);
+  backdrop-filter: blur(1rem);
 }
 
 
@@ -165,25 +180,68 @@ p {
   em {
     font-style: normal;
     color: var(--c-text-accent);
-    font-weight: 400;
+    font-weight: 600;
   }
 }
 
-
 a.btn {
+  position: relative;
   padding: 0.4rem 2rem;
-  background-color: var(--c-text-accent);
+  transform: rotateX(10deg);
   color: var(--c-text-bright);
-  border-color: var(--c-3d-shadow);
-  border-width: 1px 1px 15px 1px;
-  border-style: solid;
+  border: 0;
   font-family: var(--f-accent);
   font-weight: 500;
   text-transform: uppercase;
   font-size: 1.6rem;
   text-decoration: none;
-}
 
+  transform-style: preserve-3d;
+
+  &:hover{
+    transform: rotateX(30deg);
+    &::before {
+      box-shadow: inset 0 1rem 1rem -0.5rem rgb(0 0 0 / 50%);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: var(--c-text-accent);
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: var(--t-simple);
+
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--c-3d-shadow);
+    display: block;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    z-index: -1;
+    transform: rotateX(90deg);
+    box-shadow: inset 0 0.3rem 0.5rem 0rem rgb(0 0 0 / 50%);
+  }
+
+  &.btn--subtle{
+    color: var(--c-6);
+    font-size: 1.2rem;
+    &::before {
+      background-color: white;
+    }
+    &::after {
+      background-color: #eee;
+    }
+  }
+}
 
 .nodes {
   display: flex;

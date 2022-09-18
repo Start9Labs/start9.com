@@ -2,7 +2,7 @@ section#powered-by {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem;
+  padding: 0rem 6rem 0 6rem;
   h2{
     margin: 0;
     text-align: center;
@@ -52,6 +52,27 @@ section#powered-by {
   }
   svg {
     width: 45rem;
+    max-width: calc(100vw - 12rem);
     margin-top: 6rem;
+  }
+
+  a.source-link{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--c-text-bright);
+    line-height: 1;
+    gap: 1rem;
+    margin-bottom: -2rem;
+    img{
+      width: 10rem;
+    }
+    span{
+      background-color: var(--c-text-accent);
+      border-radius: 999px;
+      padding: .15em .6em;
+    }
   }
 }
