@@ -169,16 +169,20 @@ layout: layouts/peripheral.njk
         <img src="../assets/images/team.png" alt=""/>
         <img class="img-shadow" src="../assets/images/team.png" alt=""/>
     </div>
-    {% block content %}
-        <div>
-            <ul>
-                {% for member in team %}
-                    <li>
-                        {# <a href="/files/{{ member.login }}"> {{ member.thing2 }} </a> #}
-                        {{ member.login }}
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endblock %}
+
+    <ul class="members">
+        {% for member in team %}
+            <li class="member">
+                <img class="member__avatar" src="{{ member.avatar_url }}" alt=""/>
+                <div class="member__content">
+                    <h4>{{ member.name }}</h4>
+                    <h5>{{ member.position }}</h5>
+                    <p>{{ member.blurb }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
 </section>

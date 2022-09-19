@@ -6,7 +6,7 @@ main {
   overflow-x: clip;
 }
 
-.header__logo{
+.header__logo {
   opacity: 1 !important;
   filter: blur(0px) !important;
 }
@@ -37,7 +37,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0;
+    margin: 2rem 0 4rem 0;
     position: relative;
     img {
       width: 50%;
@@ -74,10 +74,10 @@ section#hero {
 }
 
 @media only screen and (max-width: 1245px) {
-    section#hero {
-        flex-direction: column;
-    }
+  section#hero {
+    flex-direction: column;
   }
+}
 
 section#virtues {
   .section__image img {
@@ -87,17 +87,17 @@ section#virtues {
 
 .section__double-image {
   position: relative;
-  .section__image{
+  .section__image {
     position: absolute;
-    top:-140%;
-    width:100%;
+    top: -140%;
+    width: 100%;
   }
-  .section__image--left{
-    left:-105%;
+  .section__image--left {
+    left: -105%;
     align-items: flex-end;
   }
-  .section__image--right{
-    right:-105%;
+  .section__image--right {
+    right: -105%;
 
     align-items: flex-start;
   }
@@ -174,4 +174,61 @@ p {
   strong {
     font-weight: 700;
   }
+}
+
+/* about */
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  .member {
+    display: flex;
+    gap: 1rem;
+
+    .member__avatar {
+      border-radius: 100%;
+      width: 10rem;
+      height: 10rem;
+      border: 1px solid var(--c-text-primary);
+    }
+    p {
+      font-size: .8rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+section#jobs {
+  p{
+    line-height: 1.4;
+  }
+  .job {
+    list-style: none;
+  }
+  ul, ol { 
+    display: block;
+    list-style: disc outside none;
+    margin: 1em 0;
+    padding: 0 0 0 2rem;
+}
+ol { 
+    list-style-type: decimal;
+}
+li { 
+  display: list-item;
+  list-style: disc;
+  margin-bottom: .5rem;
+  &:last-child{
+    margin-bottom: 2rem;
+  }
+}
+ul ul, ol ul {
+  list-style-type: circle;
+  margin-left: 15px; 
+}
+ol ol, ul ol { 
+  list-style-type: lower-latin;
+  margin-left: 15px; 
+}
 }

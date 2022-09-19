@@ -208,7 +208,7 @@ const buyAnchor = document.querySelector('.product--buy')
 const buyTL = gsap
   .timeline({paused:true})
   .from('#buy-lines path:first-child', {drawSVG:0, ease:'none', duration: 0.75}, 0)
-  .to('.product--buy img:first-child', {opacity:0, ease:'none', duration: 0.25}, 0);
+  .to('.product--buy img:first-child', {opacity:.4, ease:'none', duration: 0.25}, 0);
 
 buyAnchor.onmouseenter = () => buyTL.play()
 buyAnchor.onmouseleave = () => buyTL.reverse()
@@ -218,7 +218,7 @@ const diyAnchor = document.querySelector('.product--diy')
 const diyTL = gsap
   .timeline({paused:true})
   .from('#diy-lines path:first-child', {drawSVG:0, ease:'none', duration: 0.75}, 0)
-  .to('.product--diy img:first-child', {opacity:0, ease:'none', duration: 0.25}, 0);
+  .to('.product--diy img:first-child', {opacity:.4, ease:'none', duration: 0.25}, 0);
 
 diyAnchor.onmouseenter = () => diyTL.play()
 diyAnchor.onmouseleave = () => diyTL.reverse()

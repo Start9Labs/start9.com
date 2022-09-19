@@ -2,7 +2,7 @@
     <div class="footer__content">
         <div class="header">
             <img src="../assets/images/start9_logo.png" alt="">
-            <div class="footer__copyright">© 2022, START9 LABS, INC.</div>
+            <div class="footer__copyright">{{ site.footer.copyright }}</div>
             <div class="footer__donate">[btcpay widget]</div>
             </div>
         <ul class="groups">
@@ -20,5 +20,5 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="footer__canary">{{ canary.text }}</div>
+    <div class="footer__canary">{{ site.footer.canary }}</div>
 </footer>
