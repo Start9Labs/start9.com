@@ -48,8 +48,8 @@ const defaultActions = "play none none none"; //onEnter, onLeave, onEnterBack, a
 //   sections.forEach((slug) => {
 //     ScrollTrigger.create({
 //       trigger: "#" + slug,
-//       start: "top center",
-//       end: "bottom center",
+//       start: "top 75%",
+//       end: "bottom 75%",
 //       //markers: { startColor: "white", endColor: "white" },
 //       onEnter: () => {
 //         window.location.href = "#" + slug;
@@ -153,8 +153,8 @@ gsap.from("#hero-to-pitch path:first-child", {
   scrollTrigger: {
     trigger: "#hero-to-pitch",
     scrub: true,
-    start: "top center", // "triggerElement page"
-    end: "bottom center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
+    end: "bottom 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -170,7 +170,7 @@ gsap.from("#pitch", {
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#pitch",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -185,7 +185,7 @@ gsap.from("#products .subsection:nth-child(1)", {
   //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#products",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -198,7 +198,7 @@ gsap.from("#products .subsection:nth-child(2)", {
   //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#products",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -230,8 +230,8 @@ gsap.from("#products-to-info path:first-child", {
   scrollTrigger: {
     trigger: "#products-to-info path:first-child",
     scrub: true,
-    start: "top center", // "triggerElement page"
-    end: "bottom center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
+    end: "bottom 75%", // "triggerElement page"
   },
 });
 
@@ -241,8 +241,8 @@ gsap.from("#products-to-info path:nth-child(2)", {
   scrollTrigger: {
     trigger: "#products-to-info path:nth-child(2)",
     scrub: true,
-    start: "top center", // "triggerElement page"
-    end: "bottom center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
+    end: "bottom 75%", // "triggerElement page"
   },
 });
 
@@ -252,8 +252,8 @@ gsap.from("#products-to-info path:nth-child(3)", {
   scrollTrigger: {
     trigger: "#products-to-info path:nth-child(3)",
     scrub: true,
-    start: "top center", // "triggerElement page"
-    end: "bottom center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
+    end: "bottom 75%", // "triggerElement page"
   },
 });
 
@@ -271,7 +271,7 @@ gsap.from("#infographics .subsection:nth-child(1)", {
   //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#infographics .subsection:nth-child(1)",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -287,7 +287,7 @@ gsap.from("#infographics .subsection:nth-child(2)", {
   //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#infographics .subsection:nth-child(2)",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -384,8 +384,8 @@ gsap.from("#bitcoin-to-be path:first-child", {
   scrollTrigger: {
     trigger: "#bitcoin-to-be",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top 75%",
+    end: "bottom 75%",
   },
 });
 
@@ -400,7 +400,7 @@ gsap.from("#be-your-own h1", {
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#be-your-own",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -413,7 +413,7 @@ gsap.from("#be-your-own p", {
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#be-your-own h1",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -425,7 +425,7 @@ gsap.from("#be-your-own #ticker", {
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#be-your-own #ticker",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -587,8 +587,8 @@ gsap.from("#be-to-powered path", {
   scrollTrigger: {
     trigger: "#be-to-powered path",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top 75%",
+    end: "bottom 75%",
   },
 });
 
@@ -603,7 +603,7 @@ gsap.from("#powered-by h1", {
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#powered-by h1",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -616,7 +616,7 @@ gsap.from("#powered-by p", {
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#powered-by h1",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -629,7 +629,7 @@ gsap.from("#powered-by svg", {
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#powered-by svg",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -640,8 +640,8 @@ gsap.from("#powered-to-support path", {
   scrollTrigger: {
     trigger: "#powered-to-support path",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top 75%",
+    end: "bottom 75%",
   },
 });
 
@@ -659,7 +659,7 @@ gsap.from("#support", {
   //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#support",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -670,8 +670,8 @@ gsap.from("#support-to-dev path", {
   scrollTrigger: {
     trigger: "#support-to-dev path",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top 75%",
+    end: "bottom 75%",
   },
 });
 
@@ -689,7 +689,7 @@ gsap.from("#dev", {
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#dev",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -705,7 +705,7 @@ gsap.from("#dev .col:nth-child(1)", {
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#dev",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -721,7 +721,7 @@ gsap.from("#dev .col:nth-child(2)", {
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#dev",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });
@@ -732,8 +732,8 @@ gsap.from("#dev-to-contact path", {
   scrollTrigger: {
     trigger: "#dev-to-contact path",
     scrub: true,
-    start: "top center",
-    end: "bottom center",
+    start: "top 75%",
+    end: "bottom 75%",
   },
 });
 
@@ -751,7 +751,7 @@ gsap.from("#community", {
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#community",
-    start: "top center", // "triggerElement page"
+    start: "top 75%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });

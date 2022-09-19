@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "eleventy-plugin-lazyimages": "^2.1.2"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^3.0.0",

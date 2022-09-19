@@ -79,6 +79,13 @@ body{
     background: #333333;
 }
 
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
 main{
     //transform: translateY(-100vh);
     perspective: 1000px;
