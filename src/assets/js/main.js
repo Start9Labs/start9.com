@@ -100,10 +100,10 @@ gsap.from("#hero-image", {
   filter: "blur(10px)",
   delay: 0.5,
 });
-gsap.from("#logo", { 
-  duration: 0.5, 
-  y: "-5rem", 
-  opacity: 0, 
+gsap.from("#logo", {
+  duration: 0.5,
+  y: "-5rem",
+  opacity: 0,
   delay: 1.25,
   //ease: "in-out"
 });
@@ -119,7 +119,6 @@ gsap.from("#logo", {
 
 // backdrop-filter: blur(10px);
 //background-color: rgba(0,0,0,0.1);
-
 
 //////////////////////////////////////////
 // HEADER
@@ -156,7 +155,7 @@ gsap.from("#hero-to-pitch path:first-child", {
     scrub: true,
     start: "top center", // "triggerElement page"
     end: "bottom center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -172,7 +171,7 @@ gsap.from("#pitch", {
   scrollTrigger: {
     trigger: "#pitch",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -187,7 +186,7 @@ gsap.from("#products .subsection:nth-child(1)", {
   scrollTrigger: {
     trigger: "#products",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -200,9 +199,30 @@ gsap.from("#products .subsection:nth-child(2)", {
   scrollTrigger: {
     trigger: "#products",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
+
+const buyAnchor = document.querySelector('.product--buy')
+
+const buyTL = gsap
+  .timeline({paused:true})
+  .from('#buy-lines path:first-child', {drawSVG:0, ease:'none', duration: 0.75}, 0)
+  .to('.product--buy img:first-child', {opacity:0, ease:'none', duration: 0.25}, 0);
+
+buyAnchor.onmouseenter = () => buyTL.play()
+buyAnchor.onmouseleave = () => buyTL.reverse()
+
+const diyAnchor = document.querySelector('.product--diy')
+
+const diyTL = gsap
+  .timeline({paused:true})
+  .from('#diy-lines path:first-child', {drawSVG:0, ease:'none', duration: 0.75}, 0)
+  .to('.product--diy img:first-child', {opacity:0, ease:'none', duration: 0.25}, 0);
+
+diyAnchor.onmouseenter = () => diyTL.play()
+diyAnchor.onmouseleave = () => diyTL.reverse()
+
 
 gsap.from("#products-to-info path:first-child", {
   drawSVG: 0,
@@ -252,7 +272,7 @@ gsap.from("#infographics .subsection:nth-child(1)", {
   scrollTrigger: {
     trigger: "#infographics .subsection:nth-child(1)",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -268,7 +288,7 @@ gsap.from("#infographics .subsection:nth-child(2)", {
   scrollTrigger: {
     trigger: "#infographics .subsection:nth-child(2)",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -284,7 +304,7 @@ gsap.from("#bitcoin .subsection:nth-of-type(1)", {
   scrollTrigger: {
     trigger: "#bitcoin .subsection:nth-of-type(1)",
     start: "top bottom", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -297,7 +317,7 @@ gsap.from("#bitcoin .subsection:nth-of-type(2)", {
   scrollTrigger: {
     trigger: "#bitcoin .subsection:nth-of-type(2)",
     start: "top bottom", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -381,13 +401,12 @@ gsap.from("#be-your-own h1", {
   scrollTrigger: {
     trigger: "#be-your-own",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
-
 gsap.from("#be-your-own p", {
-  duration: .5,
+  duration: 0.5,
   y: "5rem",
   filter: "blur(10px)",
   opacity: 0,
@@ -395,7 +414,7 @@ gsap.from("#be-your-own p", {
   scrollTrigger: {
     trigger: "#be-your-own h1",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -407,7 +426,7 @@ gsap.from("#be-your-own #ticker", {
   scrollTrigger: {
     trigger: "#be-your-own #ticker",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -467,11 +486,10 @@ gsap.delayedCall(next, crossfade);
 
 document.querySelector(".services").addEventListener("mouseenter", pauseThunk);
 // TODO: pause not working - Id not found
-function pauseThunk () {
-    console.log('asfd')
-    gsap.getById("thunk").kill();
+function pauseThunk() {
+  console.log("asfd");
+  gsap.getById("thunk").kill();
 }
-
 
 // CAROUSEL
 
@@ -586,13 +604,12 @@ gsap.from("#powered-by h1", {
   scrollTrigger: {
     trigger: "#powered-by h1",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
-
 gsap.from("#powered-by p", {
-  duration: .5,
+  duration: 0.5,
   //y: "-10rem",
   filter: "blur(10px)",
   opacity: 0,
@@ -600,7 +617,7 @@ gsap.from("#powered-by p", {
   scrollTrigger: {
     trigger: "#powered-by h1",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -613,7 +630,7 @@ gsap.from("#powered-by svg", {
   scrollTrigger: {
     trigger: "#powered-by svg",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -643,7 +660,7 @@ gsap.from("#support", {
   scrollTrigger: {
     trigger: "#support",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -673,7 +690,7 @@ gsap.from("#dev", {
   scrollTrigger: {
     trigger: "#dev",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -689,7 +706,7 @@ gsap.from("#dev .col:nth-child(1)", {
   scrollTrigger: {
     trigger: "#dev",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -699,13 +716,13 @@ gsap.from("#dev .col:nth-child(2)", {
   scale: 0.5,
   //rotateX: 15,
   opacity: 0,
-  delay: .75,
+  delay: 0.75,
   //outline: "1px solid rgba(255,255,255,1)",
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#dev",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
@@ -735,7 +752,7 @@ gsap.from("#community", {
   scrollTrigger: {
     trigger: "#community",
     start: "top center", // "triggerElement page"
-    toggleActions: defaultActions
+    toggleActions: defaultActions,
   },
 });
 
