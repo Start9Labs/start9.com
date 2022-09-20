@@ -79,6 +79,7 @@ function openMenu(e) {
   gsap.to(openedMenuArray, { x: "0", opacity: 1, width: "auto" });
   gsap.to(closedMenuArray, { x: "3rem", opacity: 0, width: 0 });
   gsap.to("html", { overflow: "hidden" });
+  document.querySelector('html').classList.add("menu-is-open");
 }
 function closeMenu(e) {
   e.preventDefault();
@@ -87,6 +88,7 @@ function closeMenu(e) {
   gsap.to(closedMenuArray, { x: "0", opacity: 1, width: "auto" });
   gsap.to(openedMenuArray, { x: "3rem", opacity: 0, width: 0 });
   gsap.to("html", { overflow: "overlay" });
+  document.querySelector('html').classList.remove("menu-is-open");
 }
 
 //////////////////////////////////////////

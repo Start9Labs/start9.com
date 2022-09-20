@@ -1,9 +1,16 @@
+@use 'community';
+
 main {
   margin-top: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: clip;
+  background-color: #333;
+}
+
+#menu{
+  box-shadow: inset 0 -5rem 5rem -2rem rgb(0 0 0 / 40%);
 }
 
 .header__logo {
@@ -102,10 +109,26 @@ section#virtues {
     align-items: flex-start;
   }
 }
+  #logo{
+    margin-bottom: -6rem;
+    h1 { font-size: 5rem; }
+  }
 
 #hero-image img {
   margin-top: 0;
-  width: 28rem;
+  width: 25rem;
+
+}
+
+.hero--about{
+  #hero-image img {
+    margin-top: 0;
+    width: 28rem;
+  }
+  #logo{
+    margin-bottom: 0;
+    h1 { font-size: 4.2rem; }
+  }
 }
 
 h1 {
@@ -119,6 +142,7 @@ h2 {
   font-family: var(--f-hero);
   font-size: 3.7rem;
   text-align: center;
+  line-height: 1;
 }
 
 section#blurb h2 {
@@ -178,6 +202,12 @@ p {
 
 /* about */
 
+section#origin{
+  .section__image img{
+    transform: rotate(-3deg);
+  }
+}
+
 .members {
   display: flex;
   flex-wrap: wrap;
@@ -190,7 +220,7 @@ p {
       border-radius: 100%;
       width: 10rem;
       height: 10rem;
-      border: 1px solid var(--c-text-primary);
+      box-shadow: 0 3rem 2rem 0rem rgb(0 0 0 / 40%);
     }
     p {
       font-size: .8rem;
@@ -231,4 +261,44 @@ ol ol, ul ol {
   list-style-type: lower-latin;
   margin-left: 15px; 
 }
+}
+
+section#news{
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  li a{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+    outline: 1px solid rgb(255 255 255 / 0%);
+    outline-offset: .5rem;
+    transition: var(--t-simple);
+    &:hover{
+      outline: 1px solid rgb(255 255 255 / 100%);
+      outline-offset: 2rem;
+    }
+  }
+  h3{
+    text-transform: unset;
+    color: var(--c-text-primary);
+  }
+  .creator{
+    border-radius: 999px;
+    background-color: var(--c-text-accent);
+    color: var(--c-text-primary);
+    padding: .2em .5em;
+    font-size: .8rem;
+    font-weight: 500;
+    opacity: .6;
+  }
+  .twitter-text{
+    color: var(--c-text-primary);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin: 0;
+  }
 }

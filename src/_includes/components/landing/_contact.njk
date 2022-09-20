@@ -1,23 +1,32 @@
-<input type="email" name="" id="" placeholder="email address">
-    <ul
-        class="community__icons">
-        {# {% for group in menu.filter(e => e.slug == 'contact') %}
-                    {% for item in group.items|sort(false, false, 'order') %}
-                    <li>
-                        <a {{'class=' + item.class + '' if item.class}} {{'target=' + item.target + '' if item.target}} href="/{{item.url}}">{{item.name}}</a>
-                    </li>
-                    {% endfor %}
-                {% endfor %} #}
-        <li>
-            <a target="_blank" href="https://matrix.to/#/!lMnRwPWnyQvOfAoEnD:matrix.start9labs.com">{% include "components/svg/matrix.svg" %}</a>
-        </li>
-        <li>
-            <a target="_blank" href="https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q">{% include "components/svg/youtube.svg" %}</a>
-        </li>
-        <li>
-            <a target="_blank" href="https://t.me/start9_labs">{% include "components/svg/telegram.svg" %}</a>
-        </li>
-        <li>
-            <a target="_blank" href="https://twitter.com/start9labs">{% include "components/svg/twitter.svg" %}</a>
-        </li>
-    </ul>
+<form action="">
+    <input type="email" name="" id="" placeholder="email address"/>
+    <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        {# <path stroke="none" d="M0 0h24v24H0z" fill="none"/> #}
+        <line x1="10" y1="14" x2="21" y2="3" vector-effect="non-scaling-stroke" />
+        <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" vector-effect="non-scaling-stroke"/>
+        </svg>
+    </button>
+</form>
+<ul
+    class="community__icons">
+    {# {% for group in menu.filter(e => e.slug == 'contact') %}
+                        {% for item in group.items|sort(false, false, 'order') %}
+                        <li>
+                            <a {{'class=' + item.class + '' if item.class}} {{'target=' + item.target + '' if item.target}} href="/{{item.url}}">{{item.name}}</a>
+                        </li>
+                        {% endfor %}
+                    {% endfor %} #}
+    <li>
+        <a target="_blank" href="https://matrix.to/#/!lMnRwPWnyQvOfAoEnD:matrix.start9labs.com">{% include "components/svg/matrix.svg" %}</a>
+    </li>
+    <li>
+        <a target="_blank" href="https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q">{% include "components/svg/youtube.svg" %}</a>
+    </li>
+    <li>
+        <a target="_blank" href="https://t.me/start9_labs">{% include "components/svg/telegram.svg" %}</a>
+    </li>
+    <li>
+        <a target="_blank" href="https://twitter.com/start9labs">{% include "components/svg/twitter.svg" %}</a>
+    </li>
+</ul>

@@ -1,13 +1,22 @@
-#community {
+section#community {
   display: flex;
   flex-direction: column;
   align-items: center;
   //min-height: calc(100vh - 2 * var(--section-padding));
   margin-bottom: 12rem;
+  --width: calc(31ch - 5rem);
+
+  h1{
+    margin-bottom: 6rem;
+  }
+
+  form{
+    position: relative;
+  }
 
   input[type="email"] {
-    width: 31ch;
-    background: transparent;
+    width: var(--width);
+    background-color: transparent;
     border: 0;
     border-bottom: 1px dotted var(--c-line-primary);
     padding: 0.7em 1em;
@@ -15,13 +24,48 @@
     font-family: var(--f-button);
     font-weight: 100;
     color: var(--c-text-primary);
-    margin-top: 7rem;
+    transition: var(--t-simple);
+    &:focus{
+      background-color: rgba(255,255,255,.1);
+    }
+    &:focus-visible{
+      outline: none;
+    }
+    &:placeholder-shown, &:invalid{
+      &+button {
+        right: 0;
+        opacity: 0;
+      }
+    }
+  }
+  button[type='submit']{
+    transition: var(--t-simple);
+    height: 100%;
+    width: 5rem;
+    position: absolute;
+    border: 0;
+    background-color: var(--c-text-accent);
+    cursor: pointer;
+    right: -5rem;
+    opacity: 1;
+    svg{
+      transition: var(--t-simple);
+      width:70%;
+      path, line{
+        stroke: var(--c-line-primary);
+      }
+    }
+    &:hover{
+      svg{
+        transform: translateX(-0.4rem) rotate(45deg) scale(1.2);
+      }
+    }
   }
 
   .community__icons {
     display: flex;
     justify-content: space-between;
-    width: 31ch;
+    width: var(--width);
     font-size: 2rem;
     font-family: var(--f-button);
     align-items: center;

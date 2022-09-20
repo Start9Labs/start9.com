@@ -73,6 +73,14 @@ section#powered-by {
       background-color: var(--c-text-accent);
       border-radius: 999px;
       padding: .15em .6em;
+      transition: var(--t-simple);
+    }
+    &:hover{
+      transform: scale(1.05);
+      span{
+        background-color: var(--c-text-primary);
+        color: var(--c-text-accent);
+      }
     }
   }
 }

@@ -73,6 +73,12 @@ html {
   ::-webkit-scrollbar-thumb:hover {
     background: var(--c-1);
   }
+
+  &.menu-is-open{
+    .header__logo{
+        opacity: 0 !important;
+    }
+  }
 }
 
 body{
