@@ -81,7 +81,9 @@ section {
 }
 
 .section--bold{
-  background-color: rgba(239,75,99,0.2);
+  //background-color: rgba(239,75,99,0.2);
+  background-color: rgba(255,255,255,0.8);
+  --c-text-primary: black;
   backdrop-filter: blur(1rem);
 }
 
@@ -90,7 +92,7 @@ section {
 .line svg{
   width: calc(100vw - (2 * 6rem));
   max-width: 50vw;
-  max-height: 75vh;
+  max-height: 60vh;
 }
 
 nav {
@@ -120,7 +122,7 @@ nav {
 
 h1 {
   font-family: var(--f-hero);
-  font-size: min(5rem,171px);
+  font-size: min(4.5rem,171px);
   text-transform: uppercase;
   line-height: 1;
   color: var(--c-text-primary);
@@ -287,3 +289,62 @@ a.btn {
   }
 }
 
+
+
+$pastels: (red, pink) (blue, purple) (green, yellow)
+  (#a1c4fd, #c2e9fb) (#f6d365, #fda085) (#ffecd2, #fcb69f);
+$cube-edge: 4em;
+
+body {
+  margin: 0;
+  height: 100vh;
+  // perspective: 25em; maybe move from main.css?
+  // background-color: linear-gradient();
+}
+
+[class*="cube"] {
+  position: absolute;
+}
+
+.cube {
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  font-size: 8vmin;
+  animation: ani 8s ease-in-out infinite;
+
+  &__face {
+    margin: -0.5 * $cube-edge;
+    width: $cube-edge;
+    height: $cube-edge;
+    backface-visibility: hidden;
+    --i: 0;
+    --j: 1;
+    transform: rotate3d(var(--i), var(--j), 0, var(--a))
+      translateZ(0.5 * $cube-edge);
+    // interpolate because Sass apparently has issues with this
+    background: #{"linear-gradient(var(--ga), var(--gs))"};
+
+    &:nth-child(n + 5) {
+      --i: 1;
+      --j: 0;
+    }
+
+    @for $f from 0 to 6 {
+      &:nth-child(#{$f + 1}) {
+        --a: if($f < 4, $f, pow(-1, $f)) * 90deg;
+        --ga: random(360) * 1deg;
+        --gs: nth($pastels, $f + 1);
+      }
+    }
+  }
+}
+
+@keyframes ani {
+  from {
+    transform: rotateY(2turn) rotateX(2turn);
+  }
+  to {
+    transform: rotateY(1turn) rotateX(1turn);
+  }
+}

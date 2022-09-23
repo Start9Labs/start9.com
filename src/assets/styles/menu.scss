@@ -51,7 +51,7 @@
         font-size: 1.9rem;
         line-height: 1.5;
         font-weight: 100;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         letter-spacing: .1em;
         color: var(--c-text-primary);
         position: relative;
@@ -65,7 +65,8 @@
             transition: var(--t-simple);
             display: inline-block;   
             width:0;
-            height: 85%;
+            height: 84%;
+            top: 6%;
             left: 50%;
             opacity: 0;
         }
@@ -88,6 +89,7 @@
                 background-color: var(--c-text-accent);
                 width: 110%;
                 left: -5%;
+                top: 6%;
                 display: inline-block; 
                 height: 85%; 
                 position: absolute;

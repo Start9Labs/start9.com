@@ -3,7 +3,7 @@ section#products {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0rem;
+  gap: 3rem;
   
   .subsection {
     transform-style: preserve-3d;
@@ -51,12 +51,12 @@ section#products {
       }
     }
     &:first-of-type a {
-      align-items: flex-end;
+      align-items: center;
       .heading {
-        left: 6rem;
-        top: 6rem;
-        position: absolute;
-        align-self: flex-end;
+        //left: 6rem;
+        //top: 6rem;
+        //position: absolute;
+        align-self: center;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -73,13 +73,13 @@ section#products {
     &:last-of-type a {
       align-items: flex-start;
       .heading {
-        display: inline-block;
-        right: 6rem;
-        top: 6rem;
-        position: absolute;
+        // right: 6rem;
+        // top: 6rem;
+        // position: absolute;
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-self: center;
       }
       h1{
         letter-spacing: .5rem;
@@ -94,14 +94,14 @@ section#products {
       }
     }
   }
-  &::after{
-    content: '';
-    left:0;
-    right:0;
-    display: block;
-    background-color: blue;
-    transform: rotateX(90deg);
-    height: 4rem;
-    z-index: -1;
-  }
+  // &::after{
+  //   content: '';
+  //   left:0;
+  //   right:0;
+  //   display: block;
+  //   background-color: blue;
+  //   transform: rotateX(90deg);
+  //   height: 4rem;
+  //   z-index: -1;
+  // }
 }
