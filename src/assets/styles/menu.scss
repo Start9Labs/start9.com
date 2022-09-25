@@ -10,6 +10,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: 100vh;
         .header{
             align-self: flex-start;
             margin: 5rem 0 0 5rem;
@@ -51,7 +52,7 @@
         font-size: 1.9rem;
         line-height: 1.5;
         font-weight: 100;
-        //text-transform: uppercase;
+        text-transform: uppercase;
         letter-spacing: .1em;
         color: var(--c-text-primary);
         position: relative;

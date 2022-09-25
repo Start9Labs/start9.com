@@ -167,3 +167,12 @@ section#bitcoin {
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .service-icon--bitcoind {
+    width: 11rem !important;
+  }
+  .service-icon--c-lightning {
+    width: 11rem !important;
+  }
+}

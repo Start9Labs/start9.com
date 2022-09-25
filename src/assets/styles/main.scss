@@ -51,6 +51,7 @@ html {
     color: var(--c-text-primary);
     font-family: var(--f-accent);
     font-weight: 200;
+    overflow: scroll;
     overflow: overlay;
     display: flex;
 
@@ -76,7 +77,8 @@ html {
 
   &.menu-is-open{
     .header__logo{
-        opacity: 0 !important;
+        opacity: 1 !important;
+        filter: blur(0px) !important;
     }
   }
 }

@@ -87,6 +87,7 @@ function closeMenu(e) {
   gsap.to("main", { y: "0vh" });
   gsap.to(closedMenuArray, { x: "0", opacity: 1, width: "auto" });
   gsap.to(openedMenuArray, { x: "3rem", opacity: 0, width: 0 });
+  gsap.to("html", { overflow: "scroll" });
   gsap.to("html", { overflow: "overlay" });
   document.querySelector('html').classList.remove("menu-is-open");
 }
@@ -164,11 +165,23 @@ gsap.from("#hero-to-pitch path:first-child", {
 //////////////////////////////////////////
 // PITCH
 
-gsap.from("#pitch", {
+gsap.from("#pitch h1, #pitch p", {
   duration: 0.5,
   y: "5rem",
   scale: 0.9,
   opacity: 0,
+  //delay: 0.75,
+  scrollTrigger: {
+    trigger: "#pitch",
+    start: "top 75%", // "triggerElement page"
+    toggleActions: defaultActions,
+  },
+});
+
+gsap.from("#pitch a", {
+  duration: 0.5,
+  opacity: 0,
+  filter: "blur(10px)",
   //delay: 0.75,
   scrollTrigger: {
     trigger: "#pitch",
@@ -333,52 +346,64 @@ function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-bitcoinServices.forEach((service) => {
-  const serviceElement = document.querySelector(".service-icon--" + service);
-  const bitcoinSectionElement = document.querySelector("#bitcoin");
-  const upOrDown = getRandomInt(0, 1);
-  const bitcoinHeight = bitcoinSectionElement.clientHeight;
+positionServiceIcons();
 
-  serviceElement
-    ? (serviceElement.style.left = getRandomInt(5, 90) + "vw")
-    : "";
+function positionServiceIcons() {
+  bitcoinServices.forEach((service) => {
+    const serviceElement = document.querySelector(".service-icon--" + service);
+    const bitcoinSectionElement = document.querySelector("#bitcoin");
+    const upOrDown = getRandomInt(0, 1);
+    const bitcoinHeight = bitcoinSectionElement.clientHeight;
 
-  if (upOrDown) {
-    gsap.set(".service-icon--" + service, {
-      y: getRandomInt(0, bitcoinHeight / 2) + "px",
-    });
-    gsap.to(".service-icon--" + service, {
-      y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
-      //x: getRandomInt(0, 100) + "vw",
-      ease: "in",
-      delay: getRandomNumber(0, 1),
-      scrollTrigger: {
-        trigger: "#bitcoin",
-        scrub: true,
-        start: "top 25%", // "triggerElement page"
-        end: "90% center", // "triggerElement page"
-        //markers: { startColor: "lime", endColor: "lime" },
-      },
-    });
-  } else {
-    gsap.set(".service-icon--" + service, {
-      y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
-    });
-    gsap.to(".service-icon--" + service, {
-      y: getRandomInt(0, bitcoinHeight / 2) + "px",
-      //x: getRandomInt(0, 100) + "vw",
-      ease: "in",
-      delay: getRandomNumber(0, 1),
-      scrollTrigger: {
-        trigger: "#bitcoin",
-        scrub: true,
-        start: "top bottom", // "triggerElement page"
-        end: "90% center", // "triggerElement page"
-        //markers: { startColor: "orange", endColor: "orange" },
-      },
-    });
-  }
-});
+    serviceElement
+      ? (serviceElement.style.left = getRandomInt(5, 90) + "vw")
+      : "";
+
+    if (upOrDown) {
+      gsap.set(".service-icon--" + service, {
+        y: getRandomInt(0, bitcoinHeight / 2) + "px",
+      });
+      gsap.to(".service-icon--" + service, {
+        y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
+        //x: getRandomInt(0, 100) + "vw",
+        ease: "in",
+        delay: getRandomNumber(0, 1),
+        scrollTrigger: {
+          trigger: "#bitcoin",
+          scrub: true,
+          start: "top 25%",
+          end: "90% center", // "triggerElement page"
+          //markers: { startColor: "lime", endColor: "lime" },
+        },
+      });
+    } else {
+      gsap.set(".service-icon--" + service, {
+        y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
+      });
+      gsap.to(".service-icon--" + service, {
+        y: getRandomInt(0, bitcoinHeight / 2) + "px",
+        //x: getRandomInt(0, 100) + "vw",
+        ease: "in",
+        delay: getRandomNumber(0, 1),
+        scrollTrigger: {
+          trigger: "#bitcoin",
+          scrub: true,
+          start: "top bottom",
+          end: "90% center",
+        },
+      });
+    }
+  });
+}
+
+function onResizeComplete() {
+  positionServiceIcons();
+};
+var resizeTimeout = setTimeout(onResizeComplete, 400);
+window.onresize = function() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(onResizeComplete, 400);
+};
 
 gsap.from("#bitcoin-to-be path:first-child", {
   drawSVG: 0,
@@ -680,7 +705,7 @@ gsap.from("#support-to-dev path", {
 //////////////////////////////////////////
 // DEV
 
-gsap.from("#dev", {
+gsap.from("#dev h1", {
   duration: 0.5,
   //y: "5rem",
   scale: 0.8,
