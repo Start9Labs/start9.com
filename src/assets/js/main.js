@@ -1,6 +1,3 @@
-gsap.registerPlugin(DrawSVGPlugin);
-gsap.registerPlugin(CustomEase);
-
 var bodyRect = document.body.getBoundingClientRect();
 
 const sections = [
@@ -61,55 +58,9 @@ const defaultActions = "play none none none"; //onEnter, onLeave, onEnterBack, a
 //   });
 // }, 2000);
 
-//////////////////////////////////////////
-// MENU
 
-let menuOpen = document.getElementById("menu-open"),
-  menuClose = document.getElementById("menu-close"),
-  openedMenuArray = gsap.utils.toArray(".opened-menu"),
-  closedMenuArray = gsap.utils.toArray(".closed-menu");
 
-menuOpen.addEventListener("click", (e) => openMenu(e));
-menuClose.addEventListener("click", (e) => closeMenu(e));
 
-function openMenu(e) {
-  e.preventDefault();
-  gsap.to("#menu", { y: "0vh" });
-  gsap.to("main", { y: "100vh" });
-  gsap.to(openedMenuArray, { x: "0", opacity: 1, width: "auto" });
-  gsap.to(closedMenuArray, { x: "3rem", opacity: 0, width: 0 });
-  gsap.to("html", { overflow: "hidden" });
-  document.querySelector('html').classList.add("menu-is-open");
-}
-function closeMenu(e) {
-  e.preventDefault();
-  gsap.to("#menu", { y: "-100vh" });
-  gsap.to("main", { y: "0vh" });
-  gsap.to(closedMenuArray, { x: "0", opacity: 1, width: "auto" });
-  gsap.to(openedMenuArray, { x: "3rem", opacity: 0, width: 0 });
-  gsap.to("html", { overflow: "scroll" });
-  gsap.to("html", { overflow: "overlay" });
-  document.querySelector('html').classList.remove("menu-is-open");
-}
-
-//////////////////////////////////////////
-// HERO
-
-gsap.from("#hero-image", {
-  duration: 1,
-  //y: "-10rem",
-  scale: 0.95,
-  opacity: 0,
-  filter: "blur(10px)",
-  delay: 0.5,
-});
-gsap.from("#logo", {
-  duration: 0.5,
-  y: "-5rem",
-  opacity: 0,
-  delay: 1.25,
-  //ease: "in-out"
-});
 //gsap.config({trialWarn: false});
 
 // create the smooth scroller FIRST!
@@ -123,32 +74,7 @@ gsap.from("#logo", {
 // backdrop-filter: blur(10px);
 //background-color: rgba(0,0,0,0.1);
 
-//////////////////////////////////////////
-// HEADER
 
-gsap.to("header", {
-  duration: 0.5,
-  backgroundColor: "rgba(0,0,0,0.1)",
-  backdropFilter: "blur(10px)",
-  scrollTrigger: {
-    trigger: "#hero-image",
-    scrub: true,
-    start: "center top", // "triggerElement page"
-    end: "bottom top", // "triggerElement page"
-  },
-});
-
-gsap.to(".header__logo", {
-  duration: 0.5,
-  opacity: "1",
-  filter: "blur(0px)",
-  scrollTrigger: {
-    trigger: "#hero-image",
-    scrub: true,
-    start: "center top", // "triggerElement page"
-    end: "bottom top", // "triggerElement page"
-  },
-});
 
 gsap.from("#hero-to-pitch path:first-child", {
   drawSVG: 0,
@@ -398,7 +324,7 @@ function positionServiceIcons() {
 
 function onResizeComplete() {
   positionServiceIcons();
-};
+}
 var resizeTimeout = setTimeout(onResizeComplete, 400);
 window.onresize = function() {
   clearTimeout(resizeTimeout);
@@ -457,23 +383,37 @@ gsap.from("#be-your-own #ticker", {
   },
 });
 
-let pseudoserviceArray = gsap.utils.toArray(".pseudoservice"),
-  next = 3, // time to change
+let pseudoserviceArray, next, itemHeight, listHeight, windowHeight, kerplunk, kerplunk2;
+
+pseudoserviceArray = gsap.utils.toArray(".pseudoservice");
+
+next = 4;
+
+function initializeSizes() {
+
   itemHeight = document
     .querySelector(".pseudoservice")
-    .getBoundingClientRect().height,
+    .getBoundingClientRect().height;
+  
   listHeight = document
     .querySelector(".pseudoservices")
-    .getBoundingClientRect().height,
-  windowHeight = document.getElementById("ticker__window").clientHeight,
-  kerplunk = CustomEase.create(
-    "custom",
-    "M0,0 C0.126,0.382 0.066,0.863 0.198,1.036 0.25,1.104 0.264,0.982 0.326,0.982 0.344,0.982 0.489,0.998 0.516,1 0.65,1.007 0.863,1 1,1 "
-  ),
-  kerplunk2 = CustomEase.create(
-    "custom",
-    "M0,0 C0.126,0.382 0.178,0.802 0.288,1.052 0.303,1.088 0.372,0.99 0.434,0.99 0.502,0.99 0.497,1 0.524,1 0.664,1 0.863,1 1,1 "
-  );
+    .getBoundingClientRect().height;
+  
+  windowHeight = document.getElementById("ticker__window").clientHeight;
+
+}
+
+initializeSizes();
+
+kerplunk = CustomEase.create(
+  "custom",
+  "M0,0 C0.126,0.382 0.066,0.863 0.198,1.036 0.25,1.104 0.264,0.982 0.326,0.982 0.344,0.982 0.489,0.998 0.516,1 0.65,1.007 0.863,1 1,1 "
+);
+
+kerplunk2 = CustomEase.create(
+  "custom",
+  "M0,0 C0.126,0.382 0.178,0.802 0.288,1.052 0.303,1.088 0.372,0.99 0.434,0.99 0.502,0.99 0.497,1 0.524,1 0.664,1 0.863,1 1,1 "
+);
 
 function crossfade() {
   var action = gsap
@@ -495,10 +435,10 @@ function crossfade() {
 
   var thisPseudoservice = pseudoserviceArray[2].innerHTML,
     thisElement = document.querySelector(
-      ".slides-container--" + thisPseudoservice.toLowerCase()
+      ".service-container--" + thisPseudoservice.toLowerCase().replace(' ','-')
     );
 
-  var slidesContainerArray = document.querySelectorAll(".slides-container");
+  var slidesContainerArray = document.querySelectorAll(".service-container");
   slidesContainerArray.forEach((thisContainer) => {
     thisContainer.style.display = "none";
   });
@@ -511,101 +451,104 @@ function crossfade() {
 // start the crossfade after next = 3 sec
 gsap.delayedCall(next, crossfade);
 
-document.querySelector(".services").addEventListener("mouseenter", pauseThunk);
-// TODO: pause not working - Id not found
-function pauseThunk() {
-  console.log("asfd");
-  gsap.getById("thunk").kill();
-}
+// document.querySelector(".services").addEventListener("mouseenter", pauseThunk);
+// // TODO: pause not working - Id not found
+// function pauseThunk() {
+//   console.log("asfd");
+//   gsap.getById("thunk").kill();
+// }
 
 // CAROUSEL
 
-var slideDelay = 1.5;
-var slideDuration = 0.3;
-var wrap = true;
+// var slideDelay = 1.5;
+// var slideDuration = 0.3;
+// var wrap = true;
 
-var slides = document.querySelectorAll(".slide");
-var prevButton = document.querySelector("#prevButton");
-var nextButton = document.querySelector("#nextButton");
-var progressWrap = gsap.utils.wrap(0, 1);
+// var slides = document.querySelectorAll(".slide");
+// var prevButton = document.querySelector("#prevButton");
+// var nextButton = document.querySelector("#nextButton");
+// var progressWrap = gsap.utils.wrap(0, 1);
 
-var numSlides = slides.length;
+// var numSlides = slides.length;
 
-gsap.set(slides, {
-  xPercent: (i) => i * 100,
-});
+// gsap.set(slides, {
+//   xPercent: (i) => i * 100,
+// });
 
-var wrapX = gsap.utils.wrap(-100, (numSlides - 1) * 100);
+// var wrapX = gsap.utils.wrap(-100, (numSlides - 1) * 100);
 
-var animation = gsap.to(slides, {
-  xPercent: "+=" + numSlides * 100,
-  duration: 1,
-  ease: "none",
-  paused: true,
-  repeat: -1,
-  modifiers: {
-    xPercent: wrapX,
-  },
-});
+// var animation = gsap.to(slides, {
+//   xPercent: "+=" + numSlides * 100,
+//   duration: 1,
+//   ease: "none",
+//   paused: true,
+//   repeat: -1,
+//   modifiers: {
+//     xPercent: wrapX,
+//   },
+// });
 
-var proxy = document.createElement("div");
-var slideAnimation = gsap.to({}, {});
-var slideWidth = 0;
-var wrapWidth = 0;
+// var proxy = document.createElement("div");
+// var slideAnimation = gsap.to({}, {});
+// var slideWidth = 0;
+// var wrapWidth = 0;
 
 resize();
 
 window.addEventListener("resize", resize);
 
-prevButton.addEventListener("click", function () {
-  animateSlides(1);
-});
+// prevButton.addEventListener("click", function () {
+//   animateSlides(1);
+// });
 
-nextButton.addEventListener("click", function () {
-  animateSlides(-1);
-});
+// nextButton.addEventListener("click", function () {
+//   animateSlides(-1);
+// });
 
 // function updateDraggable() {
 //   slideAnimation.kill();
 //   this.update();
 // }
 
-function animateSlides(direction) {
-  slideAnimation.kill();
-  var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
+// function animateSlides(direction) {
+//   slideAnimation.kill();
+//   var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
 
-  slideAnimation = gsap.to(proxy, {
-    x: x,
-    duration: slideDuration,
-    onUpdate: updateProgress,
-  });
-}
+//   slideAnimation = gsap.to(proxy, {
+//     x: x,
+//     duration: slideDuration,
+//     onUpdate: updateProgress,
+//   });
+// }
 
-function updateProgress() {
-  animation.progress(progressWrap(gsap.getProperty(proxy, "x") / wrapWidth));
-}
+// function updateProgress() {
+//   animation.progress(progressWrap(gsap.getProperty(proxy, "x") / wrapWidth));
+// }
 
-function snapX(value) {
-  let snapped = gsap.utils.snap(slideWidth, value);
-  return wrap
-    ? snapped
-    : gsap.utils.clamp(-slideWidth * (numSlides - 1), 0, snapped);
-}
+// function snapX(value) {
+//   let snapped = gsap.utils.snap(slideWidth, value);
+//   return wrap
+//     ? snapped
+//     : gsap.utils.clamp(-slideWidth * (numSlides - 1), 0, snapped);
+// }
 
 function resize() {
-  var norm = gsap.getProperty(proxy, "x") / wrapWidth || 0;
+  initializeSizes();
+  
+  // var norm = gsap.getProperty(proxy, "x") / wrapWidth || 0;
 
-  slideWidth = slides[0].offsetWidth;
-  wrapWidth = slideWidth * numSlides;
+  // slideWidth = slides[0].offsetWidth;
+  // wrapWidth = slideWidth * numSlides;
 
-  wrap; // || draggable.applyBounds({minX: -slideWidth * (numSlides - 1), maxX: 0});
+  // wrap; // || draggable.applyBounds({minX: -slideWidth * (numSlides - 1), maxX: 0});
 
-  gsap.set(proxy, {
-    x: norm * wrapWidth,
-  });
+  // gsap.set(proxy, {
+  //   x: norm * wrapWidth,
+  // });
 
-  animateSlides(0);
-  slideAnimation.progress(1);
+  // animateSlides(0);
+  // slideAnimation.progress(1);
+
 }
 
 gsap.from("#be-to-powered path", {

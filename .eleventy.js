@@ -19,10 +19,10 @@ module.exports = function (eleventyConfig) {
   //plugins
   eleventyConfig.addPlugin(eleventySass);
 
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
-    imgSelector: 'img:not(.unlazy)', // custom image selector
-    //cacheFile: '', // don't cache results to a file
-  });
+  // eleventyConfig.addPlugin(lazyImagesPlugin, {
+  //   imgSelector: 'img:not(.unlazy)', // custom image selector
+  //   //cacheFile: '', // don't cache results to a file
+  // });
 
   return {
     dir: { input: "src", output: "_site", data: "_data" },

@@ -39,4 +39,15 @@ section#infographics{
       }
     }
   }
+
+  .image-with-shadow{
+    width: 100%;
+    z-index: 1;
+    .img-shadow{
+      width: 100%;
+      svg{
+        width: 100%;
+      }
+    }
+  }
 }

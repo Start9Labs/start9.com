@@ -1,54 +1,67 @@
 [
     {
       "name": "Whatsapp",
+      "slug": "whatsapp",
       "url": "https://start9.com/marketplace/175"
     },
     {
       "name": "Twitter",
+      "slug": "twitter",
       "url": "https://start9.com/marketplace/175"
     },
     {
       "name": "Lastpass",
+      "slug": "lastpass",
       "url": "https://start9.com/marketplace/199"
     },
     {
       "name": "bank",
+      "slug": "bank",
       "url": "https://start9.com/marketplace/148"
     },
     {
       "name": "Github",
+      "slug": "github",
       "url": "https://start9.com/marketplace/126"
     },
     {
       "name": "Google Drive",
+      "slug": "google-drive",
       "url": "https://start9.com/marketplace/186"
     },
     {
       "name": "iPhotos",
+      "slug": "iphotos",
       "url": "https://start9.com/marketplace/119"
     },
     {
       "name": "Coinbase",
+      "slug": "coinbase",
       "url": "https://start9.com/marketplace/132"
     },
     {
       "name": "GoFundMe",
+      "slug": "gofundme",
       "url": "https://start9.com/marketplace/165"
     },
     {
       "name": "PayPal",
+      "slug": "paypal",
       "url": "https://start9.com/marketplace/165"
     },
     {
       "name": "iMessage",
+      "slug": "imessage",
       "url": "https://start9.com/marketplace/165"
     },
     {
       "name": "KeePass",
+      "slug": "keepass",
       "url": "https://start9.com/marketplace/165"
     },
     {
       "name": "Kickstarter",
+      "slug": "kickstarter",
       "url": "https://start9.com/marketplace/165"
     }
   ]

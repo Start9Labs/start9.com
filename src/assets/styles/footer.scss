@@ -7,8 +7,8 @@ footer{
         display: flex;
         .header{
             align-self: flex-start;
-            margin: 5rem 0 0 5rem;
-            img{
+            margin: 1.8rem 0 0 5rem;
+            svg{
                 width: 12rem;
             }
         }
@@ -105,17 +105,26 @@ footer{
   }
 
   @media only screen and (max-width: 650px) {
-    footer .groups li > a {
-      font-size: 3.5vmin;
-    }
-    footer .groups{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
 
-    footer .groups li {
-        border: 0 !important;
+    footer .footer__content {
+        flex-direction: column;
+        .header{
+            margin: 5rem 0 2.5rem 2.5rem;
+        }
+        .groups .full {
+            grid-row: auto;
+        }
+        .groups li > a {
+            font-size: 3.5vmin;
+          }
+          .groups{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            li {
+                border: 0 !important;
+            }
+        }
     }
   }
 

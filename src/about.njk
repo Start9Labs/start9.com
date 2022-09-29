@@ -6,7 +6,7 @@ layout: layouts/peripheral.njk
 {# <script src="{{ '/assets/js/getTeam.js' | url }}"></script> #}
 <section id="hero" class="hero--about">
     <div id="hero-image">
-        <img src="../assets/images/about-hero.png" alt=""/>
+        <img src="../assets/images/about-hero.png" alt="about page hero image: a robot emerging from the embasssy" title="about page hero image: a robot emerging from the embasssy"/>
         <img class="img-shadow" src="../assets/images/about-hero.png" alt=""/>
     </div>
     <div id="logo">
@@ -49,12 +49,12 @@ layout: layouts/peripheral.njk
     <h2>mission</h2>
     <div class="section__double-image">
         <div class="section__image section__image--left">
-            <img src="../assets/images/mission1.png" alt=""/>
+            <img src="../assets/images/mission1.png" alt="mission section hero: a rocketship trail" title="mission section hero: a rocketship trail"/>
             <img class="img-shadow" src="../assets/images/mission1.png" alt=""/>
         </div>
         <h3>To eliminate the need for trusted third parties in the human/computer relationship.</h3>
         <div class="section__image section__image--right">
-            <img src="../assets/images/mission2.png" alt=""/>
+            <img src="../assets/images/mission2.png" alt="mission section hero: a rocketship with trail" title="mission section hero: a rocketship with trail"/>
             <img class="img-shadow" src="../assets/images/mission2.png" alt=""/>
         </div>
     </div>
@@ -63,7 +63,7 @@ layout: layouts/peripheral.njk
 <section id="values">
     <h2>values</h2>
     <div class="section__image">
-        <img src="../assets/images/values.png" alt=""/>
+        <img src="../assets/images/values.png" alt="values section hero: an eye with a slash through it" title="values section hero: an eye with a slash through it"/>
         <img class="img-shadow" src="../assets/images/values.png" alt=""/>
     </div>
     <p>
@@ -93,7 +93,7 @@ layout: layouts/peripheral.njk
 <section id="virtues">
     <h2>virtues</h2>
     <div class="section__image">
-        <img src="../assets/images/virtues.png" alt=""/>
+        <img src="../assets/images/virtues.png" alt="virtues section hero: a sunrise between mountains" title="virtues section hero: a sunrise between mountains"/>
         <img class="img-shadow" src="../assets/images/virtues.png" alt=""/>
     </div>
     <p>
@@ -118,7 +118,7 @@ layout: layouts/peripheral.njk
 <section id="origin">
     <h2>origin story</h2>
     <div class="section__image">
-        <img src="../assets/images/origin.png" alt=""/>
+        <img src="../assets/images/origin.png" alt="origin section hero: pikachu" title="origin section hero: pikachu"/>
         <img class="img-shadow" src="../assets/images/origin.png" alt=""/>
     </div>
     <p>
@@ -166,14 +166,14 @@ layout: layouts/peripheral.njk
 <section id="team">
     <h2>our team</h2>
     <div class="section__image">
-        <img src="../assets/images/team2.png" alt=""/>
+        <img src="../assets/images/team2.png" alt="team section hero: robots being printed" title="team section hero: robots being printed"/>
         <img class="img-shadow" src="../assets/images/team2.png" alt=""/>
     </div>
 
     <ul class="members">
         {% for member in team %}
             <li class="member">
-                <img class="member__avatar" src="{{ member.avatar_url }}" alt=""/>
+                <img class="member__avatar" src="{{ member.avatar_url }}" alt="{{ member.name }}'s avatar" title="{{ member.name }}'s avatar"/>
                 <div class="member__content">
                     <h4>{{ member.name }}</h4>
                     <h5>{{ member.position }}</h5>

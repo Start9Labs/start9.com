@@ -1,141 +1,186 @@
 [
-    {
-        "name": "Synapse",
-        "slug": "synapse",
-        "description": "Synapse is the battle-tested, reference implementation of the Matrix protocol. Matrix is a next-generation, federated, full-featured, encrypted, independent messaging system. There are no trusted third parties involved. (see matrix.org for details).",
-        "categories": ["communications"],
-        "pseudoservices": [
-            "whatsapp","imessage"
-        ]
-    },
-    {
-        "name": "Mastodon",
-        "slug": "mastodon",
-        "description": "Mastodon is a free, open-source social network server based on ActivityPub where users can follow friends and discover new ones. On Mastodon, users can publish anything they want: links, pictures, text, video. All Mastodon servers are interoperable as a federated network (users on one server can seamlessly communicate with users from another one, including non-Mastodon software that implements ActivityPub)!",
-        "categories": ["communications"],
-        "pseudoservices": [
-            "twitter"
-        ]
-    },
-    {
-        "name": "Vaultwarden",
-        "slug": "vaultwarden",
-        "description": "Vaultwarden is a lightweight and secure password manager for storing and autofilling sensitive information such as usernames and passwords, credit cards, identities, and notes. It is an alternative implementation of the Bitwarden server API written in Rust and compatible with upstream Bitwarden clients. All data is stored in an encrypted vault on your Embassy.",
-        "categories": ["data"],
-        "pseudoservices": [
-            "lastpass","keepass"
-        ]
-    },
-    {
-        "name": "Balance of Satoshis",
-        "slug": "balanceofsatoshis",
-        "description": "",
-        "categories": ["plebnet-tools"],
-        "pseudoservices": []
-    },
-    {
-        "name": "Bitcoin Core",
-        "slug": "bitcoind",
-        "description": "",
-        "categories": ["bitcoin"],
-        "pseudoservices": ["bank"]
-    },
-    {
-        "name": "Bitcoin Proxy",
-        "slug": "btc-rpc-proxy",
-        "description": "",
-        "categories": ["bitcoin"],
-        "pseudoservices": []
-    },
-    {
-        "name": "BTCPay Server",
-        "slug": "btcpayserver",
-        "description": "",
-        "categories": ["bitcoin"],
-        "pseudoservices": ["kickstarter","gofundme"]
-    },
-    {
-        "name": "Core Lightning",
-        "slug": "c-lightning",
-        "description": "",
-        "categories": ["lightning"],
-        "pseudoservices": ["paypal","coinbase"]
-    },
-    {
-        "name": "electrs",
-        "slug": "electrs",
-        "description": "",
-        "categories": ["bitcoin"],
-        "pseudoservices": []
-    },
-    {
-        "name": "lightning Jet",
-        "slug": "lightning-jet",
-        "description": "",
-        "categories": ["plebnet-tools"],
-        "pseudoservices": []
-    },
-    {
-        "name": "Lightning Network Daemon",
-        "slug": "lnd",
-        "description": "",
-        "categories": ["lightning"],
-        "pseudoservices": ["paypal","coinbase"]
-    },
-    {
-        "name": "Lightning Terminal",
-        "slug": "lightning-terminal",
-        "description": "",
-        "categories": ["lightning"],
-        "pseudoservices": []
-    },
-    {
-        "name": "LNDg",
-        "slug": "lndg",
-        "description": "",
-        "categories": ["plebnet-tools"],
-        "pseudoservices": []
-    },
-    {
-        "name": "Mempool",
-        "slug": "mempool",
-        "description": "",
-        "categories": ["bitcoin"],
-        "pseudoservices": ["bank"]
-    },
-    {
-        "name": "Ride the Lightning",
-        "slug": "ride-the-lightning",
-        "description": "",
-        "categories": ["lightning"],
-        "pseudoservices": ["paypal","coinbase"]
-    },
-    {
-        "name": "Spark Wallet",
-        "slug": "spark-wallet",
-        "description": "",
-        "categories": ["lightning"],
-        "pseudoservices": ["paypal"]
-    },
-    {
-        "name": "Specter",
-        "slug": "specter",
-        "description": "",
-        "categories": ["bitcoin"],
-        "pseudoservices": []
-    },
-    {
-        "name": "Sphinx Chat",
-        "slug": "sphinx-relay",
-        "description": "",
-        "categories": ["lightning"],
-        "pseudoservices": ["whatsapp","imessage"]
-    },
-    {
-        "name": "Thunderhub",
-        "slug": "thunderhub",
-        "description": "",
-        "categories": ["bitcoin"],
-        "pseudoservices": ["paypal","coinbase"]
-    }
+  {
+    "name": "Synapse",
+    "slug": "synapse",
+    "description": "A battle-tested implementation of the Matrix protocol, the killer of all messaging apps.",
+    "color": "#666666",
+    "categories": ["communications"],
+    "pseudoservices": ["whatsapp", "imessage"]
+  },
+  {
+    "name": "Mastodon",
+    "slug": "mastodon",
+    "description": "A free, open-source social network server",
+    "color": "#6364ff",
+    "categories": ["communications"],
+    "pseudoservices": ["twitter"]
+  },
+  {
+    "name": "Vaultwarden",
+    "slug": "vaultwarden",
+    "description": "Secure password management",
+    "color": "#175ddc",
+    "categories": ["data"],
+    "pseudoservices": ["lastpass", "keepass"]
+  },
+  {
+    "name": "Balance of Satoshis",
+    "slug": "balanceofsatoshis",
+    "description": "A tool for working with the balance of your satoshis on LND.",
+    "color": "#",
+    "categories": ["plebnet-tools"],
+    "pseudoservices": []
+  },
+  {
+    "name": "Bitcoin Core",
+    "slug": "bitcoind",
+    "description": "A Bitcoin Full Node by Bitcoin Core.",
+    "color": "#f2a900",
+    "categories": ["bitcoin"],
+    "pseudoservices": ["bank"]
+  },
+  {
+    "name": "Bitcoin Proxy",
+    "slug": "btc-rpc-proxy",
+    "description": "Super charge your Bitcoin node.",
+    "color": "#",
+    "categories": ["bitcoin"],
+    "pseudoservices": []
+  },
+  {
+    "name": "BTCPay Server",
+    "slug": "btcpayserver",
+    "description": "Bitcoin and cryptocurrency payment processor and POS system.",
+    "color": "#51b13e",
+    "categories": ["bitcoin"],
+    "pseudoservices": ["kickstarter", "gofundme"]
+  },
+  {
+    "name": "Core Lightning",
+    "slug": "c-lightning",
+    "description": "An implementation of the Lightning Network protocol by Blockstream.",
+    "color": "#ffe95f",
+    "categories": ["lightning"],
+    "pseudoservices": ["paypal", "coinbase"]
+  },
+  {
+    "name": "electrs",
+    "slug": "electrs",
+    "description": "",
+    "color": "#",
+    "categories": ["bitcoin"],
+    "pseudoservices": []
+  },
+  {
+    "name": "lightning Jet",
+    "slug": "lightning-jet",
+    "description": "",
+    "color": "#",
+    "categories": ["plebnet-tools"],
+    "pseudoservices": []
+  },
+  {
+    "name": "Lightning Network Daemon",
+    "slug": "lnd",
+    "description": "A complete implementation of a Lightning Network node by Lightning Labs.",
+    "color": "#338dc9",
+    "categories": ["lightning"],
+    "pseudoservices": ["paypal", "coinbase"]
+  },
+  {
+    "name": "Lightning Terminal",
+    "slug": "lightning-terminal",
+    "description": "Your Home for Lightning Liquidity",
+    "color": "#570380",
+    "categories": ["lightning"],
+    "pseudoservices": []
+  },
+  {
+    "name": "LNDg",
+    "slug": "lndg",
+    "description": "Powerful web interface for LND developed specifically for LND Routing Node Operators",
+    "color": "#",
+    "categories": ["plebnet-tools"],
+    "pseudoservices": []
+  },
+  {
+    "name": "Mempool",
+    "slug": "mempool",
+    "description": "A Bitcoin node and network visualizer.",
+    "color": "#8884f7",
+    "categories": ["bitcoin"],
+    "pseudoservices": ["bank"]
+  },
+  {
+    "name": "Ride the Lightning",
+    "slug": "ride-the-lightning",
+    "description": "",
+    "color": "#bdbdbd",
+    "categories": ["lightning"],
+    "pseudoservices": ["paypal", "coinbase"]
+  },
+  {
+    "name": "Spark Wallet",
+    "slug": "spark-wallet",
+    "description": "A minimalistic wallet GUI for Core Lightning (CLN).",
+    "color": "#2c384c",
+    "categories": ["lightning"],
+    "pseudoservices": ["paypal"]
+  },
+  {
+    "name": "Specter",
+    "slug": "specter",
+    "description": "A desktop GUI for Bitcoin Core optimised to work with hardware wallets.",
+    "color": "#e80001",
+    "categories": ["bitcoin"],
+    "pseudoservices": []
+  },
+  {
+    "name": "Sphinx Chat",
+    "slug": "sphinx-relay",
+    "description": "Chat on the lightning Network.",
+    "color": "#618aff",
+    "categories": ["lightning"],
+    "pseudoservices": ["whatsapp", "imessage"]
+  },
+  {
+    "name": "Thunderhub",
+    "slug": "thunderhub",
+    "description": "LND Lightning Node Manager in your Browser",
+    "color": "#2b3885",
+    "categories": ["bitcoin"],
+    "pseudoservices": ["paypal", "coinbase"]
+  },
+  {
+    "name": "Ghost",
+    "slug": "ghost",
+    "description": "A self-hosted blogging platform.",
+    "color": "#bfbfbe",
+    "categories": ["communications"],
+    "pseudoservices": ["paypal", "coinbase"]
+  },
+  {
+    "name": "Photoview",
+    "slug": "photoview",
+    "description": "An easy way to organize and share personal photos.",
+    "color": "#ff692c",
+    "categories": ["data"],
+    "pseudoservices": ["iphotos"]
+  },
+  {
+    "name": "Syncthing",
+    "slug": "syncthing",
+    "description": "Synchronizes files between devices in real time, safely protected from prying eyes.",
+    "color": "#1191ce",
+    "categories": ["data"],
+    "pseudoservices": ["google-drive"]
+  },
+  {
+    "name": "Gitea",
+    "slug": "gitea",
+    "description": "A painless, self-hosted git service.",
+    "color": "#609926",
+    "categories": ["data"],
+    "pseudoservices": ["github"]
+  }
 ]

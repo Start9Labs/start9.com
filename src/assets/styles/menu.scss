@@ -14,7 +14,7 @@
         .header{
             align-self: flex-start;
             margin: 5rem 0 0 5rem;
-            img{
+            svg{
                 width: 12rem;
             }
         }
@@ -60,6 +60,10 @@
         flex-direction: column;
         display: inline-block;
         white-space: nowrap;
+        --hover-padding: .5rem;
+        --hover-width: calc(100% + (2 * var(--hover-padding)));
+        --hover-nudge: calc(-1 * var(--hover-padding));
+
         &::after{
             content: '';
             position: absolute;
@@ -75,8 +79,8 @@
 
             &::after{
                 border: var(--b-primary);
-                width: 110%;
-                left: -5%;
+                width: var(--hover-width);
+                left: var(--hover-nudge);
                 opacity: 1;
             }
         }
@@ -88,8 +92,8 @@
                 z-index: -1;
                 //border: var(--b-primary);
                 background-color: var(--c-text-accent);
-                width: 110%;
-                left: -5%;
+                width: var(--hover-width);
+                left: var(--hover-nudge);
                 top: 6%;
                 display: inline-block; 
                 height: 85%; 

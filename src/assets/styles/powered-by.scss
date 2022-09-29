@@ -54,14 +54,14 @@ section#powered-by {
   svg {
     width: 45rem;
     max-width: calc(100vw - 12rem);
-    margin-top: 6rem;
+    //margin-top: 6rem;
   }
 
   a.source-link{
     margin-top: 5rem;
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 500;
     color: var(--c-text-bright);
     line-height: 1;
@@ -75,6 +75,7 @@ section#powered-by {
       border-radius: 999px;
       padding: .15em .6em;
       transition: var(--t-simple);
+      white-space: nowrap;
     }
     &:hover{
       transform: scale(1.05);

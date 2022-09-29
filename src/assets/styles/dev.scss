@@ -16,10 +16,11 @@
     gap:1rem;
   }
   .wrapper{
-    background-color: var(--c-1);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05));
     max-width: 35ch;
+    padding: 2rem;
     .content {
-      padding: 1rem;
+      //padding: 1rem;
       h3{
         margin: 0;
         font-family: var(--f-accent);
@@ -33,7 +34,7 @@
     }
     .footer{
       padding: 1rem;
-      background: var(--c-spacer);
+      //background: var(--c-spacer);
       display: flex;
       justify-content: center;
     }
@@ -42,7 +43,7 @@
     position: relative;
     &::before{
       position: absolute;
-      top: 17rem;
+      top: 15rem;
       left: -4rem;
     content: '';
     display: block;
@@ -58,5 +59,6 @@
   img {
     width: 20rem;
     box-shadow: 0 3rem 2rem 0rem rgb(0 0 0 / 40%);
+    border-radius: 1.3rem;
   }
 }

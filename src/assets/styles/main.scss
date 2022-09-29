@@ -104,6 +104,14 @@ a {
     transition: var(--t-simple);
 }
 
+p a {
+    color: var(--c-text-primary);
+    text-decoration: underline;
+    &:hover{
+        color: var(--c-text-accent);
+    }
+}
+
 h1, h2, h3, h4, h5 {
     margin: 0;
     text-transform: uppercase;
@@ -127,16 +135,33 @@ header{
     z-index: 2;
     top:0;
 
-    .header__logo{
+    a.header__logo{
         opacity: 0;
         filter: blur(10px);
-        margin-top: -.9rem;
-        margin-bottom: -1rem;
         margin-left: 1rem;
-        height: fit-content;
-        img{
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        svg{
            width:8rem; 
+           position: absolute;
+           path{
+        transition: var(--t-simple);
+                stroke-width: 0;
+              stroke: transparent;
+           }
         }
+        &:hover{
+            svg path{
+              stroke-width: 0.4rem;
+              stroke: var(--c-text-primary);
+            }
+            svg path:last-child{
+              stroke-width: 0.4rem;
+              stroke: var(--c-text-accent);
+            }
+          }
     }
 }
 nav{
