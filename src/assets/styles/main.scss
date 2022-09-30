@@ -47,6 +47,7 @@
 html {
     //background-color: lime;
     font-size: 2vmin;
+    font-size: max(2vmin, 10px);
     scroll-behavior: smooth;
     color: var(--c-text-primary);
     font-family: var(--f-accent);
@@ -154,11 +155,10 @@ header{
         }
         &:hover{
             svg path{
-              stroke-width: 0.4rem;
+              stroke-width: 0.2rem;
               stroke: var(--c-text-primary);
             }
             svg path:last-child{
-              stroke-width: 0.4rem;
               stroke: var(--c-text-accent);
             }
           }
@@ -243,6 +243,9 @@ nav{
 #hero-image {
     position: relative;
     display: flex;
+    scale: 0.95;
+    opacity: 0;
+    filter: blur(10px);
     img {
       width: 50rem;
       max-width: 90vw;

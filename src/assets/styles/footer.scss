@@ -1,8 +1,12 @@
 footer{
+    transform: translate(0px, 0vh);
     //position: absolute;
     padding: 0;
     font-weight: 400;
     color: gray;
+    .footer__copyright, .footer__donate{
+        font-size: max(14px, 0.8rem);
+    }
     .footer__content{
         display: flex;
         .header{
@@ -44,7 +48,7 @@ footer{
     }
     .groups li > a {
         font-family: var(--f-accent);
-        font-size: .8rem;
+        font-size: max(14px,.8rem);
         line-height: 1.5;
         font-weight: 300;
         //text-transform: uppercase;
@@ -100,7 +104,7 @@ footer{
 
 @media only screen and (max-width: 1200px) {
     footer .groups li > a {
-      font-size: 2.2vw;
+      font-size: 2vw;
     }
   }
 

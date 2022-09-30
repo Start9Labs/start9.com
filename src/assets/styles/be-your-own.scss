@@ -75,8 +75,8 @@
       align-items: center;
       height: var(--size);
       padding: var(--p);
-      background-color: #353535;
-      border-bottom: 0.5rem #353535 solid;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+      border-bottom: 0.5rem transparent solid;
     }
     #ticker__window {
       height: calc(var(--rows-height) * var(--line));
@@ -174,7 +174,7 @@
             
             &::before{
               position: absolute;
-              top: -4rem;
+              top: calc(-4rem + 2px);
               content: '';
               display: block;
               //width: 0;

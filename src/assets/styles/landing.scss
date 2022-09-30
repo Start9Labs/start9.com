@@ -353,3 +353,12 @@ body {
     transform: rotateY(1turn) rotateX(1turn);
   }
 }
+
+@media screen and (max-width: 500px) {
+  #hero{
+    margin-top: 25vh;
+  }
+  .line svg{
+    max-height: 40vh;
+  }
+}
