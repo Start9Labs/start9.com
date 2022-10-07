@@ -141,7 +141,7 @@ const buyAnchor = document.querySelector(".product--buy");
 const buyTL = gsap
   .timeline({ paused: true })
   .from(
-    "#buy-lines path:first-child",
+    "#buy-real-lines path:first-child",
     { drawSVG: 0, ease: "none", duration: 0.75 },
     0
   )
