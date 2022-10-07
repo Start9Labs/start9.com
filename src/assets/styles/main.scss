@@ -312,8 +312,8 @@ nav {
   position: relative;
 }
 
-/* (Safari + MobileSafari >= 14.6) or (All MobileSafari versions) */
-@supports  (selector(:nth-child(1 of x))) or (-webkit-touch-callout: none) {
+/* Safari 9+ */
+@supports (-webkit-hyphens:none) {
   body{
     overflow-x: hidden;
   }
