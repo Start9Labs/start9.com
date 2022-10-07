@@ -330,13 +330,13 @@ nav {
 
   @media screen and (min-width: 900px) {
     #be-your-own {
-      --rows-above: 3 !important;
+      --rows-above: 2 !important;
     }
   }
   
   @media screen and (max-width: 1300px) {
     #be-your-own {
-      --rows-above: 2 !important;
+      --rows-above: 1 !important;
     }
   }
 }
