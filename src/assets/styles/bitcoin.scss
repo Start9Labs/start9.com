@@ -103,7 +103,7 @@ section#bitcoin {
     z-index: -2;
     backdrop-filter: blur(48px);
     mix-blend-mode: soft-light;
-    box-shadow: 0 37px 50px rgb(0 0 0 / 20%);
+    box-shadow: 0 2rem 3rem var(--c-shadow-3);
 
     &.service-icon--balanceofsatoshis {
       width: 5rem;

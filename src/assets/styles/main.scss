@@ -1,279 +1,313 @@
-@use 'normalize';
-@use 'fonts';
-@use 'menu';
-@use 'footer';
+@use "normalize";
+@use "fonts";
+@use "menu";
+@use "footer";
 /* @use 'post'; */
 
-:root { 
-    background-attachment: fixed; 
-    --viewportWidth: calc(100vw - var(--scrollbarWidth));
+:root {
+  background-attachment: fixed;
+  --viewportWidth: calc(100vw - var(--scrollbarWidth));
 
-    --c-1: rgba(255,255,255);
-    --c-text-primary: var(--c-1);
-    --c-line-primary: var(--c-1);
+  --c-1: rgba(255, 255, 255);
+  --c-text-primary: var(--c-1);
+  --c-line-primary: var(--c-1);
 
-    --c-2: #EF4B63;
-    --c-text-accent: var(--c-2);
-    --c-line-accent: var(--c-2);
+  --c-2: #ef4b63;
+  --c-text-accent: var(--c-2);
+  --c-line-accent: var(--c-2);
 
-    --c-3: #333;
-    --c-bkg: var(--c-3);
+  --c-3: #333;
+  --c-bkg: var(--c-3);
 
-    --c-4: #BA1930;
-    --c-3d-shadow: var(--c-4);
+  --c-4: #ba1930;
+  --c-3d-shadow: var(--c-4);
 
-    --c-5: rgba(255,255,255,1);
-    --c-text-bright: var(--c-5);
+  --c-5: rgba(255, 255, 255, 1);
+  --c-text-bright: var(--c-5);
 
-    --c-6: rgb(194, 194, 194);
+  --c-6: rgb(194, 194, 194);
 
-    --c-spacer: rgba(255,255,255,.05);
-    --s-primary: 0.5;
-    --b-primary: 1px solid var(--c-line-primary);
-    --b-secondary: 1px dashed var(--c-line-primary);
+  --c-shadow-1: rgb(0 0 0 / 50%);
+  --c-shadow-2: rgb(0 0 0 / 40%);
+  --c-shadow-3: rgb(0 0 0 / 20%);
 
-    --f-hero: "Basis Grotesque Pro";
-    --f-bold: "Tusker Grotesk 5500";
-    --f-accent: 'Montserrat';
-    --f-accent2: 'Arkibal Mono';
-    --f-accent-bold: 'Montserrat';
-    --f-accent2-bold: 'Arkibal Mono Rg';
-    --f-copy: 'Liberation Mono';
-    --f-button: 'Basis Grotesque Mono Pro';
+  --c-spacer: rgba(255, 255, 255, 0.05);
 
-    --t-simple: all .2s ease-in-out;
+  --sh-2: 0 3rem 2rem 0rem var(--c-shadow-2);
+
+  --s-primary: 0.5;
+  --b-primary: 1px solid var(--c-line-primary);
+  --b-secondary: 1px dashed var(--c-line-primary);
+
+  --f-hero: "Basis Grotesque Pro";
+  --f-bold: "Tusker Grotesk 5500";
+  --f-accent: "Montserrat";
+  --f-accent2: "Arkibal Mono";
+  --f-accent-bold: "Montserrat";
+  --f-accent2-bold: "Arkibal Mono Rg";
+  --f-copy: "Liberation Mono";
+  --f-button: "Basis Grotesque Mono Pro";
+
+  --t-simple: all 0.2s ease-in-out;
 }
 
 html {
-    //background-color: lime;
-    font-size: 2vmin;
-    font-size: max(2vmin, 10px);
-    scroll-behavior: smooth;
-    color: var(--c-text-primary);
-    font-family: var(--f-accent);
-    font-weight: 200;
-    overflow: scroll;
-    overflow: overlay;
-    display: flex;
+  //background-color: lime;
+  font-size: 2vmin;
+  font-size: max(2vmin, 10px);
+  scroll-behavior: smooth;
+  color: var(--c-text-primary);
+  font-family: var(--f-accent);
+  font-weight: 200;
+  overflow: scroll;
+  overflow: overlay;
+  display: flex;
 
-    /* width */
-::-webkit-scrollbar {
+  /* width */
+  ::-webkit-scrollbar {
     width: 1rem;
   }
-  
+
   /* Track */
   ::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: var(--c-2);
   }
-  
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: var(--c-1);
   }
 
-  &.menu-is-open{
-    .header__logo{
-        opacity: 1 !important;
-        filter: blur(0px) !important;
+  &.menu-is-open {
+    .header__logo {
+      opacity: 1 !important;
+      filter: blur(0px) !important;
     }
   }
 }
 
-body{
-    background: #333333;
+body {
+  background: var(--c-bkg);
 }
 
 img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 
-main{
-    //transform: translateY(-100vh);
-    perspective: 1000px;
+picture {
+  display: contents;
+}
+
+picture + picture {
+  position: absolute;
+}
+
+main {
+  //transform: translateY(-100vh);
+  perspective: 1000px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  transition: var(--t-simple);
+}
+
+a.link-in-svg{
+  fill: var(--c-text-accent);
+  path{
     transition: var(--t-simple);
+  }
+  &:hover{
+    path{
+      fill: var(--c-text-primary);
+    }
+  }
 }
 
 p a {
-    color: var(--c-text-primary);
-    text-decoration: underline;
-    &:hover{
-        color: var(--c-text-accent);
-    }
+  color: var(--c-text-primary);
+  text-decoration: underline;
+  &:hover {
+    color: var(--c-text-accent);
+  }
 }
 
-h1, h2, h3, h4, h5 {
-    margin: 0;
-    text-transform: uppercase;
-    em {
-        color: var(--c-text-accent);
-        font-style: normal;
-    }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  text-transform: uppercase;
+  em {
+    color: var(--c-text-accent);
+    font-style: normal;
+  }
 }
 
 ul {
-    margin:0;
-    padding:0;
-    li{
-        list-style: none;
-    }
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
 }
 
-header{
-    position: fixed;
-    width: 100vw;
-    z-index: 2;
-    top:0;
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
 
-    a.header__logo{
-        opacity: 0;
-        filter: blur(10px);
-        margin-left: 1rem;
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        svg{
-           width:8rem; 
-           position: absolute;
-           path{
-        transition: var(--t-simple);
-                stroke-width: 0;
-              stroke: transparent;
-           }
-        }
-        &:hover{
-            svg path{
-              stroke-width: 0.2rem;
-              stroke: var(--c-text-primary);
-            }
-            svg path:last-child{
-              stroke: var(--c-text-accent);
-            }
-          }
-    }
-}
-nav{
-    --padding: 1rem;
-    //width: calc(100% - 2 * var(--padding) - 15px);
-    width: 100vw;
-    box-sizing: border-box;
-    font-family: var(--f-accent);
-    font-weight: 300;
-    line-height: 1;
-    text-transform: uppercase;
-    padding: var(--padding);
+  a.header__logo {
+    opacity: 0;
+    filter: blur(10px);
+    margin-left: 1rem;
     display: flex;
-    justify-content: space-between;
-
-    ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 1rem;
-        li {
-            list-style: none;
-            a {
-                color: var(--c-text-bright);
-                font-size: 1.5rem;
-                padding: 0em 0.5em 0em 0.5em;
-
-                path {
-                    fill: var(--c-text-bright);
-                    transition: var(--t-simple);
-                }
-
-                &.em{
-                    background-color: var(--c-text-accent);
-                    margin-right: 1rem;
-                    &:hover{
-                        color: var(--c-text-accent);
-                        background-color: var(--c-text-bright);
-                    }
-                }
-                &:hover{
-                    color: var(--c-text-accent);
-                    path {
-                        fill: var(--c-text-accent);
-                    }
-                }
-            }
-        }
-    }
-    &.scrolled-menu{
-        backdrop-filter: blur(10px);
-        background-color: rgba(0,0,0,0.1);
-    }
-}
-
-#menu-open{
-    display: flex;
-    gap: .5em;
     align-items: center;
-    svg{
-        height: .7em;
-        margin-top: -2px;
+    position: relative;
+
+    svg {
+      width: 8rem;
+      position: absolute;
+      path {
+        transition: var(--t-simple);
+        stroke-width: 0;
+        stroke: transparent;
+      }
+      path:last-child{
+        //filter: drop-shadow(0 0 0.6rem rgb(0 0 0 / 80%));
+      }
     }
+    &:hover {
+      svg path {
+        stroke-width: 0.2rem;
+        stroke: var(--c-text-primary);
+      }
+      svg path:last-child {
+        stroke: var(--c-text-accent);
+      }
+    }
+  }
+}
+nav {
+  --padding: 1rem;
+  //width: calc(100% - 2 * var(--padding) - 15px);
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: var(--f-accent);
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    li {
+      list-style: none;
+      a {
+        color: var(--c-text-bright);
+        font-size: 1.5rem;
+        padding: 0em 0.5em 0em 0.5em;
+
+        path {
+          fill: var(--c-text-bright);
+          transition: var(--t-simple);
+        }
+
+        &.em {
+          background-color: var(--c-text-accent);
+          margin-right: 1rem;
+          &:hover {
+            color: var(--c-text-accent);
+            background-color: var(--c-text-bright);
+          }
+        }
+        &:hover {
+          color: var(--c-text-accent);
+          path {
+            fill: var(--c-text-accent);
+          }
+        }
+      }
+    }
+  }
+  &.scrolled-menu {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+#menu-open {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  svg {
+    height: 0.7em;
+    margin-top: -2px;
+  }
 }
 
 .opened-menu {
-    opacity: 0;
-    width: 0;
-    transform: translateX(3rem);
-    //overflow: hidden;
-    white-space: nowrap;
-    //margin-left: -1rem;
+  opacity: 0;
+  width: 0;
+  transform: translateX(3rem);
+  //overflow: hidden;
+  white-space: nowrap;
+  //margin-left: -1rem;
 }
 .closed-menu {
-    //overflow: hidden;
-    white-space: nowrap;
+  //overflow: hidden;
+  white-space: nowrap;
 }
 
 #hero-image {
-    position: relative;
-    display: flex;
-    scale: 0.95;
-    opacity: 0;
-    filter: blur(10px);
-    img {
-      width: 50rem;
-      max-width: 90vw;
-      margin-top: 6rem;
-    }
+  position: relative;
+  display: flex;
+  scale: 0.95;
+  opacity: 0;
+  filter: blur(10px);
+  img {
+    width: 50rem;
+    max-width: 90vw;
+    margin-top: 6rem;
   }
+}
 
 .img-shadow {
-    filter: blur(2rem) brightness(0);
-    z-index: -1;
-    position: absolute;
-    top: 5rem;
-    opacity: .5;
-  }
+  filter: blur(2rem) brightness(0);
+  z-index: -1;
+  position: absolute;
+  top: 5rem;
+  opacity: 0.5;
+}
 
-  @media only screen and (max-width: 500px) {
-    .header__logo img{
-        width: 11rem !important;
-    }
-    .hide-on-mobile{
-        display: none;
-    }
-    nav ul li a {
-        font-size: 2.5rem;
-    }
+@media only screen and (max-width: 500px) {
+  .header__logo img {
+    width: 11rem !important;
   }
+  .hide-on-mobile {
+    display: none;
+  }
+  nav ul li a {
+    font-size: 2.5rem;
+  }
+}
 
-  .image-with-shadow{
-    display: flex;
-    position: relative;
-  }
+.image-with-shadow {
+  display: flex;
+  position: relative;
+}

@@ -18,7 +18,7 @@
 
 body, .ScrollSmoother-wrapper {
   margin: 0;
-  background: linear-gradient(0deg, #333333, #333333),
+  background: linear-gradient(0deg, var(--c-bkg), var(--c-bkg)),
     url("../../assets/images/bkg.jpg");
   background-blend-mode: color, normal;
   background-size: cover;
@@ -62,7 +62,7 @@ section {
 }
 
 [class*="section--"]{
-  box-shadow: rgb(0 0 0 / 50%) 0 3rem 3rem;
+  box-shadow: var(--c-shadow-1) 0 3rem 3rem;
 }
 
 .section--inverse{
@@ -96,7 +96,7 @@ section {
 .line svg{
   width: calc(100vw - (2 * 6rem));
   max-width: 50vw;
-  max-height: 60vh;
+  max-height: 50vh;
 }
 
 nav {
@@ -104,6 +104,8 @@ nav {
 }
 
 #logo {
+  transform: translateY(-5rem);
+  opacity: 0;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -208,7 +210,7 @@ a.btn {
   &:hover{
     transform: rotateX(30deg);
     &::before {
-      box-shadow: inset 0 1rem 1rem -0.5rem rgb(0 0 0 / 50%);
+      box-shadow: inset 0 1rem 1rem -0.5rem var(--c-shadow-1);
     }
   }
 
@@ -235,7 +237,7 @@ a.btn {
     height: 1rem;
     z-index: -1;
     transform: rotateX(90deg) translateY(2px);
-    box-shadow: inset 0 0.3rem 0.5rem 0rem rgb(0 0 0 / 50%);
+    box-shadow: inset 0 0.3rem 0.5rem 0rem var(--c-shadow-1);
   }
 
   &.btn--subtle{
@@ -294,6 +296,9 @@ a.btn {
   }
 }
 
+#bitcoin-to-be, #be-to-powered, #powered-to-support, #support-to-dev {
+  transform: scaleX(-1);
+}
 
 
 $pastels: (red, pink) (blue, purple) (green, yellow)

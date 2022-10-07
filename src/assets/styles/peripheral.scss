@@ -6,11 +6,11 @@ main {
   flex-direction: column;
   align-items: center;
   overflow-x: clip;
-  background-color: #333;
+  background-color: var(--c-bkg);
 }
 
 #menu {
-  box-shadow: inset 0 -5rem 5rem -2rem rgb(0 0 0 / 40%);
+  box-shadow: inset 0 -5rem 5rem -2rem var(--c-shadow-2);
 }
 
 .header__logo {
@@ -226,7 +226,7 @@ section#origin {
       border-radius: 100%;
       width: 10rem;
       height: 10rem;
-      box-shadow: 0 3rem 2rem 0rem rgb(0 0 0 / 40%);
+      box-shadow: var(--sh-2);
     }
     p {
       font-size: 0.8rem;
@@ -309,5 +309,7 @@ section#news {
     font-size: 1.2rem;
     line-height: 1.4;
     margin: 0;
+    width: 100%;
+    overflow: hidden;
   }
 }

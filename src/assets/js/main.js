@@ -1,5 +1,6 @@
 var bodyRect = document.body.getBoundingClientRect();
 
+// TODO: pull these from data js
 const sections = [
   "pitch",
   "products",
@@ -45,8 +46,8 @@ const defaultActions = "play none none none"; //onEnter, onLeave, onEnterBack, a
 //   sections.forEach((slug) => {
 //     ScrollTrigger.create({
 //       trigger: "#" + slug,
-//       start: "top 75%",
-//       end: "bottom 75%",
+//       start: "top 25%",
+//       end: "bottom 25%",
 //       //markers: { startColor: "white", endColor: "white" },
 //       onEnter: () => {
 //         window.location.href = "#" + slug;
@@ -57,9 +58,6 @@ const defaultActions = "play none none none"; //onEnter, onLeave, onEnterBack, a
 //     });
 //   });
 // }, 2000);
-
-
-
 
 //gsap.config({trialWarn: false});
 
@@ -73,8 +71,6 @@ const defaultActions = "play none none none"; //onEnter, onLeave, onEnterBack, a
 
 // backdrop-filter: blur(10px);
 //background-color: rgba(0,0,0,0.1);
-
-
 
 gsap.from("#hero-to-pitch path:first-child", {
   drawSVG: 0,
@@ -96,7 +92,6 @@ gsap.from("#pitch h1, #pitch p", {
   y: "5rem",
   scale: 0.9,
   opacity: 0,
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#pitch",
     start: "top 75%", // "triggerElement page"
@@ -104,11 +99,10 @@ gsap.from("#pitch h1, #pitch p", {
   },
 });
 
-gsap.from("#pitch a", {
+gsap.from("#pitch iframe", {
   duration: 0.5,
   opacity: 0,
   filter: "blur(10px)",
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#pitch",
     start: "top 75%", // "triggerElement page"
@@ -123,7 +117,6 @@ gsap.from("#products .subsection:nth-child(1)", {
   duration: 0.5,
   opacity: 0,
   outline: "1px solid rgba(255,255,255,1)",
-  //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#products",
     start: "top 75%", // "triggerElement page"
@@ -136,7 +129,6 @@ gsap.from("#products .subsection:nth-child(2)", {
   delay: 0.25,
   opacity: 0,
   outline: "1px solid rgba(255,255,255,1)",
-  //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#products",
     start: "top 75%", // "triggerElement page"
@@ -144,26 +136,41 @@ gsap.from("#products .subsection:nth-child(2)", {
   },
 });
 
-const buyAnchor = document.querySelector('.product--buy')
+const buyAnchor = document.querySelector(".product--buy");
 
 const buyTL = gsap
-  .timeline({paused:true})
-  .from('#buy-lines path:first-child', {drawSVG:0, ease:'none', duration: 0.75}, 0)
-  .to('.product--buy img:first-child', {opacity:.4, ease:'none', duration: 0.25}, 0);
+  .timeline({ paused: true })
+  .from(
+    "#buy-lines path:first-child",
+    { drawSVG: 0, ease: "none", duration: 0.75 },
+    0
+  )
+  .to(
+    ".product--buy img:first-child",
+    { opacity: 0.4, ease: "none", duration: 0.25 },
+    0
+  );
 
-buyAnchor.onmouseenter = () => buyTL.play()
-buyAnchor.onmouseleave = () => buyTL.reverse()
+buyAnchor.onmouseenter = () => buyTL.play();
+buyAnchor.onmouseleave = () => buyTL.reverse();
 
-const diyAnchor = document.querySelector('.product--diy')
+const diyAnchor = document.querySelector(".product--diy");
 
 const diyTL = gsap
-  .timeline({paused:true})
-  .from('#diy-lines path:first-child', {drawSVG:0, ease:'none', duration: 0.75}, 0)
-  .to('.product--diy img:first-child', {opacity:.4, ease:'none', duration: 0.25}, 0);
+  .timeline({ paused: true })
+  .from(
+    "#diy-lines path:first-child",
+    { drawSVG: 0, ease: "none", duration: 0.75 },
+    0
+  )
+  .to(
+    ".product--diy img:first-child",
+    { opacity: 0.4, ease: "none", duration: 0.25 },
+    0
+  );
 
-diyAnchor.onmouseenter = () => diyTL.play()
-diyAnchor.onmouseleave = () => diyTL.reverse()
-
+diyAnchor.onmouseenter = () => diyTL.play();
+diyAnchor.onmouseleave = () => diyTL.reverse();
 
 gsap.from("#products-to-info path:first-child", {
   drawSVG: 0,
@@ -203,13 +210,8 @@ gsap.from("#products-to-info path:nth-child(3)", {
 
 gsap.from("#infographics .subsection:nth-child(1)", {
   duration: 0.5,
-  //y: "5rem",
-  //scale: 0.8,
-  //rotateX: 15,
   opacity: 0,
-  //delay: 0.75,
   outline: "1px solid rgba(255,255,255,1)",
-  //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#infographics .subsection:nth-child(1)",
     start: "top 75%", // "triggerElement page"
@@ -219,13 +221,8 @@ gsap.from("#infographics .subsection:nth-child(1)", {
 
 gsap.from("#infographics .subsection:nth-child(2)", {
   duration: 0.5,
-  //y: "5rem",
-  //scale: 0.8,
-  //rotateX: 15,
   opacity: 0,
-  //delay: 0.75,
   outline: "1px solid rgba(255,255,255,1)",
-  //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#infographics .subsection:nth-child(2)",
     start: "top 75%", // "triggerElement page"
@@ -239,7 +236,6 @@ gsap.from("#infographics .subsection:nth-child(2)", {
 gsap.from("#bitcoin .subsection:nth-of-type(1)", {
   duration: 1,
   opacity: 0,
-  //outline: "1px solid rgba(255,255,255,1)",
   filter: "blur(10px)",
   y: "5rem",
   scrollTrigger: {
@@ -252,7 +248,6 @@ gsap.from("#bitcoin .subsection:nth-of-type(1)", {
 gsap.from("#bitcoin .subsection:nth-of-type(2)", {
   duration: 1,
   opacity: 0,
-  //outline: "1px solid rgba(255,255,255,1)",
   filter: "blur(10px)",
   y: "-5rem",
   scrollTrigger: {
@@ -272,13 +267,29 @@ function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-positionServiceIcons();
+//positionServiceIcons();
+
+const timelineServiceIcons = gsap.timeline({
+  onComplete() {
+    //deleteSplit();
+    //scroll.update();
+    //resolve();
+    console.log("complete");
+  },
+});
 
 function positionServiceIcons() {
-  bitcoinServices.forEach((service) => {
-    const serviceElement = document.querySelector(".service-icon--" + service);
+  console.log("positionServiceIcons");
+
+  bitcoinServices.forEach((service, i) => {
+    var serviceClass = ".service-icon--" + service;
+
+    gsap.set(serviceClass, {});
+    gsap.to(serviceClass, {});
+
+    const serviceElement = document.querySelector(serviceClass);
     const bitcoinSectionElement = document.querySelector("#bitcoin");
-    const upOrDown = getRandomInt(0, 1);
+    const upOrDown = i % 2;
     const bitcoinHeight = bitcoinSectionElement.clientHeight;
 
     serviceElement
@@ -286,14 +297,15 @@ function positionServiceIcons() {
       : "";
 
     if (upOrDown) {
-      gsap.set(".service-icon--" + service, {
+      gsap.set(serviceClass, {
         y: getRandomInt(0, bitcoinHeight / 2) + "px",
       });
-      gsap.to(".service-icon--" + service, {
+      gsap.to(serviceClass, {
         y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
         //x: getRandomInt(0, 100) + "vw",
         ease: "in",
         delay: getRandomNumber(0, 1),
+        overwrite: true,
         scrollTrigger: {
           trigger: "#bitcoin",
           scrub: true,
@@ -303,32 +315,47 @@ function positionServiceIcons() {
         },
       });
     } else {
-      gsap.set(".service-icon--" + service, {
+      gsap.set(serviceClass, {
         y: getRandomInt(bitcoinHeight / 2, bitcoinHeight) + "px",
       });
-      gsap.to(".service-icon--" + service, {
+      gsap.to(serviceClass, {
         y: getRandomInt(0, bitcoinHeight / 2) + "px",
         //x: getRandomInt(0, 100) + "vw",
         ease: "in",
         delay: getRandomNumber(0, 1),
+        overwrite: true,
         scrollTrigger: {
           trigger: "#bitcoin",
           scrub: true,
           start: "top bottom",
           end: "90% center",
+          //markers: { startColor: "lime", endColor: "blue" },
         },
       });
     }
   });
 }
 
+const tickerTL = gsap.timeline();
+
 function onResizeComplete() {
   positionServiceIcons();
+  initializeSizes();
+  //gsap.delayedCall(next, crossfade);
+  //tickerTL.resizePlay ? tickerTL.resizePlay.restart(true) : "";
 }
+
 var resizeTimeout = setTimeout(onResizeComplete, 400);
-window.onresize = function() {
+window.onresize = function () {
+  // if (tickerTL.isActive()) tickerTL.pause();
+  // if (!tickerTL.resizePlay)
+  //   tickerTL.resizePlay = gsap.delayedCall(0.2, function () {
+  //     tickerTL.play();
+  //   });
+
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(onResizeComplete, 400);
+  console.log("onresize");
 };
 
 gsap.from("#bitcoin-to-be path:first-child", {
@@ -348,9 +375,7 @@ gsap.from("#bitcoin-to-be path:first-child", {
 gsap.from("#be-your-own h1", {
   duration: 0.5,
   y: "5rem",
-  //scale: 0.8,
   opacity: 0,
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#be-your-own",
     start: "top 75%", // "triggerElement page"
@@ -363,7 +388,6 @@ gsap.from("#be-your-own p", {
   y: "5rem",
   filter: "blur(10px)",
   opacity: 0,
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#be-your-own h1",
     start: "top 75%", // "triggerElement page"
@@ -375,7 +399,6 @@ gsap.from("#be-your-own #ticker", {
   duration: 1.5,
   filter: "blur(20px)",
   opacity: 0,
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#be-your-own #ticker",
     start: "top 75%", // "triggerElement page"
@@ -383,27 +406,27 @@ gsap.from("#be-your-own #ticker", {
   },
 });
 
-let pseudoserviceArray, next, itemHeight, listHeight, windowHeight, kerplunk, kerplunk2;
+// TICKER
 
-pseudoserviceArray = gsap.utils.toArray(".pseudoservice");
-
-next = 4;
+let pseudoserviceArray = gsap.utils.toArray(".pseudoservice"),
+  next = 4,
+  itemHeight,
+  listHeight,
+  windowHeight,
+  kerplunk,
+  kerplunk2;
 
 function initializeSizes() {
-
   itemHeight = document
     .querySelector(".pseudoservice")
     .getBoundingClientRect().height;
-  
+
   listHeight = document
     .querySelector(".pseudoservices")
     .getBoundingClientRect().height;
-  
+
   windowHeight = document.getElementById("ticker__window").clientHeight;
-
 }
-
-initializeSizes();
 
 kerplunk = CustomEase.create(
   "custom",
@@ -416,26 +439,24 @@ kerplunk2 = CustomEase.create(
 );
 
 function crossfade() {
-  var action = gsap
-    .timeline()
+  var action = tickerTL
     .to(pseudoserviceArray, {
       id: "thunk",
       y: "-=" + itemHeight,
       duration: 1,
       ease: kerplunk2,
+      overwrite: true
     })
     .to(pseudoserviceArray[0], { y: "+=" + listHeight, duration: 0 }); // the first to the end
 
   pseudoserviceArray.push(pseudoserviceArray.shift()); // the first (shift) to the end (push) from the array
-  //console.log(pseudoserviceArray);
-  //console.log(itemHeight);
 
   // start endless run
   gsap.delayedCall(next, crossfade);
 
   var thisPseudoservice = pseudoserviceArray[2].innerHTML,
     thisElement = document.querySelector(
-      ".service-container--" + thisPseudoservice.toLowerCase().replace(' ','-')
+      ".service-container--" + thisPseudoservice.toLowerCase().replace(" ", "-")
     );
 
   var slidesContainerArray = document.querySelectorAll(".service-container");
@@ -448,108 +469,7 @@ function crossfade() {
   }
 }
 
-// start the crossfade after next = 3 sec
 gsap.delayedCall(next, crossfade);
-
-// document.querySelector(".services").addEventListener("mouseenter", pauseThunk);
-// // TODO: pause not working - Id not found
-// function pauseThunk() {
-//   console.log("asfd");
-//   gsap.getById("thunk").kill();
-// }
-
-// CAROUSEL
-
-// var slideDelay = 1.5;
-// var slideDuration = 0.3;
-// var wrap = true;
-
-// var slides = document.querySelectorAll(".slide");
-// var prevButton = document.querySelector("#prevButton");
-// var nextButton = document.querySelector("#nextButton");
-// var progressWrap = gsap.utils.wrap(0, 1);
-
-// var numSlides = slides.length;
-
-// gsap.set(slides, {
-//   xPercent: (i) => i * 100,
-// });
-
-// var wrapX = gsap.utils.wrap(-100, (numSlides - 1) * 100);
-
-// var animation = gsap.to(slides, {
-//   xPercent: "+=" + numSlides * 100,
-//   duration: 1,
-//   ease: "none",
-//   paused: true,
-//   repeat: -1,
-//   modifiers: {
-//     xPercent: wrapX,
-//   },
-// });
-
-// var proxy = document.createElement("div");
-// var slideAnimation = gsap.to({}, {});
-// var slideWidth = 0;
-// var wrapWidth = 0;
-
-resize();
-
-window.addEventListener("resize", resize);
-
-// prevButton.addEventListener("click", function () {
-//   animateSlides(1);
-// });
-
-// nextButton.addEventListener("click", function () {
-//   animateSlides(-1);
-// });
-
-// function updateDraggable() {
-//   slideAnimation.kill();
-//   this.update();
-// }
-
-// function animateSlides(direction) {
-//   slideAnimation.kill();
-//   var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
-
-//   slideAnimation = gsap.to(proxy, {
-//     x: x,
-//     duration: slideDuration,
-//     onUpdate: updateProgress,
-//   });
-// }
-
-// function updateProgress() {
-//   animation.progress(progressWrap(gsap.getProperty(proxy, "x") / wrapWidth));
-// }
-
-// function snapX(value) {
-//   let snapped = gsap.utils.snap(slideWidth, value);
-//   return wrap
-//     ? snapped
-//     : gsap.utils.clamp(-slideWidth * (numSlides - 1), 0, snapped);
-// }
-
-function resize() {
-  initializeSizes();
-  
-  // var norm = gsap.getProperty(proxy, "x") / wrapWidth || 0;
-
-  // slideWidth = slides[0].offsetWidth;
-  // wrapWidth = slideWidth * numSlides;
-
-  // wrap; // || draggable.applyBounds({minX: -slideWidth * (numSlides - 1), maxX: 0});
-
-  // gsap.set(proxy, {
-  //   x: norm * wrapWidth,
-  // });
-
-  // animateSlides(0);
-  // slideAnimation.progress(1);
-
-}
 
 gsap.from("#be-to-powered path", {
   drawSVG: 0,
@@ -568,9 +488,7 @@ gsap.from("#be-to-powered path", {
 gsap.from("#powered-by h1", {
   duration: 0.5,
   y: "-5rem",
-  //scale: 0.8,
   opacity: 0,
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#powered-by h1",
     start: "top 75%", // "triggerElement page"
@@ -580,10 +498,8 @@ gsap.from("#powered-by h1", {
 
 gsap.from("#powered-by p", {
   duration: 0.5,
-  //y: "-10rem",
   filter: "blur(10px)",
   opacity: 0,
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#powered-by h1",
     start: "top 75%", // "triggerElement page"
@@ -593,10 +509,8 @@ gsap.from("#powered-by p", {
 
 gsap.from("#powered-by svg", {
   duration: 1,
-  //y: "-10rem",
   filter: "blur(20px)",
   opacity: 0,
-  //delay: 0.75,
   scrollTrigger: {
     trigger: "#powered-by svg",
     start: "top 75%", // "triggerElement page"
@@ -620,13 +534,8 @@ gsap.from("#powered-to-support path", {
 
 gsap.from("#support", {
   duration: 0.5,
-  //y: "5rem",
-  //scale: 0.8,
-  //rotateX: 15,
   opacity: 0,
-  //delay: 0.75,
   outline: "1px solid rgba(255,255,255,1)",
-  //filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#support",
     start: "top 75%", // "triggerElement page"
@@ -650,12 +559,8 @@ gsap.from("#support-to-dev path", {
 
 gsap.from("#dev h1", {
   duration: 0.5,
-  //y: "5rem",
   scale: 0.8,
-  //rotateX: 15,
   opacity: 0,
-  //delay: 0.75,
-  //outline: "1px solid rgba(255,255,255,1)",
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#dev",
@@ -667,11 +572,9 @@ gsap.from("#dev h1", {
 gsap.from("#dev .col:nth-child(1)", {
   duration: 0.5,
   x: "5rem",
-  //scale: 0.8,
-  //rotateX: 15,
   opacity: 0,
   delay: 0.5,
-  //outline: "1px solid rgba(255,255,255,1)",
+  outline: "1px solid rgba(255,255,255,1)",
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#dev",
@@ -684,10 +587,8 @@ gsap.from("#dev .col:nth-child(2)", {
   duration: 0.5,
   x: "-5rem",
   scale: 0.5,
-  //rotateX: 15,
   opacity: 0,
   delay: 0.75,
-  //outline: "1px solid rgba(255,255,255,1)",
   filter: "blur(10px)",
   scrollTrigger: {
     trigger: "#dev",
@@ -712,11 +613,8 @@ gsap.from("#dev-to-contact path", {
 
 gsap.from("#community", {
   duration: 0.5,
-  //y: "5rem",
   scale: 0.8,
-  //rotateX: 15,
   opacity: 0,
-  //delay: 0.75,
   //outline: "1px solid rgba(255,255,255,1)",
   filter: "blur(10px)",
   scrollTrigger: {
@@ -725,379 +623,3 @@ gsap.from("#community", {
     toggleActions: defaultActions,
   },
 });
-
-//Librarys
-
-/*
-var imagesLoaded = require('imagesloaded');
-import barba from '@barba/core';
-import LocomotiveScroll from 'locomotive-scroll';
-import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { InertiaPlugin } from "gsap/InertiaPlugin";
-import { SplitText } from "gsap/SplitText";
-
-gsap.registerPlugin(Draggable, ScrollToPlugin, ScrollTrigger, InertiaPlugin, SplitText);
-
-
-
-
-// Locomotive Scroll
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    tablet: {
-        breakpoint: 961
-    }
-});
-
-
-
-
-// Use Locomotive Scroll with ScrollTrigger
-scroll.on("scroll", ScrollTrigger.update);
-
-ScrollTrigger.scrollerProxy(".locomotive", {
-  scrollTop(value) {
-    return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y;
-  }, 
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  pinType: document.querySelector(".locomotive").style.transform ? "transform" : "fixed"
-});
-
-
-
-
-// Mobile Menu Toggle
-const menuIcon = document.querySelector('.navBtnContainer');
-const mobileNav = document.querySelector('.mobileNav');
-
-const menuToggle = function () {
-    menuIcon.addEventListener(`click`, function() {
-        if(this.classList.contains(`active`)) {
-            this.classList.remove(`active`);
-            mobileNav.classList.remove(`active`);
-        } else {
-            this.classList.add(`active`);
-            mobileNav.classList.add(`active`);
-        }
-    });
-}
-
-menuToggle();
-
-
-
-
-// Custom cursor
-const cursorAnimate = function () {
-    const cursors = document.querySelector('.cursors')
-    const cursor = cursors.querySelector('.cursor')
-    const cursorLinks = document.querySelectorAll('a, video, .resumeItem')
-    let cursorX = 0
-    let cursorY = 0
-    let aimX = 0
-    let aimY = 0
-    let speed = 0.2
-
-    const cursorEase = function () {
-        cursorX += (aimX - cursorX) * speed
-        cursorY += (aimY - cursorY) * speed
-
-        cursor.style.left = cursorX + "px"
-        cursor.style.top = cursorY + "px"
-
-        requestAnimationFrame(cursorEase)
-    }
-
-    cursorEase()
-
-    document.addEventListener('mousemove', function (event) {
-        aimX = event.pageX
-        aimY = event.pageY
-    })
-
-    cursorLinks.forEach(cursorLink => {
-        cursorLink.addEventListener('mouseover', function () {
-            cursor.classList.add(`hover`)
-        })
-        cursorLink.addEventListener('mouseout', function () {
-            cursor.classList.remove(`hover`)
-        })
-    })
-}
-
-
-
-
-// Scroll Trigger Hero Image
-const heroImgInnerAnimate = function () {
-    const heroImgInner = document.querySelectorAll('.heroImgInner');
-    heroImgInner.forEach(function (heroImgInner){
-        gsap.to(heroImgInner, {
-            scrollTrigger: {
-                trigger: heroImgInner,
-                scroller: ".locomotive",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1,
-            },
-            y: "-43.75%",
-            ease: "none"
-        })
-    })
-}
-
-
-
-
-// Footer Marquee
-const footerMarqueeAnimate = function () {
-    const footerMarquee = document.querySelector('.footerMarqueeItem');
-    const footerMarqueeTrack = document.querySelector('.footerMarqueeTrack');
-    const footerMarqueeItemWidth = footerMarquee.offsetWidth;
-    //console.log(footerMarqueeItemWidth);
-    const footerMarqueeTL = gsap.timeline({repeat:-1, defaults:{ease:"none"}});
-    footerMarqueeTL.to(footerMarqueeTrack,{x:-footerMarqueeItemWidth, duration:20});  
-}
-
-
-
-
-// Scroll Trigger Marquee
-const marqueeAnimate = function () {
-    const marquee = document.querySelectorAll('.marqueeTrack');
-    marquee.forEach(function (marquee){
-        gsap.to(marquee, {
-            scrollTrigger: {
-                trigger: marquee,
-                scroller: ".locomotive",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1,
-            },
-            x: "-33.33%",
-            ease: "none"
-        })
-    })
-}
-
-
-
-
-// Scroll Trigger Spin
-const spinTextAnimate = function () {
-    const spinText = document.querySelectorAll('.spinText');
-    spinText.forEach(function (spinText){
-        gsap.to(spinText, {
-            scrollTrigger: {
-                trigger: spinText,
-                scroller: ".locomotive",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1,
-            },
-            rotation:360,
-            ease: "none"
-        })
-    })
-}
-
-
-
-
-// Work Experience Dropdown
-const experienceToggle = function () {
-    const resumeItems = document.querySelectorAll('.resumeItem');
-    resumeItems.forEach(function (item) {
-        let jobTitleHeight = item.offsetHeight;
-        item.addEventListener('click', function () {
-            let jobDescHeight = this.children[4].offsetHeight;
-            if(this.classList.contains('active')) {
-                this.classList.remove('active')
-                this.style.height = jobTitleHeight + "px"
-            } else {
-                this.classList.add('active')
-                this.style.height = jobTitleHeight + jobDescHeight + "px"
-            }
-            setTimeout(function () { scroll.update(); }, 1000)
-        })
-    });
-}
-experienceToggle();
-
-
-
-
-// Update scroll height after Images Load
-imagesLoaded( 'body', function() {
-    scroll.update();
-    cursorAnimate();
-    footerMarqueeAnimate();
-    marqueeAnimate();
-    spinTextAnimate();
-    ScrollTrigger.matchMedia({
-        "(min-width: 960px)": function() {
-            heroImgInnerAnimate();
-        }
-    })
-});
-
-
-
-
-
-
-
-
-// Barba
-
-const transitionPanel1 = document.querySelector('#transitionPanel1');
-const loadPanel = document.querySelector('.loadPanel');
-
-barba.hooks.after(() => {
-    marqueeAnimate();
-    spinTextAnimate();
-    experienceToggle();
-    cursorAnimate();
-    ScrollTrigger.matchMedia({
-        "(min-width: 960px)": function() {
-            heroImgInnerAnimate();
-        }
-    })
-    scroll.update();
-});
-
-
-barba.init({
-
-    transitions: [{
-        name: 'default',
-
-
-
-        once({ next }) {
-
-            return new Promise(resolve => {
-
-                const timeline = gsap.timeline({
-                    onComplete() {
-                        deleteSplit();
-                        scroll.update();
-                        resolve();
-                    }
-                });
-
-                const splitHeadline = new SplitText('h1', {type:'words'})
-                function deleteSplit() {
-                    splitHeadline.revert()
-                }
-
-
-                timeline
-                    .set('.load-content', {opacity: 0})
-                    .set('main', {y: 200, opacity: 0})
-                    .set('header', {y: -100, opacity: 0})
-                    .set(splitHeadline.words, {opacity: 0, y: 48})
-                    .to('.load-content', {duration: 1, opacity: 1}, 0.5)
-                    .to('.loadPanel', {duration: 1, height: 0, ease: "power4.inOut"}, '+=1')
-                    .to('.load-content', {duration: 1, opacity: 0}, '-=1')
-                    .to('header', {duration: 1, y: 0, opacity: 1, ease: "power4.out"}, '-=0.5')
-                    .to('main', {duration: 1, y: 0, opacity: 1, ease: "power4.out"}, '-=1')
-                    .to(splitHeadline.words, {duration: 1, y: 0, opacity: 1, ease: "power3.out", stagger: 0.04}, '-=1')
-                    .set('.loadPanel', {opacity: 0, display:'none'})
-
-            });
-            
-        },
-
-
-
-        leave({ current, next, trigger }) {
-
-            return new Promise(resolve => {
-
-                const timeline = gsap.timeline({
-                    onComplete() {
-                        resolve();
-                    }
-                });
-
-                transitionPanel1.classList.add(`active`);
-                mobileNav.classList.remove(`active`);
-                menuIcon.classList.remove(`active`);
-
-                timeline
-                    .to('footer', {duration: 0.5, opacity: 0}, 0)
-                    .to(current.container, {duration: 0.5, opacity: 0}, 0)
-                    .to(current.container, {display: 'none'})
-
-            });
-
-        },
-
-
-
-        beforeEnter({ current, next, trigger }) {
-
-            scroll.scrollTo(0, 0);
-
-        },
-
-
-
-        enter({ current, next, trigger }) {
-
-            imagesLoaded( 'body', function() {
-                scroll.update();
-            });
-
-            return new Promise(resolve => {
-                
-                const timeline = gsap.timeline({
-                    onComplete() {
-                        transitionPanel1.classList.remove(`active`);
-                        resolve();
-                    }
-                });
-
-                timeline
-                    .set(current.container, {opacity: 0})
-                    .set(next.container, {opacity: 0})
-
-            });
-        },
-
-
-
-        afterEnter({ current, next, trigger }) {
-
-            return new Promise(resolve => {
-                
-                const timeline = gsap.timeline({
-                    onComplete() {
-                        resolve();
-                    }
-                });
-
-                timeline
-                    .to(next.container, {duration: 1, opacity: 1}, 0.5)
-                    .to('footer', {duration: 1, opacity: 1}, 0.5)
-
-            });
-        },
-
-
-        
-    }],
-
-    views: [{}],
-
-    //debug: true
-});
-
-*/

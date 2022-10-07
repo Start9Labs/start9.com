@@ -20,7 +20,7 @@
     margin: 0 0 0 1rem !important;
     &::before{
       top: 25% !important;
-      left: -4rem !important;
+      left: calc(-4rem + 2px) !important;
       align-self: flex-start !important;
       justify-content: center !important;
       border-top: 2rem transparent solid !important;
@@ -40,11 +40,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6rem;
+  gap: 3rem;
   //margin: 0 0 6rem 0;
   padding: 0 6rem 0 6rem;
   box-sizing: border-box;
   width: 100%;
+  //transform: translate(0px,0px);
 
   //--size: 3rem;
   --p-t: calc(0.2 * var(--size));
@@ -170,7 +171,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 3rem 2rem 0rem rgb(0 0 0 / 40%);
+            box-shadow: var(--sh-2);
             
             &::before{
               position: absolute;

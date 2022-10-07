@@ -84,5 +84,13 @@ section#powered-by {
         color: var(--c-text-accent);
       }
     }
+    &.source-link--floated{
+      position: absolute;
+    }
   }
+}
+
+svg|a:link,
+svg|a:visited {
+  cursor: pointer;
 }

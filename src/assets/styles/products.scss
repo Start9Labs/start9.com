@@ -1,15 +1,16 @@
 section#products {
   transform-style: preserve-3d;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
   gap: 3rem;
-  
+
   .subsection {
     transform-style: preserve-3d;
     position: relative;
 
-    .heading{
+    .heading {
       transition: var(--t-simple);
       z-index: 1;
     }
@@ -18,7 +19,7 @@ section#products {
       transition: var(--t-simple);
     }
 
-    .product__subheader{
+    .product__subheader {
       font-weight: 500;
       color: var(--c-text-primary);
       text-transform: uppercase;
@@ -35,12 +36,12 @@ section#products {
       padding: 2rem;
       //transition: var(--t-simple);
       .heading h1 {
-        line-height: .8;
+        line-height: 0.8;
       }
-      &:hover{
+      &:hover {
         .heading {
           transform: scale(1.1);
-          > *{
+          > * {
             color: var(--c-text-accent);
           }
         }
@@ -50,8 +51,9 @@ section#products {
         // }
       }
     }
-    &:first-of-type a {
+    &.subsection--buy a {
       align-items: center;
+
       .heading {
         //left: 6rem;
         //top: 6rem;
@@ -61,36 +63,54 @@ section#products {
         display: flex;
         flex-direction: column;
       }
-      .product__subheader{
-
+      .product__subheader {
       }
-      background: linear-gradient(45deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.05));
-      svg{
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.05)
+      );
+      svg {
         width: 27.5vw;
         position: absolute;
       }
     }
-    &:last-of-type a {
-      align-items: flex-start;
-      .heading {
-        // right: 6rem;
-        // top: 6rem;
-        // position: absolute;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-self: center;
-      }
-      h1{
-        letter-spacing: .5rem;
-      }
-      .product__subheader{
+    &.subsection--diy {
+      position: absolute;
+      bottom: -5rem;
+      background-color: var(--c-bkg);
+      a {
 
-      }
-      background: linear-gradient(45deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25));
-      svg{
-        width: 27.5vw;
-        position: absolute;
+        &:hover {
+          .heading {
+            transform: none;
+          }
+        }
+
+        padding: 1rem;
+        align-items: flex-start;
+        .heading {
+          // right: 6rem;
+          // top: 6rem;
+          // position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+        }
+        h1 {
+          letter-spacing: 0.5rem;
+        }
+        .product__subheader {
+        }
+        background: linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.25)
+        );
+        svg {
+          width: 27.5vw;
+          position: absolute;
+        }
       }
     }
   }

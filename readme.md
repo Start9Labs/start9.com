@@ -8,7 +8,7 @@
 
 ### for now...
 ```
-npm start
+npm run start
 ```
 
 Run the following command on your local environment:

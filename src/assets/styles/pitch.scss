@@ -9,9 +9,15 @@ section#pitch {
     h1 {
       margin: 0;
       display: inline-block;
-      max-width: 73vw;
+      max-width: min(16ch,64vw);
     }
     p{
-      max-width: min(50ch, 73vw);
+      max-width: min(50ch, 64vw);
+    }
+    iframe{
+      border:0;
+      width: max(500px,50vw);
+      height: max(282px,28.2vw);
+      box-shadow: var(--c-shadow-1) 0 3rem 3rem;
     }
   }

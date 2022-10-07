@@ -1,6 +1,6 @@
 <section id="menu">
     <div class="menu-content">
-        {# <div class="header"><a href="/"><img src="../assets/images/start9_logo.png" alt=""/></a></div> #}
+        {# <div class="header"><a href="/"><img src="assets/images/start9_logo.png" alt=""/></a></div> #}
         <ul class="groups">
             {% for group in menu|selectattr("inFlyout")|sort(false, false, 'order') %}
             <li class="{{group.size}}">
