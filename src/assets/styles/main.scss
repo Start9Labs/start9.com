@@ -321,6 +321,22 @@ nav {
     transform: translate(0,0);
   }
   section#supprt img{
-    max-width: 40vh;
+    max-width: 40vh !important;
+  }
+
+  section#bitcoin::after{
+    bottom: -99vh;
+  }
+
+  @media screen and (min-width: 900px) {
+    #be-your-own {
+      --rows-above: 3 !important;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+    #be-your-own {
+      --rows-above: 2 !important;
+    }
   }
 }
