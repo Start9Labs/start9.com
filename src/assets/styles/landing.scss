@@ -19,7 +19,7 @@
 body, .ScrollSmoother-wrapper {
   margin: 0;
   background: linear-gradient(0deg, var(--c-bkg), var(--c-bkg)),
-    url("../images/bkg.jpg");
+    url("/assets/images/bkg.jpg");
   background-blend-mode: color, normal;
   background-size: cover;
   background-attachment: fixed;
