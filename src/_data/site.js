@@ -26,5 +26,5 @@ module.exports = {
         copyright: "© " + new Date().getFullYear() + " by START9 LABS, INC.",
         canary:
           "WE HAVE NEVER RECEIVED A SECRET GOVERNMENT REQUEST TO HAND OVER USER INFORMATION.",
-      },
+      }
     };

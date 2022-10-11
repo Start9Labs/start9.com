@@ -1,8 +1,8 @@
 <section id="be-your-own">
-    <h1>be
+    <h1>Be
         <em>your own</em>
         everything</h1>
-    <p>Anything you can do in the <a href="https://en.wikipedia.org/wiki/Censorship_by_Apple#App_Store" target="_blank">permissioned</a>, <a href="https://www.computerworld.com/article/3634591/the-problem-with-the-subscription-economy.html" target="_blank">subscription-based</a>, <a href="https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google" target="_blank">privacy-invading</a>, <a target="_blank" href="https://dataprot.net/articles/biggest-data-breaches/">insecure</a> model of cloud computing, you
+    <p>Anything you can do in the <a href="https://en.wikipedia.org/wiki/Censorship_by_Apple#App_Store" target="_blank" rel="noopener noreferrer">permissioned</a>, <a href="https://www.computerworld.com/article/3634591/the-problem-with-the-subscription-economy.html" target="_blank" rel="noopener noreferrer">subscription-based</a>, <a href="https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google" target="_blank" rel="noopener noreferrer">privacy-invading</a>, <a target="_blank" rel="noopener noreferrer" href="https://dataprot.net/articles/biggest-data-breaches/">insecure</a> model of cloud computing, you
         can also do in the open, free, private, secure model of <em>sovereign computing</em>.</p>
     <div id='ticker'>
         <div id="ticker__selected-frame">
@@ -22,7 +22,7 @@
                     {% for service in services %}
                         {% if pseudoservice.slug in service.pseudoservices %}
                             <div class="service__content" >
-                                <a class="service__link" href="https://marketplace.start9.com/{{service.slug}}" target="_blank">
+                                <a class="service__link" href="https://marketplace.start9.com/{{service.slug}}" target="_blank" rel="noopener noreferrer">
                                     <img class="service__image service__image--{{ service.slug }}" src="assets/images/service-icons/{{ service.slug }}.png" alt="{{ service.name }} embassyOS service icon" title="{{ service.name }} embassyOS service icon"
                                     style="filter: drop-shadow(0px 0px 3rem {{ service.color }}C0)"/>
                                     <div class="service__info">

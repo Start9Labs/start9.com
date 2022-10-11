@@ -1,0 +1,8 @@
+section#news{
+    width: calc(100vw - 2 * var(--side-padding));
+
+    .podcasts{
+        width: 100%;
+        display: flex;
+    }
+}

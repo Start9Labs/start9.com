@@ -12,7 +12,7 @@ section#infographics{
     padding: 6rem;
     outline: 1px solid rgba(255,255,255,0);
     svg{
-      width: min(110%, 1000px);
+      width: 100%;
       //width: clamp(500px, 50vw, 1000px);
     }
     &:first-child{
@@ -42,7 +42,7 @@ section#infographics{
   }
 
   .image-with-shadow{
-    width: 100%;
+    width: clamp(min(400px, 90vw), 110%, 1000px);
     z-index: 1;
     .img-shadow{
       width: 100%;

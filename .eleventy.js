@@ -1,5 +1,7 @@
 const eleventySass = require("eleventy-sass");
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const faviconPlugin = require("eleventy-favicon");
+const pluginSEO = require("eleventy-plugin-seo");
 
 // https://www.npmjs.com/package/eleventy-plugin-img2picture
 const img2picture = require("eleventy-plugin-img2picture");
@@ -26,7 +28,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy('src/assets/images/**/*.gif');
 
 
-  if (true) {//(process.env.ELEVENTY_ENV === "production") {
+  if (false) {//(process.env.ELEVENTY_ENV === "production") {
     eleventyConfig.addPlugin(img2picture, {
       // Should be same as Eleventy input folder set using `dir.input`.
       eleventyInputDir: "src",
@@ -41,13 +43,13 @@ module.exports = function (eleventyConfig) {
     });
   } else {
     // During development, copy the files to Eleventy's `dir.output`
-    eleventyConfig.addPassthroughCopy("src/assets/images");
+    eleventyConfig.addPassthroughCopy("_site/assets/images");
   }
-
-  //eleventyConfig.addNunjucksFilter('bitcoin', arr => arr.filter(e => e.name == 'Synapse'));
 
   //plugins
   eleventyConfig.addPlugin(eleventySass);
+  eleventyConfig.addPlugin(faviconPlugin, { destination: './_site' });
+  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
   //eleventyConfig.addPlugin(tinyCSS);
   eleventyConfig.addPlugin(tinyHTML);
   eleventyConfig.addPlugin(tinysvg, {

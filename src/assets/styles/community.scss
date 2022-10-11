@@ -63,24 +63,24 @@ section#community {
     }
   }
 
-  .community__icons {
-    display: flex;
-    justify-content: space-between;
-    width: var(--width);
-    font-size: 2rem;
-    font-family: var(--f-button);
-    align-items: center;
-    margin-top: 3rem;
+}
+.community__icons {
+  display: flex;
+  justify-content: space-between;
+  width: var(--width);
+  font-size: 2rem;
+  font-family: var(--f-button);
+  align-items: center;
+  margin-top: 3rem;
 
-    a {
-      &:hover svg path{
-        fill: var(--c-text-accent);
-      }
-      svg {
-        width: 3rem;
-        path{
-            transition: var(--t-simple);
-        }
+  a {
+    &:hover svg path{
+      fill: var(--c-text-accent);
+    }
+    svg {
+      width: 3rem;
+      path{
+          transition: var(--t-simple);
       }
     }
   }

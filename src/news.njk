@@ -16,8 +16,7 @@ layout: layouts/peripheral.njk
 </section>
 
 <section id="news">
-    {# <h2>{{ jobs|length }} {{ "Open Position" if jobs|length == 1 else "Open Positions" }}</h2> #}
-    <ul class="news">
+    {# <ul class="news">
         {% for post in news %}
         <li class="post">
             <a href="{{ post.guid }}">
@@ -34,6 +33,29 @@ layout: layouts/peripheral.njk
                 
                 {% if post.description %}
                 <p>{{ post.description }}</p>
+                {% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul> #}
+    <ul class="podcasts">
+        {% for item in podcasts %}
+        <li class="podcast">
+            <a href="{{ item.link }}">
+                {% if item.anchor %}
+                <span class="creator">{{ item.anchor }}</span>
+                {% endif %}
+                {% if item.anchor %}
+                <img src="{{ item.image }}" alt=""/>
+                {% endif %}
+                {% if item.title %}
+                <h3>{{ item.title }}</h3>
+                {% endif %}
+                {% if item.date %}
+                <time datetime="{{ item.date }}">{{ item.date }}</time>
+                {% endif %}
+                {% if item.description %}
+                <p>{{ item.description }}</p>
                 {% endif %}
             </a>
         </li>

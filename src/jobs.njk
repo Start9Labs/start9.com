@@ -16,6 +16,8 @@ layout: layouts/peripheral.njk
 </section>
 
 <section id="jobs">
+    {% set jobs = [] %}
+    {% if jobs|length > 0 %}
     <h2>{{ jobs|length }} {{ "Open Position" if jobs|length == 1 else "Open Positions" }}</h2>
     <ul class="jobs">
         {% for job in jobs %}
@@ -45,4 +47,14 @@ layout: layouts/peripheral.njk
         </li>
         {% endfor %}
     </ul>
+    {% endif %}
+    {% if jobs|length == 0 %}
+        <h3>
+            As of <time datetime="{{ buildInfo.time.raw }}">{{ buildInfo.time.dateOnly }}</time> there are no open positions at Start9.
+        </h3>
+        <br/>
+        <h3>
+            Check back soon!
+        </h3>
+    {% endif %}
 </section>

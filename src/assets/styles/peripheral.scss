@@ -20,6 +20,7 @@ main {
 
 section {
   --width: 42ch;
+  --width-full: calc(100vw - (2 * var(--side-padding)));
   --side-padding: 3rem;
   font-family: "Montserrat";
   font-weight: 300;
@@ -28,6 +29,13 @@ section {
   padding: 7rem var(--side-padding);
   position: relative;
   overflow: visible;
+
+  &.section--no-image {
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+
   &:nth-of-type(2n + 3) {
     &::before {
       content: "";
@@ -67,7 +75,7 @@ section#hero {
   padding-top: 0;
   padding-bottom: 0;
   gap: 5rem;
-  width: calc(100vw - (2 * var(--side-padding)));
+  width: var(--width-full);
   justify-content: center;
   flex-direction: row;
 
@@ -272,8 +280,9 @@ section#jobs {
   }
 }
 
+// old news
 section#news {
-  ul {
+  ul.news {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -312,4 +321,75 @@ section#news {
     width: 100%;
     overflow: hidden;
   }
+}
+
+section#news {
+  width: var(--width-full);
+
+  ul.podcasts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    .podcast a {
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.05)
+      );
+      .creator {
+        left: 1rem;
+        position: absolute;
+        top: -0.6rem;
+        opacity: 1;
+      }
+      img {
+        width: 20rem;
+        height: 20rem;
+        aspect-ratio: 1;
+        object-fit: contain;
+        background-color: #212121;
+      }
+      h3,
+      p, time {
+        width: 20rem;
+        padding: 0 2rem;
+        box-sizing: border-box;
+      }
+
+      h3{
+        font-size: 1.6rem;
+      }
+      p {
+        color: #eee;
+        margin-top: -1.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+        font-size: 0.8rem;
+      }
+
+      time{
+        margin-top: -1.5rem;
+        color: var(--c-text-accent);
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+section#contact { 
+  gap: 3rem;
+  p{ margin: 0;}
+.community__icons{
+  width: auto;
+  margin: 0;
+}
 }

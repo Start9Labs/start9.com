@@ -27,6 +27,9 @@
 
   --c-6: rgb(194, 194, 194);
 
+  --c-7: #2fdf75;
+  --c-success: var(--c-7);
+
   --c-shadow-1: rgb(0 0 0 / 50%);
   --c-shadow-2: rgb(0 0 0 / 40%);
   --c-shadow-3: rgb(0 0 0 / 20%);
@@ -133,10 +136,25 @@ a.link-in-svg{
 }
 
 p a {
-  color: var(--c-text-primary);
-  text-decoration: underline;
+  color: var(--c-text-accent);
+  //text-decoration: underline;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    border-radius: 2px;
+    background: linear-gradient(111.3deg, transparent 9.6%, var(--c-2) 93.6%);
+    background: linear-gradient(111.3deg, transparent 9.6%, var(--c-2) 50%, transparent 93.6%);
+  }
   &:hover {
     color: var(--c-text-accent);
+    &::after {
+      background: linear-gradient(111.3deg, var(--c-2) 9.6%, var(--c-2) 93.6%);
+    }
   }
 }
 
@@ -151,6 +169,10 @@ h5 {
     color: var(--c-text-accent);
     font-style: normal;
   }
+}
+
+h1, h2{
+  text-transform:none;
 }
 
 ul {
@@ -293,6 +315,25 @@ nav {
   position: absolute;
   top: 5rem;
   opacity: 0.5;
+}
+
+.form-alert{
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: none;
+
+  &.form-alert--success{
+    background-color: var(--c-success);
+  }
+
+  &.form-alert--error{
+    background-color: red;
+  }
+
+  &.form-alert--visible{
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 500px) {

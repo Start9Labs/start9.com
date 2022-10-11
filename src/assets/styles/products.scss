@@ -5,6 +5,7 @@ section#products {
   align-items: flex-end;
   justify-content: center;
   gap: 3rem;
+  --img-width: 42vw;
 
   .subsection {
     transform-style: preserve-3d;
@@ -26,14 +27,14 @@ section#products {
       transition: var(--t-simple);
     }
     img {
-      //transition: var(--t-simple);
-      width: 42vw;
+      transition: var(--t-simple);
+      width: var(--img-width);
     }
     a {
       display: flex;
       flex-direction: column;
       position: relative;
-      padding: 2rem;
+      padding: 4rem;
       //transition: var(--t-simple);
       .heading h1 {
         line-height: 0.8;
@@ -45,23 +46,24 @@ section#products {
             color: var(--c-text-accent);
           }
         }
-        // img{
-        //   transform: scale(1.1);
-        //   opacity: .2;
-        // }
+        img{
+          transform: scale(1.05);
+          opacity: .5;
+        }
       }
     }
     &.subsection--buy a {
       align-items: center;
 
       .heading {
-        //left: 6rem;
-        //top: 6rem;
-        //position: absolute;
         align-self: center;
         text-align: center;
         display: flex;
         flex-direction: column;
+        margin-top: 3rem;
+      }
+      h1 {
+        text-transform: uppercase;
       }
       .product__subheader {
       }
@@ -71,10 +73,9 @@ section#products {
         rgba(255, 255, 255, 0.05)
       );
       svg {
-        width: 27.5vw;
+        width: var(--img-width);
+        transform: scale(1.05);
         position: absolute;
-        top: 20%;
-        left:22%;
       }
     }
     &.subsection--diy {
@@ -82,7 +83,6 @@ section#products {
       bottom: -5rem;
       background-color: var(--c-bkg);
       a {
-
         &:hover {
           .heading {
             transform: none;
