@@ -8,8 +8,8 @@
         "name": "Store",
         "slug": "store",
         "url": "https://store.start9.com/",
-        "target": "",
-        "class": "em"
+        "target": "_blank",
+        "class": ""
       },
       {
         "name": "Developers",
@@ -39,10 +39,18 @@
         "class": ""
       },
       {
-        "name": "News/Media",
+        "name": "Podcasts",
         "slug": "news",
         "url": "/news",
         "target": "",
+        "order": 1,
+        "class": ""
+      },
+      {
+        "name": "Videos",
+        "slug": "videos",
+        "url": "https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q",
+        "target": "_blank",
         "order": 1,
         "class": ""
       },
@@ -92,16 +100,16 @@
       {
         "name": "Embassy ONE",
         "slug": "embassy-one",
-        "url": "https://store.start9.com/products/embassy",
-        "target": "",
+        "url": "https://store.start9.com/collections/embassy/products/embassy-one",
+        "target": "_blank",
         "order": 0,
         "class": ""
       },
       {
         "name": "Embassy Pro",
         "slug": "embassy-pro",
-        "url": "https://store.start9.com/products/embassy-2",
-        "target": "",
+        "url": "https://store.start9.com/collections/embassy/products/embassy-2",
+        "target": "_blank",
         "order": 1,
         "class": ""
       },
@@ -109,7 +117,7 @@
         "name": "Store",
         "slug": "store",
         "url": "https://store.start9.com/",
-        "target": "",
+        "target": "_blank",
         "order": 2,
         "class": "highlight"
       }
@@ -144,7 +152,7 @@
         "name": "Docs",
         "slug": "docs",
         "url": "https://start9.com/latest/user-manual",
-        "target": "",
+        "target": "_blank",
         "order": 1,
         "class": ""
       },

@@ -78,8 +78,8 @@ gsap.from("#hero-to-pitch path:first-child", {
   scrollTrigger: {
     trigger: "#hero-to-pitch",
     scrub: true,
-    start: "top 75%", // "triggerElement page"
-    end: "bottom 75%", // "triggerElement page"
+    start: "top 50%", // "triggerElement page"
+    end: "bottom 50%", // "triggerElement page"
     toggleActions: defaultActions,
   },
 });

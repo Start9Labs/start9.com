@@ -12,10 +12,10 @@
         {% endfor %}
       {% endfor %}
       <li class="closed-menu">
-        <a id="menu-open" href="">menu {% include "components/svg/menu-open.svg" %}</a>
+        <a id="menu-open" href=""><span class="hide-on-mobile">menu</span> {% include "components/svg/menu-open.svg" %}</a>
       </li>
       <li class="opened-menu">
-        <a id="menu-close" href="">close</a>
+        <a id="menu-close" href="">{% include "components/svg/menu-close.svg" %}</a>
       </li>
     </ul>
   </nav>

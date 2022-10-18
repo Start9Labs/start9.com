@@ -32,7 +32,8 @@ section#products {
     }
     a {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: flex-end;
       position: relative;
       padding: 4rem;
       //transition: var(--t-simple);
@@ -53,14 +54,15 @@ section#products {
       }
     }
     &.subsection--buy a {
-      align-items: center;
+      //align-items: center;
+      gap: 0.2rem;
 
       .heading {
-        align-self: center;
+        //align-self: center;
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-top: 3rem;
+        //margin-top: 3rem;
       }
       h1 {
         text-transform: uppercase;
@@ -76,6 +78,7 @@ section#products {
         width: var(--img-width);
         transform: scale(1.05);
         position: absolute;
+        margin-left: 0.5rem;
       }
     }
     &.subsection--diy {

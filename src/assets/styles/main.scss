@@ -55,7 +55,6 @@
 }
 
 html {
-  //background-color: lime;
   font-size: 2vmin;
   font-size: max(2vmin, 10px);
   scroll-behavior: smooth;
@@ -240,10 +239,17 @@ nav {
     gap: 1rem;
     li {
       list-style: none;
+      display: flex;
       a {
         color: var(--c-text-bright);
         font-size: 1.5rem;
         padding: 0em 0.5em 0em 0.5em;
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        svg {
+          height: 0.7em;
+        }
 
         path {
           fill: var(--c-text-bright);
@@ -273,16 +279,6 @@ nav {
   }
 }
 
-#menu-open {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-  svg {
-    height: 0.7em;
-    margin-top: -2px;
-  }
-}
-
 .opened-menu {
   opacity: 0;
   width: 0;
@@ -305,7 +301,7 @@ nav {
   img {
     width: 50rem;
     max-width: 90vw;
-    margin-top: 6rem;
+    //margin-top: 6rem;
   }
 }
 
@@ -336,6 +332,16 @@ nav {
   }
 }
 
+.p--standalone {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.center{
+  width: fit-content;
+    align-self: center;
+}
+
 @media only screen and (max-width: 500px) {
   .header__logo img {
     width: 11rem !important;
@@ -343,9 +349,11 @@ nav {
   .hide-on-mobile {
     display: none;
   }
-  nav ul li a {
+  nav ul{
+    gap: 0;
+  li a {
     font-size: 2.5rem;
-  }
+  }} 
 }
 
 .image-with-shadow {

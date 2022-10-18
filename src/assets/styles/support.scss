@@ -12,11 +12,11 @@ section#support {
     justify-content: center;
     gap: 6rem;
     .col {
-      max-width: 37vw;
+      max-width: clamp(min(400px, 90vw), 20rem, 1000px);
     }
   }
   img {
-    max-height: 40vh;
+    max-height: 20rem;
     max-width: 100%;
     transform: rotateZ(5deg);
   }

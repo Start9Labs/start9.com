@@ -1,3 +1,9 @@
-<svg viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.8706 18.957H0.370605V15.957H13.8706V18.957ZM27.3706 11.457H0.370605V8.45703H27.3706V11.457ZM27.3706 3.95703H13.8706V0.957031H27.3706V3.95703Z" />
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="menu-icon"
+   viewBox="0 0 26.999994 17.999969"
+   fill="none">
+  <path
+     fill="#ffffff"
+     d="M 13.499995,17.999969 H 0 v -3 h 13.499995 z m 13.5,-7.5 H 0 v -2.99997 h 26.999995 z m 0,-7.49997 h -13.5 V 0 h 13.5 z" />
 </svg>

@@ -333,8 +333,12 @@ section#news {
     flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
+
+    --width: clamp(min(400px, 90vw), 20rem, 1000px);
+
     .podcast a {
-      width: 20rem;
+      width: var(--width);
+      height: 100%;
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -351,28 +355,28 @@ section#news {
         opacity: 1;
       }
       img {
-        width: 20rem;
-        height: 20rem;
+        width: var(--width);
+        height: var(--width);
         aspect-ratio: 1;
         object-fit: contain;
         background-color: #212121;
       }
       h3,
       p, time {
-        width: 20rem;
+        width: var(--width);
         padding: 0 2rem;
         box-sizing: border-box;
       }
 
       h3{
-        font-size: 1.6rem;
+        font-size: max(28px, 1.6rem);
       }
       p {
         color: #eee;
         margin-top: -1.5rem;
         margin-bottom: 2rem;
         line-height: 1.4;
-        font-size: 0.8rem;
+        font-size: max(14px, 0.8rem);
       }
 
       time{

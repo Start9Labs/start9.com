@@ -13,7 +13,7 @@ gsap.from("section#hero+section", {
     },
   });
 
-const sections = document.querySelectorAll("section:not(#hero):not(#blurb)");
+const sections = document.querySelectorAll("section:not(#hero):not(#blurb):not(#menu)");
 
 sections.forEach(function (section) {
   gsap.from(section, {
