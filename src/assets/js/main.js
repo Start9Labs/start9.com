@@ -1,4 +1,4 @@
-var bodyRect = document.body.getBoundingClientRect();
+//var bodyRect = document.body.getBoundingClientRect();
 
 // TODO: pull these from data js
 const sections = [
@@ -99,6 +99,8 @@ gsap.from("#pitch h1, #pitch p", {
   },
 });
 
+console.log('test');
+
 // gsap.from("#pitch iframe", {
 //   duration: 0.5,
 //   opacity: 0,
@@ -147,7 +149,11 @@ const buyTL = gsap
   )
   .to(
     ".product__buy-image",
-    { opacity: 0.4, ease: "none", duration: 0.25 },
+    { //opacity: 0.5, 
+      ease: "none", 
+      duration: 0.25,
+      filter: "drop-shadow(0 0 2rem rgba(0,0,0,.5)) invert(.9)"
+    },
     0
   );
 
