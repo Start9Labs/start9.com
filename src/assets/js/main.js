@@ -99,16 +99,16 @@ gsap.from("#pitch h1, #pitch p", {
   },
 });
 
-gsap.from("#pitch iframe", {
-  duration: 0.5,
-  opacity: 0,
-  filter: "blur(10px)",
-  scrollTrigger: {
-    trigger: "#pitch",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
+// gsap.from("#pitch iframe", {
+//   duration: 0.5,
+//   opacity: 0,
+//   filter: "blur(10px)",
+//   scrollTrigger: {
+//     trigger: "#pitch",
+//     start: "top 75%", // "triggerElement page"
+//     toggleActions: defaultActions,
+//   },
+// });
 
 //////////////////////////////////////////
 // PRODUCTS
@@ -146,7 +146,7 @@ const buyTL = gsap
     0
   )
   .to(
-    ".product--buy img:first-child",
+    ".product__buy-image",
     { opacity: 0.4, ease: "none", duration: 0.25 },
     0
   );
@@ -154,23 +154,23 @@ const buyTL = gsap
 buyAnchor.onmouseenter = () => buyTL.play();
 buyAnchor.onmouseleave = () => buyTL.reverse();
 
-const diyAnchor = document.querySelector(".product--diy");
+// const diyAnchor = document.querySelector(".product--diy");
 
-const diyTL = gsap
-  .timeline({ paused: true })
-  .from(
-    "#diy-lines path:first-child",
-    { drawSVG: 0, ease: "none", duration: 0.75 },
-    0
-  )
-  .to(
-    ".product--diy img:first-child",
-    { opacity: 0.4, ease: "none", duration: 0.25 },
-    0
-  );
+// const diyTL = gsap
+//   .timeline({ paused: true })
+//   .from(
+//     "#diy-lines path:first-child",
+//     { drawSVG: 0, ease: "none", duration: 0.75 },
+//     0
+//   )
+//   .to(
+//     ".product--diy img:first-child",
+//     { opacity: 0.4, ease: "none", duration: 0.25 },
+//     0
+//   );
 
-diyAnchor.onmouseenter = () => diyTL.play();
-diyAnchor.onmouseleave = () => diyTL.reverse();
+// diyAnchor.onmouseenter = () => diyTL.play();
+// diyAnchor.onmouseleave = () => diyTL.reverse();
 
 gsap.from("#products-to-info path:first-child", {
   drawSVG: 0,
@@ -183,27 +183,27 @@ gsap.from("#products-to-info path:first-child", {
   },
 });
 
-gsap.from("#products-to-info path:nth-child(2)", {
-  drawSVG: 0,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#products-to-info path:nth-child(2)",
-    scrub: true,
-    start: "top 75%", // "triggerElement page"
-    end: "bottom 75%", // "triggerElement page"
-  },
-});
+// gsap.from("#products-to-info path:nth-child(2)", {
+//   drawSVG: 0,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#products-to-info path:nth-child(2)",
+//     scrub: true,
+//     start: "top 75%", // "triggerElement page"
+//     end: "bottom 75%", // "triggerElement page"
+//   },
+// });
 
-gsap.from("#products-to-info path:nth-child(3)", {
-  drawSVG: 0,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#products-to-info path:nth-child(3)",
-    scrub: true,
-    start: "top 75%", // "triggerElement page"
-    end: "bottom 75%", // "triggerElement page"
-  },
-});
+// gsap.from("#products-to-info path:nth-child(3)", {
+//   drawSVG: 0,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#products-to-info path:nth-child(3)",
+//     scrub: true,
+//     start: "top 75%", // "triggerElement page"
+//     end: "bottom 75%", // "triggerElement page"
+//   },
+// });
 
 //////////////////////////////////////////
 // INFOGRAPHICS

@@ -5,7 +5,7 @@ section#products {
   align-items: flex-end;
   justify-content: center;
   gap: 3rem;
-  --img-width: 35vw;
+  --img-width: min(35vw,500px);
 
   .subsection {
     transform-style: preserve-3d;
