@@ -12,7 +12,7 @@
     <ul>
         {% for highlight in highlights %}
         <li>
-            <div class="highlight-icon">{% include "components/svg/" + highlight.slug + ".njk" %}</div>
+            <div class="highlight-icon">{% include "svgs/" + highlight.slug + ".njk" %}</div>
             <h3>{{highlight.name|safe}}</h3>
         </li>
         {% endfor %}

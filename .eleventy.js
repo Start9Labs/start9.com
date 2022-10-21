@@ -53,7 +53,7 @@ module.exports = function (eleventyConfig) {
   //eleventyConfig.addPlugin(tinyCSS);
   eleventyConfig.addPlugin(tinyHTML);
   eleventyConfig.addPlugin(tinysvg, {
-    baseUrl: 'src/_includes/components/svg/',
+    baseUrl: 'src/_includes/svgs/',
   });
 
   // eleventyConfig.addPlugin(lazyImagesPlugin, {
