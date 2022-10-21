@@ -31,15 +31,11 @@
             grid-row: span 2;
         }
         & > li {
-            //margin-top: 5rem;
             padding: 2.5rem 2.5rem;
             &:nth-child(-n+2){
                 border-right: var(--b-secondary);
             }
         }
-        // & > *{
-        //     outline: 1px solid orange;
-        // }
     }
     h1{
         font-family: var(--f-accent-bold);

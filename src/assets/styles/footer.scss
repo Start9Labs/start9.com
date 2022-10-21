@@ -1,9 +1,9 @@
 footer{
     transform: translate(0px, 0vh);
-    //position: absolute;
     padding: 0;
     font-weight: 400;
     color: gray;
+    background-color: black;
     .footer__copyright, .footer__donate{
         font-size: max(14px, 0.8rem);
     }
@@ -17,7 +17,6 @@ footer{
             }
         }
     }
-    background-color: black;
     .groups{
         display: flex;
         flex-wrap: wrap;
@@ -30,15 +29,8 @@ footer{
             grid-row: span 2;
         }
         & > li {
-            //margin-top: 5rem;
             padding: 2.5rem 2.5rem;
-            &:nth-child(-n+2){
-                // border-right: var(--b-secondary);
-            }
         }
-        // & > *{
-        //     outline: 1px solid orange;
-        // }
     }
     h1{
         font-family: var(--f-accent-bold);
@@ -64,24 +56,8 @@ footer{
         path{
             transition: var(--t-simple);
         }
-        // &::after{
-        //     content: '';
-        //     position: absolute;
-        //     transition: var(--t-simple);
-        //     display: inline-block;   
-        //     width:0;
-        //     height: 85%;
-        //     left: 50%;
-        //     opacity: 0;
-        // }
         &:hover {
             color: var(--c-text-accent);
-            // &::after{
-            //     border: var(--b-primary);
-            //     width: 110%;
-            //     left: -5%;
-            //     opacity: 1;
-            // }
             path {
                 stroke: var(--c-text-accent);
             }
@@ -92,7 +68,6 @@ footer{
             &::before{
                 content: '';
                 z-index: -1;
-                //border: var(--b-primary);
                 background-color: var(--c-text-accent);
                 width: 110%;
                 left: -5%;
@@ -107,12 +82,12 @@ footer{
         }
 
     }
+    .footer__canary{
+        text-align: center;
+        padding: 2rem;
+    }
 }
 
-.footer__canary{
-    text-align: center;
-    padding: 2rem;
-}
 
 @media only screen and (max-width: 1200px) {
     footer .groups li > a {

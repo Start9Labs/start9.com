@@ -6,12 +6,10 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
-<script defer src="{{ '/assets/js/gsap.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/ScrollTrigger.min.js' | url }}"></script>
-{# <script defer src="{{ '/assets/js/ScrollSmoother.min.js' | url }}"></script> #}
-<script defer src="{{ '/assets/js/DrawSVGPlugin.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/CustomEase.min.js' | url }}"></script>
-{# <script defer src="{{ '/assets/js/list.min.js' | url }}"></script> #}
+<script defer src="{{ '/assets/js/libraries/gsap.min.js' | url }}"></script>
+<script defer src="{{ '/assets/js/libraries/ScrollTrigger.min.js' | url }}"></script>
+<script defer src="{{ '/assets/js/libraries/DrawSVGPlugin.min.js' | url }}"></script>
+<script defer src="{{ '/assets/js/libraries/CustomEase.min.js' | url }}"></script>
 <script defer src="{{ '/assets/js/_header.js' | url }}"></script>
 <script defer src="{{ '/assets/js/_menu.js' | url }}"></script>
 <script defer src="{{ '/assets/js/_hero.js' | url }}"></script>

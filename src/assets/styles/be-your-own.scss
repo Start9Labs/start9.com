@@ -115,7 +115,6 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      //background-color: #353535;
       padding: 2rem;
       font-size: var(--size);
       left: -1rem;
@@ -136,7 +135,7 @@
 
         .service__content {
           width: 100%;
-          color: var(--c-1);
+          color: var(--c-text-primary);
           font-size: 1rem;
           font-weight: 400;
           display: flex;
@@ -165,7 +164,7 @@
             width: 12rem;
             &.service__image--gitea,
             &.service__image--photoview {
-              background-color: var(--c-1);
+              background-color: var(--c-bkg-offset);
               padding: 1rem;
               box-sizing: border-box;
             }
@@ -212,11 +211,6 @@
             bottom: 0;
             z-index: -1;
           }
-
-          &:nth-child(n + 2) {
-            outline: 1px solid orange;
-            display: none !important;
-          }
         }
       }
     }
@@ -254,7 +248,7 @@
   position: absolute;
   font-size: 90px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--c-bkg-light-fade9);
   display: flex;
   align-items: center;
   justify-content: center;

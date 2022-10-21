@@ -1,10 +1,3 @@
-/* 
-    scroll bar width from vizion;
-    add shadows - maybe with animation
-    more responsive scaling from vizion
-
-*/
-
 @use 'pitch';
 @use 'products';
 @use 'infographics';
@@ -16,7 +9,7 @@
 @use 'community';
 
 
-body, .ScrollSmoother-wrapper {
+body {
   margin: 0;
   background: linear-gradient(0deg, var(--c-bkg), var(--c-bkg)),
     url("/assets/images/bkg.jpg");
@@ -36,7 +29,6 @@ section {
   --section-padding: 6vh;
   // min-height: calc(100vh - 2 * var(--section-padding));
   // padding: 0 var(--section-padding);
-  // outline: 1px solid orange;
 }
 
 .subsection{
@@ -61,12 +53,12 @@ section {
   fill: var(--c-bkg);
 }
 
-[class*="section--"]{
+.panel--shadow {
   box-shadow: var(--c-shadow-1) 0 3rem 3rem;
 }
 
 .section--inverse{
-  background-color: rgba(255,255,255,0.2);
+  background-color: var(--c-bkg-light-fade2);
   backdrop-filter: blur(1rem);
   h1, p {
     color: var(--c-bkg);
@@ -80,18 +72,9 @@ section {
 }
 
 .section--subtle{
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--c-bkg-dark-fade2);
   backdrop-filter: blur(1rem);
 }
-
-.section--bold{
-  //background-color: rgba(239,75,99,0.2);
-  background-color: rgba(255,255,255,0.8);
-  --c-text-primary: black;
-  backdrop-filter: blur(1rem);
-}
-
-
 
 .line svg{
   width: calc(100vw - (2 * 6rem));
@@ -245,13 +228,13 @@ a.btn {
   }
 
   &.btn--subtle{
-    color: #777777;
+    color: var(--c-gray3);
     font-size: 1.2rem;
     &::before {
-      background-color: white;
+      background-color: var(--c-bkg-offset);
     }
     &::after {
-      background-color: #eee;
+      background-color: var(--c-gray5);
     }
   }
 }
@@ -300,68 +283,11 @@ a.btn {
   }
 }
 
+// flipping some lines horizontally
 #bitcoin-to-be, #be-to-powered, #powered-to-support, #support-to-dev {
   transform: scaleX(-1);
 }
 
-
-$pastels: (red, pink) (blue, purple) (green, yellow)
-  (#a1c4fd, #c2e9fb) (#f6d365, #fda085) (#ffecd2, #fcb69f);
-$cube-edge: 4em;
-
-// body {
-//   margin: 0;
-//   height: 100vh;
-//   // perspective: 25em; maybe move from main.css?
-//   // background-color: linear-gradient();
-// }
-
-// [class*="cube"] {
-//   position: absolute;
-// }
-
-// .cube {
-//   top: 50%;
-//   left: 50%;
-//   transform-style: preserve-3d;
-//   font-size: 8vmin;
-//   animation: ani 8s ease-in-out infinite;
-
-//   &__face {
-//     margin: -0.5 * $cube-edge;
-//     width: $cube-edge;
-//     height: $cube-edge;
-//     backface-visibility: hidden;
-//     --i: 0;
-//     --j: 1;
-//     transform: rotate3d(var(--i), var(--j), 0, var(--a))
-//       translateZ(0.5 * $cube-edge);
-//     // interpolate because Sass apparently has issues with this
-//     background: #{"linear-gradient(var(--ga), var(--gs))"};
-
-//     &:nth-child(n + 5) {
-//       --i: 1;
-//       --j: 0;
-//     }
-
-//     @for $f from 0 to 6 {
-//       &:nth-child(#{$f + 1}) {
-//         --a: if($f < 4, $f, pow(-1, $f)) * 90deg;
-//         --ga: random(360) * 1deg;
-//         --gs: nth($pastels, $f + 1);
-//       }
-//     }
-//   }
-// }
-
-// @keyframes ani {
-//   from {
-//     transform: rotateY(2turn) rotateX(2turn);
-//   }
-//   to {
-//     transform: rotateY(1turn) rotateX(1turn);
-//   }
-// }
 
 @media screen and (max-width: 500px) {
   #hero{

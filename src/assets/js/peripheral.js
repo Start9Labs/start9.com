@@ -1,3 +1,7 @@
+//////////////////////////////////////////
+// GSAP ACTIONS
+// options: "play", "pause", "resume", "reset", "restart", "complete", "reverse", and "none"
+// arguments: onEnter, onLeave, onEnterBack, and onLeaveBack
 const defaultActions = "play none none none";
 
 gsap.from("section#hero+section", {

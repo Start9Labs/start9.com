@@ -16,7 +16,7 @@
     gap:1rem;
   }
   .wrapper{
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05));
+    background: var(--c-glass);
     max-width: 35ch;
     padding: 2rem;
     .content {
@@ -27,7 +27,7 @@
         font-weight: 300;
         font-size: 2rem;
         line-height: 1.1em;
-        color: var(--c-3);
+        color: var(--c-text-offset);
         text-transform: none;
         padding-bottom: 1rem;
       }
@@ -43,7 +43,7 @@
     position: relative;
     &::before{
       position: absolute;
-      top: 15rem;
+      top: 12rem;
       left: -4rem;
     content: '';
     display: block;

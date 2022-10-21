@@ -44,7 +44,7 @@ section {
       bottom: 0;
       left: calc(-1 * ((100vw - var(--width)) / 2) + var(--side-padding));
       width: 100vw;
-      background-color: #212121;
+      background-color: var(--c-gray1);
       z-index: -1;
     }
   }
@@ -343,11 +343,7 @@ section#news {
       flex-direction: column;
       gap: 2rem;
       position: relative;
-      background: linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.05)
-      );
+      background: var(--c-glass);
       .creator {
         left: 1rem;
         position: absolute;
@@ -359,7 +355,7 @@ section#news {
         height: var(--width);
         aspect-ratio: 1;
         object-fit: contain;
-        background-color: #212121;
+        background-color: var(--c-gray1);
       }
       h3,
       p, time {
@@ -372,7 +368,7 @@ section#news {
         font-size: max(28px, 1.6rem);
       }
       p {
-        color: #eee;
+        color: var(--c-gray5);
         margin-top: -1.5rem;
         margin-bottom: 2rem;
         line-height: 1.4;

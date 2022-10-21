@@ -1,3 +1,4 @@
+// if you uncomment these sections, you can fetch data from the github api on build
 //const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function() {

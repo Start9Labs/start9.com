@@ -3,7 +3,7 @@
 }
 
 section#bitcoin {
-  background-image: linear-gradient(180deg, #f7931a 0%, #7b1af8 100%);
+  background-image: linear-gradient(180deg, var(--c-bitcoin) 0%, var(--c-lightning) 100%);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
@@ -15,6 +15,7 @@ section#bitcoin {
   z-index: -1;
   margin-bottom: -10rem;
 
+  // gradient to fade away from bkg
   &::before {
     content: "";
     width: 100%;
@@ -24,6 +25,7 @@ section#bitcoin {
     top: -100vh;
   }
 
+  // gradient to fade back to bkg
   &::after {
     content: "";
     width: 100%;
@@ -33,17 +35,9 @@ section#bitcoin {
     bottom: -100vh;
   }
 
-  #grid-blend-top {
+  // grid of squares (svg)
+  #grid-blend-top, #grid-blend-bottom {
     // mix-blend-mode: multiply;
-    width: 100vw;
-    rect {
-      fill: var(--c-bkg);
-      stroke: var(--c-bkg);
-      stroke-width: 2px;
-    }
-  }
-
-  #grid-blend-bottom {
     width: 100vw;
     rect {
       fill: var(--c-bkg);
@@ -55,7 +49,7 @@ section#bitcoin {
   p {
     max-width: min(35ch, 50vw);
     em {
-      color: var(--c-1);
+      color: var(--c-text-primary);
       font-weight: 700;
     }
   }
@@ -65,7 +59,7 @@ section#bitcoin {
     gap: 3rem;
   }
 
-  .subsection:first-of-type {
+  .subsection--bitcoin {
     display: flex;
     flex-direction: column;
     place-self: flex-start;
@@ -73,7 +67,7 @@ section#bitcoin {
     margin-left: 8rem;
     align-items: flex-start;
   }
-  .subsection:nth-of-type(2) {
+  .subsection--lightning {
     place-self: flex-end;
     display: flex;
     flex-direction: column;
@@ -125,7 +119,7 @@ section#bitcoin {
     }
     &.service-icon--electrs {
       width: 7rem;      
-      background-color: var(--c-1);
+      background-color: var(--c-bkg-offset);
       padding: 1rem;
       z-index: -6;
     }

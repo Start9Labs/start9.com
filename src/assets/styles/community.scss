@@ -27,7 +27,7 @@ section#community {
     color: var(--c-text-primary);
     transition: var(--t-simple);
     &:focus{
-      background-color: rgba(255,255,255,.1);
+      background-color: var(--c-bkg-light-fade1);
     }
     &:focus-visible{
       outline: none;

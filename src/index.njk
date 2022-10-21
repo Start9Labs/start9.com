@@ -2,46 +2,8 @@
 title: Start9 | Sovereign Computing
 layout: layouts/base.njk
 ---
-{# 
-<script>
-    
-    // https://yewtu.be/watch?v=FJ44qmE5odc
-
-    let path = document.querySelector('path');
-    let pathLength = path.getTotalLength();
-
-    path.style.strokeDasharray = pathLength + ' ' + pathLength;
-
-    path.style.strokeDashoffset = pathLength;
-
-    window.addEventListener('scroll', ()=> {
-
-        // what percent down is it?
-        var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-        // length to offset the dashes
-        var drawLength = pathLength * scrollPercentage;
-
-        // draw in reverse
-        path.style.strokeDashoffset = pathLength - drawLength;
-
-
-
-    }) 
-    
-</script> #}
 
 <link rel="stylesheet" href="/assets/styles/landing.css">
-<link rel="preload" as="image" href="assets/images/explosion.png">
-
-<div class="cube">
-  <div class="cube__face"></div>
-  <div class="cube__face"></div>
-  <div class="cube__face"></div>
-  <div class="cube__face"></div>
-  <div class="cube__face"></div>
-  <div class="cube__face"></div>
-</div>
 
 {% include "components/landing/hero.njk" %}
 
@@ -92,13 +54,15 @@ layout: layouts/base.njk
 
 {% include "components/landing/community.njk" %}
 
-<script defer src="{{ '/assets/js/gsap.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/ScrollTrigger.min.js' | url }}"></script>
-{# <script defer src="{{ '/assets/js/ScrollSmoother.min.js' | url }}"></script> #}
-<script defer src="{{ '/assets/js/DrawSVGPlugin.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/CustomEase.min.js' | url }}"></script>
-{# <script defer src="{{ '/assets/js/list.min.js' | url }}"></script> #}
+<script defer src="{{ '/assets/js/libraries/gsap.min.js' | url }}"></script>
+<script defer src="{{ '/assets/js/libraries/ScrollTrigger.min.js' | url }}"></script>
+<script defer src="{{ '/assets/js/libraries/DrawSVGPlugin.min.js' | url }}"></script>
+<script defer src="{{ '/assets/js/libraries/CustomEase.min.js' | url }}"></script>
 <script defer src="{{ '/assets/js/_header.js' | url }}"></script>
 <script defer src="{{ '/assets/js/_menu.js' | url }}"></script>
 <script defer src="{{ '/assets/js/_hero.js' | url }}"></script>
-<script defer src="{{ '/assets/js/main.js' | url }}"></script>
+<script defer src="{{ '/assets/js/landing.js' | url }}"></script>
+<script defer src="{{ '/assets/js/landing/_appearance-animation.js' | url }}"></script>
+<script defer src="{{ '/assets/js/landing/_bitcoin-animation.js' | url }}"></script>
+<script defer src="{{ '/assets/js/landing/_ticker-animation.js' | url }}"></script>
+<script defer src="{{ '/assets/js/landing/_contact-post.js' | url }}"></script>

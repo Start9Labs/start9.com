@@ -3,7 +3,7 @@
    class="menu-icon"
    viewBox="0 0 13.414213 13.414213"
    stroke-width="2"
-   stroke="#ffffff"
+   stroke="var(--c-text-primary)"
    fill="none">
   <line
      x1="12.707107"

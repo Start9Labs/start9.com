@@ -30,8 +30,8 @@
       flex-direction: column;
       padding: 3%;
       list-style: none;
-      border-right: 1px dashed var(--c-1);
-      border-bottom: 1px dashed var(--c-1);
+      border-right: 1px dashed var(--c-line-primary);
+      border-bottom: 1px dashed var(--c-line-primary);
       box-sizing: border-box;
 
       &:nth-child(3n){
