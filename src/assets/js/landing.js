@@ -18,7 +18,6 @@ var resizeTimeout = setTimeout(onResizeComplete, 400);
 window.onresize = function () {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(onResizeComplete, 400);
-  console.log("onresize");
 };
 
 

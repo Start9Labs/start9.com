@@ -22,13 +22,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('src/assets/fonts');
   eleventyConfig.addPassthroughCopy("./src/assets/js");
-  // eleventyConfig.addPassthroughCopy('src/assets/images/**/*.png');
-  // eleventyConfig.addPassthroughCopy('src/assets/images/**/*.svg');
-  eleventyConfig.addPassthroughCopy('src/assets/images/**/*.jpg');
-  // eleventyConfig.addPassthroughCopy('src/assets/images/**/*.gif');
 
-
-  if (true) {//(process.env.ELEVENTY_ENV === "production") {
+  if (process.env.ELEVENTY_ENV === "production") {
     eleventyConfig.addPlugin(img2picture, {
       // Should be same as Eleventy input folder set using `dir.input`.
       eleventyInputDir: "src",
@@ -43,7 +38,7 @@ module.exports = function (eleventyConfig) {
     });
   } else {
     // During development, copy the files to Eleventy's `dir.output`
-    eleventyConfig.addPassthroughCopy("_site/assets/images");
+    eleventyConfig.addPassthroughCopy('./src/assets/images/');
   }
 
   //plugins
