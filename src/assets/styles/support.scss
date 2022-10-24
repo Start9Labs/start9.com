@@ -32,4 +32,13 @@ section#support {
       }
     }
   }
+
+  @media only screen and (max-width: 500px) {
+    section#support cols{
+      gap: 3rem;
+    }
+    section#support img{
+      max-height: 17rem;
+    }
+  }
 }

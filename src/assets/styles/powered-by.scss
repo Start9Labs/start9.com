@@ -52,9 +52,15 @@ section#powered-by {
     }
   }
   svg {
-    width: 45rem;
-    max-width: calc(100vw - 12rem);
+    --width: min(45rem, (100vw - 12rem));
+    width: --width;
+    //width: 45rem;
+    //max-width: calc(100vw - 12rem);
     //margin-top: 6rem;
+  }
+
+  #stack-image-block svg {
+    height: calc((679 / 843) * var(--width)); // forcing aspect ratio for iOS
   }
 
   a.source-link{
@@ -88,6 +94,7 @@ section#powered-by {
       position: absolute;
     }
   }
+
 }
 
 svg|a:link,

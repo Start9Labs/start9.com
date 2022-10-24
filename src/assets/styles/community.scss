@@ -16,6 +16,7 @@ section#community {
   }
 
   input[type="email"] {
+    border-radius: 0;
     width: var(--width);
     background-color: transparent;
     border: 0;

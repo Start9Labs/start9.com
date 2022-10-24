@@ -142,6 +142,9 @@ section#virtues {
     h1 {
       font-size: 4.2rem;
     }
+    svg {
+      width: 33rem; // force width for firefox
+    }
   }
 }
 
@@ -358,13 +361,14 @@ section#news {
         background-color: var(--c-gray1);
       }
       h3,
-      p, time {
+      p,
+      time {
         width: var(--width);
         padding: 0 2rem;
         box-sizing: border-box;
       }
 
-      h3{
+      h3 {
         font-size: max(28px, 1.6rem);
       }
       p {
@@ -375,7 +379,7 @@ section#news {
         font-size: max(14px, 0.8rem);
       }
 
-      time{
+      time {
         margin-top: -1.5rem;
         color: var(--c-text-accent);
         font-weight: 600;
@@ -385,11 +389,13 @@ section#news {
   }
 }
 
-section#contact { 
+section#contact {
   gap: 3rem;
-  p{ margin: 0;}
-.community__icons{
-  width: auto;
-  margin: 0;
-}
+  p {
+    margin: 0;
+  }
+  .community__icons {
+    width: auto;
+    margin: 0;
+  }
 }
