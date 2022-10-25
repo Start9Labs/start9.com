@@ -1,163 +1,116 @@
-[
-  {
+{
+  "file-browser": {
+    "name": "File Browser",
+    "description": "Personal cloud data storage",
+    "color": "#ffe95f",
+    "bitcoin": false
+  },
+  "synapse": {
     "name": "Synapse",
-    "slug": "synapse",
     "description": "A battle-tested implementation of the Matrix protocol, the killer of all messaging apps.",
     "color": "#666666",
-    "categories": ["communications"]
+    "bitcoin": false
   },
-  {
+  "mastodon": {
     "name": "Mastodon",
-    "slug": "mastodon",
     "description": "A free, open-source social network server",
     "color": "#6364ff",
-    "categories": ["communications"]
+    "bitcoin": false
   },
-  {
+  "vaultwarden": {
     "name": "Vaultwarden",
-    "slug": "vaultwarden",
     "description": "Secure password management",
     "color": "#175ddc",
-    "categories": ["data"]
+    "bitcoin": false
   },
-  {
-    "name": "Balance of Satoshis",
-    "slug": "balanceofsatoshis",
-    "description": "A tool for working with the balance of your satoshis on LND.",
-    "color": "#",
-    "categories": ["plebnet-tools"]
-  },
-  {
+  "bitcoind": {
     "name": "Bitcoin Core",
-    "slug": "bitcoind",
     "description": "A Bitcoin Full Node by Bitcoin Core.",
     "color": "#f2a900",
-    "categories": ["bitcoin"]
+    "bitcoin": true
   },
-  {
-    "name": "Bitcoin Proxy",
-    "slug": "btc-rpc-proxy",
-    "description": "Super charge your Bitcoin node.",
-    "color": "#",
-    "categories": ["bitcoin"]
-  },
-  {
+  "btcpay": {
     "name": "BTCPay Server",
-    "slug": "btcpayserver",
     "description": "Bitcoin and cryptocurrency payment processor and POS system.",
     "color": "#51b13e",
-    "categories": ["bitcoin"]
+    "bitcoin": true
   },
-  {
+  "cln": {
     "name": "Core Lightning",
-    "slug": "c-lightning",
     "description": "An implementation of the Lightning Network protocol by Blockstream.",
     "color": "#ffe95f",
-    "categories": ["lightning"]
+    "bitcoin": true
   },
-  {
+  "electrs": {
     "name": "electrs",
-    "slug": "electrs",
     "description": "",
-    "color": "#",
-    "categories": ["bitcoin"]
+    "color": "#2c384c",
+    "bitcoin": true
   },
-  {
-    "name": "lightning Jet",
-    "slug": "lightning-jet",
-    "description": "",
-    "color": "#",
-    "categories": ["plebnet-tools"]
-  },
-  {
+  "lnd": {
     "name": "Lightning Network Daemon",
-    "slug": "lnd",
     "description": "A complete implementation of a Lightning Network node by Lightning Labs.",
     "color": "#338dc9",
-    "categories": ["lightning"]
+    "bitcoin": true
   },
-  {
+  "lit": {
     "name": "Lightning Terminal",
-    "slug": "lightning-terminal",
     "description": "Your Home for Lightning Liquidity",
     "color": "#570380",
-    "categories": ["lightning"]
+    "bitcoin": true
   },
-  {
-    "name": "LNDg",
-    "slug": "lndg",
-    "description": "Powerful web interface for LND developed specifically for LND Routing Node Operators",
-    "color": "#",
-    "categories": ["plebnet-tools"]
-  },
-  {
+  "mempool": {
     "name": "Mempool",
-    "slug": "mempool",
     "description": "A Bitcoin node and network visualizer.",
     "color": "#8884f7",
-    "categories": ["bitcoin"]
+    "bitcoin": true
   },
-  {
+  "rtl": {
     "name": "Ride the Lightning",
-    "slug": "ride-the-lightning",
-    "description": "",
+    "description": "A node management GUI for Lightning Network",
     "color": "#bdbdbd",
-    "categories": ["lightning"]
+    "bitcoin": true
   },
-  {
+  "spark": {
     "name": "Spark Wallet",
-    "slug": "spark-wallet",
     "description": "A minimalistic wallet GUI for Core Lightning (CLN).",
     "color": "#2c384c",
-    "categories": ["lightning"]
+    "bitcoin": true
   },
-  {
+  "specter": {
     "name": "Specter",
-    "slug": "specter",
     "description": "A desktop GUI for Bitcoin Core optimised to work with hardware wallets.",
     "color": "#e80001",
-    "categories": ["bitcoin"]
+    "bitcoin": true
   },
-  {
+  "sphinx": {
     "name": "Sphinx Chat",
-    "slug": "sphinx-relay",
     "description": "Chat on the lightning Network.",
     "color": "#618aff",
-    "categories": ["lightning"]
+    "bitcoin": true
   },
-  {
+  "thunderhub": {
     "name": "Thunderhub",
-    "slug": "thunderhub",
     "description": "LND Lightning Node Manager in your Browser",
     "color": "#2b3885",
-    "categories": ["bitcoin"]
+    "bitcoin": true
   },
-  {
+  "ghost": {
     "name": "Ghost",
-    "slug": "ghost",
     "description": "A self-hosted blogging platform.",
     "color": "#bfbfbe",
-    "categories": ["communications"]
+    "bitcoin": false
   },
-  {
+  "photoview": {
     "name": "Photoview",
-    "slug": "photoview",
     "description": "An easy way to organize and share personal photos.",
     "color": "#ff692c",
-    "categories": ["data"]
+    "bitcoin": false
   },
-  {
-    "name": "Syncthing",
-    "slug": "syncthing",
-    "description": "Synchronizes files between devices in real time, safely protected from prying eyes.",
-    "color": "#1191ce",
-    "categories": ["data"]
-  },
-  {
+  "gitea": {
     "name": "Gitea",
-    "slug": "gitea",
     "description": "A painless, self-hosted git service.",
     "color": "#609926",
-    "categories": ["data"]
+    "bitcoin": false
   }
-]
+}

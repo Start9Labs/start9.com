@@ -104,22 +104,14 @@ section#bitcoin {
     mix-blend-mode: soft-light;
     box-shadow: 0 2rem 3rem var(--c-shadow-3);
 
-    &.service-icon--balanceofsatoshis {
-      width: 5rem;
-      z-index: -8;
-    }
     &.service-icon--bitcoind {
       width: 15rem;
     }
-    &.service-icon--btc-rpc-proxy {
-      width: 9rem;
-      z-index: -4;
-    }
-    &.service-icon--btcpayserver {
+    &.service-icon--btcpay {
       width: 6rem;
       z-index: -7;
     }
-    &.service-icon--c-lightning {
+    &.service-icon--cln {
       width: 15rem;
     }
     &.service-icon--electrs {
@@ -128,31 +120,23 @@ section#bitcoin {
       padding: 1rem;
       z-index: -6;
     }
-    &.service-icon--lightning-jet {
-      width: 6rem;
-      z-index: -7;
-    }
     &.service-icon--lnd {
       width: 10rem;
       z-index: -3;
     }
-    &.service-icon--lightning-terminal {
+    &.service-icon--lit {
       width: 7rem;
       z-index: -6;
-    }
-    &.service-icon--lndg {
-      width: 9rem;
-      z-index: -4;
     }
     &.service-icon--mempool {
       width: 8rem;
       z-index: -5;
     }
-    &.service-icon--ride-the-lightning {
+    &.service-icon--rtl {
       width: 8rem;
       z-index: -5;
     }
-    &.service-icon--spark-wallet {
+    &.service-icon--spark {
       width: 7rem;
       z-index: -6;
     }
@@ -160,7 +144,7 @@ section#bitcoin {
       width: 5rem;
       z-index: -8;
     }
-    &.service-icon--sphinx-relay {
+    &.service-icon--sphinx {
       width: 6rem;
       z-index: -7;
     }

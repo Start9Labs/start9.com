@@ -11,8 +11,8 @@
         </div>
         <div id="ticker__window">
             <ul class='pseudoservices'>
-                {% for pseudoservice in pseudoservices %}
-                    <li class="pseudoservice">{{ pseudoservice.name }}</li>
+                {% for ps in pseudoservices %}
+                    <li class="pseudoservice">{{ ps.name }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -20,15 +20,15 @@
             {% for ps in pseudoservices %}
                 <div class="service-container service-container--{{ ps.slug }}">
                     <div class="service__content" >
-                        <a class="service__link" href="https://marketplace.start9.com/{{service.slug}}" target="_blank" rel="noopener noreferrer">
-                            <img class="service__image service__image--{{ ps.service.slug }}" src="/assets/images/service-icons/{{ ps.service.slug }}.png" alt="{{ ps.service.name }} embassyOS service icon" title="{{ ps.service.name }} embassyOS service icon"
-                            style="filter: drop-shadow(0px 0px 3rem {{ ps.service.color }}C0)"/>
+                        <a class="service__link" href="https://marketplace.start9.com/{{ ps.service }}" target="_blank" rel="noopener noreferrer">
+                            <img class="service__image service__image--{{ ps.service }}" src="/assets/images/service-icons/{{ ps.service }}.png" alt="{{ services[ps.service].name }} embassyOS service icon" title="{{ services[ps.service].name }} embassyOS service icon"
+                            style="filter: drop-shadow(0px 0px 3rem {{ services[ps.service].color }}C0)"/>
                             <div class="service__info">
-                                <h3 class="service__name">{{ ps.service.name }}</h3>
-                                <p class="service__desc">{{ ps.service.description }}</p>
+                                <h3 class="service__name">{{ services[ps.service].name }}</h3>
+                                <p class="service__desc">{{ services[ps.service].description }}</p>
                             </div>
                         </a>
-                        <div class="service__bkg" style="background: linear-gradient(180deg, {{ ps.service.color }}00 0%, {{ ps.service.color }}C0 30%, {{ ps.service.color }}FF 50%, {{ ps.service.color }}C0 66%, {{ ps.service.color }}00 100%);"></div>
+                        <div class="service__bkg" style="background: linear-gradient(180deg, {{ services[ps.service].color }}00 0%, {{ services[ps.service].color }}C0 30%, {{ services[ps.service].color }}FF 50%, {{ services[ps.service].color }}C0 66%, {{ services[ps.service].color }}00 100%);"></div>
                     </div>
                 </div>
             {% endfor %}

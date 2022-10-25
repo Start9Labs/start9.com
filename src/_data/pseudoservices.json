@@ -2,140 +2,71 @@
   {
     "name": "Whatsapp",
     "slug": "whatsapp",
-    "service": {
-      "name": "Synapse",
-      "slug": "synapse",
-      "description": "A battle-tested implementation of the Matrix protocol, the killer of all messaging apps","color": "#666666"
-    }
+    "service": "synapse"
   },
   {
     "name": "Twitter",
     "slug": "twitter",
-    "service": {
-      "name": "Mastodon",
-      "slug": "mastodon",
-      "description": "A free, open-source social network server",
-      "color": "#6364ff"
-    }
+    "service": "mastodon"
   },
   {
     "name": "Lastpass",
     "slug": "lastpass",
-    "service": {
-      "name": "Vaultwarden",
-      "slug": "vaultwarden",
-      "description": "Secure password management",
-      "color": "#175ddc"
-    }
+    "service": "vaultwarden"
   },
   {
     "name": "bank",
     "slug": "bank",
-    "service": {
-      "name": "Bitcoin Core",
-      "slug": "bitcoind",
-      "description": "A Bitcoin Full Node by Bitcoin Core.",
-      "color": "#f2a900"
-    }
+    "service": "bitcoind"
   },
   {
     "name": "Github",
     "slug": "github",
-    "service": {
-      "name": "Gitea",
-      "slug": "gitea",
-      "description": "A painless, self-hosted git service.",
-      "color": "#609926"
-    }
+    "service": "gitea"
   },
   {
     "name": "Google Drive",
     "slug": "google-drive",
-    "service": {
-      "name": "Syncthing",
-      "slug": "syncthing",
-      "description": "Synchronizes files between devices in real time, safely protected from prying eyes.",
-      "color": "#1191ce"
-    }
+    "service": "file-browser"
   },
   {
-    "name": "iPhotos",
-    "slug": "iphotos",
-    "service": {
-      "name": "Photoview",
-      "slug": "photoview",
-      "description": "An easy way to organize and share personal photos.",
-      "color": "#ff692c"
-    }
+    "name": "iPhoto",
+    "slug": "iphoto",
+    "service": "photoview"
   },
   {
     "name": "GoFundMe",
     "slug": "gofundme",
-    "service": {
-      "name": "BTCPay Server",
-      "slug": "btcpayserver",
-      "description": "Bitcoin and cryptocurrency payment processor and POS system.",
-      "color": "#51b13e"
-    }
+    "service": "btcpay"
   },
   {
     "name": "PayPal",
     "slug": "paypal",
-    "service": {
-      "name": "LND",
-      "slug": "lnd",
-      "description": "A complete implementation of a Lightning Network node by Lightning Labs.",
-      "color": "#338dc9"
-    }
+    "service": "lnd"
   },
   {
     "name": "iMessage",
     "slug": "imessage", 
-    "service": {
-      "name": "Synapse",
-      "slug": "synapse",
-      "description": "A battle-tested implementation of the Matrix protocol, the killer of all messaging apps.",
-      "color": "#666666"
-  }
+    "service": "synapse"
   },
   {
     "name": "Kickstarter",
     "slug": "kickstarter",
-    "service": {
-      "name": "BTCPay Server",
-      "slug": "btcpayserver",
-      "description": "Bitcoin and cryptocurrency payment processor and POS system.",
-      "color": "#51b13e"
-    }
+    "service": "btcpay"
   },
   {
     "name": "Medium",
     "slug": "medium",
-    "service": {
-      "name": "Ghost",
-      "slug": "ghost",
-      "description": "A self-hosted blogging platform.",
-      "color": "#bfbfbe"
-    }
+    "service": "ghost"
   },
   {
     "name": "Dropbox",
     "slug": "dropbox",
-    "service": {
-      "name": "Syncthing",
-      "slug": "syncthing",
-      "description": "Synchronizes files between devices in real time, safely protected from prying eyes.",
-      "color": "#1191ce"
-    }
+    "service": "nextcloud"
   },
   {
     "name": "1Password",
     "slug": "1password",
-    "service": {
-      "name": "Vaultwarden",
-      "slug": "vaultwarden",
-      "description": "Secure password management",
-      "color": "#175ddc"
-    }
+    "service": "vaultwarden"
   }
 ]

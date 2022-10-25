@@ -6,21 +6,17 @@
 // DATA
 // TODO: pull this from data js instead
 const bitcoinServices = [
-    "balanceofsatoshis",
     "bitcoind",
-    "btc-rpc-proxy",
-    "btcpayserver",
-    "c-lightning",
+    "btcpay",
+    "cln",
     "electrs",
-    "lightning-jet",
     "lnd",
-    "lightning-terminal",
-    "lndg",
+    "lit",
     "mempool",
-    "ride-the-lightning",
-    "spark-wallet",
+    "rtl",
+    "spark",
     "specter",
-    "sphinx-relay",
+    "sphinx",
     "thunderhub",
   ];
 
