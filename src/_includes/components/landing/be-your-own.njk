@@ -17,24 +17,20 @@
             </ul>
         </div>
         <div class="services">
-            {% for pseudoservice in pseudoservices %}
-            <div class="service-container service-container--{{ pseudoservice.slug }}">
-                    {% for service in services %}
-                        {% if pseudoservice.slug in service.pseudoservices %}
-                            <div class="service__content" >
-                                <a class="service__link" href="https://marketplace.start9.com/{{service.slug}}" target="_blank" rel="noopener noreferrer">
-                                    <img class="service__image service__image--{{ service.slug }}" src="/assets/images/service-icons/{{ service.slug }}.png" alt="{{ service.name }} embassyOS service icon" title="{{ service.name }} embassyOS service icon"
-                                    style="filter: drop-shadow(0px 0px 3rem {{ service.color }}C0)"/>
-                                    <div class="service__info">
-                                        <h3 class="service__name">{{ service.name }}</h3>
-                                        <p class="service__desc">{{ service.description }}</p>
-                                    </div>
-                                </a>
-                                <div class="service__bkg" style="background: linear-gradient(180deg, {{ service.color }}00 0%, {{ service.color }}C0 30%, {{ service.color }}FF 50%, {{ service.color }}C0 66%, {{ service.color }}00 100%);"></div>
+            {% for ps in pseudoservices %}
+                <div class="service-container service-container--{{ ps.slug }}">
+                    <div class="service__content" >
+                        <a class="service__link" href="https://marketplace.start9.com/{{service.slug}}" target="_blank" rel="noopener noreferrer">
+                            <img class="service__image service__image--{{ ps.service.slug }}" src="/assets/images/service-icons/{{ ps.service.slug }}.png" alt="{{ ps.service.name }} embassyOS service icon" title="{{ ps.service.name }} embassyOS service icon"
+                            style="filter: drop-shadow(0px 0px 3rem {{ ps.service.color }}C0)"/>
+                            <div class="service__info">
+                                <h3 class="service__name">{{ ps.service.name }}</h3>
+                                <p class="service__desc">{{ ps.service.description }}</p>
                             </div>
-                        {% endif %}
-                    {% endfor %}
-            </div>
+                        </a>
+                        <div class="service__bkg" style="background: linear-gradient(180deg, {{ ps.service.color }}00 0%, {{ ps.service.color }}C0 30%, {{ ps.service.color }}FF 50%, {{ ps.service.color }}C0 66%, {{ ps.service.color }}00 100%);"></div>
+                    </div>
+                </div>
             {% endfor %}
         </div>
     </div>
