@@ -12,7 +12,7 @@
         <div id="ticker__window">
             <ul class='pseudoservices'>
                 {% for ps in pseudoservices %}
-                    <li class="pseudoservice">{{ ps.name }}</li>
+                    <li class="pseudoservice" onclick="moveTick(this.innerHTML)">{{ ps.name }}</li>
                 {% endfor %}
             </ul>
         </div>
