@@ -45,20 +45,23 @@
       position: absolute;
       top: 12rem;
       left: -4rem;
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 2rem transparent solid;
-    border-right: 2rem #1e1e1e solid;
-    border-bottom: 2rem transparent solid;
-    border-left: 2rem transparent solid;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 2rem transparent solid;
+      border-right: 2rem #1e1e1e solid;
+      border-bottom: 2rem transparent solid;
+      border-left: 2rem transparent solid;
 
+    }
   }
-}
   img {
     width: 20rem;
     box-shadow: var(--sh-2);
     border-radius: 1.3rem;
+  }
+  .skills {
+    text-align: center;
   }
 }

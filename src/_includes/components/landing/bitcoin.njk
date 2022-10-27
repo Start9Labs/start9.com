@@ -1,28 +1,32 @@
 <section id="bitcoin">
-    {% include "svgs/bitcoin-grid-blend-top.svg" %}
-    <div class="subsection subsection--bitcoin">
-        <h1>Become Bitcoin</h1>
-        <p>
-            <em>Don't trust, verify.</em>
-            <br/>Run a full Bitcoin node to verify transactions and enforce the consensus rules you choose.</p>
-        <a class="btn btn--subtle" target="_blank" rel="noopener noreferrer" href="{{ site.bitcoin.whyRunBitcoinUrl }}">why host a bitcoin node?</a>
-    </div>
-    <div class="subsection subsection--lightning">
-        <h1>Become Lightning</h1>
-        <p>
-            <em>Not your keys, not your coins.</em>
-            <br/>Run a Lightning node to take full control and custody over your Bitcoin on Lightning.</p>
-        <a class="btn btn--subtle" target="_blank" rel="noopener noreferrer" href="{{ site.bitcoin.whyRunLightningUrl }}">why host a lightning node?</a>
+  {% include "svgs/bitcoin-grid-blend-top.svg" %}
+  <div class="subsection subsection--bitcoin">
+    <h1>Become Bitcoin</h1>
+      <p>
+        <em>Don't trust, verify.</em>
+        <br/>Run a full Bitcoin node to verify transactions and enforce the consensus rules you choose.
+      </p>
+  </div>
+  <div class="subsection subsection--lightning">
+    <h1>Become Lightning</h1>
+    <p>
+      <em>Not your keys, not your coins.</em>
+      <br/>Run a Lightning node to take full control and custody over your Bitcoin on Lightning.
+    </p>
     </div>
     <div id="flying-icons">
-        {% for slug, service in services %}
-            {% if (service.bitcoin == true) %}
-                <img
-                    class="service-icon service-icon--{{ slug }}"
-                    src="/assets/images/service-icons/{{ slug }}.png"
-                    alt="{{ service.name }} embassyOS service icon"/>
-            {% endif %}
-        {% endfor %}
+      {% for slug, service in services %}
+        {% if (service.bitcoin == true) %}
+          <img
+            class="service-icon service-icon--{{ slug }}"
+            src="/assets/images/service-icons/{{ slug }}.png"
+            alt="{{ service.name }} embassyOS service icon"/>
+        {% endif %}
+      {% endfor %}
     </div>
-    {% include "svgs/bitcoin-grid-blend-bottom.svg" %}
+    <div class="subsection subsection--bitcoin">
+    <h1>Become unstoppable</h1>
+      <p>Using Bitcoin in this way makes exchanging value censorship resistent and truly sovereign.</p>
+  </div>
+  {% include "svgs/bitcoin-grid-blend-bottom.svg" %}
 </section>

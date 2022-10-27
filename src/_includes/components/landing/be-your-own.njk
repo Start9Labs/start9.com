@@ -1,38 +1,39 @@
 <section id="be-your-own">
-    <h1>Be
-        <em>your own</em>
-        everything</h1>
-    <p>Anything you can do in the <a href="https://en.wikipedia.org/wiki/Censorship_by_Apple#App_Store" target="_blank" rel="noopener noreferrer">permissioned</a>, <a href="https://www.computerworld.com/article/3634591/the-problem-with-the-subscription-economy.html" target="_blank" rel="noopener noreferrer">subscription-based</a>, <a href="https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google" target="_blank" rel="noopener noreferrer">privacy-invading</a>, <a target="_blank" rel="noopener noreferrer" href="https://dataprot.net/articles/biggest-data-breaches/">insecure</a> model of cloud computing, you
-        can also do in the open, free, private, secure model of <em>sovereign computing</em>.</p>
-    <div id='ticker'>
-        <div id="ticker__selected-frame">
-            <span>be your own</span>
-            {# <div id="services"></div> #}
-        </div>
-        <div id="ticker__window">
-            <ul class='pseudoservices'>
-                {% for ps in pseudoservices %}
-                    <li class="pseudoservice" onclick="moveTick(this.innerHTML)">{{ ps.name }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="services">
-            {% for ps in pseudoservices %}
-                <div class="service-container service-container--{{ ps.slug }}">
-                    <div class="service__content" >
-                        <a class="service__link" href="https://marketplace.start9.com/{{ ps.service }}" target="_blank" rel="noopener noreferrer">
-                            <img class="service__image service__image--{{ ps.service }}" src="/assets/images/service-icons/{{ ps.service }}.png" alt="{{ services[ps.service].name }} embassyOS service icon" title="{{ services[ps.service].name }} embassyOS service icon"
-                            style="filter: drop-shadow(0px 0px 3rem {{ services[ps.service].color }}C0)"/>
-                            <div class="service__info">
-                                <h3 class="service__name">{{ services[ps.service].name }}</h3>
-                                <p class="service__desc">{{ services[ps.service].description }}</p>
-                            </div>
-                        </a>
-                        <div class="service__bkg" style="background: linear-gradient(180deg, {{ services[ps.service].color }}00 0%, {{ services[ps.service].color }}C0 30%, {{ services[ps.service].color }}FF 50%, {{ services[ps.service].color }}C0 66%, {{ services[ps.service].color }}00 100%);"></div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+  <h1>Be <em>your own</em> everything</h1>
+  {# <p>Anything you can do in the <a href="https://en.wikipedia.org/wiki/Censorship_by_Apple#App_Store" target="_blank" rel="noopener noreferrer">permissioned</a>, <a href="https://www.computerworld.com/article/3634591/the-problem-with-the-subscription-economy.html" target="_blank" rel="noopener noreferrer">subscription-based</a>, <a href="https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google" target="_blank" rel="noopener noreferrer">privacy-invading</a>, <a target="_blank" rel="noopener noreferrer" href="https://dataprot.net/articles/biggest-data-breaches/">insecure</a> model of cloud computing, you
+      can also do in the open, free, private, secure model of <em>sovereign computing</em>.</p> #}
+  <p>
+    embassyOS empowers open source developers to create modern services that give you this power. Install the equivalents of your favorite apps with ease and <em>become unstoppable</em> today.
+  </p>
+  <div id='ticker'>
+    <div id="ticker__selected-frame">
+      <span>be your own</span>
+      {# <div id="services"></div> #}
     </div>
-    <a href="{{ site.beYourOwn.url }}" class="btn">browse the start9 marketplace</a>
+    <div id="ticker__window">
+      <ul class='pseudoservices'>
+        {% for ps in pseudoservices %}
+          <li class="pseudoservice" onclick="moveTick(this.innerHTML)">{{ ps.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="services">
+      {% for ps in pseudoservices %}
+        <div class="service-container service-container--{{ ps.slug }}">
+          <div class="service__content" >
+            <a class="service__link" href="https://marketplace.start9.com/{{ ps.service }}" target="_blank" rel="noopener noreferrer">
+              <img class="service__image service__image--{{ ps.service }}" src="/assets/images/service-icons/{{ ps.service }}.png" alt="{{ services[ps.service].name }} embassyOS service icon" title="{{ services[ps.service].name }} embassyOS service icon"
+              style="filter: drop-shadow(0px 0px 3rem {{ services[ps.service].color }}C0)"/>
+              <div class="service__info">
+                <h3 class="service__name">{{ services[ps.service].name }}</h3>
+                <p class="service__desc">{{ services[ps.service].description }}</p>
+              </div>
+            </a>
+            <div class="service__bkg" style="background: linear-gradient(180deg, {{ services[ps.service].color }}00 0%, {{ services[ps.service].color }}C0 30%, {{ services[ps.service].color }}FF 50%, {{ services[ps.service].color }}C0 66%, {{ services[ps.service].color }}00 100%);"></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <a href="{{ site.beYourOwn.url }}" class="btn">Browse marketplace</a>
 </section>

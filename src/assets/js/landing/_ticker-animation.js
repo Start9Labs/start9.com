@@ -49,7 +49,7 @@ function tick() {
   pseudoserviceArray.push(pseudoserviceArray.shift());
 
   // start endless run
-  gsap.delayedCall(next, tick);
+  // gsap.delayedCall(next, tick);
 
   let thisPseudoservice = pseudoserviceArray[2].innerHTML
   let thisElement = document.querySelector(
@@ -81,7 +81,7 @@ function moveTick(service) {
   let current = pseudoserviceArray[2].innerHTML
   let currentIndex = 2
 
-  let i = pseudoserviceArray.slice().findIndex(a => a.innerHTML === service)
+  let i = pseudoserviceArray.findIndex(a => a.innerHTML === service)
   console.log(i)
   let diff = Math.abs(currentIndex - i)
   let y

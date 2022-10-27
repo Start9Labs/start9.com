@@ -25,9 +25,9 @@
     "service": "gitea"
   },
   {
-    "name": "Google Drive",
-    "slug": "google-drive",
-    "service": "file-browser"
+    "name": "Gsuite",
+    "slug": "gsuite",
+    "service": "nextcloud"
   },
   {
     "name": "iPhoto",
@@ -62,7 +62,7 @@
   {
     "name": "Dropbox",
     "slug": "dropbox",
-    "service": "nextcloud"
+    "service": "file-browser"
   },
   {
     "name": "1Password",

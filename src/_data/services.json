@@ -25,7 +25,7 @@
   },
   "bitcoind": {
     "name": "Bitcoin Core",
-    "description": "A Bitcoin Full Node by Bitcoin Core.",
+    "description": "A Bitcoin full node by Bitcoin Core.",
     "color": "#f2a900",
     "bitcoin": true
   },
@@ -110,6 +110,12 @@
   "gitea": {
     "name": "Gitea",
     "description": "A painless, self-hosted git service.",
+    "color": "#609926",
+    "bitcoin": false
+  },
+  "nextcloud": {
+    "name": "Nextcloud",
+    "description": "Online collaboration platform.",
     "color": "#609926",
     "bitcoin": false
   }

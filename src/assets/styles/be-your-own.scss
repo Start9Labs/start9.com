@@ -1,6 +1,6 @@
 @media screen and (min-width: 900px) {
   #be-your-own {
-    --size: 3rem;
+    --size: 2.7rem;
     --rows-above: 2;
     --rows-height: 7;
   }
@@ -102,6 +102,7 @@
       li {
         list-style: none;
         font-size: var(--size);
+        font-weight: bolder;
         line-height: 1;
         display: flex;
         align-items: center;
@@ -176,25 +177,27 @@
           }
 
           .service__info {
-            background-color: var(--c-text-accent);
+            background-color: rgba(255, 255, 255, 0.3);
             width: 20ch;
-            padding: 1rem;
+            padding: 1.3rem;
             margin-top: 1rem;
             position: relative;
             display: flex;
             flex-direction: column;
-            box-shadow: var(--sh-2);
+            box-shadow: var(--sh-1);
+            border-radius: 24px;
+            backdrop-filter: blur(4px);
 
             &::before {
               position: absolute;
-              top: calc(-4rem + 2px);
+              top: calc(-4rem);
               content: "";
               display: block;
               //width: 0;
               //height: 0;
               border-top: 2rem transparent solid;
               border-right: 2rem transparent solid;
-              border-bottom: 2rem var(--c-text-accent) solid;
+              border-bottom: 2rem rgba(255, 255, 255, 0.3) solid;
               border-left: 2rem transparent solid;
               align-self: center;
             }
@@ -205,6 +208,8 @@
               font-size: 0.75rem;
               height: 4em;
               overflow: hidden;
+              // margin: 0 !important;
+              padding: 0.2rem;
             }
           }
 
