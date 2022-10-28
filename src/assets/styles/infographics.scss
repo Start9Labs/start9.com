@@ -45,7 +45,7 @@ section#infographics{
   }
 
   .image-with-shadow{
-    --width: clamp(min(200px, 20vw), 68%, 535px);
+    --width: clamp(min(200px, 20vw), 60%, 535px);
     width: var(--width);
     z-index: 1;
     .img-shadow{
