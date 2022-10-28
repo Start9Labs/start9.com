@@ -22,7 +22,7 @@ function showSuccess() {
     emailError.classList.remove("form-alert--visible");
   }
   
-  document.getElementById("contactSubmit").addEventListener("click", function () {
+  document.getElementById("contactSubmit").addEventListener("click", function (e) {
     const fromEmail = document.getElementById("fromEmail");
     const emailError = document.getElementById("emailError");
     const emailSuccess = document.getElementById("emailSuccess");
@@ -35,12 +35,19 @@ function showSuccess() {
       hideError();
   
       try {
-        fetch(siteUrl + "app/php/email/v1/SendSupportMail.php", {
+        var body = {
+          customer: {
+            email: fromEmail,
+            accepts_marketing: true,
+            verified_email: true,
+          },
+        };
+        fetch(siteUrl + "/api/subscribe", {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
           },
-          body: formBody,
+          body: JSON.stringify(body),
         }).then((response) => {
           if (response.status === 200) {
             showSuccess();
