@@ -39,10 +39,10 @@
 
   --c-6: #c2c2c2;
 
-  --c-7: #2fdf75;
+  --c-7: #27b45f;
   --c-success: var(--c-7);
 
-  --c-8: #ff0000;
+  --c-8: #e43434;
   --c-negative: var(--c-8);
 
   --c-accent: #6866cc;
@@ -369,7 +369,7 @@ nav {
 .form-alert {
   padding: 1.5rem;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   display: none;
 
   &.form-alert--success {
@@ -378,6 +378,10 @@ nav {
 
   &.form-alert--error {
     background-color: var(--c-negative);
+
+    a {
+      font-weight: 700;
+    }
   }
 
   &.form-alert--visible {
