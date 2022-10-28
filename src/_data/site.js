@@ -26,5 +26,6 @@ module.exports = {
         copyright: "© " + new Date().getFullYear() + " by START9 LABS, INC.",
         canary:
           "WE HAVE NEVER RECEIVED A SECRET GOVERNMENT REQUEST TO HAND OVER USER INFORMATION.",
+        donate: 'https://btcpay.start9labs.com/apps/2Et1JUmJnDwzKncfVBXvspeXiFsa/crowdfund'
       }
     };
