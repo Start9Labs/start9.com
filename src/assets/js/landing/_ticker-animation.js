@@ -49,7 +49,7 @@ function tick() {
   pseudoserviceArray.push(pseudoserviceArray.shift());
 
   // start endless run
-  gsap.delayedCall(next, tick);
+  // gsap.delayedCall(next, tick);
 
   let thisPseudoservice = pseudoserviceArray[2].innerHTML
   let thisElement = document.querySelector(
