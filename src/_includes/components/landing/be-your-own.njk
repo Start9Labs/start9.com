@@ -1,7 +1,5 @@
 <section id="be-your-own">
   <h1>Be <em>your own</em> everything</h1>
-  {# <p>Anything you can do in the <a href="https://en.wikipedia.org/wiki/Censorship_by_Apple#App_Store" target="_blank" rel="noopener noreferrer">permissioned</a>, <a href="https://www.computerworld.com/article/3634591/the-problem-with-the-subscription-economy.html" target="_blank" rel="noopener noreferrer">subscription-based</a>, <a href="https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google" target="_blank" rel="noopener noreferrer">privacy-invading</a>, <a target="_blank" rel="noopener noreferrer" href="https://dataprot.net/articles/biggest-data-breaches/">insecure</a> model of cloud computing, you
-      can also do in the open, free, private, secure model of <em>sovereign computing</em>.</p> #}
   <p>
     embassyOS empowers open source developers to create modern services that give you this power. Install the equivalents of your favorite apps with ease and <em>become unstoppable</em> today.
   </p>
@@ -13,7 +11,7 @@
     <div id="ticker__window">
       <ul class='pseudoservices'>
         {% for ps in pseudoservices %}
-          <li class="pseudoservice" onclick="moveTick(this.innerHTML)">{{ ps.name }}</li>
+          <li class="pseudoservice">{{ ps.name }}</li>
         {% endfor %}
       </ul>
     </div>
