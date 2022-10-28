@@ -15,6 +15,9 @@ section#infographics{
       width: 100%;
       //width: clamp(500px, 50vw, 1000px);
     }
+    h1 {
+      padding-left: 3rem;
+    }
     &:first-child{
       &::before {
         content: '';
@@ -42,7 +45,7 @@ section#infographics{
   }
 
   .image-with-shadow{
-    --width: clamp(min(400px, 90vw), 110%, 1000px);
+    --width: clamp(min(200px, 20vw), 68%, 535px);
     width: var(--width);
     z-index: 1;
     .img-shadow{
@@ -51,6 +54,12 @@ section#infographics{
         width: 100%;
       }
     }
+  }
+
+  .container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
   }
 
   #big-tech-network-image-block svg{
