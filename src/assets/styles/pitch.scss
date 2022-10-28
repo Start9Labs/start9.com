@@ -3,11 +3,11 @@ section#pitch {
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    margin-bottom: 6rem;
-    // gap: 3rem;
+    margin-bottom: 4rem;
+    // gap: 1rem;
   
     h1 {
-      margin: 0;
+      margin-bottom: 16px;
       display: inline-block;
       max-width: min(16ch,64vw);
     }
