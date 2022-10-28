@@ -22,20 +22,33 @@
     margin: 0 0 0 1rem !important;
     &::before {
       top: 25% !important;
-      left: calc(-4rem + 2px) !important;
+      left: calc(-4rem) !important;
       align-self: flex-start !important;
       justify-content: center !important;
       border-top: 2rem transparent solid !important;
-      border-right: 2rem var(--c-text-accent) solid !important;
+      border-right: 2rem rgba(255, 255, 255, 0.3) solid !important;
       border-bottom: 2rem transparent solid !important;
       border-left: 2rem transparent solid !important;
     }
   }
+
 }
 
 @media screen and (max-width: 900px) {
   #be-your-own {
     --size: 2rem;
+  }
+  #ticker {
+    height: 32vh !important;
+
+  }
+
+  a {
+    margin-bottom: 4rem !important;
+  }
+
+  .service__image {
+    width: 10rem !important;
   }
 }
 
@@ -86,6 +99,7 @@
         rgba(255, 255, 255, 0.02)
       );
       border-bottom: 0.5rem transparent solid;
+      width: 80vw;
     }
     #ticker__window {
       height: calc(var(--rows-height) * var(--line));
