@@ -101,3 +101,9 @@ svg|a:link,
 svg|a:visited {
   cursor: pointer;
 }
+
+.container {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
