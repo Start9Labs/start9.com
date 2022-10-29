@@ -158,11 +158,16 @@ section#bitcoin {
 }
 
 @media only screen and (max-width: 500px) {
+  section#bitcoin {
+    p {
+      max-width: min(35ch, 73vw);
+    }
+  }
   .service-icon--bitcoind {
-    width: 11rem !important;
+    width: 9rem !important;
   }
   .service-icon--c-lightning {
-    width: 11rem !important;
+    width: 9rem !important;
   }
 
   section#bitcoin .subsection {
@@ -170,10 +175,17 @@ section#bitcoin {
   }
 
   section#bitcoin .subsection--bitcoin {
-    margin-left: 4rem;
+    margin-left: 2rem;
   }
 
   section#bitcoin .subsection--lightning {
-    margin-right: 4rem;
+    margin-left: 2rem;
+    margin-right: 0;
+    align-items: flex-start;
+    place-self: flex-start;
+    h1,
+    p {
+      text-align: left;
+    }
   }
 }

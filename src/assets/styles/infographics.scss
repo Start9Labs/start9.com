@@ -47,7 +47,7 @@ section#infographics{
   }
 
   .image-with-shadow{
-    --width: clamp(min(200px, 20vw), 36%, 500px);
+    --width: clamp(min(200px, 20vw), 75%, 500px);
     width: var(--width);
     z-index: 1;
     .img-shadow{
@@ -59,6 +59,7 @@ section#infographics{
   }
 
   .container {
+    margin-top: 3rem;
     width: 90vw;
     display: flex;
     justify-content: center;

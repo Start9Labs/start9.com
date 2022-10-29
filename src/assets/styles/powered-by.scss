@@ -103,3 +103,9 @@ svg|a:visited {
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+}
