@@ -14,7 +14,7 @@
         <ul>
           {% for item in group.items|sort(false, false, 'order') %}
           <li>
-            <a {{'class=' + item.class + '' if item.class}} {{'target=' + item.target + '' if item.target}} href="{{item.url}}">{{item.name}}{% if item.icon %}{% include "svgs/" + item.icon + ".svg" %}{% endif %}</a>
+            <a {{'class=' + item.class + '' if item.class}} {{'target=' + item.target + '' if item.target}} href="{{item.url}}" rel="noopener noreferrer">{{item.name}}{% if item.icon %}{% include "svgs/" + item.icon + ".svg" %}{% endif %}</a>
           </li>
           {% endfor %}
         </ul>

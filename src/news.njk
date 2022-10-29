@@ -42,7 +42,7 @@ layout: layouts/peripheral.njk
     <ul class="podcasts">
         {% for item in podcasts %}
         <li class="podcast">
-            <a href="{{ item.link }}">
+            <a href="{{ item.link }}" rel="noopener noreferrer" target="_blank">
                 {% if item.anchor %}
                 <span class="creator">{{ item.anchor }}</span>
                 {% endif %}
