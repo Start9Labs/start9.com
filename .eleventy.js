@@ -1,5 +1,6 @@
 const eleventySass = require("eleventy-sass");
 const faviconPlugin = require("eleventy-favicon");
+const format = require('date-fns/format')
 
 // https://github.com/artstorm/eleventy-plugin-seo
 const pluginSEO = require("eleventy-plugin-seo");
@@ -53,6 +54,11 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addWatchTarget('./src/assets/styles/**/*')
+
+  // add date filter for human readability
+  eleventyConfig.addFilter('date', function (date, dateFormat) {
+    return format(date, dateFormat)
+  })
 
   return {
     dir: { input: "src", output: "_site", data: "_data" },

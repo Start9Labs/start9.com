@@ -1,7 +1,7 @@
 {
   "name": "start9-landing",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Start9 company landing page featuring embassyOS products",
   "main": "index.js",
   "module": "main.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
+    "date-fns": "^2.29.3",
     "eleventy-plugin-lazyimages": "^2.1.2"
   },
   "dependencies": {
