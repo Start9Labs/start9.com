@@ -40,7 +40,6 @@
   }
   #be-your-own a {
     margin-bottom: 4rem !important;
-    z-index: 200;
   }
   #ticker {
     height: 32vh !important;
@@ -106,7 +105,7 @@
       font-size: var(--size);
       left: 11.5ch;
       position: relative;
-      z-index: 10;
+      // z-index: 10;
     }
 
     ul.pseudoservices {
