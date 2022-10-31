@@ -100,7 +100,7 @@
     }
     #ticker__window {
       height: calc(var(--rows-height) * var(--line));
-      width: calc(100vw - 12rem - 11.5ch);
+      width: calc(100vw - 12rem - 9.5ch);
       overflow: hidden;
       font-size: var(--size);
       left: 11.5ch;

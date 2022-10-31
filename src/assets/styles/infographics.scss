@@ -73,3 +73,9 @@ section#infographics{
     height: calc((606 / 1282) * var(--width)); // force aspect ratio for iOS
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .subsction:first-child {
+    padding-left: 0;
+  }
+}
