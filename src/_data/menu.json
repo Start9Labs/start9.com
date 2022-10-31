@@ -14,7 +14,7 @@
       {
         "name": "Developers",
         "slug": "dev",
-        "url": "https://start9.com/latest/developer-docs",
+        "url": "https://docs.start9.com/latest/developer-docs",
         "target": "_blank",
         "order": 1,
         "class": "hide-on-mobile"
@@ -60,14 +60,6 @@
         "url": "/contact",
         "target": "",
         "order": 2,
-        "class": ""
-      },
-      {
-        "name": "Team",
-        "slug": "team",
-        "url": "/about#team",
-        "target": "",
-        "order": 3,
         "class": ""
       },
       {
@@ -135,7 +127,7 @@
       {
         "name": "Support",
         "slug": "support",
-        "url": "https://start9.com/latest/support/",
+        "url": "https://docs.start9.com/latest/support/",
         "target": "_blank",
         "order": 0,
         "class": ""
@@ -143,7 +135,7 @@
       {
         "name": "FAQ",
         "slug": "faq",
-        "url": "https://start9.com/latest/support/faq/",
+        "url": "https://docs.start9.com/latest/support/faq/",
         "target": "_blank",
         "order": 0,
         "class": ""
@@ -178,7 +170,7 @@
       {
         "name": "Contribute",
         "slug": "contribute",
-        "url": "https://start9.com/latest/contribute/index",
+        "url": "https://docs.start9.com/latest/contribute/index",
         "target": "_blank",
         "order": 0,
         "class": ""
@@ -186,7 +178,7 @@
       {
         "name": "Dev Docs",
         "slug": "dev-docs",
-        "url": "https://start9.com/latest/developer-docs",
+        "url": "https://docs.start9.com/latest/developer-docs",
         "target": "_blank",
         "order": 1,
         "class": ""
