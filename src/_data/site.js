@@ -5,7 +5,7 @@ module.exports = {
   },
   products: {
     buyUrl: "https://store.start9.com/",
-    diyUrl: "https://docs.start9.com/diy",
+    diyUrl: "https://docs.start9.com/latest/diy",
   },
   bitcoin: {
     whyRunBitcoinUrl: "https://bitcoinmagazine.com/culture/six-reasons-you-should-run-bitcoin-node",
