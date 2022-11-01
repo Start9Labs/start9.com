@@ -39,11 +39,14 @@
 
   --c-6: #c2c2c2;
 
-  --c-7: #2fdf75;
+  --c-7: #27b45f;
   --c-success: var(--c-7);
 
-  --c-8: #ff0000;
+  --c-8: #e43434;
   --c-negative: var(--c-8);
+
+  --c-accent: #6866cc;
+  --c-accent-green: #17bd89;
 
   --c-bitcoin: #f7931a;
   --c-lightning: #7b1af8;
@@ -70,6 +73,7 @@
   --c-dark-glass: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
 
   --sh-2: 0 3rem 2rem 0rem var(--c-shadow-2);
+  --sh-1: 0 1rem 2rem 0rem var(--c-shadow-2);
 
   --s-primary: 0.5;
   --b-primary: 1px solid var(--c-line-primary);
@@ -174,37 +178,34 @@ a.link-in-svg {
 
 p a {
   color: var(--c-text-accent);
-  //text-decoration: underline;
   position: relative;
-  &::after {
-    content: "";
+  &::before {
+    display: inline-block;
     position: absolute;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    height: 1px;
+    background: linear-gradient(130deg, #EE6570, #FF4961, #993E4A);
+    height: 3px;
     border-radius: 2px;
-    background: linear-gradient(
-      111.3deg,
-      transparent 9.6%,
-      var(--c-bkg-accent) 93.6%
-    );
-    background: linear-gradient(
-      111.3deg,
-      transparent 9.6%,
-      var(--c-bkg-accent) 50%,
-      transparent 93.6%
-    );
+    top: 100%;
+    left: 0;
+    width: 100%;
   }
-  &:hover {
-    color: var(--c-text-accent);
-    &::after {
-      background: linear-gradient(
-        111.3deg,
-        var(--c-bkg-accent) 9.6%,
-        var(--c-bkg-accent) 93.6%
-      );
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:linear-gradient(130deg, #EE6570, #FF4961, #993E4A);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
 
@@ -368,7 +369,7 @@ nav {
 .form-alert {
   padding: 1.5rem;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   display: none;
 
   &.form-alert--success {
@@ -377,6 +378,10 @@ nav {
 
   &.form-alert--error {
     background-color: var(--c-negative);
+
+    a {
+      font-weight: 700;
+    }
   }
 
   &.form-alert--visible {

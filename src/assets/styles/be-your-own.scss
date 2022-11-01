@@ -1,6 +1,6 @@
 @media screen and (min-width: 900px) {
   #be-your-own {
-    --size: 3rem;
+    --size: 2.7rem;
     --rows-above: 2;
     --rows-height: 7;
   }
@@ -22,20 +22,30 @@
     margin: 0 0 0 1rem !important;
     &::before {
       top: 25% !important;
-      left: calc(-4rem + 2px) !important;
+      left: calc(-4rem) !important;
       align-self: flex-start !important;
       justify-content: center !important;
       border-top: 2rem transparent solid !important;
-      border-right: 2rem var(--c-text-accent) solid !important;
+      border-right: 2rem rgba(255, 255, 255, 0.3) solid !important;
       border-bottom: 2rem transparent solid !important;
       border-left: 2rem transparent solid !important;
     }
   }
+
 }
 
 @media screen and (max-width: 900px) {
   #be-your-own {
     --size: 2rem;
+  }
+  #be-your-own a {
+    margin-bottom: 4rem !important;
+  }
+  #ticker {
+    height: 32vh !important;
+  }
+  .service__image {
+    width: 10rem !important;
   }
 }
 
@@ -43,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   //margin: 0 0 6rem 0;
   padding: 0 6rem 0 6rem;
   box-sizing: border-box;
@@ -69,6 +79,7 @@
       //outline: 1px solid white;
       //outline-offset: calc(0.1 * var(--size));
       font-size: var(--size);
+      font-weight: bolder;
       text-transform: uppercase;
       line-height: var(--size);
       position: absolute;
@@ -85,14 +96,16 @@
         rgba(255, 255, 255, 0.02)
       );
       border-bottom: 0.5rem transparent solid;
+      width: 80vw;
     }
     #ticker__window {
       height: calc(var(--rows-height) * var(--line));
-      width: calc(100vw - 12rem - 11.5ch);
+      width: calc(100vw - 12rem - 6.5ch);
       overflow: hidden;
       font-size: var(--size);
       left: 11.5ch;
       position: relative;
+      // z-index: 10;
     }
 
     ul.pseudoservices {
@@ -108,6 +121,10 @@
         padding: var(--p);
         white-space: nowrap;
         overflow: hidden;
+
+        &:hover {
+          cursor: 'pointer'
+        }
       }
     }
 
@@ -171,25 +188,27 @@
           }
 
           .service__info {
-            background-color: var(--c-text-accent);
+            background-color: rgba(255, 255, 255, 0.3);
             width: 20ch;
-            padding: 1rem;
+            padding: 1.3rem;
             margin-top: 1rem;
             position: relative;
             display: flex;
             flex-direction: column;
-            box-shadow: var(--sh-2);
+            box-shadow: var(--sh-1);
+            border-radius: 24px;
+            backdrop-filter: blur(4px);
 
             &::before {
               position: absolute;
-              top: calc(-4rem + 2px);
+              top: calc(-4rem);
               content: "";
               display: block;
               //width: 0;
               //height: 0;
               border-top: 2rem transparent solid;
               border-right: 2rem transparent solid;
-              border-bottom: 2rem var(--c-text-accent) solid;
+              border-bottom: 2rem rgba(255, 255, 255, 0.3) solid;
               border-left: 2rem transparent solid;
               align-self: center;
             }
@@ -200,6 +219,8 @@
               font-size: 0.75rem;
               height: 4em;
               overflow: hidden;
+              // margin: 0 !important;
+              padding: 0.2rem;
             }
           }
 

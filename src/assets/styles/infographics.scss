@@ -3,17 +3,22 @@ section#infographics{
   flex-direction: column;
   align-items: stretch;
   padding: 0 3rem;
+
   .subsection{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    // gap: 1rem;
     padding: 6rem 3rem;
     outline: 1px solid rgba(255,255,255,0);
     svg{
       width: 100%;
       //width: clamp(500px, 50vw, 1000px);
+    }
+    h1 {
+      padding-left: 3rem;
+      margin-bottom: 16px;
     }
     &:first-child{
       &::before {
@@ -42,7 +47,7 @@ section#infographics{
   }
 
   .image-with-shadow{
-    --width: clamp(min(400px, 90vw), 110%, 1000px);
+    --width: clamp(min(200px, 20vw), 75%, 500px);
     width: var(--width);
     z-index: 1;
     .img-shadow{
@@ -53,11 +58,24 @@ section#infographics{
     }
   }
 
+  .container {
+    margin-top: 3rem;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+  }
+
   #big-tech-network-image-block svg{
     height: calc((494 / 1282) * var(--width)); // force aspect ratio for iOS
   }
 
   #embassyos-network-image-block svg{
     height: calc((606 / 1282) * var(--width)); // force aspect ratio for iOS
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .subsction:first-child {
+    padding-left: 0;
   }
 }

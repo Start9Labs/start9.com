@@ -34,8 +34,9 @@ kerplunk2 = CustomEase.create(
   "M0,0 C0.126,0.382 0.178,0.802 0.288,1.052 0.303,1.088 0.372,0.99 0.434,0.99 0.502,0.99 0.497,1 0.524,1 0.664,1 0.863,1 1,1 "
 );
 
+
 function tick() {
-  var action = tickerTL
+  let action = tickerTL
     .to(pseudoserviceArray, {
       id: "thunk",
       y: "-=" + itemHeight,
@@ -50,8 +51,8 @@ function tick() {
   // start endless run
   gsap.delayedCall(next, tick);
 
-  var thisPseudoservice = pseudoserviceArray[2].innerHTML,
-    thisElement = document.querySelector(
+  let thisPseudoservice = pseudoserviceArray[2].innerHTML
+  let thisElement = document.querySelector(
       ".service-container--" + thisPseudoservice.toLowerCase().replace(" ", "-")
     );
 
@@ -67,3 +68,44 @@ function tick() {
 
 // initialize
 gsap.delayedCall(next, tick);
+
+
+function moveTick(service) {
+  
+  let thisPseudoservice = pseudoserviceArray.slice().filter(a => a.innerHTML === service)[0].innerHTML
+  let thisElement = document.querySelector(".service-container--" + thisPseudoservice.toLowerCase().replace(" ", "-"));
+
+  // get index of current tick
+  // let current = Array.from(Array.from(document.querySelectorAll(".service-container")).filter(a => a.style.display === 'flex')[0].classList).filter(a => a.includes("--"))[0].split("--")[1]
+  // let currentIndex = pseudoserviceArray.findIndex(a => a.innerHTML.toLowerCase() === current)
+  let current = pseudoserviceArray[2].innerHTML
+  let currentIndex = 2
+
+  let i = pseudoserviceArray.findIndex(a => a.innerHTML === service)
+  console.log(i)
+  let diff = Math.abs(currentIndex - i)
+  let y
+  if (i > currentIndex) {
+    y = "-=" + (itemHeight * diff)
+  } else {
+    y = "+=" + (itemHeight * diff)
+  }
+  
+  tickerTL
+  .to(pseudoserviceArray, {
+    id: "thunk",
+    y,
+    duration: 1,
+    ease: kerplunk2,
+    overwrite: 'auto',
+  })
+  var slidesContainerArray = document.querySelectorAll(".service-container");
+  slidesContainerArray.forEach((thisContainer) => {
+    thisContainer.style.display = "none";
+  });
+
+  if (thisElement) {
+    thisElement.style.display = "flex";
+  }
+
+}

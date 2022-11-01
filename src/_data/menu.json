@@ -14,8 +14,8 @@
       {
         "name": "Developers",
         "slug": "dev",
-        "url": "https://start9.com/latest/contribute/index",
-        "target": "",
+        "url": "https://docs.start9.com/latest/developer-docs",
+        "target": "_blank",
         "order": 1,
         "class": "hide-on-mobile"
       }
@@ -63,14 +63,6 @@
         "class": ""
       },
       {
-        "name": "Team",
-        "slug": "team",
-        "url": "/about#team",
-        "target": "",
-        "order": 3,
-        "class": ""
-      },
-      {
         "name": "Jobs",
         "slug": "jobs",
         "url": "/jobs",
@@ -98,7 +90,7 @@
     "inFooter": true,
     "items": [
       {
-        "name": "Embassy ONE",
+        "name": "Embassy One",
         "slug": "embassy-one",
         "url": "https://store.start9.com/collections/embassy/products/embassy-one",
         "target": "_blank",
@@ -135,23 +127,23 @@
       {
         "name": "Support",
         "slug": "support",
-        "url": "https://start9.com/latest/support/",
-        "target": "",
+        "url": "https://docs.start9.com/latest/support/",
+        "target": "_blank",
         "order": 0,
         "class": ""
       },
       {
         "name": "FAQ",
         "slug": "faq",
-        "url": "https://start9.com/latest/support/faq/",
-        "target": "",
+        "url": "https://docs.start9.com/latest/support/faq/",
+        "target": "_blank",
         "order": 0,
         "class": ""
       },
       {
         "name": "Docs",
         "slug": "docs",
-        "url": "https://start9.com/latest/user-manual",
+        "url": "https://docs.start9.com",
         "target": "_blank",
         "order": 1,
         "class": ""
@@ -178,16 +170,16 @@
       {
         "name": "Contribute",
         "slug": "contribute",
-        "url": "https://start9.com/latest/contribute/index",
-        "target": "",
+        "url": "https://docs.start9.com/latest/contribute/index",
+        "target": "_blank",
         "order": 0,
         "class": ""
       },
       {
         "name": "Dev Docs",
         "slug": "dev-docs",
-        "url": "https://start9.com/latest/developer-docs",
-        "target": "",
+        "url": "https://docs.start9.com/latest/developer-docs",
+        "target": "_blank",
         "order": 1,
         "class": ""
       },

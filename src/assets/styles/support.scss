@@ -2,15 +2,13 @@ section#support {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem;
-  //margin-bottom: 6rem;
-  gap: 3rem;
-  //transform: translate(0px,0px);
+  padding: 5rem;
+  gap: 1rem;
   .cols {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6rem;
+    gap: 3rem;
     .col {
       max-width: clamp(min(400px, 90vw), 20rem, 1000px);
     }
@@ -20,22 +18,24 @@ section#support {
     max-width: 100%;
     transform: rotateZ(5deg);
   }
-  // flip columns when stacking for small screens
+  .image-with-shadow {
+    max-width: 8rem;
+  }
+  .img-shadow {
+    top: 1rem;
+  }
+  .support__content {
+    padding-bottom: 0.5rem;
+  }
   @media only screen and (max-width: 1200px) {
-    .cols{
-      flex-direction: column;
-      .col:nth-child(1){
-        order: 2;
-      }
-      .col:nth-child(2){
-        order: 1;
-      }
+    .support__content {
+      padding-top: 1rem;
     }
   }
 
   @media only screen and (max-width: 500px) {
     section#support cols{
-      gap: 3rem;
+      gap: 2rem;
     }
     section#support img{
       max-height: 17rem;

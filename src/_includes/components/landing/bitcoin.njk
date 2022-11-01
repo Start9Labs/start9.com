@@ -1,31 +1,34 @@
 <section id="bitcoin">
-    {% include "svgs/bitcoin-grid-blend-top.svg" %}
-    <div class="subsection subsection--bitcoin">
-        <h1>Become Bitcoin</h1>
-        <p>
-            <em>Don't trust, verify.</em>
-            <br/>Run a full Bitcoin node to verify transactions and enforce the consensus rules you choose.</p>
-        <a class="btn btn--subtle" target="_blank" rel="noopener noreferrer" href="{{ site.bitcoin.whyRunBitcoinUrl }}">why host a bitcoin node?</a>
-    </div>
-    <div class="subsection subsection--lightning">
-        <h1>Become Lightning</h1>
-        <p>
-            <em>Not your keys, not your coins.</em>
-            <br/>Run a Lightning node to take full control and custody over your Bitcoin on Lightning.</p>
-        <a class="btn btn--subtle" target="_blank" rel="noopener noreferrer" href="{{ site.bitcoin.whyRunLightningUrl }}">why host a lightning node?</a>
+  {% include "svgs/bitcoin-grid-blend-top.svg" %}
+  <div class="subsection subsection--bitcoin">
+    <h1>Become Bitcoin</h1>
+      <p>
+        <em>Don't trust, verify.</em>
+        <br/>Run a full Bitcoin node to verify transactions and enforce the consensus rules you choose.
+      </p>
+  </div>
+  <div class="subsection subsection--lightning">
+    <h1>Become Lightning</h1>
+    <p>
+      <em>Not your keys, not your coins.</em>
+      <br/>Run a Lightning node to take full control and custody over your Bitcoin payments.
+    </p>
     </div>
     <div id="flying-icons">
-        {% for service in services %}
-            {% for category in service.categories %}
-                {% if (category == "bitcoin") or (category == "lightning") or (category == "plebnet-tools") %}
-                    <img
-                        class="service-icon service-icon--{{ service.slug }}"
-                        src="/assets/images/service-icons/{{ service.slug }}.png"
-                        alt="{{ service.name }} embassyOS service icon"
-                        alt="{{ service.name }} embassyOS service icon"/>
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
+      {% for slug, service in services %}
+        {% if (service.bitcoin == true) %}
+          <img
+            class="service-icon service-icon--{{ slug }}"
+            src="/assets/images/service-icons/{{ slug }}.png"
+            alt="{{ service.name }} embassyOS service icon"/>
+        {% endif %}
+      {% endfor %}
     </div>
-    {% include "svgs/bitcoin-grid-blend-bottom.svg" %}
+  <div class="subsection subsection--bitcoin">
+    <h1>Become Unstoppable</h1>
+    <p>
+      When you run your own Bitcoin and Lightning nodes, you <em>become your own bank</em> and payment processor. Nobody can stop you from spending your money as you see fit, 24/7/365, from anywhere, to anywhere, instantly, and for free.
+    </p>
+  </div>
+  {% include "svgs/bitcoin-grid-blend-bottom.svg" %}
 </section>

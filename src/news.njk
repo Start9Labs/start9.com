@@ -4,75 +4,62 @@ layout: layouts/peripheral.njk
 ---
 
 <section id="hero">
-    <div id="hero-image" class="image-with-shadow">
-        <img src="/assets/images/news-hero.png" alt="news page hero: tv emerging from an embassy" title="news page hero: tv emerging from an embassy"/>
-        <img class="img-shadow" src="/assets/images/news-hero.png" alt=""/>
-    </div>
-    <div id="logo">
-        <h1>
-            <span>Podcasts</span>
-        </h1>
-    </div>
+  <div id="hero-image" class="image-with-shadow">
+    <img src="/assets/images/news-hero.png" alt="news page hero: tv emerging from an embassy" title="news page hero: tv emerging from an embassy"/>
+    <img class="img-shadow" src="/assets/images/news-hero.png" alt=""/>
+  </div>
+  <div id="logo">
+    <h1>
+        <span>Podcasts</span>
+    </h1>
+  </div>
 </section>
 
 <section id="news">
-    {# TWITTER / MEDIUM FEED #}
-    {# <ul class="news">
-        {% for post in news %}
-        <li class="post">
-            <a href="{{ post.guid }}">
-                {% if post.creator %}
-                <span class="creator">{{ post.creator }}</span>
-                {% endif %}
+  {# TWITTER / MEDIUM FEED #}
+  {# <ul class="news">
+    {% for post in news %}
+    <li class="post">
+      <a href="{{ post.guid }}">
+        {% if post.creator %}
+        <span class="creator">{{ post.creator }}</span>
+        {% endif %}
 
-                {% if post.creator.includes('@') %}
-                <p class="twitter-text">{{ post.title }}</p>
-                {% else %}
-                <h3>{{ post.title }}</h3>
-                {% endif %}
-                <h4>{{ post.pubDate }}</h4>
-                
-                {% if post.description %}
-                <p>{{ post.description }}</p>
-                {% endif %}
-            </a>
-        </li>
-        {% endfor %}
-    </ul> #}
-    <ul class="podcasts">
-        {% for item in podcasts %}
-        <li class="podcast">
-            <a href="{{ item.link }}">
-                {% if item.anchor %}
-                <span class="creator">{{ item.anchor }}</span>
-                {% endif %}
-                {% if item.anchor %}
-                <img src="{{ item.image }}" alt=""/>
-                {% endif %}
-                {% if item.title %}
-                <h3>{{ item.title }}</h3>
-                {% endif %}
-                {% if item.date %}
-                <time datetime="{{ item.date }}">{{ item.date }}</time>
-                {% endif %}
-                {% if item.description %}
-                <p>{{ item.description }}</p>
-                {% endif %}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</section>
-
-{# <div id="hacker-list">
-  <ul class="list">
-    <li>
-       <h3 class="name">Jonny</h3>
-       <p class="city">Stockholm</p>
+        {% if post.creator.includes('@') %}
+        <p class="twitter-text">{{ post.title }}</p>
+        {% else %}
+        <h3>{{ post.title }}</h3>
+        {% endif %}
+        <h4>{{ post.pubDate }}</h4>
+        
+        {% if post.description %}
+        <p>{{ post.description }}</p>
+        {% endif %}
+      </a>
     </li>
-    <li>
-      <h3 class="name">Jonas</h3>
-      <p class="city">Berlin</p>
+    {% endfor %}
+  </ul> #}
+  <ul class="podcasts">
+    {% for item in podcasts %}
+    <li class="podcast">
+      <a href="{{ item.link }}" rel="noopener noreferrer" target="_blank">
+        {% if item.anchor %}
+        <span class="creator">{{ item.anchor }}</span>
+        {% endif %}
+        {% if item.anchor %}
+        <img src="{{ item.image }}" alt=""/>
+        {% endif %}
+        {% if item.title %}
+        <h3>{{ item.title }}</h3>
+        {% endif %}
+        {% if item.date %}
+        <time datetime="{{ item.date }}">{{ item.date }}</time>
+        {% endif %}
+        {% if item.description %}
+        <p>{{ item.description }}</p>
+        {% endif %}
+      </a>
     </li>
+    {% endfor %}
   </ul>
-</div> #}
+</section>

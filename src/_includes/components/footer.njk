@@ -1,24 +1,26 @@
 <footer>
-    <div class="footer__content">
-        <div class="header">
-            {% include "svgs/logo.svg" %}
-            <div class="footer__copyright">{{ site.footer.copyright }}</div>
-            <div class="footer__donate">[btcpay widget]</div>
-            </div>
-        <ul class="groups">
-            {% for group in menu|selectattr("inFooter")|sort(false, false, 'order') %}
-            <li class="{{group.size}}">
-                <h1>{{group.name}}</h1>
-                <ul>
-                    {% for item in group.items|sort(false, false, 'order') %}
-                    <li>
-                        <a {{'class=' + item.class + '' if item.class}} {{'target=' + item.target + '' if item.target}} href="{{item.url}}">{{item.name}}{% if item.icon %}{% include "svgs/" + item.icon + ".svg" %}{% endif %}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            {% endfor %}
-        </ul>
+  <div class="footer__content">
+    <div class="header">
+      {% include "svgs/logo.svg" %}
+      <div class="footer__copyright">{{ site.footer.copyright }}</div>
+      <div class="footer__donate">
+        <a href="{{ site.footer.donate }}" class="btn" rel="noopener noreferrer" target="_blank">Donate</a>
+      </div>
     </div>
-    <div class="footer__canary">{{ site.footer.canary }}</div>
+    <ul class="groups">
+      {% for group in menu|selectattr("inFooter")|sort(false, false, 'order') %}
+      <li class="{{group.size}}">
+        <h1>{{group.name}}</h1>
+        <ul>
+          {% for item in group.items|sort(false, false, 'order') %}
+          <li>
+            <a {{'class=' + item.class + '' if item.class}} {{'target=' + item.target + '' if item.target}} href="{{item.url}}" rel="noopener noreferrer">{{item.name}}{% if item.icon %}{% include "svgs/" + item.icon + ".svg" %}{% endif %}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="footer__canary">{{ site.footer.canary }}</div>
 </footer>

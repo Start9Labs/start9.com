@@ -1,67 +1,72 @@
 [
-    {
-      "name": "Whatsapp",
-      "slug": "whatsapp",
-      "url": "https://start9.com/marketplace/175"
-    },
-    {
-      "name": "Twitter",
-      "slug": "twitter",
-      "url": "https://start9.com/marketplace/175"
-    },
-    {
-      "name": "Lastpass",
-      "slug": "lastpass",
-      "url": "https://start9.com/marketplace/199"
-    },
-    {
-      "name": "bank",
-      "slug": "bank",
-      "url": "https://start9.com/marketplace/148"
-    },
-    {
-      "name": "Github",
-      "slug": "github",
-      "url": "https://start9.com/marketplace/126"
-    },
-    {
-      "name": "Google Drive",
-      "slug": "google-drive",
-      "url": "https://start9.com/marketplace/186"
-    },
-    {
-      "name": "iPhotos",
-      "slug": "iphotos",
-      "url": "https://start9.com/marketplace/119"
-    },
-    {
-      "name": "Coinbase",
-      "slug": "coinbase",
-      "url": "https://start9.com/marketplace/132"
-    },
-    {
-      "name": "GoFundMe",
-      "slug": "gofundme",
-      "url": "https://start9.com/marketplace/165"
-    },
-    {
-      "name": "PayPal",
-      "slug": "paypal",
-      "url": "https://start9.com/marketplace/165"
-    },
-    {
-      "name": "iMessage",
-      "slug": "imessage",
-      "url": "https://start9.com/marketplace/165"
-    },
-    {
-      "name": "KeePass",
-      "slug": "keepass",
-      "url": "https://start9.com/marketplace/165"
-    },
-    {
-      "name": "Kickstarter",
-      "slug": "kickstarter",
-      "url": "https://start9.com/marketplace/165"
-    }
-  ]
+  {
+    "name": "Whatsapp",
+    "slug": "whatsapp",
+    "service": "synapse"
+  },
+  {
+    "name": "Twitter",
+    "slug": "twitter",
+    "service": "mastodon"
+  },
+  {
+    "name": "Lastpass",
+    "slug": "lastpass",
+    "service": "vaultwarden"
+  },
+  {
+    "name": "bank",
+    "slug": "bank",
+    "service": "bitcoind"
+  },
+  {
+    "name": "Github",
+    "slug": "github",
+    "service": "gitea"
+  },
+  {
+    "name": "Gsuite",
+    "slug": "gsuite",
+    "service": "nextcloud"
+  },
+  {
+    "name": "iPhoto",
+    "slug": "iphoto",
+    "service": "photoview"
+  },
+  {
+    "name": "GoFundMe",
+    "slug": "gofundme",
+    "service": "btcpay"
+  },
+  {
+    "name": "PayPal",
+    "slug": "paypal",
+    "service": "lnd"
+  },
+  {
+    "name": "iMessage",
+    "slug": "imessage", 
+    "service": "synapse"
+  },
+  {
+    "name": "Kickstarter",
+    "slug": "kickstarter",
+    "service": "btcpay"
+  },
+  {
+    "name": "Medium",
+    "slug": "medium",
+    "service": "ghost"
+  },
+  {
+    "name": "Dropbox",
+    "slug": "dropbox",
+    "service": "file-browser"
+  },
+  {
+    "name": "1Password",
+    "slug": "1password",
+    "service": "vaultwarden"
+  }
+]

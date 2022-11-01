@@ -1,15 +1,12 @@
 const eleventySass = require("eleventy-sass");
-const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const faviconPlugin = require("eleventy-favicon");
+const format = require('date-fns/format')
 
 // https://github.com/artstorm/eleventy-plugin-seo
 const pluginSEO = require("eleventy-plugin-seo");
 
 // https://github.com/saneef/eleventy-plugin-img2picture
 const img2picture = require("eleventy-plugin-img2picture");
-
-// https://www.npmjs.com/package/@sardine/eleventy-plugin-tinycss
-const tinyCSS = require('@sardine/eleventy-plugin-tinycss');
 
 // https://www.npmjs.com/package/@sardine/eleventy-plugin-tinysvg
 const tinysvg = require('@sardine/eleventy-plugin-tinysvg');
@@ -51,11 +48,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventySass);
   eleventyConfig.addPlugin(faviconPlugin, { destination: './_site' });
   eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
-  //eleventyConfig.addPlugin(tinyCSS); // smartly injects selectors from external css files into style tags. requires some massaging. not ready for prime time.
   eleventyConfig.addPlugin(tinyHTML);
   eleventyConfig.addPlugin(tinysvg, {
     baseUrl: 'src/_includes/svgs/',
   });
+
+  eleventyConfig.addWatchTarget('./src/assets/styles/**/*')
+
+  // add date filter for human readability
+  eleventyConfig.addFilter('date', function (date, dateFormat) {
+    return format(date, dateFormat)
+  })
 
   return {
     dir: { input: "src", output: "_site", data: "_data" },
