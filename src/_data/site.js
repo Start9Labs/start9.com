@@ -5,7 +5,7 @@ module.exports = {
   },
   products: {
     buyUrl: "https://store.start9.com/",
-    diyUrl: "https://start9.com/latest/diy",
+    diyUrl: "https://docs.start9.com/diy",
   },
   bitcoin: {
     whyRunBitcoinUrl: "https://bitcoinmagazine.com/culture/six-reasons-you-should-run-bitcoin-node",
@@ -18,10 +18,10 @@ module.exports = {
     url: "https://github.com/Start9Labs/embassy-os"
   },
   support: {
-    url: "https://start9.com/latest/support/index"
+    url: "https://docs.start9.com/latest/support/index"
   },
   dev: {
-    url: "https://start9.com/latest/developer-docs/"
+    url: "https://docs.start9.com/latest/developer-docs"
   },
   footer: {
     copyright: "© " + new Date().getFullYear() + " by START9 LABS, INC.",
