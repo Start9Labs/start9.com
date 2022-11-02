@@ -43,6 +43,12 @@
   }
   #ticker {
     height: 32vh !important;
+    #ticker__selected-frame {
+      left: -2.4ch !important;
+    }
+    #ticker__window {
+      left: 10ch !important;
+    }
   }
   .service__image {
     width: 10rem !important;
@@ -100,7 +106,7 @@
     }
     #ticker__window {
       height: calc(var(--rows-height) * var(--line));
-      width: calc(100vw - 12rem - 6.5ch);
+      width: calc(100vw - 12rem);
       overflow: hidden;
       font-size: var(--size);
       left: 11.5ch;
