@@ -1,21 +1,19 @@
-//////////////////////////////////////////
-// GSAP ACTIONS
-// options: "play", "pause", "resume", "reset", "restart", "complete", "reverse", and "none"
-// arguments: onEnter, onLeave, onEnterBack, and onLeaveBack
+import { gsap } from "gsap";
+
 const defaultActions = "play none none none";
 
 gsap.from("section#hero+section", {
-    duration: 0.5,
-    y: "5rem",
-    opacity: 0,
-    delay: 1,
-    filter: "blur(10px)",
-    scrollTrigger: {
-      trigger: "section#hero+section",
-      start: "top 75%", // "triggerElement page"
-      toggleActions: defaultActions,
-    },
-  });
+  duration: 0.5,
+  y: "5rem",
+  opacity: 0,
+  delay: 1,
+  filter: "blur(10px)",
+  scrollTrigger: {
+    trigger: "section#hero+section",
+    start: "top 75%", // "triggerElement page"
+    toggleActions: defaultActions,
+  },
+});
 
 const sections = document.querySelectorAll("section:not(#hero):not(#blurb):not(#menu)");
 

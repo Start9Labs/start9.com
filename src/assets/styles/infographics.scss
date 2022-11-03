@@ -74,7 +74,7 @@ section#infographics{
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) and (min-width: 375px) {
   .subsction:first-child {
     padding-left: 0;
   }

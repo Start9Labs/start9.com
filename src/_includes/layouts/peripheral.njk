@@ -2,25 +2,16 @@
 layout: layouts/base.njk
 ---
 
-<link rel="stylesheet" href="/assets/styles/peripheral.css"/>
+<link rel="stylesheet" href="/@root/src/assets/styles/peripheral.scss"/>{{ __slinkity.head | safe }}
 
 {{ content | safe }}
 
-<script defer src="{{ '/assets/js/libraries/gsap.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/libraries/ScrollTrigger.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/libraries/DrawSVGPlugin.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/libraries/CustomEase.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/_header.js' | url }}"></script>
-<script defer src="{{ '/assets/js/_menu.js' | url }}"></script>
-<script defer src="{{ '/assets/js/_hero.js' | url }}"></script>
-<script defer src="{{ '/assets/js/peripheral.js' | url }}"></script>
-
-{# <script defer>
-
- var options = {
-    valueNames: [ 'name', 'city' ]
-};
-
-var hackerList = new List('hacker-list', options);
-
-</script> #}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src="{{ '/libs/DrawSVGPlugin.min.js' }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/main.js' }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/header.js' }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/menu.js' }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/hero.js' }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/peripheral.js' }}"></script>

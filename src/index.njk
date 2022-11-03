@@ -3,7 +3,7 @@ title: Start9 | Sovereign Computing
 layout: layouts/base.njk
 ---
 
-<link rel="stylesheet" href="/assets/styles/landing.css">
+<link rel="stylesheet" href="/@root/src/assets/styles/landing.scss">{{ __slinkity.head | safe }}
 
 {% include "components/landing/hero.njk" %}
 
@@ -39,7 +39,6 @@ layout: layouts/base.njk
     {% include "svgs/lines/bitcoin-to-be.svg" %}
 </div>
 
-
 {% include "components/landing/support.njk" %}
 
 <div class="line" id="support-to-dev">
@@ -54,15 +53,16 @@ layout: layouts/base.njk
 
 {% include "components/landing/community.njk" %}
 
-<script defer src="{{ '/assets/js/libraries/gsap.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/libraries/ScrollTrigger.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/libraries/DrawSVGPlugin.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/libraries/CustomEase.min.js' | url }}"></script>
-<script defer src="{{ '/assets/js/_header.js' | url }}"></script>
-<script defer src="{{ '/assets/js/_menu.js' | url }}"></script>
-<script defer src="{{ '/assets/js/_hero.js' | url }}"></script>
-<script defer src="{{ '/assets/js/landing.js' | url }}"></script>
-<script defer src="{{ '/assets/js/landing/_appearance-animation.js' | url }}"></script>
-<script defer src="{{ '/assets/js/landing/_bitcoin-animation.js' | url }}"></script>
-<script defer src="{{ '/assets/js/landing/_ticker-animation.js' | url }}"></script>
-<script defer src="{{ '/assets/js/landing/_contact-post.js' | url }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src="{{ '/libs/DrawSVGPlugin.min.js' }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/main.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/appearance-animation.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/bitcoin-animation.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/contact.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/header.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/hero.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/menu.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/landing.js' | url }}"></script>
+<script defer type="module" src="{{ '/@root/src/assets/js/ticker-animation.js' | url }}"></script>

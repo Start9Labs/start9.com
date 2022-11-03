@@ -1,31 +1,38 @@
 module.exports = {
   url: 'https://start9.com',
+  description: '',
   pitch: {
-    url: "#infographics" //"https://start9.com/latest/learn/index"
+    url: '#infographics' //'https://start9.com/latest/learn/index'
   },
   products: {
-    buyUrl: "https://store.start9.com/",
-    diyUrl: "https://docs.start9.com/latest/diy",
+    buyUrl: 'https://store.start9.com/',
+    diyUrl: 'https://docs.start9.com/latest/diy',
   },
   bitcoin: {
-    whyRunBitcoinUrl: "https://bitcoinmagazine.com/culture/six-reasons-you-should-run-bitcoin-node",
-    whyRunLightningUrl: "",
+    whyRunBitcoinUrl: 'https://bitcoinmagazine.com/culture/six-reasons-you-should-run-bitcoin-node',
+    whyRunLightningUrl: '',
   },
   beYourOwn: {
-    url: "https://marketplace.start9.com/"
+    url: 'https://marketplace.start9.com/'
   },
   poweredBy: {
-    url: "https://github.com/Start9Labs/embassy-os"
+    url: 'https://github.com/Start9Labs/embassy-os'
   },
   support: {
-    url: "https://docs.start9.com/latest/support/index"
+    url: 'https://docs.start9.com/latest/support/index'
+  },
+  docs: {
+    url: 'https://docs.start9.com/latest'
   },
   dev: {
-    url: "https://docs.start9.com/latest/developer-docs"
+    url: 'https://docs.start9.com/latest/developer-docs'
+  },
+  contribute: {
+    url: 'https://start9.com/latest/contribute/index'
   },
   footer: {
-    copyright: "© " + new Date().getFullYear() + " by START9 LABS, INC.",
-    canary: "WE HAVE NEVER RECEIVED A SECRET GOVERNMENT REQUEST TO HAND OVER USER INFORMATION.",
+    copyright: '© ' + new Date().getFullYear() + ' by START9 LABS, INC.',
+    canary: 'WE HAVE NEVER RECEIVED A SECRET GOVERNMENT REQUEST TO HAND OVER USER INFORMATION.',
     donate: 'https://btcpay.start9.com/apps/2Et1JUmJnDwzKncfVBXvspeXiFsa/crowdfund'
   }
 };

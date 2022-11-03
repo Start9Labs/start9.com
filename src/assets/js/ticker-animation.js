@@ -1,6 +1,8 @@
 /********************************************/
 /* BE YOUR OWN TICKER ANIMATION             */
 /********************************************/
+import { gsap } from "gsap";
+import { CustomEase } from "gsap/CustomEase";
 
 const tickerTL = gsap.timeline();
 
@@ -12,7 +14,7 @@ let pseudoserviceArray = gsap.utils.toArray(".pseudoservice"),
   kerplunk,
   kerplunk2;
 
-function initializeSizes() {
+export function initializeSizes() {
   itemHeight = document
     .querySelector(".pseudoservice")
     .getBoundingClientRect().height;
@@ -70,10 +72,12 @@ function tick() {
 gsap.delayedCall(next, tick);
 
 
+// @NOTE in progress implementation - do not remove
 function moveTick(service) {
   
   let thisPseudoservice = pseudoserviceArray.slice().filter(a => a.innerHTML === service)[0].innerHTML
   let thisElement = document.querySelector(".service-container--" + thisPseudoservice.toLowerCase().replace(" ", "-"));
+
 
   // get index of current tick
   // let current = Array.from(Array.from(document.querySelectorAll(".service-container")).filter(a => a.style.display === 'flex')[0].classList).filter(a => a.includes("--"))[0].split("--")[1]
@@ -107,5 +111,4 @@ function moveTick(service) {
   if (thisElement) {
     thisElement.style.display = "flex";
   }
-
 }
