@@ -1,38 +1,38 @@
 <section id="why">
-    <h2>Why run your own server?</h2>
-    <div class="nodes">
-        <div class="row">
-            <div class="path-node path-node-text">
-                <p>Right now, your favorite apps send your personal data off to live on a server somewhere else - where it can be analyzed, censored, sold or worse.</p>
-            </div>
-            <div class="path-node path-node-img">
-                <img src="/assets/images/big-tech-theft.gif" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="path-node path-node-text">
-                <p>But when you run your own server, you control your data. Your data never has to leave the privacy of your own home.</p>
-            </div>
-            <div class="path-node path-node-img">
-                <img src="/assets/images/big-tech-fail.gif" alt="">
-            </div>
-        </div>
+  <h2>Why run your own server?</h2>
+  <div class="nodes">
+    <div class="row">
+      <div class="path-node path-node-text">
+        <p>Right now, your favorite apps send your personal data off to live on a server somewhere else - where it can be analyzed, censored, sold or worse.</p>
+      </div>
+      <div class="path-node path-node-img">
+        <img src="/assets/images/big-tech-theft.gif" alt="">
+      </div>
     </div>
-    <div class="cols">
-        <div class="col">
-            <h3>When you run your own server, you are your <em>own cloud</em>.</h3>
-        </div>
-        <div class="col" id='ticker'>
-            <div id="ticker__selected-frame">
-                be your own
-            </div>
-            <div id="ticker__window">
-                <ul class='pseudoservices'>
-                    {% for pseudoservice in pseudoservices %}
-                    <li class="pseudoservice">{{pseudoservice.name}}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+    <div class="row">
+      <div class="path-node path-node-text">
+        <p>But when you run your own server, you control your data. Your data never has to leave the privacy of your own home.</p>
+      </div>
+      <div class="path-node path-node-img">
+        <img src="/assets/images/big-tech-fail.gif" alt="">
+      </div>
     </div>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <h3>When you run your own server, you are your <em>own cloud</em>.</h3>
+    </div>
+    <div class="col" id='ticker'>
+      <div id="ticker__selected-frame">
+        be your own
+      </div>
+      <div id="ticker__window">
+        <ul class='pseudoservices'>
+          {% for pseudoservice in pseudoservices %}
+            <li class="pseudoservice">{{pseudoservice.name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
