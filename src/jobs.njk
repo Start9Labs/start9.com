@@ -1,5 +1,5 @@
 ---
-title: Jobs | Start9 
+title: Jobs
 layout: layouts/peripheral.njk
 ---
 
@@ -16,9 +16,9 @@ layout: layouts/peripheral.njk
 </section>
 
 <section id="jobs">
-  {% set jobs = [] %}
+  {# {% set jobs = [] %} #}
   {% if jobs|length > 0 %}
-    <h2>{{ jobs|length }} {{ "Open Position" if jobs|length == 1 else "Open Positions" }}</h2>
+    {# <h2>{{ jobs|length }} {{ "Open Position" if jobs|length == 1 else "Open Positions" }}</h2> #}
     <ul class="jobs">
       {% for job in jobs %}
       <li class="job">
@@ -50,7 +50,7 @@ layout: layouts/peripheral.njk
   {% endif %}
   {% if jobs|length == 0 %}
     <h3>
-      As of <time datetime="{{ buildInfo.time.raw }}">{{ buildInfo.time.dateOnly }}</time> there are no open positions at Start9.
+      There are no open positions at Start9 at this time.
     </h3>
     <br/>
     <h3>
