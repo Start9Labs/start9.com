@@ -67,8 +67,6 @@ section#products {
       h1 {
         text-transform: uppercase;
       }
-      .product__subheader {
-      }
       background: var(--c-glass);
       svg {
         width: var(--img-width);
@@ -110,14 +108,4 @@ section#products {
       }
     }
   }
-  // &::after{
-  //   content: '';
-  //   left:0;
-  //   right:0;
-  //   display: block;
-  //   background-color: blue;
-  //   transform: rotateX(90deg);
-  //   height: 4rem;
-  //   z-index: -1;
-  // }
 }

@@ -313,7 +313,7 @@ section#news {
     background-color: var(--c-text-accent);
     color: var(--c-text-primary);
     padding: 0.2em 0.5em;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
     opacity: 0.6;
   }
@@ -370,20 +370,21 @@ section#news {
       }
 
       h3 {
-        font-size: max(28px, 1.6rem);
+        font-size: max(26px, 1.4rem);
       }
       p {
         color: var(--c-gray5);
         margin-top: -1.5rem;
         margin-bottom: 2rem;
         line-height: 1.4;
-        font-size: max(14px, 0.8rem);
+        font-size: max(18px, 0.9rem);
       }
 
       time {
         margin-top: -1.5rem;
-        color: var(--c-text-accent);
-        font-weight: 600;
+        color: var(--c-accent);
+        font-weight: 500;
+        font-size: 0.9rem;
         text-transform: uppercase;
       }
     }

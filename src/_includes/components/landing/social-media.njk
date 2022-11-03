@@ -1,7 +1,7 @@
 <ul class="community__icons">
   {% for name, item in site.media %}
     <li>
-      <a target="_blank" rel="noopener noreferrer" href="{{ item.url }}">{% include "svgs/" + name + ".svg" %}</a>
+      <a target="_blank" rel="noopener noreferrer" href="{{ item }}">{% include "svgs/" + name + ".svg" %}</a>
     </li>
   {% endfor %}
 </ul>

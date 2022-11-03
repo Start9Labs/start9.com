@@ -1,4 +1,6 @@
-[
+const site = require('./site')
+
+module.exports = [
   {
     "inHeader": true,
     "inFlyout": false,
@@ -7,14 +9,14 @@
       {
         "name": "Store",
         "slug": "store",
-        "url": "https://store.start9.com/",
+        "url": site.products.buyUrl,
         "target": "_blank",
         "class": ""
       },
       {
-        "name": "Developers",
-        "slug": "dev",
-        "url": "https://docs.start9.com/latest/developer-docs",
+        "name": "Docs",
+        "slug": "docs",
+        "url": site.docs.url,
         "target": "_blank",
         "order": 1,
         "class": "hide-on-mobile"
@@ -22,7 +24,7 @@
     ]
   },
   {
-    "name": "Our Company",
+    "name": "Company",
     "slug": "company",
     "order": 0,
     "size": "full",
@@ -39,6 +41,76 @@
         "class": ""
       },
       {
+        "name": "Jobs",
+        "slug": "jobs",
+        "url": "/jobs",
+        "target": "",
+        "order": 1,
+        "class": ""
+      },
+      {
+        "name": "Contribute",
+        "slug": "contribute",
+        "url": site.contribute.url,
+        "target": "_blank",
+        "order": 2,
+        "class": ""
+      },
+      {
+        "name": "Contact",
+        "slug": "contact",
+        "url": "/contact",
+        "target": "",
+        "order": 3,
+        "class": ""
+      }
+    ]
+  },
+  {
+    "name": "Products",
+    "slug": "products",
+    "order": 1,
+    "size": "half",
+    "inHeader": false,
+    "inFlyout": true,
+    "inFooter": true,
+    "items": [
+      {
+        "name": "Embassy One",
+        "slug": "embassy-one",
+        "url": site.products.one,
+        "target": "_blank",
+        "order": 0,
+        "class": ""
+      },
+      {
+        "name": "Embassy Pro",
+        "slug": "embassy-pro",
+        "url": site.products.pro,
+        "target": "_blank",
+        "order": 1,
+        "class": ""
+      },
+      {
+        "name": "Gear",
+        "slug": "gear",
+        "url": site.products.gear,
+        "target": "_blank",
+        "order": 1,
+        "class": ""
+      }
+    ]
+  },
+  {
+    "name": "Media",
+    "slug": "media",
+    "order": 3,
+    "size": "half",
+    "inHeader": false,
+    "inFlyout": true,
+    "inFooter": true,
+    "items": [
+      {
         "name": "Podcasts",
         "slug": "news",
         "url": "/news",
@@ -49,74 +121,23 @@
       {
         "name": "Videos",
         "slug": "videos",
-        "url": "https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q",
+        "url": site.media.youtube,
         "target": "_blank",
-        "order": 1,
-        "class": ""
-      },
-      {
-        "name": "Contact",
-        "slug": "contact",
-        "url": "/contact",
-        "target": "",
         "order": 2,
         "class": ""
       },
       {
-        "name": "Jobs",
-        "slug": "jobs",
-        "url": "/jobs",
-        "target": "",
-        "order": 4,
-        "class": ""
-      },
-      {
-        "name": "Privacy",
-        "slug": "privacy",
-        "url": "/privacy",
-        "target": "",
-        "order": 5,
+        "name": "Blog",
+        "slug": "blog",
+        "url": site.media.medium,
+        "target": "_blank",
+        "order": 3,
         "class": ""
       }
     ]
   },
   {
-    "name": "Our Products",
-    "slug": "products",
-    "order": 1,
-    "size": "full",
-    "inHeader": false,
-    "inFlyout": true,
-    "inFooter": true,
-    "items": [
-      {
-        "name": "Embassy One",
-        "slug": "embassy-one",
-        "url": "https://store.start9.com/collections/embassy/products/embassy-one",
-        "target": "_blank",
-        "order": 0,
-        "class": ""
-      },
-      {
-        "name": "Embassy Pro",
-        "slug": "embassy-pro",
-        "url": "https://store.start9.com/collections/embassy/products/embassy-2",
-        "target": "_blank",
-        "order": 1,
-        "class": ""
-      },
-      {
-        "name": "Store",
-        "slug": "store",
-        "url": "https://store.start9.com/",
-        "target": "_blank",
-        "order": 2,
-        "class": "highlight"
-      }
-    ]
-  },
-  {
-    "name": "EmbassyOS",
+    "name": "embassyOS",
     "slug": "embassyos",
     "order": 2,
     "size": "half",
@@ -127,15 +148,7 @@
       {
         "name": "Support",
         "slug": "support",
-        "url": "https://docs.start9.com/latest/support/",
-        "target": "_blank",
-        "order": 0,
-        "class": ""
-      },
-      {
-        "name": "FAQ",
-        "slug": "faq",
-        "url": "https://docs.start9.com/latest/support/faq/",
+        "url": site.support.url,
         "target": "_blank",
         "order": 0,
         "class": ""
@@ -143,7 +156,7 @@
       {
         "name": "Docs",
         "slug": "docs",
-        "url": "https://docs.start9.com",
+        "url": site.docs.url,
         "target": "_blank",
         "order": 1,
         "class": ""
@@ -151,7 +164,7 @@
       {
         "name": "Marketplace",
         "slug": "marketplace",
-        "url": "https://marketplace.start9.com/",
+        "url": site.dev.marketplace,
         "target": "_blank",
         "order": 2,
         "class": ""
@@ -168,17 +181,9 @@
     "inFooter": true,
     "items": [
       {
-        "name": "Contribute",
-        "slug": "contribute",
-        "url": "https://docs.start9.com/latest/contribute/index",
-        "target": "_blank",
-        "order": 0,
-        "class": ""
-      },
-      {
         "name": "Dev Docs",
         "slug": "dev-docs",
-        "url": "https://docs.start9.com/latest/developer-docs",
+        "url": site.dev.docs,
         "target": "_blank",
         "order": 1,
         "class": ""
@@ -186,7 +191,7 @@
       {
         "name": "Github",
         "slug": "github",
-        "url": "https://github.com/Start9Labs",
+        "url": site.dev.github,
         "target": "_blank",
         "order": 1,
         "class": "",
@@ -201,12 +206,12 @@
     "size": "half",
     "inHeader": false,
     "inFlyout": false,
-    "inFooter": true,
+    "inFooter": false,
     "items": [
       {
         "name": "Matrix",
         "slug": "matrix",
-        "url": "https://matrix.to/#/!lMnRwPWnyQvOfAoEnD:matrix.start9labs.com",
+        "url": site.media.matrix,
         "target": "_blank",
         "order": 0,
         "class": ""
@@ -214,7 +219,7 @@
       {
         "name": "YouTube",
         "slug": "youtube",
-        "url": "https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q",
+        "url": site.media.youtube,
         "target": "_blank",
         "order": 1,
         "class": ""
@@ -222,7 +227,7 @@
       {
         "name": "Telegram",
         "slug": "telegram",
-        "url": "https://t.me/start9_labs",
+        "url": site.media.telegram,
         "target": "_blank",
         "order": 1,
         "class": ""
@@ -230,7 +235,7 @@
       {
         "name": "Twitter",
         "slug": "twitter",
-        "url": "https://twitter.com/start9labs",
+        "url": site.media.twitter,
         "target": "_blank",
         "order": 1,
         "class": ""
