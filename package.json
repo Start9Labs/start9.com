@@ -1,5 +1,5 @@
 {
-  "name": "start9-landing",
+  "name": "start9-website",
   "version": "1.0.0",
   "description": "The Start9 company landing page featuring embassyOS products",
   "scripts": {
@@ -24,10 +24,9 @@
     "@11ty/eleventy-img": "^2.0.1",
     "@sardine/eleventy-plugin-tinysvg": "^1.2.0",
     "date-fns": "^2.29.3",
-    "eleventy-favicon": "^1.1.3",
+    "eleventy-plugin-gen-favicons": "^1.1.1",
     "eleventy-plugin-lazyimages": "^2.1.2",
     "eleventy-plugin-seo": "^0.5.2",
-    "esm": "^3.2.25",
     "slinkity": "^0.8.3"
   },
   "dependencies": {

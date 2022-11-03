@@ -1,6 +1,6 @@
 module.exports = {
   url: 'https://start9.com',
-  description: '',
+  description: 'The Start9 company landing page featuring embassyOS products',
   pitch: {
     url: '#infographics' //'https://start9.com/latest/learn/index'
   },
