@@ -36,8 +36,8 @@ module.exports = {
     url: 'https://start9.com/latest/contribute'
   },
   footer: {
-    copyright: '© ' + new Date().getFullYear() + ' by START9 LABS, INC.',
-    canary: 'WE HAVE NEVER RECEIVED A SECRET GOVERNMENT REQUEST TO HAND OVER USER INFORMATION.',
+    copyright: '© ' + new Date().getFullYear() + ' by Start9 Labs, Inc',
+    canary: 'We have never been subjected to compromise the freedom and privacy of our users by a government agency. If this message disappears, raise the flags.',
     donate: 'https://btcpay.start9.com/apps/2Et1JUmJnDwzKncfVBXvspeXiFsa/crowdfund'
   },
   media: {

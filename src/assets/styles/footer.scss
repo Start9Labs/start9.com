@@ -4,8 +4,11 @@ footer {
   font-weight: 400;
   color: gray;
   background-color: black;
-  .footer__copyright, .footer__donate {
-    font-size: max(10px, 0.8rem);
+  .footer__copyright {
+    font-size: max(8px, 0.6rem);
+  }
+  .footer__donate {
+    font-size: max(8px, 0.8rem);
   }
   .footer__content {
     display: flex;
@@ -13,7 +16,10 @@ footer {
       align-self: flex-start;
       margin: 1.8rem 0 0 5rem;
       svg {
-        width: 12rem;
+        width: 10rem;
+      }
+      p {
+        font-size: max(12px, 0.9rem);
       }
     }
     .footer__donate {
@@ -38,6 +44,7 @@ footer {
     }
   }
   .groups{
+    margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr;
@@ -105,7 +112,7 @@ footer {
   .footer__canary{
     text-align: center;
     padding: 2rem;
-    color: var(--c-accent)
+    color: var(--c-text-accent)
   }
 }
 
@@ -117,7 +124,6 @@ footer {
 }
 
 @media only screen and (max-width: 650px) {
-
   footer .footer__content {
     flex-direction: column;
     .header {
@@ -133,8 +139,9 @@ footer {
     }
     .groups li > a {
       font-size: 3.5vmin;
-      }
+    }
     .groups {
+      margin-left: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
