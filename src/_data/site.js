@@ -34,5 +34,13 @@ module.exports = {
     copyright: '© ' + new Date().getFullYear() + ' by START9 LABS, INC.',
     canary: 'WE HAVE NEVER RECEIVED A SECRET GOVERNMENT REQUEST TO HAND OVER USER INFORMATION.',
     donate: 'https://btcpay.start9.com/apps/2Et1JUmJnDwzKncfVBXvspeXiFsa/crowdfund'
+  },
+  media: {
+    matrix: 'https://matrix.to/#/!lMnRwPWnyQvOfAoEnD:matrix.start9labs.com',
+    twitter: 'https://twitter.com/start9labs',
+    telegram: 'https://t.me/start9_labs',
+    youtube: 'https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q',
+    discourse: 'https://community.start9.com',
+    tor: 'http://privacy34kn4ez3y3nijweec6w4g54i3g54sdv7r5mr6soma3w4begyd.onion'
   }
 };
