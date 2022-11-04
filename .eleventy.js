@@ -6,6 +6,7 @@ const slinkity = require('slinkity')
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/images/');
+  eleventyConfig.addPassthroughCopy('./src/assets/videos/');
   eleventyConfig.addPassthroughCopy('public')
 
   //plugins
