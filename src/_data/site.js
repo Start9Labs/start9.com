@@ -36,7 +36,7 @@ module.exports = {
   },
   footer: {
     copyright: '© ' + new Date().getFullYear() + ' by Start9 Labs, Inc',
-    canary: 'We have never been subjected to compromise the freedom and privacy of our users by a government agency. If this message disappears, raise the flags.',
+    canary: 'We have never received a secret government request to hand over user information.',
     donate: 'https://btcpay.start9.com/apps/2Et1JUmJnDwzKncfVBXvspeXiFsa/crowdfund'
   },
   media: {
