@@ -1,9 +1,12 @@
 {
-    "title": "Personal Server",
-    "description": "Sovereign computing for a free future. Anyone can do it. No one can stop it.",
+    "title": "Start9",
+    "description": "Sovereign computing for a free future",
     "url": "https://start9.com",
     "author": "Start9",
     "twitter": "start9labs",
     "image": "https://start9.com/thumbnail.jpg",
-    "ogtype": "website"
+    "ogtype": "website",
+    "options": {
+      "titleDivider": "|"
+    }
   }
