@@ -410,17 +410,16 @@ section#contact {
 
   .btn {
     text-align: center;
-    padding: 0.7rem 1.2rem;
+    padding: 1rem 1.3rem;
     color: var(--c-text-bright);
     background-color: var(--c-accent);
     border: 0;
     font-family: var(--f-accent);
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
     box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
     border-radius: 34px;
-    width: 5rem;
 
     &:hover {
       transform: scale(1.03);
@@ -430,15 +429,21 @@ section#contact {
   p {
     text-align: center;
     margin: 0;
+    font-size: 1.4rem;
   }
 }
 
 section#pro-video {
-  width: 60vw;
-  height: 60vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  iframe {
-    border: none;
+  video {
+    width: 78vw;
+    border: 0.1rem solid var(--c-1);
+    border-radius: 1px;
+    box-shadow: 0 0 1px var(--c-gray3);
   }
 }
 
@@ -446,13 +451,6 @@ section#pro-video {
   section#hero {
     flex-direction: column;
     margin-bottom: 6rem;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  section#pro-video {
-    width: 70vw;
-    height: 80vh;
   }
 }
 
@@ -478,8 +476,21 @@ section#pro-video {
     }
   }
 
+  #pro-tagline {
+    .btn {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1.7rem;
+    }
+  }
+
+
   section#pro-video {
-    width: 90vw;
-    height: 25vh;
+    video {
+      width: 90vw;;
+      height: 24vh;
+    }
   }
 }

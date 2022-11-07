@@ -12,17 +12,20 @@ layout: layouts/peripheral.njk
     <img class="img-shadow" src="/assets/images/news-hero.png" alt=""/>
   </div>
   <div id="logo">
-    <h1>
+    <h1 class="text-center pb1">
       <span>Embassy Pro</span>
     </h1>
     <div id="pro-tagline">
-      <p>Introducting our new flagship product</p>
+      <p class="pb1">Introducting our new flagship product</p>
       <a href="{{ site.products.pro }}" class="btn" rel="noopener noreferrer" target="_blank">Get yours</a>
     </div>
   </div>
 </section>
   
 <section id="pro-video">
-  <iframe id="pro-iframe" width="100%" height="100%" src="/Embassy_Pro_final.mp4" allowfullscreen></iframe>
+  <video controls preload="metadata" poster="https://start9.sirv.com/Embassy_Pro_final.mp4">
+    <source src="https://start9.sirv.com/Embassy_Pro_final.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 </section>
   

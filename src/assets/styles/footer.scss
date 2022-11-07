@@ -12,6 +12,7 @@ footer {
     .header {
       align-self: flex-start;
       margin: 1.8rem 0 0 5rem;
+      flex-direction: column;
       svg {
         width: 10rem;
       }
@@ -34,7 +35,7 @@ footer {
         border: 0;
         font-family: var(--f-accent);
         font-weight: 300;
-        font-size: max(10px, 1rem);
+        font-size: max(13px, 1rem);
         text-decoration: none;
         box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
         border-radius: 34px;
@@ -134,7 +135,7 @@ footer {
 
 @media only screen and (max-width: 1200px) {
   footer .groups li > a {
-    font-size: 2vw;
+    font-size: 1.6vw;
   }
 }
 
