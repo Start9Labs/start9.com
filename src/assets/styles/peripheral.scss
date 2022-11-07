@@ -434,16 +434,30 @@ section#contact {
 }
 
 section#pro-video {
-  width: 100vw;
+  width: 80vw;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  video {
-    width: 78vw;
-    border: 0.1rem solid var(--c-1);
-    border-radius: 1px;
-    box-shadow: 0 0 1px var(--c-gray3);
+  .video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 2px;
+    border: 2px solid var(--c-gray5);
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   }
 }
 
@@ -486,11 +500,8 @@ section#pro-video {
     }
   }
 
-
   section#pro-video {
-    video {
-      width: 90vw;;
-      height: 24vh;
-    }
+    width: 90vw;;
+    height: 20vh;
   }
 }
