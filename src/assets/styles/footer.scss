@@ -7,9 +7,6 @@ footer {
   .footer__copyright {
     font-size: max(8px, 0.6rem);
   }
-  .footer__donate {
-    font-size: max(8px, 0.8rem);
-  }
   .footer__content {
     display: flex;
     .header {
@@ -22,16 +19,22 @@ footer {
         font-size: max(12px, 0.9rem);
       }
     }
-    .footer__donate {
-      margin-top: 3rem;
+    .footer__btns {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+
       .btn {
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 1.2rem;
         color: var(--c-text-bright);
         background-color: var(--c-accent);
         border: 0;
         font-family: var(--f-accent);
         font-weight: 300;
-        font-size: 1rem;
+        font-size: max(10px, 1rem);
         text-decoration: none;
         box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
         border-radius: 34px;
@@ -39,6 +42,18 @@ footer {
         &:hover {
           transform: scale(1.03);
           filter: brightness(120%);
+        }
+      }
+      a {
+        &:hover svg path {
+          fill: var(--c-text-accent);
+        }
+        svg {
+          width: 2.3rem !important;
+
+          path {
+            transition: var(--t-simple);
+          }
         }
       }
     }

@@ -1,5 +1,6 @@
 module.exports = {
   url: 'https://start9.com',
+  torUrl: 'http://privacy34kn4ez3y3nijweec6w4g54i3g54sdv7r5mr6soma3w4begyd.onion',
   pitch: {
     url: '#infographics' //'https://start9.com/latest/learn/index'
   },
@@ -47,6 +48,5 @@ module.exports = {
     youtube: 'https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q',
     discourse: 'https://community.start9.com',
     medium: 'https://start9labs.medium.com',
-    tor: 'http://privacy34kn4ez3y3nijweec6w4g54i3g54sdv7r5mr6soma3w4begyd.onion'
   }
 };
