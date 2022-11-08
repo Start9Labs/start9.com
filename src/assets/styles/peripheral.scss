@@ -440,24 +440,32 @@ section#pro-video {
   justify-content: center;
   align-items: center;
 
-  .video {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
+  .flowplayer {
+    width: 63vw;
     border-radius: 2px;
     border: 2px solid var(--c-gray5);
+  }
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+  video {
+    // position: relative;
+    // width: 80%;
+    // padding-top: 56.25%;
+    // overflow: hidden;
+
+    // iframe {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   border: none;
+    // }
+  }
+
+  .fp-ui a {
+    display: none!important;
   }
 }
 
