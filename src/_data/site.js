@@ -8,7 +8,7 @@ module.exports = {
     buyUrl: 'https://store.start9.com',
     diyUrl: 'https://docs.start9.com/latest/diy',
     one: 'https://store.start9.com/collections/embassy/products/embassy-one',
-    pro: 'https://store.start9.com/collections/embassy/products/embassy-pro',
+    pro: 'https://store.start9.com/products/embassy-pro-presale',
     gear: 'https://store.start9.com/collections/apparel'
   },
   bitcoin: {
