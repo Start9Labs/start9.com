@@ -1,5 +1,6 @@
 //////////////////////////////////////////
 // HERO
+import { gsap } from "gsap";
 
 gsap.to("#hero-image", {
   duration: 1,
@@ -9,6 +10,7 @@ gsap.to("#hero-image", {
   filter: "blur(0px)",
   delay: 0.5,
 });
+
 gsap.to("#logo", {
   duration: 0.5,
   y: 0,

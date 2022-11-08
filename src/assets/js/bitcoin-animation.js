@@ -1,24 +1,25 @@
 /********************************************/
 /* BITCOIN SECTION FLOATING ICONS ANIMATION */
 /********************************************/
+import { gsap } from "gsap";
 
 //////////////////////////////////////////
 // DATA
 // TODO: pull this from data js instead
 const bitcoinServices = [
-    "bitcoind",
-    "btcpay",
-    "cln",
-    "electrs",
-    "lnd",
-    "lit",
-    "mempool",
-    "rtl",
-    "spark",
-    "specter",
-    "sphinx",
-    "thunderhub",
-  ];
+  "bitcoind",
+  "btcpay",
+  "cln",
+  "electrs",
+  "lnd",
+  "lit",
+  "mempool",
+  "rtl",
+  "spark",
+  "specter",
+  "sphinx",
+  "thunderhub",
+];
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -30,7 +31,7 @@ function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-function positionServiceIcons() {
+export function positionServiceIcons() {
   bitcoinServices.forEach((service, i) => {
     var serviceClass = ".service-icon--" + service;
 

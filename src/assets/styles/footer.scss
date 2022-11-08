@@ -4,28 +4,38 @@ footer {
   font-weight: 400;
   color: gray;
   background-color: black;
-  .footer__copyright, .footer__donate {
-    font-size: max(10px, 0.8rem);
+  .footer__copyright {
+    font-size: max(8px, 0.6rem);
   }
   .footer__content {
     display: flex;
     .header {
       align-self: flex-start;
       margin: 1.8rem 0 0 5rem;
+      flex-direction: column;
       svg {
-        width: 12rem;
+        width: 10rem;
+      }
+      p {
+        font-size: max(12px, 0.9rem);
       }
     }
-    .footer__donate {
-      margin-top: 3rem;
+    .footer__btns {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+
       .btn {
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 1.2rem;
         color: var(--c-text-bright);
         background-color: var(--c-accent);
         border: 0;
         font-family: var(--f-accent);
         font-weight: 300;
-        font-size: 1rem;
+        font-size: max(13px, 1rem);
         text-decoration: none;
         box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
         border-radius: 34px;
@@ -35,9 +45,22 @@ footer {
           filter: brightness(120%);
         }
       }
+      a {
+        &:hover svg path {
+          fill: var(--c-text-accent);
+        }
+        svg {
+          width: 2.3rem !important;
+
+          path {
+            transition: var(--t-simple);
+          }
+        }
+      }
     }
   }
   .groups{
+    margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr;
@@ -105,18 +128,18 @@ footer {
   .footer__canary{
     text-align: center;
     padding: 2rem;
+    color: var(--c-gray3)
   }
 }
 
 
 @media only screen and (max-width: 1200px) {
   footer .groups li > a {
-    font-size: 2vw;
+    font-size: 1.6vw;
   }
 }
 
 @media only screen and (max-width: 650px) {
-
   footer .footer__content {
     flex-direction: column;
     .header {
@@ -132,8 +155,9 @@ footer {
     }
     .groups li > a {
       font-size: 3.5vmin;
-      }
+    }
     .groups {
+      margin-left: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;

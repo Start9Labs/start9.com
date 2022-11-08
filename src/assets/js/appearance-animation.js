@@ -1,10 +1,12 @@
 /************************************************/
 /* SECTION, LINE, AND TEXT APPEARANCE ANIMATION */
 /************************************************/
-
+import { gsap } from "gsap";
 
 //////////////////////////////////////////
 // HERO
+
+const defaultActions = "play none none none";
 
 // line animation
 gsap.from("#hero-to-pitch path:first-child", {
@@ -101,29 +103,31 @@ gsap.from("#products-to-info path:first-child", {
 //////////////////////////////////////////
 // INFOGRAPHICS
 
-// object animation
-gsap.from("#infographics .subsection--trust", {
-  duration: 0.5,
-  opacity: 0,
-  outline: "1px solid rgba(255,255,255,1)",
-  scrollTrigger: {
-    trigger: "#infographics .subsection--trust",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
+if (document.querySelector("#infographics .subsection--control")) {
+  // object animation
+  gsap.from("#infographics .subsection--trust", {
+    duration: 0.5,
+    opacity: 0,
+    outline: "1px solid rgba(255,255,255,1)",
+    scrollTrigger: {
+      trigger: "#infographics .subsection--trust",
+      start: "top 75%", // "triggerElement page"
+      toggleActions: defaultActions,
+    },
+  });
 
-// object animation
-gsap.from("#infographics .subsection--control", {
-  duration: 0.5,
-  opacity: 0,
-  outline: "1px solid rgba(255,255,255,1)",
-  scrollTrigger: {
-    trigger: "#infographics .subsection--control",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
+  // object animation
+  gsap.from("#infographics .subsection--control", {
+    duration: 0.5,
+    opacity: 0,
+    outline: "1px solid rgba(255,255,255,1)",
+    scrollTrigger: {
+      trigger: "#infographics .subsection--control",
+      start: "top 75%", // "triggerElement page"
+      toggleActions: defaultActions,
+    },
+  });
+}
 
 //////////////////////////////////////////
 // BITCOIN
@@ -221,52 +225,55 @@ gsap.from("#be-to-powered path", {
 //////////////////////////////////////////
 // POWERED
 
-gsap.from("#powered-by h1", {
-  duration: 0.5,
-  y: "-5rem",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#powered-by h1",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
+if (document.querySelector("#powered-by") && document.querySelector("#powered-by svg")) {
+  gsap.from("#powered-by h1", {
+    duration: 0.5,
+    y: "-5rem",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#powered-by h1",
+      start: "top 75%", // "triggerElement page"
+      toggleActions: defaultActions,
+    },
+  });
+  
+  // object animation
+  gsap.from("#powered-by p", {
+    duration: 0.5,
+    filter: "blur(10px)",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#powered-by h1",
+      start: "top 75%", // "triggerElement page"
+      toggleActions: defaultActions,
+    },
+  });
 
-// object animation
-gsap.from("#powered-by p", {
-  duration: 0.5,
-  filter: "blur(10px)",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#powered-by h1",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
+  // object animation
+  gsap.from("#powered-by svg", {
+    duration: 1,
+    filter: "blur(20px)",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#powered-by svg",
+      start: "top 75%", // "triggerElement page"
+      toggleActions: defaultActions,
+    },
+  });
+  
+  // line animation
+  gsap.from("#powered-to-support path", {
+    drawSVG: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#powered-to-support path",
+      scrub: true,
+      start: "top 75%",
+      end: "bottom 75%",
+    },
+  });
+}
 
-// object animation
-gsap.from("#powered-by svg", {
-  duration: 1,
-  filter: "blur(20px)",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#powered-by svg",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
-
-// line animation
-gsap.from("#powered-to-support path", {
-  drawSVG: 0,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#powered-to-support path",
-    scrub: true,
-    start: "top 75%",
-    end: "bottom 75%",
-  },
-});
 
 //////////////////////////////////////////
 // SUPPORT

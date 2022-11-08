@@ -1,5 +1,6 @@
 //////////////////////////////////////////
 // MENU
+import { gsap } from "gsap";
 
 let menuOpen = document.getElementById("menu-open"),
   menuClose = document.getElementById("menu-close"),
@@ -9,7 +10,7 @@ let menuOpen = document.getElementById("menu-open"),
 menuOpen.addEventListener("click", (e) => openMenu(e));
 menuClose.addEventListener("click", (e) => closeMenu(e));
 
-function openMenu(e) {
+export default function openMenu(e) {
   e.preventDefault();
   gsap.to("#menu", { y: "0vh" });
   gsap.to("main", { y: "100vh" });

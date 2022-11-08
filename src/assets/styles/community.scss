@@ -82,12 +82,21 @@ section#community {
   a {
     &:hover svg path{
       fill: var(--c-text-accent);
+      transform: scale(0.9);
     }
     svg {
       width: 3rem;
-      path{
-          transition: var(--t-simple);
+      path {
+        transition: var(--t-simple);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section#community {
+    input[type=email] {
+      width: 23rem;
     }
   }
 }

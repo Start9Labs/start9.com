@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-{# <html lang="en" style="--scrollbarWidth: 0px; --viewportWidth: calc(100vw - var(--scrollbarWidth));"> #}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# <meta name="description" content="{{ description }}">
-    <title>{{ title }}</title> #}
-    {% favicon './favicon.svg' %}
-    <link rel="stylesheet" href="/assets/styles/main.css">
+    {% favicons './public/favicon.svg' %}
+    <link rel="stylesheet" href="/@root/src/assets/styles/main.scss">{{ __slinkity.head | safe }}
     {% seo "" %}
 </head>
 <body>
@@ -22,30 +19,5 @@
   </main>
 
   {% include "components/footer.njk" %}
-
-  {# <script>
-    window.onload = setScrollbarVariable;
-    document.onload = setScrollbarVariable;
-    window.onresize = setScrollbarVariable;
-
-    function setScrollbarVariable() {
-
-      const viewportDependantWidth = (typeof window.orientation !== "undefined") ? screen.width : window.innerWidth;
-
-      const scrollbarWidth = viewportDependantWidth - document.body.clientWidth;
-      document.documentElement.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`);
-
-      console.log(scrollbarWidth);
-    }
-
-  </script> #}
-
-  <style>
-    :root{
-      --viewportWidth: calc(100vw - var(--scrollbarWidth));
-    }
-  </style>
-
-
 </body>
 </html>

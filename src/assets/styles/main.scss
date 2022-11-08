@@ -399,6 +399,10 @@ nav {
   align-self: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 @media only screen and (max-width: 500px) {
   .header__logo img {
     width: 11rem !important;
@@ -448,4 +452,8 @@ nav {
       --rows-above: 1 !important;
     }
   }
+}
+
+.pb1 {
+  padding-bottom: 1rem;
 }

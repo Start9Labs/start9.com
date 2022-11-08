@@ -1,8 +1,12 @@
 {
     "title": "Start9",
-    "description": "Sovereign computing for a free future.",
+    "description": "Sovereign computing for a free future",
     "url": "https://start9.com",
-    "author": "Start9 Labs",
+    "author": "Start9",
     "twitter": "start9labs",
-    "image": "https://start9.com/assets/images/thumbnail.jpg"
+    "image": "https://start9.com/thumbnail.jpg",
+    "ogtype": "website",
+    "options": {
+      "titleDivider": "|"
+    }
   }

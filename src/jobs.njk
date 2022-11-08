@@ -1,60 +1,60 @@
 ---
-title: Jobs | Start9 
+title: Jobs
 layout: layouts/peripheral.njk
 ---
 
 <section id="hero">
-    <div id="hero-image" class="image-with-shadow">
-        <img src="/assets/images/jobs-hero.png" alt="jobs page hero: laptop emerging from an embassy" title="jobs page hero: laptop emerging from an embassy"/>
-        <img class="img-shadow" src="/assets/images/jobs-hero.png" alt=""/>
-    </div>
-    <div id="logo">
-        <h1>
-            <span>Jobs</span>
-        </h1>
-    </div>
+  <div id="hero-image" class="image-with-shadow">
+    <img src="/assets/images/jobs-hero.png" alt="jobs page hero: laptop emerging from an embassy" title="jobs page hero: laptop emerging from an embassy"/>
+    <img class="img-shadow" src="/assets/images/jobs-hero.png" alt=""/>
+  </div>
+  <div id="logo">
+    <h1>
+      <span>Jobs</span>
+    </h1>
+  </div>
 </section>
 
 <section id="jobs">
-    {% set jobs = [] %}
-    {% if jobs|length > 0 %}
-    <h2>{{ jobs|length }} {{ "Open Position" if jobs|length == 1 else "Open Positions" }}</h2>
+  {# {% set jobs = [] %} #}
+  {% if jobs|length > 0 %}
+    {# <h2>{{ jobs|length }} {{ "Open Position" if jobs|length == 1 else "Open Positions" }}</h2> #}
     <ul class="jobs">
-        {% for job in jobs %}
-        <li class="job">
-            <h3>{{ job.title }}</h3>
-            <p>{{ job.blurb }}</p>
-            <h4>Job Description</h4>
-            <ul>
-                {% for item in job.description %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ul>
-            <h4>Requirements</h4>
-            <ul>
-                {% for requirement in job.requirements %}
-                    <li>{{ requirement }}</li>
-                {% endfor %}
-            </ul>
-            <h4>Benefits</h4>
-            <ul>
-                {% for benefit in job.benefits %}
-                    <li>{{ benefit }}</li>
-                {% endfor %}
-            </ul>
-            <h4>How to Apply</h4>
-            <p>{{ job.how }}</p>
-        </li>
-        {% endfor %}
+      {% for job in jobs %}
+      <li class="job">
+        <h3>{{ job.title }}</h3>
+        <p>{{ job.blurb }}</p>
+        <h4>Job Description</h4>
+        <ul>
+          {% for item in job.description %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <h4>Requirements</h4>
+        <ul>
+          {% for requirement in job.requirements %}
+            <li>{{ requirement }}</li>
+          {% endfor %}
+        </ul>
+        <h4>Benefits</h4>
+        <ul>
+          {% for benefit in job.benefits %}
+            <li>{{ benefit }}</li>
+          {% endfor %}
+        </ul>
+        <h4>How to Apply</h4>
+        <p>{{ job.how }}</p>
+      </li>
+      {% endfor %}
     </ul>
-    {% endif %}
-    {% if jobs|length == 0 %}
-        <h3>
-            As of <time datetime="{{ buildInfo.time.raw }}">{{ buildInfo.time.dateOnly }}</time> there are no open positions at Start9.
-        </h3>
-        <br/>
-        <h3>
-            Check back soon!
-        </h3>
-    {% endif %}
+  {% endif %}
+  {% if jobs|length == 0 %}
+    <h3>
+      There are no open positions at Start9 at this time.
+    </h3>
+    <br/>
+    <h3>
+      Check back soon!
+    </h3>
+  {% endif %}
 </section>
