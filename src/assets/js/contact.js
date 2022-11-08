@@ -4,6 +4,8 @@
 
 const emailError = document.getElementById("emailError")
 const emailSuccess = document.getElementById("emailSuccess")
+const errorMsg = "Something's not working. If you keep getting this error, try us at <a href='https://t.me/start9_lab' rel='noopener noreferrer' target='_blank'>Telegram</a> instead."
+
 function showSuccess(message) {
   hideError();
   emailSuccess.classList.add("form-alert--visible");
@@ -57,22 +59,18 @@ document.getElementById("contactSubmit").addEventListener("click", function (e) 
         if (response.ok) {
           showSuccess("Thanks for subscribing!");
         } else {
-          if (response.status = 422) {
+          if (response.status === 422) {
             showError("Already subscribed!")
           } else {
             console.error(`Error code: ${response.status} - Details: ${response.statusText}`)
-            showError(
-              "Something's not working. If you keep getting this error, try us at <a href='https://twitter.com/start9labs' rel='noopener noreferrer' target='_blank'>Twitter</a> instead."
-            );
+            showError(errorMsg);
           }
         }
       });
     } catch (error) {
       clear()
       console.error(error)
-      showError(
-        "Something's not working. If you keep getting this error, try us at <a href='https://twitter.com/start9labs' rel='noopener noreferrer' target='_blank'>Twitter</a> instead."
-      );
+      showError(errMsg);
     }
   } else {
     showError("Sorry, you must use a valid email address.");

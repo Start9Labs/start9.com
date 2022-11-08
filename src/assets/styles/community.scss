@@ -92,3 +92,11 @@ section#community {
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  section#community {
+    input[type=email] {
+      width: 23rem;
+    }
+  }
+}
