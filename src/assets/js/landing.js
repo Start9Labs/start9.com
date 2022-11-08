@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { positionServiceIcons } from '/@root/src/assets/js/bitcoin-animation.js'
-import { initializeSizes } from '/@root/src/assets/js/ticker-animation.js'
+import { initializeSizes, tick, next } from '/@root/src/assets/js/ticker-animation.js'
 
 //////////////////////////////////////////
 // RE-RENDER COMPLEX ANIMATIONS ON WINDOW RESIZE
@@ -8,9 +8,11 @@ import { initializeSizes } from '/@root/src/assets/js/ticker-animation.js'
 function onResizeComplete() {
   positionServiceIcons();
   initializeSizes();
+  // initialize ticker
+  gsap.delayedCall(next, tick);
 }
 
-var resizeTimeout = setTimeout(onResizeComplete, 400);
+let resizeTimeout = setTimeout(onResizeComplete, 400);
 window.onresize = function () {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(onResizeComplete, 400);
