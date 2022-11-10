@@ -286,6 +286,33 @@ section#banner {
   top: 0;
   height: $banner-height;
 
+  a {
+    cursor: pointer;
+  }
+
+  .link-container {
+    position: relative;
+  }
+
+ .link-container .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .link-container .inner {
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .link-container .inner a {
+    pointer-events: all;
+    position: relative;
+  }
+
   .banner__content {
     display: flex;
     align-items: center;
