@@ -2,6 +2,7 @@
 @use "fonts";
 @use "menu";
 @use "footer";
+@import "vars";
 
 :root {
   background-attachment: fixed;
@@ -18,6 +19,7 @@
   --c-gray4: #d1d1d1;
   --c-gray5: #e0e0e0;
   --c-gray6: #f4f4f5;
+  --c-gray7: #1e1e1e;
 
   --c-1: rgba(255, 255, 255);
   --c-text-primary: var(--c-1);
@@ -239,8 +241,8 @@ header {
   position: fixed;
   width: 100vw;
   z-index: 2;
-  top: 0;
-
+  padding-top: 1rem;
+  
   a.header__logo {
     opacity: 0;
     filter: blur(10px);
@@ -272,6 +274,43 @@ header {
     }
   }
 }
+
+.header__top {
+  top: $banner-height;
+}
+
+section#banner {
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: $banner-height;
+
+  .banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--c-accent);
+    color: var(--c-1);
+
+    p {
+      max-width: 100vw;
+      font-size: 1rem;
+    }
+
+    a {
+      color: var(--c-1);
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section#banner p {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
 nav {
   --padding: 1rem;
   //width: calc(100% - 2 * var(--padding) - 15px);
@@ -456,4 +495,16 @@ nav {
 
 .pb1 {
   padding-bottom: 1rem;
+}
+
+.pt1 {
+  padding-top: 1rem;
+}
+
+.pt2 {
+  padding-top: 2rem;
+}
+
+.pt3 {
+  padding-top: 3rem;
 }

@@ -4,6 +4,7 @@ module.exports = {
   pitch: {
     url: '#infographics' //'https://start9.com/latest/learn/index'
   },
+  banner: true,
   products: {
     buyUrl: 'https://store.start9.com',
     diyUrl: 'https://docs.start9.com/latest/diy',
