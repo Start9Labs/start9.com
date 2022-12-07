@@ -1,5 +1,61 @@
 [
   {
+    "title": "Why Are We Bullish?",
+    "date": "December 2, 2022",
+    "link": "https://www.youtube.com/watch?v=Ct0sS9UmjG0",
+    "image": "https://pbs.twimg.com/profile_banners/2298103730/1575064829/1080x360",
+    "anchor": "BTC Sessions: Bullish Bit",
+    "description": "Dread, Jason Maier, Urban Hacker."
+  },
+  {
+    "title": "Matt Hill: The Era of 'Sovereign Computing' is Here",
+    "date": "December 1, 2022",
+    "link": "https://www.seetee.io/podcast/s3e9/matt-hill-the-era-of-sovereign-computing-is-here/",
+    "image": "https://www.seetee.io/assets/podcast/thumbnails/s3e9_400x400.webp",
+    "anchor": "Closing the Loop",
+    "description": "Today's guest is Matt Hill, co-founder and CEO of Start9 Labs, a leading pioneer in what he calls 'Sovereign Computing.'"
+  },
+  {
+    "title": "Sovereign Computing, Decentralizing the Internet, and Owning your Data with Matt and Aiden from Start9",
+    "date": "November 30, 2022",
+    "link": "https://anchor.fm/thecafebitcoinpodcast/episodes/Sovereign-Computing--Decentralizing-the-Internet-and-Owning-your-Data-with-Matt-Hill-and-Aiden-from-Start-9---November-30th--2022-e1ri6ij",
+    "image": "https://production.listennotes.com/podcasts/the-caf%C3%A9-bitcoin-podcast-swan-bitcoin-vfMdjJWuGln-sjScmZtdiR_.1400x1400.jpg",
+    "anchor": "The Cafe Bitcoin Podcast",
+    "description": "We talk about sovereign computing, decentralizing the internet and what to expect from Start 9 in 2023!"
+  },
+  {
+    "title": "Opting out with Matt Hill",
+    "date": "November 25, 2022",
+    "link": "https://www.stitcher.com/show/the-cryptoconomy-podcast/episode/chat-75-opting-out-with-matt-hill-208990506",
+    "image": "https://bitcoinaudible.com/wp-content/uploads/2020/05/photo_2020-05-31_23-07-44.jpg",
+    "anchor": "Bitcoin Audible",
+    "description": "On the nature of sovereignty, the challenges of the world we live in, the fog of war that has descended upon our lives, and on the tools and systems we need (and are building) in order to ensure we will find ourselves in a future of sovereign individuals."
+  },
+  {
+    "title": "Sovereign Computing with @start9labs",
+    "date": "November 25, 2022",
+    "link": "https://www.stitcher.com/show/once-bitten/episode/grassfedbitcoin-sovereign-computing-with-start9labs-299-208979440",
+    "image": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/3134186/3134186-1581240303263-e0a3e92467678.jpg",
+    "anchor": "Once Bitten",
+    "description": "Today's guest on the show is @Grassfedbitcoin who joins me to talk about self-hosting all your personal data at home with @start9labs Embassy One."
+  },
+  {
+    "title": "Matt Hill | Sovereign Computing",
+    "date": "November 21, 2022",
+    "link": "https://www.youtube.com/watch?v=p4FbsM7ZATI",
+    "image": "https://imgv2-1-f.scribdassets.com/img/audiobook/609351465/198x198/bfc85dd904/1669092054?v=1",
+    "anchor": "Simply Bitcoin IRL",
+    "description": "Nico talks with Matt Hill, CEO of Start9 Labs."
+  },
+  {
+    "title": "Sovereign Computing ft. Matt Hill",
+    "date": "November 16, 2022",
+    "link": "https://www.youtube.com/watch?v=wtqNLkeW7A4",
+    "image": "https://cdn.player.fm/images/37887462/series/m3PF8RLNL0BA74cV/128.jpg",
+    "anchor": "Talking in Bits",
+    "description": "In episode 87, we're back with Matt Hill, who builds Sovereign computers for individuals over at Start9."
+  },
+  {
     "title": "RaspiFUD or fact? Bitcoin nodes and security",
     "date": "September 16, 2022",
     "link": "https://stephanlivera.com/episode/414/",
