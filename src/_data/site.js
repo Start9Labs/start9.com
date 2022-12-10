@@ -39,7 +39,7 @@ module.exports = {
   footer: {
     copyright: '© ' + new Date().getFullYear() + ' by Start9 Labs, Inc',
     canary: 'We have never received a secret government request to hand over user information.',
-    donate: 'https://btcpay.start9.com/apps/2Et1JUmJnDwzKncfVBXvspeXiFsa/crowdfund'
+    donate: 'https://donate.start9.com'
   },
   media: {
     // NOTE: the keys here correspond to the name of the svg logo
