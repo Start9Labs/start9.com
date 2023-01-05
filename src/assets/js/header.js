@@ -1,6 +1,5 @@
 //////////////////////////////////////////
 // HEADER
-import { gsap } from "gsap";
 
 gsap.to("header", {
   duration: 0.5,

@@ -39,7 +39,7 @@ Now, your blog is ready to be deployed. All generated files are located at `_sit
 └── src
     ├── _data          # Eleventy data folder (supports .json and exported .js)
     ├── _includes
-    │   └── components # landing sections and reuable components
+    │   └── components # landing sections and reusable components
     │   └── layouts    # page layouts
     │   └── svgs       # for including in njk templates
     └── assets         

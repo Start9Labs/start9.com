@@ -1,6 +1,5 @@
 //////////////////////////////////////////
 // HERO
-import { gsap } from "gsap";
 
 gsap.to("#hero-image", {
   duration: 1,

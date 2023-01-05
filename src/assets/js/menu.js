@@ -1,6 +1,5 @@
 //////////////////////////////////////////
 // MENU
-import { gsap } from "gsap";
 
 let menuOpen = document.getElementById("menu-open"),
   menuClose = document.getElementById("menu-close"),

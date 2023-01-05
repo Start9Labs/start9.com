@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-
 const defaultActions = "play none none none";
 
 gsap.from("section#hero+section", {

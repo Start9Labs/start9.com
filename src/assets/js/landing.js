@@ -1,4 +1,3 @@
-import { gsap } from "gsap";
 import { positionServiceIcons } from '/@root/src/assets/js/bitcoin-animation.js'
 import { initializeSizes, tick, next } from '/@root/src/assets/js/ticker-animation.js'
 

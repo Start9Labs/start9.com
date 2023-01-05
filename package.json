@@ -25,12 +25,10 @@
     "@sardine/eleventy-plugin-tinysvg": "^1.2.0",
     "date-fns": "^2.29.3",
     "eleventy-plugin-gen-favicons": "^1.1.1",
-    "eleventy-plugin-lazyimages": "^2.1.2",
     "eleventy-plugin-seo": "^0.5.2",
     "slinkity": "^0.8.3"
   },
   "dependencies": {
-    "gsap": "^3.10.4",
     "rss-parser": "^3.12.0"
   },
   "browserslist": [
