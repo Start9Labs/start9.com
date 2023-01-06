@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/videos/');
   eleventyConfig.addPassthroughCopy('public')
 
-  //plugins
+  // plugins
   eleventyConfig.addPlugin(faviconPlugin, { outputDir: './public' });
   eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}))
   eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
@@ -17,10 +17,18 @@ module.exports = function (eleventyConfig) {
     baseUrl: 'src/_includes/svgs/',
   });
 
-  //filters
+  // filters
   eleventyConfig.addFilter('date', function (date, dateFormat) {
     return format(date, dateFormat)
   })
+
+  // cors
+  eleventyConfig.setBrowserSyncConfig({
+    middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
+    });
 
   return {
     dir: { input: "src", output: "_site", data: "_data" },
