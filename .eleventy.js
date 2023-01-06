@@ -22,14 +22,6 @@ module.exports = function (eleventyConfig) {
     return format(date, dateFormat)
   })
 
-  // cors
-  eleventyConfig.setServerOptions({
-    middleware: function (req, res, next) {
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        next();
-      }
-    });
-
   return {
     dir: { input: "src", output: "_site", data: "_data" },
   };
