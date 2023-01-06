@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
   })
 
   // cors
-  eleventyConfig.setBrowserSyncConfig({
+  eleventyConfig.setServerOptions({
     middleware: function (req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();
