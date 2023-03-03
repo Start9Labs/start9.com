@@ -16,20 +16,20 @@ layout: layouts/peripheral.njk
 </section>
 
 <section id="contact">
-  <button id="feedback-form">Contact Us!</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div id="feedback-form">form will be placed in here</div>
 
-  <script id="zammad_form_script" src="https://support.start9.com/assets/form/form.js"></script>
+<script id="zammad_form_script" src="https://support.start9.com/assets/form/form.js"></script>
 
-  <script>
-    $(function() {
-      $('#feedback-form').ZammadForm({
-        messageTitle: 'Feedback Form',
-        messageSubmit: 'Submit',
-        messageThankYou: 'Thank you for your inquiry (#%s)! We\'ll contact you as soon as possible.',
-        modal: true
-      });
-    });
-  </script>
+<script>
+$(function() {
+  $('#feedback-form').ZammadForm({
+    messageTitle: 'Feedback Form',
+    messageSubmit: 'Submit',
+    messageThankYou: 'Thank you for your inquiry (#%s)! We\'ll contact you as soon as possible.'
+  });
+});
+</script>
   
   {% include "components/landing/social-media.njk" %}
 </section>
