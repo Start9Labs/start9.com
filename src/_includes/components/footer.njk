@@ -1,4 +1,16 @@
 <footer>
+  <script src="https://support.start9.com/assets/chat/chat.min.js"></script>
+  <script>
+  $(function() {
+    new ZammadChat({
+      title: '<strong>Chat</strong> with a Start9 Technician',
+      background: '#ff4961',
+      fontSize: '12px',
+      chatId: 1,
+      show: true
+    });
+  });
+  </script>
   <div class="footer__content">
     <div class="header">
       {% include "svgs/logo.svg" %}
