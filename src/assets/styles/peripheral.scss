@@ -48,15 +48,18 @@ section {
       z-index: -1;
     }
   }
+
   .section__image {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2rem 0 4rem 0;
     position: relative;
+
     img {
       width: 30%;
     }
+
     .img-shadow {
       top: 3rem;
       filter: blur(1rem) brightness(0);
@@ -90,6 +93,7 @@ section#hero {
 
 section#mission {
   --width: 38ch;
+
   img {
     width: 50%;
   }
@@ -103,25 +107,30 @@ section#virtues {
 
 .section__double-image {
   position: relative;
+
   .section__image {
     position: absolute;
     top: -140%;
     width: 100%;
   }
+
   .section__image--left {
     left: -105%;
     align-items: flex-end;
   }
+
   .section__image--right {
     right: -105%;
 
     align-items: flex-start;
   }
 }
+
 #logo {
   transform: translateY(-5rem);
   opacity: 0;
   margin-bottom: -6rem;
+
   h1 {
     font-size: 5rem;
   }
@@ -137,11 +146,14 @@ section#virtues {
     margin-top: 0;
     width: 28rem;
   }
+
   #logo {
     margin-bottom: 0;
+
     h1 {
       font-size: 4.2rem;
     }
+
     svg {
       width: 33rem; // force width for firefox
     }
@@ -191,6 +203,7 @@ ul#sub-menu {
   display: flex;
   justify-content: space-between;
   width: 33rem;
+
   li a {
     font-family: var(--f-hero);
     font-size: 1.2rem;
@@ -199,6 +212,7 @@ ul#sub-menu {
     font-weight: 900;
     white-space: nowrap;
     transition: var(--t-simple);
+
     &:hover {
       color: var(--c-text-accent);
     }
@@ -230,6 +244,7 @@ section#origin {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+
   .member {
     display: flex;
     gap: 1rem;
@@ -240,6 +255,7 @@ section#origin {
       height: 10rem;
       box-shadow: var(--sh-2);
     }
+
     p {
       font-size: 0.8rem;
       line-height: 1.4;
@@ -251,9 +267,11 @@ section#jobs {
   p {
     line-height: 1.4;
   }
+
   .job {
     list-style: none;
   }
+
   ul,
   ol {
     display: block;
@@ -261,22 +279,27 @@ section#jobs {
     margin: 1em 0;
     padding: 0 0 0 2rem;
   }
+
   ol {
     list-style-type: decimal;
   }
+
   li {
     display: list-item;
     list-style: disc;
     margin-bottom: 0.5rem;
+
     &:last-child {
       margin-bottom: 2rem;
     }
   }
+
   ul ul,
   ol ul {
     list-style-type: circle;
     margin-left: 15px;
   }
+
   ol ol,
   ul ol {
     list-style-type: lower-latin;
@@ -291,6 +314,7 @@ section#news {
     flex-direction: column;
     gap: 4rem;
   }
+
   li a {
     display: flex;
     flex-direction: column;
@@ -299,15 +323,18 @@ section#news {
     outline: 1px solid rgb(255 255 255 / 0%);
     outline-offset: 0.5rem;
     transition: var(--t-simple);
+
     &:hover {
       outline: 1px solid rgb(255 255 255 / 100%);
       outline-offset: 2rem;
     }
   }
+
   h3 {
     text-transform: unset;
     color: var(--c-text-primary);
   }
+
   .creator {
     border-radius: 999px;
     background-color: var(--c-text-accent);
@@ -317,6 +344,7 @@ section#news {
     font-weight: 500;
     opacity: 0.6;
   }
+
   .twitter-text {
     color: var(--c-text-primary);
     font-size: 1.2rem;
@@ -348,12 +376,14 @@ section#news {
       gap: 2rem;
       position: relative;
       background: var(--c-glass);
+
       .creator {
         left: 1rem;
         position: absolute;
         top: -0.6rem;
         opacity: 1;
       }
+
       img {
         width: var(--width);
         height: var(--width);
@@ -361,6 +391,7 @@ section#news {
         object-fit: contain;
         background-color: var(--c-gray1);
       }
+
       h3,
       p,
       time {
@@ -372,6 +403,7 @@ section#news {
       h3 {
         font-size: max(26px, 1.4rem);
       }
+
       p {
         color: var(--c-gray5);
         margin-top: -1.5rem;
@@ -393,12 +425,63 @@ section#news {
 
 section#contact {
   gap: 3rem;
+
   p {
     margin: 0;
   }
+
   .community__icons {
     width: auto;
     margin: 0;
+  }
+
+  .zammad-form {
+    font-size: 18px;
+
+    input {
+      line-height: 2;
+    }
+
+    label {
+      font-size: 26px;
+      font-variant: all-small-caps;
+      display: block;
+      padding-bottom: 4px;
+    }
+
+    .form-control {
+      &::placeholder {
+        font-size: 16px;
+        padding: 4px;
+      }
+
+      &:focus {
+        outline: none !important;
+        border: 1px solid var(--c-accent);
+        box-shadow: 0 0 10px var(--c-accent);
+      }
+    }
+
+
+    button {
+      padding: 0.5rem 1.2rem;
+      color: var(--c-text-bright);
+      background-color: var(--c-accent);
+      border: 0;
+      font-family: var(--f-accent);
+      font-weight: 300;
+      font-size: max(13px, 1rem);
+      text-decoration: none;
+      box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
+      border-radius: 4px;
+
+
+      &:hover {
+        transform: scale(1.03);
+        filter: brightness(120%);
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -426,6 +509,7 @@ section#contact {
       filter: brightness(120%);
     }
   }
+
   p {
     text-align: center;
     margin: 0;
@@ -439,9 +523,10 @@ section#contact {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   height: 0;
-  
+
   iframe {
     border: none;
     position: absolute;
@@ -473,15 +558,19 @@ section#contact {
 
   section#mission {
     --width: 32ch;
+
     img {
       width: 36%;
     }
+
     .section__double-image .section__image--left {
       left: -94%;
     }
+
     .section__double-image .section__image--right {
       right: -91%;
     }
+
     .section__double-image .section__image {
       top: -148%;
     }
@@ -491,7 +580,7 @@ section#contact {
     .btn {
       font-size: 1.5rem;
     }
-  
+
     p {
       font-size: 1.7rem;
     }
