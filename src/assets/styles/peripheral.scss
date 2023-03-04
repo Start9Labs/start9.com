@@ -436,6 +436,7 @@ section#contact {
   }
 
   .zammad-form {
+    font-size: 18px;
 
     input {
       line-height: 2;
@@ -473,7 +474,7 @@ section#contact {
       text-decoration: none;
       box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
       border-radius: 4px;
-      
+
 
       &:hover {
         transform: scale(1.03);
