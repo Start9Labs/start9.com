@@ -485,6 +485,21 @@ section#contact {
   }
 }
 
+section#creators {
+  ul {
+    margin-left: 15px;
+    
+    li {
+      margin-left: 30px;
+      list-style-type: square;
+    }
+  }
+
+  h3 {
+    font-size: max(13px, 1.2rem);
+  }
+}
+
 #pro-tagline {
   display: flex;
   flex-direction: column;
