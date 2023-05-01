@@ -51,7 +51,7 @@ module.exports = [
       {
         "name": "Contribute",
         "slug": "contribute",
-        "url": site.contribute.url,
+        "url": "/contribute",
         "target": "_blank",
         "order": 2,
         "class": ""
@@ -62,14 +62,6 @@ module.exports = [
         "url": "/contact",
         "target": "",
         "order": 3,
-        "class": ""
-      },
-      {
-        "name": "Community",
-        "slug": "community",
-        "url": "/community",
-        "target": "",
-        "order": 4,
         "class": ""
       }
     ]

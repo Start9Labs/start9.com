@@ -1,7 +1,7 @@
 {
   "name": "start9-website",
   "version": "1.0.0",
-  "description": "The Start9 company landing page featuring embassyOS products",
+  "description": "The Start9 company landing page featuring our server products",
   "scripts": {
     "start": "slinkity --serve --incremental",
     "build": "slinkity"
