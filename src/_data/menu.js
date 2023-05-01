@@ -63,6 +63,14 @@ module.exports = [
         "target": "",
         "order": 3,
         "class": ""
+      },
+      {
+        "name": "Community",
+        "slug": "community",
+        "url": "/community",
+        "target": "",
+        "order": 4,
+        "class": ""
       }
     ]
   },
