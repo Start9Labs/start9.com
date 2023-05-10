@@ -34,7 +34,8 @@ module.exports = {
     marketplace: 'https://marketplace.start9.com'
   },
   contribute: {
-    url: 'https://start9.com/latest/contribute'
+    url: 'https://start9.com/latest/contribute',
+    techDetails: 'https://start9.com/community-tech-program'
   },
   footer: {
     copyright: '© ' + new Date().getFullYear() + ' by Start9 Labs, Inc',
