@@ -93,7 +93,7 @@
     "link": "https://www.stitcher.com/show/once-bitten/episode/grassfedbitcoin-sovereign-computing-with-start9labs-299-208979440",
     "image": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/3134186/3134186-1581240303263-e0a3e92467678.jpg",
     "anchor": "Once Bitten",
-    "description": "Today's guest on the show is @Grassfedbitcoin who joins me to talk about self-hosting all your personal data at home with @start9labs Embassy One."
+    "description": "Today's guest on the show is @Grassfedbitcoin who joins me to talk about self-hosting all your personal data at home with @start9labs Server One."
   },
   {
     "title": "Matt Hill | Sovereign Computing",
@@ -149,7 +149,7 @@
     "link": "https://www.freedomsphoenix.com/Media/322001-2022-03-10-2022-03-11-ernest-hancock-interviews-david-croisant-start9-labs.htm",
     "image": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts/62/f0/38/ps.tbxsjaqa.jpg/626x0w.webp",
     "anchor": "Declare Your Independence",
-    "description": "David Croisant (Start9 Labs) comes on to talk about EmbassyOS version 0.3.0, 'self-hosting,' freedom tech, 'Uncle Jim' model, rebuilding the Internet, pirate communications, etc..."
+    "description": "David Croisant (Start9 Labs) comes on to talk about StartOS version 0.3.0, 'self-hosting,' freedom tech, 'Uncle Jim' model, rebuilding the Internet, pirate communications, etc..."
   },
   {
     "title": "SLP352 Matt Hill",
@@ -157,7 +157,7 @@
     "link": "https://stephanlivera.com/episode/352/",
     "image": "https://i0.wp.com/stephanlivera.com/wp-content/uploads/2022/02/SLP352-WP-Thumbnail.png",
     "anchor": "Stephan Livera Podcast",
-    "description": "EmbassyOS & Making Self-Sovereignty Tech Cheaper Than The Alternatives"
+    "description": "StartOS & Making Self-Sovereignty Tech Cheaper Than The Alternatives"
   },
   {
     "title": "On The Record with Start9",
@@ -165,7 +165,7 @@
     "link": "https://www.youtube.com/watch?v=jMV_DWAMtmc",
     "image": "https://i3.ytimg.com/vi/jMV_DWAMtmc/maxresdefault.jpg",
     "anchor": "On The Record",
-    "description": "Start9 demo the latest version of EmbassyOS"
+    "description": "Start9 demo the latest version of StartOS"
   },
   {
     "title": "Episode #101: Securing your own data with Matt Hill of Start9",
@@ -173,12 +173,12 @@
     "link": "https://www.agoristnexus.com/securing-your-own-data-with-matt-hill-of-start9-episode-101/",
     "image": "https://www.agoristnexus.com/wp-content/uploads/2021/11/paste-147-750x450.png",
     "anchor": "Agorist Nexus",
-    "description": "In this episode Brandon and Dag speak with Matt Hill of Start9 Labs about securing your own data with Embassy"
+    "description": "In this episode Brandon and Dag speak with Matt Hill of Start9 Labs about securing your own data with a Start9 server"
   },
   {
-    "title": "Episode #287: EmbassyOS v0.3.0, building out the independent stack, and philosophy with Matt Hill",
+    "title": "Episode #287: StartOS v0.3.0, building out the independent stack, and philosophy with Matt Hill",
     "date": "November 22, 2021",
-    "link": "https://talesfromthecrypt.libsyn.com/287-embassyos-v030-building-out-the-independent-stack-and-philosophy-with-matt-hill",
+    "link": "https://talesfromthecrypt.libsyn.com/287-StartOS-v030-building-out-the-independent-stack-and-philosophy-with-matt-hill",
     "image": "https://assets.libsyn.com/secure/content/63745304",
     "anchor": "Tales From The Crypt",
     "description": "Join Marty as he sits down with Matt Hill, co-founder of Start9 Labs"
@@ -189,7 +189,7 @@
     "link": "https://bitcoinmatrix.libsyn.com/matt-hill-on-soverign-computing-the-private-web-truly-owning-your-own-data",
     "image": "https://assets.libsyn.com/secure/item/21234746",
     "anchor": "The Bitcoin Matrix",
-    "description": "Matt Hill sits down with Cedric to discuss Start9, building technology for the individual, the Embassy personal server, and how you can leverage the dark net for private Bitcoin, Lightning Network, data, messaging and social media"
+    "description": "Matt Hill sits down with Cedric to discuss Start9, building technology for the individual, the Start9 personal server, and how you can leverage the dark net for private Bitcoin, Lightning Network, data, messaging and social media"
   },
   {
     "title": "Anarchast Episode 566",
@@ -197,7 +197,7 @@
     "link": "https://odysee.com/@Anarchast:2/Become-a-Digital-Sovereign-with-Start9:f",
     "image": "https://i1.sndcdn.com/avatars-h52MnISbZ9tcP7DC-4nV1iQ-t500x500.jpg",
     "anchor": "Anarchast",
-    "description": "Today we are introduced to David from Start9 to get a demo of their potentially world changing project -- the Embassy!  Become a Digital Sovereign with Start9"
+    "description": "Today we are introduced to David from Start9 to get a demo of their potentially world changing project -- the Start9 Server!  Become a Digital Sovereign with Start9"
   },
   {
     "title": "The Survival Podcast Episode 2937",
@@ -219,7 +219,7 @@
     "title": "Matt Hill and Vlad Costea",
     "date": "July 13, 2021",
     "link": "https://bitcoin-takeover.com/s4-e5-matt-hill-on-the-philosophy-of-sovereignty/",
-    "image": "https://i2.wp.com/bitcoin-takeover.com/wp-content/uploads/2021/07/BTCTKVR-S9-E5-Matt-Hill-Start9-Labs-EmbassyOS-Embassy-OS-Sovereignty-Node-in-a-Box-Bitcoin-Lightning-Takeover.jpg?w=1920&ssl=1",
+    "image": "https://i2.wp.com/bitcoin-takeover.com/wp-content/uploads/2021/07/BTCTKVR-S9-E5-Matt-Hill-Start9-Labs-StartOS-Embassy-OS-Sovereignty-Node-in-a-Box-Bitcoin-Lightning-Takeover.jpg?w=1920&ssl=1",
     "anchor": "Bitcoin Takeover",
     "description": "Bitcoin Takeover S4 E5: Matt Hill on the Philosophy of Sovereignty"
   },
@@ -277,7 +277,7 @@
     "link": "https://www.youtube.com/watch?v=QYYY9Iw1aXE",
     "image": "https://i.ytimg.com/vi/QYYY9Iw1aXE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbQy80EnPsOR1s_pW_xYzY64Ufcw",
     "anchor": "Tucson Bitcoin",
-    "description": "Lucy Cifferello explains how Start9 is a company dedicated to lowering the bar of entry into Self-Sovereignty. Their flagship product, The Embassy, allows for one click installs of privacy oriented apps"
+    "description": "Lucy Cifferello explains how Start9 is a company dedicated to lowering the bar of entry into Self-Sovereignty. Their flagship product, the Start9 Server, allows for one click installs of privacy oriented apps"
   },
   {
     "title": "Interview with David Croisant",
@@ -293,7 +293,7 @@
     "link": "https://www.thebitcoinpath.com/podcast/16-matt-hill-sovereign-computing-with-the-embassy-by-start-9-labs/",
     "image": "https://m.media-amazon.com/images/I/41-qTKOsR-L._SL500_.jpg",
     "anchor": "The Bitcoin Path",
-    "description": "Jon talk with Matt about sovereign computing, privacy, and the Start9 Embassy personal server"
+    "description": "Jon talk with Matt about sovereign computing, privacy, and the Start9 personal server"
   },
   {
     "title": "Inteview with Matt Hill",
@@ -301,7 +301,7 @@
     "link": "https://anchor.fm/tales-from-the-crypt/episodes/220-Matt-Hill-eob5h7",
     "image": "https://assets.libsyn.com/secure/content/63745304",
     "anchor": "Tales From The Crypt",
-    "description": "Marty sits down with Matt Hill to discuss: Founding Start9 Labs - The Embassy - Routing around Apple's App Store - Why personal hardware is an imperative moving forward - Self-sovereign surveillance - Making all of this easy"
+    "description": "Marty sits down with Matt Hill to discuss: Founding Start9 Labs - The Start9 Server - Routing around Apple's App Store - Why personal hardware is an imperative moving forward - Self-sovereign surveillance - Making all of this easy"
   },
   {
     "title": "Sovereignty in a Box",
