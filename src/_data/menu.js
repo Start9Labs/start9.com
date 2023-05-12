@@ -52,7 +52,7 @@ module.exports = [
         "name": "Contribute",
         "slug": "contribute",
         "url": "/contribute",
-        "target": "_blank",
+        "target": "",
         "order": 2,
         "class": ""
       },
