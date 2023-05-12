@@ -52,7 +52,7 @@ module.exports = [
         "name": "Contribute",
         "slug": "contribute",
         "url": "/contribute",
-        "target": "_blank",
+        "target": "",
         "order": 2,
         "class": ""
       },
@@ -76,16 +76,16 @@ module.exports = [
     "inFooter": true,
     "items": [
       {
-        "name": "Embassy One",
-        "slug": "embassy-one",
+        "name": "Server One",
+        "slug": "server-one",
         "url": site.products.one,
         "target": "_blank",
         "order": 0,
         "class": ""
       },
       {
-        "name": "Embassy Pro",
-        "slug": "embassy-pro",
+        "name": "Server Pro",
+        "slug": "server-pro",
         "url": site.products.pro,
         "target": "_blank",
         "order": 1,
@@ -137,8 +137,8 @@ module.exports = [
     ]
   },
   {
-    "name": "embassyOS",
-    "slug": "embassyos",
+    "name": "Start",
+    "slug": "startos",
     "order": 2,
     "size": "half",
     "inHeader": false,

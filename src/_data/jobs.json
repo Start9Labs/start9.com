@@ -1,8 +1,8 @@
 [
   {
     "title": "Senior Backend Developer (Rust)",
-    "blurb": "Our mission at Start9 is to eliminate the need for trusted 3rd parties in the human/computer relationship. Our flagship product, EmbassyOS, is the most advanced, secure, and reliable personal server operating system in the world, making it possible for anyone to host their own software and data. One brick at a time, we will help construct an open and decentralized computing platform for humanity's future, one where sovereign individuals control their own data and the flow of information, as well as the abundance of intelligent devices that will come to engulf the human experience.",
-    "description": ["We are seeking an experienced Rust developer to contribute to the embassyOS backend codebase. The embassyOS backend is a novel and highly performant container management system that affords users granular control over applications running on their personal server."],
+    "blurb": "Our mission at Start9 is to eliminate the need for trusted 3rd parties in the human/computer relationship. Our flagship product, StartOS, is the most advanced, secure, and reliable personal server operating system in the world, making it possible for anyone to host their own software and data. One brick at a time, we will help construct an open and decentralized computing platform for humanity's future, one where sovereign individuals control their own data and the flow of information, as well as the abundance of intelligent devices that will come to engulf the human experience.",
+    "description": ["We are seeking an experienced Rust developer to contribute to the StartOS backend codebase. The StartOS backend is a novel and highly performant container management system that affords users granular control over applications running on their personal server."],
     "requirements": [
       "Familiarity with Rust's async model and the tokio runtime",
       "Familiarity with Linux kernel intrinsics",
@@ -20,5 +20,24 @@
       "Team retreats!"
     ],
     "how": "Email us at jobs@start9.com with your resume and any other information you think we should know about you."
+  },
+  {
+    "title": "Community Support Tech",
+    "blurb": "We take support and education extremely seriously at Start9. We need motivated and passionate individuals to help us scale our highly-rated community support team.",
+    "description": ["We are accepting applicants to the first training program beginning July 1. If accepted, this mandatory training which will teach you to be a StartOS expert as well as an empathetic first responder. During slow support days, there will be opportunities to assist with beta testing, quality assurance, and more. This program will be constantly expanding, with application periods occurring approximately once per year."],
+    "requirements": [
+      "A passion for Freedom-principled technologies",
+      "Basic computing skills",
+      "Empathy and patience",
+      "Bonus: Linux, sysadmin, or devops experience"
+    ],
+    "benefits": [
+      "Certification training program",
+      "Complimentary Start9 Server Lite",
+      "Badge in community channels",
+      "Contracted shift-based position",
+      "Paid in Bitcoin at a rate of $21 / hr USD"
+    ],
+    "how": "Email us at apply@start9.com."
   }
 ]

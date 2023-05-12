@@ -47,7 +47,7 @@ module.exports = async function() {
       name: "Chris",
       position: "developer and service packager",
       avatar_url: "https://avatars.githubusercontent.com/u/7445670?v=4",
-      blurb: "Chris is on a mission to bring the Lightning Network to the masses, and believes embassyOS is the best way to achieve this. In his view, the most important bottleneck in the bitcoin revolution is the democratization of knowledge, so he works tirelessly to mine the bitcoin ecosystem for knowledge and share it with others. His main area of expertise is packaging services for embassyOS and he is the lead maintainer on several services."
+      blurb: "Chris is on a mission to bring the Lightning Network to the masses, and believes StartOS is the best way to achieve this. In his view, the most important bottleneck in the bitcoin revolution is the democratization of knowledge, so he works tirelessly to mine the bitcoin ecosystem for knowledge and share it with others. His main area of expertise is packaging services for StartOS and he is the lead maintainer on several services."
     },
     {
       name: "Lex",
