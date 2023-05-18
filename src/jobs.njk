@@ -29,7 +29,7 @@ layout: layouts/peripheral.njk
           {% for item in job.description %}
             <p>{{ item }}</p>
             {% if job.title.includes('Community') %}
-            <p>Visit <a target='_blank' href='https://start9.com/community-tech-program'>here</a> for more details.</p>
+            <p>Visit <a target='_blank' rel="noopener noreferrer" href='{{ site.contribute.techDetails }}'>here</a> for more details.</p>
             {% endif%}
           {% endfor %}
         </ul>

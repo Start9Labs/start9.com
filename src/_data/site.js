@@ -35,7 +35,7 @@ module.exports = {
   },
   contribute: {
     url: 'https://start9.com/latest/contribute',
-    techDetails: 'https://start9.com/community-tech-program'
+    techDetails: 'https://blog.start9.com/community-tech-program/'
   },
   footer: {
     copyright: '© ' + new Date().getFullYear() + ' by Start9 Labs, Inc',
