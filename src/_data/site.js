@@ -20,7 +20,7 @@ module.exports = {
     url: 'https://marketplace.start9.com'
   },
   poweredBy: {
-    url: 'https://github.com/Start9Labs/embassy-os'
+    url: 'https://github.com/Start9Labs/start-os'
   },
   support: {
     url: 'https://docs.start9.com/latest/support'
