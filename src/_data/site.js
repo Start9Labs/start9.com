@@ -49,6 +49,6 @@ module.exports = {
     telegram: 'https://t.me/start9_labs',
     youtube: 'https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q',
     discourse: 'https://community.start9.com',
-    medium: 'https://start9labs.medium.com',
+    blog: 'https://blog.start9.com',
   }
 };
