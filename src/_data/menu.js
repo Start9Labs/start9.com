@@ -129,7 +129,7 @@ module.exports = [
       {
         "name": "Blog",
         "slug": "blog",
-        "url": site.media.blog,
+        "url": site.media.ghost,
         "target": "_blank",
         "order": 3,
         "class": ""
