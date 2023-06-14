@@ -16,20 +16,28 @@ layout: layouts/peripheral.njk
 </section>
 
 <section id="contact">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<div id="feedback-form">form will be placed in here</div>
-
-<script id="zammad_form_script" src="https://support.start9.com/assets/form/form.js"></script>
-
-<script>
-$(function() {
-  $('#feedback-form').ZammadForm({
-    messageTitle: 'Feedback Form',
-    messageSubmit: 'Submit',
-    messageThankYou: 'Thank you for your inquiry (#%s)! We\'ll contact you as soon as possible.'
-  });
-});
-</script>
-  
+  <h4 class="text-center">Reach out on social media</h4>
   {% include "components/landing/social-media.njk" %}
+  <h4 class="text-center">message us</h4>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <div id="feedback-form">form will be placed in here</div>
+
+  <script id="zammad_form_script" src="https://support.start9.com/assets/form/form.js"></script>
+
+  <script>
+  $(function() {
+    $('#feedback-form').ZammadForm({
+      messageTitle: 'Feedback Form',
+      messageSubmit: 'Submit',
+      messageThankYou: 'Thank you for your inquiry (#%s)! We\'ll contact you as soon as possible.'
+    });
+  });
+  </script>
+
+  <h4 class="text-center">email us</h4>
+  <p class="text-center">
+    {% include 'components/emails/security-email.njk' %} | 
+    {% include 'components/emails/affiliate-email.njk' %} | 
+    {% include 'components/emails/support-email.njk' %}
+  </p>
 </section>
