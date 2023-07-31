@@ -76,19 +76,11 @@ module.exports = [
     "inFooter": true,
     "items": [
       {
-        "name": "Server One",
-        "slug": "server-one",
-        "url": site.products.one,
+        "name": "Servers",
+        "slug": "servers",
+        "url": site.products.servers,
         "target": "_blank",
         "order": 0,
-        "class": ""
-      },
-      {
-        "name": "Server Pro",
-        "slug": "server-pro",
-        "url": site.products.pro,
-        "target": "_blank",
-        "order": 1,
         "class": ""
       },
       {

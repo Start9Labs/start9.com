@@ -8,8 +8,7 @@ module.exports = {
   products: {
     buyUrl: 'https://store.start9.com',
     diyUrl: 'https://docs.start9.com/latest/diy',
-    one: 'https://store.start9.com/products/server-one',
-    pro: 'https://store.start9.com/products/server-pro',
+    servers: 'https://store.start9.com/collections/servers',
     gear: 'https://store.start9.com/collections/apparel'
   },
   bitcoin: {
