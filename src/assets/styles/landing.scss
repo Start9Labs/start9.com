@@ -18,6 +18,16 @@ body {
   width: 100vw;
 }
 
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: -50;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
+}
+
 @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */ 
   body{
@@ -108,7 +118,8 @@ nav {
 }
 
 #logo {
-  transform: translateY(-5rem);
+  // transform: translateY(-5rem);
+  animation: fadeIn ease 5s forwards;
   opacity: 0;
   display: inline-flex;
   flex-direction: column;
@@ -122,6 +133,35 @@ nav {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: .1ch;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 }
 
