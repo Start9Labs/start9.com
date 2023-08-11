@@ -19,13 +19,15 @@ body {
 }
 
 video {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  object-position: center;
-  z-index: -50;
-  box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -109,8 +111,8 @@ section {
 
 .line svg{
   width: calc(100vw - (2 * 6rem));
-  max-width: 50vw;
-  max-height: 50vh;
+  max-width: 40vw;
+  max-height: 40vh;
 }
 
 nav {
@@ -184,7 +186,7 @@ h1 {
 
   em {
     font-style: normal;
-    color: var(--c-text-accent);
+    // color: var(--c-text-accent);
   }
 
   .img-inline {
@@ -203,7 +205,7 @@ aside > h1 {
 
   em {
     font-style: normal;
-    color: var(--c-text-accent);
+    // color: var(--c-text-accent);
   }
 }
 
@@ -216,7 +218,7 @@ h2 {
 
   em {
     font-style: normal;
-    color: var(--c-text-accent);
+    // color: var(--c-text-accent);
   }
 
   .img-inline {
