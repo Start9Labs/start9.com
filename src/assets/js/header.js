@@ -6,7 +6,7 @@ gsap.to("header", {
   backgroundColor: "rgba(0,0,0,0.1)",
   backdropFilter: "blur(10px)",
   scrollTrigger: {
-    trigger: "#hero-image",
+    trigger: "#hero",
     scrub: true,
     start: "center top", // "triggerElement page"
     end: "bottom top", // "triggerElement page"
@@ -18,7 +18,7 @@ gsap.to(".header__logo", {
   opacity: "1",
   filter: "blur(0px)",
   scrollTrigger: {
-    trigger: "#hero-image",
+    trigger: "#hero",
     scrub: true,
     start: "center top", // "triggerElement page"
     end: "bottom top", // "triggerElement page"

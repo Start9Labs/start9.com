@@ -99,8 +99,8 @@ section {
 
 .line svg{
   width: calc(100vw - (2 * 6rem));
-  max-width: 50vw;
-  max-height: 50vh;
+  max-width: 40vw;
+  max-height: 40vh;
 }
 
 nav {
@@ -108,7 +108,8 @@ nav {
 }
 
 #logo {
-  transform: translateY(-5rem);
+  // transform: translateY(-5rem);
+  animation: fadeIn ease 5s forwards;
   opacity: 0;
   display: inline-flex;
   flex-direction: column;
@@ -122,6 +123,35 @@ nav {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: .1ch;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 }
 
@@ -144,7 +174,7 @@ h1 {
 
   em {
     font-style: normal;
-    color: var(--c-text-accent);
+    // color: var(--c-text-accent);
   }
 
   .img-inline {
@@ -163,7 +193,7 @@ aside > h1 {
 
   em {
     font-style: normal;
-    color: var(--c-text-accent);
+    // color: var(--c-text-accent);
   }
 }
 
@@ -176,7 +206,7 @@ h2 {
 
   em {
     font-style: normal;
-    color: var(--c-text-accent);
+    // color: var(--c-text-accent);
   }
 
   .img-inline {

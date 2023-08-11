@@ -1,14 +1,14 @@
 //////////////////////////////////////////
 // HERO
 
-gsap.to("#hero-image", {
-  duration: 1,
-  //y: "-10rem",
-  scale: 1,
-  opacity: 1,
-  filter: "blur(0px)",
-  delay: 0.5,
-});
+// gsap.to("#hero-image", {
+//   duration: 1,
+//   //y: "-10rem",
+//   scale: 1,
+//   opacity: 1,
+//   filter: "blur(0px)",
+//   delay: 0.5,
+// });
 
 gsap.to("#logo", {
   duration: 0.5,

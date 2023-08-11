@@ -260,19 +260,19 @@ if (document.querySelector("#powered-by") && document.querySelector("#powered-by
     },
   });
   
-  // line animation
-  gsap.from("#powered-to-support path", {
-    drawSVG: 0,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#powered-to-support path",
-      scrub: true,
-      start: "top 75%",
-      end: "bottom 75%",
-    },
-  });
 }
 
+// line animation
+gsap.from("#powered-to-support path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#powered-to-support path",
+    scrub: true,
+    start: "top 75%",
+    end: "bottom 75%",
+  },
+});
 
 //////////////////////////////////////////
 // SUPPORT
