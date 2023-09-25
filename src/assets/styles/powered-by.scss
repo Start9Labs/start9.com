@@ -83,3 +83,70 @@ svg a:visited {
     padding-bottom: 4.7rem;
   }
 }
+
+.ap-widget-container {
+  width: 90vw;
+  margin: 2rem 0 3rem 0;
+  text-align: center;
+
+  .glider-next, .glider-prev {
+    img {
+      filter: invert(1);
+    }
+  }
+
+  a {
+    color: var(--c-red1);
+    font-size: 0.7rem!important;
+  }
+
+  .ap-avg-rat-c {
+    // font-variant: all-small-caps;
+    text-transform: none;
+    font-size: 0.7rem!important;
+  }
+
+  .glider-slide:hover {
+    background-color: transparent!important;
+    opacity: 50%;
+  }
+
+  .glider-dots {
+    padding: 1rem;
+  }
+
+  .glider-track {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+  }
+
+  .ap-review {
+    height: 100%!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0!important;
+    padding: 0!important;
+  }
+
+  .glider-dot.active {
+    background: var(--c-red1);
+  }
+    
+  .glider-contain {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .ap-review-author, .ap-read-more {
+    color: var(--c-gray3)!important;
+  }
+
+  .ap-logo-c {
+    background: var(--c-text-primary);
+    border-radius: 1.7rem;
+    padding: 12px;
+    width: 100px!important;
+  }
+}
