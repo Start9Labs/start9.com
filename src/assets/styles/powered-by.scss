@@ -74,16 +74,6 @@ svg a:visited {
   justify-content: center;
 }
 
-@media only screen and (max-width: 500px) {
-  .container {
-    width: 100vw;
-  }
-
-  section#powered-by .inline img{
-    padding-bottom: 4.7rem;
-  }
-}
-
 .ap-widget-container {
   width: 90vw;
   margin: 2rem 0 3rem 0;
@@ -144,9 +134,31 @@ svg a:visited {
   }
 
   .ap-logo-c {
-    background: var(--c-text-primary);
+    background: var(--c-gray5);
     border-radius: 1.7rem;
-    padding: 12px;
+    padding: 10px 12px;
     width: 100px!important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+
+  section#powered-by .inline img {
+    padding-bottom: 4.7rem;
+  }
+
+  .ap-widget-container {
+    .ap-logo-c {
+      width: 65px !important;
+      border-radius: 2.7rem;
+      padding: 6px 8px!important;
+    }
+
+    .glider-contain {
+      padding: 0 40px;
+    }
   }
 }

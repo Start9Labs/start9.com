@@ -317,6 +317,14 @@ a.btn {
   gap: 1rem;
   justify-content: center;
   margin: 2rem;
+
+  &-mobile {
+    display: none
+  }
+
+  &-desktop {
+    display: block;
+  }
 }
 
 
@@ -326,5 +334,14 @@ a.btn {
   }
   .line svg{
     max-height: 30vh;
+  }
+
+  .ratings {
+    &-mobile {
+      display: block;
+    }
+    &-desktop {
+      display: none;
+    }
   }
 }
