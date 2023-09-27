@@ -311,22 +311,75 @@ a.btn {
   transform: scaleX(-1);
 }
 
-.ratings {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-  margin: 2rem;
+.ap-widget-container {
+  width: 90vw;
+  text-align: center;
 
-  &-mobile {
-    display: none
+  .glider-next,
+  .glider-prev {
+    img {
+      filter: invert(1);
+    }
   }
 
-  &-desktop {
-    display: block;
+  a {
+    color: var(--c-red1);
+    font-size: 0.7rem !important;
+  }
+
+  .ap-avg-rat-c {
+    // font-variant: all-small-caps;
+    text-transform: none;
+    font-size: 0.7rem !important;
+  }
+
+  .glider-slide:hover {
+    background-color: transparent !important;
+    opacity: 50%;
+  }
+
+  .glider-dots {
+    padding: 1rem;
+  }
+
+  .glider-track {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .ap-review {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .glider-dot.active {
+    background: var(--c-red1);
+  }
+
+  .glider-contain {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .ap-review-author,
+  .ap-read-more {
+    color: var(--c-gray3) !important;
+  }
+
+  .ap-logo-c {
+    display: none!important;
+  }
+
+  .ap-rev-stars {
+    display: flex;
   }
 }
-
 
 @media screen and (max-width: 500px) {
   #hero{
@@ -335,13 +388,15 @@ a.btn {
   .line svg{
     max-height: 30vh;
   }
-
-  .ratings {
-    &-mobile {
-      display: block;
+  .ap-widget-container {
+    .ap-logo-c {
+      width: 65px !important;
+      border-radius: 2.7rem;
+      padding: 6px 8px !important;
     }
-    &-desktop {
-      display: none;
+
+    .glider-contain {
+      padding: 0 40px;
     }
   }
 }
