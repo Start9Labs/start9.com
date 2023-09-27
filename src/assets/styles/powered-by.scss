@@ -74,12 +74,38 @@ svg a:visited {
   justify-content: center;
 }
 
+.ratings {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem;
+
+  &-mobile {
+    display: none
+  }
+
+  &-desktop {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .container {
     width: 100vw;
   }
 
-  section#powered-by .inline img{
+  .ratings {
+    &-mobile {
+      display: block;
+    }
+
+    &-desktop {
+      display: none;
+    }
+  }
+
+  section#powered-by .inline img {
     padding-bottom: 4.7rem;
   }
 }
