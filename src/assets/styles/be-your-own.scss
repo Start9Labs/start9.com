@@ -55,6 +55,12 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  #ticker {
+    display: none;
+  }
+}
+
 #be-your-own {
   display: flex;
   flex-direction: column;
