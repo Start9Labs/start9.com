@@ -131,7 +131,7 @@ module.exports = [
   {
     "name": "Start",
     "slug": "startos",
-    "order": 2,
+    "order": 3,
     "size": "half",
     "inHeader": false,
     "inFlyout": true,
@@ -146,11 +146,19 @@ module.exports = [
         "class": ""
       },
       {
+        "name": "FAQ",
+        "slug": "faq",
+        "url": "/faq",
+        "target": "",
+        "order": 1,
+        "class": ""
+      },
+      {
         "name": "Docs",
         "slug": "docs",
         "url": site.docs.url,
         "target": "_blank",
-        "order": 1,
+        "order": 2,
         "class": ""
       },
       {
@@ -158,7 +166,7 @@ module.exports = [
         "slug": "marketplace",
         "url": site.dev.marketplace,
         "target": "_blank",
-        "order": 2,
+        "order": 3,
         "class": ""
       }
     ]
