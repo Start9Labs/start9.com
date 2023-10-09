@@ -575,6 +575,74 @@ a.btn {
   text-align: center;
 }
 
+input[type='checkbox'] {
+  display: none;
+}
+
+#faq h4 {
+  display: inline-block;
+  padding-right: 0.3rem;
+}
+
+.wrap-collabsible {
+  margin: 1.2rem 0;
+}
+
+.toggle {
+  display: block;
+  padding: 1rem;
+  color: var(--c-text-primary);
+  background: var(--c-bkg-light-fade05);
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.toggle:hover {
+  color: var(--c-text-primary);
+}
+
+.toggle::after {
+  content: ' ';
+  display: inline-block;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid currentColor;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked+.toggle::after {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked+.toggle+.collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked+.toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: var(--c-bkg-light-fade1);
+  // border-bottom: 1px solid var(--c-bkg-light-fade2);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 1rem 1.5rem;
+}
+
+.collapsible-content p {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 1245px) {
   section#hero {
     flex-direction: column;

@@ -30,180 +30,191 @@ layout: layouts/peripheral.njk
   </div>
 </section>
 
-<section id="general">
-  <h2>General</h2>
-  <div class="section__image">
-    <img src="/assets/images/jobs-hero.png" alt="techs section hero: open laptop" title="techs section hero: open laptop"/>
-    <img class="img-shadow" src="/assets/images/jobs-hero.png" alt=""/>
-  </div>
-  <h4>What is Start9 Labs?</h4>
-  <p>Start9 Labs is a company composed of a global team of builders, based in Denver, USA.  Start9 is the lead development team behind StartOS, and sells plug-and-play personal servers.  Learn more on our <a href="https://start9.com/about">About Page</a>.</p>
+<div id="faq">
 
-  <h4>What is a personal server?</h4>
-  <p>"The Cloud" is just someone else's computer, but it doesn't have to be.  You can think of a personal server as your own private cloud.  Most things that you normally do using Big Tech services, such as file storage, photo sharing, video conferencing, hosting a blog, consuming your favorite media, Bitcoin transactions, and much more can be done on your own server.  Before StartOS, running a personal server was a daunting task, but now anybody can do it, and nobody can stop it!</p>
+  <section id="general">
+    <h2>General</h2>
+    <div class="section__image">
+      <img src="/assets/images/jobs-hero.png" alt="techs section hero: open laptop" title="techs section hero: open laptop"/>
+      <img class="img-shadow" src="/assets/images/jobs-hero.png" alt=""/>
+    </div>
+    <div class="wrap-collabsible">
+      <input id="collapsible" class="toggle" type="checkbox">
+      <label for="collapsible" class="toggle">
+        <h4>What is Start9 Labs?</h4>
+      </label>
+      <div class="collapsible-content">
+        <div class="content-inner">
+          <p>Start9 Labs is a company composed of a global team of builders, based in Denver, USA.  Start9 is the lead development team behind StartOS, and sells plug-and-play personal servers.  Learn more on our <a href="https://start9.com/about">About Page</a>.</p>
+        </div>
+      </div>
+    </div>
 
-  <h4>Why would I want to run a personal server?</h4>
-  <p>When you switch from Big Tech services to running your own on a personal server, you will:
+    <h4>What is a personal server?</h4>
+    <p>"The Cloud" is just someone else's computer, but it doesn't have to be.  You can think of a personal server as your own private cloud.  Most things that you normally do using Big Tech services, such as file storage, photo sharing, video conferencing, hosting a blog, consuming your favorite media, Bitcoin transactions, and much more can be done on your own server.  Before StartOS, running a personal server was a daunting task, but now anybody can do it, and nobody can stop it!</p>
+
+    <h4>Why would I want to run a personal server?</h4>
+    <p>When you switch from Big Tech services to running your own on a personal server, you will:
     <li>save money - there are no subscription fees</li>
-    <li>save time - there are no advertisements or confusing terms to agree to</li>
-    <li>protect your data - it belongs to you exclusively, share only what you choose</li>
-    <li>enhance your privacy - protect against metadata leaks, no trackers or spyware</li>
-    <li>become Sovereign - even if your Internet is cut off, you can still access your data</li>
-  </p>
+      <li>save time - there are no advertisements or confusing terms to agree to</li>
+      <li>protect your data - it belongs to you exclusively, share only what you choose</li>
+      <li>enhance your privacy - protect against metadata leaks, no trackers or spyware</li>
+      <li>become Sovereign - even if your Internet is cut off, you can still access your data</li>
+    </p>
 
-  <h4>Where can I get help?</h4>
-  <p>Start9 has built a strong reputation around accessible, helpful humans to guide you on your Sovereign Computing journey!  The first place to check is our <a href="https://community.start9.com">Community Hub</a> - be sure to do a search, as your inquiry has likely already been answered.
+    <h4>Where can I get help?</h4>
+    <p>Start9 has built a strong reputation around accessible, helpful humans to guide you on your Sovereign Computing journey!  The first place to check is our <a href="https://community.start9.com">Community Hub</a> - be sure to do a search, as your inquiry has likely already been answered.
   <br>
   If you still have a problem, or need a concept explained, jump into one of our other <a href="https://start9.com/contact">Community Channels</a> - be sure to do a search in your channel of choice first!
   <br>
   If you need help with a service that you have installed on StartOS, you might like to <a href="https://docs.start9.com/latest/support/external-support">go to their team directly</a>, as they will be the foremost experts on that software.</p>
 
-  <h4>What is StartOS?</h4>
-  <p>StartOS is a new kind of Linux-based Operating System (OS). It is a built from the ground up to allow anyone to easily run a private “cloud,” become independent from Big Tech, and own their own data.  All operation is done from your client devices (mobile/laptop/desktop) using a beautiful UI.  You can also integrate many popular native apps, such as Bitwarden, Matrix, Nextcloud, Bitcoin wallets, and more!
+    <h4>What is StartOS?</h4>
+    <p>StartOS is a new kind of Linux-based Operating System (OS). It is a built from the ground up to allow anyone to easily run a private “cloud,” become independent from Big Tech, and own their own data.  All operation is done from your client devices (mobile/laptop/desktop) using a beautiful UI.  You can also integrate many popular native apps, such as Bitwarden, Matrix, Nextcloud, Bitcoin wallets, and more!
 
   StartOS contains a suite of tools which make it easy to:
 
     <li>Install, manage, and run services that YOU own and control from a simple Marketplace registry (similar to your phone's app store)</li>
-    <li>Upgrade StartOS with the latest features and security updates</li>
-    <li>Backup services and data, and restore from backups if needed</li>
-    <li>Quickly gain insight on your services with our powerful Health Checks and Notifications systems</li>
-    <li>Create your own StartOS services with our poweful developer SDK, including an “Actions” API to simplify complex operations for the common user</li>
-    <li>and much, much more!</li>
-  </p>
+      <li>Upgrade StartOS with the latest features and security updates</li>
+      <li>Backup services and data, and restore from backups if needed</li>
+      <li>Quickly gain insight on your services with our powerful Health Checks and Notifications systems</li>
+      <li>Create your own StartOS services with our poweful developer SDK, including an “Actions” API to simplify complex operations for the common user</li>
+      <li>and much, much more!</li>
+    </p>
 
-  <h4>Is StartOS Open Source?</h4>
-  <p>Yes! StartOS source code is available under an [MIT license](https://github.com/Start9Labs/start-os/blob/master/LICENSE).</p>
+    <h4>Is StartOS Open Source?</h4>
+    <p>Yes! StartOS source code is available under an [MIT license](https://github.com/Start9Labs/start-os/blob/master/LICENSE).</p>
 
-  <h4>What are StartOS services?</h4>
-  <p>A "service" can be any piece of software added to a Marketplace registry. Unlike “apps,” services are (usually) “server-side” software, meaning they are intended to run 24/7/365 and listen for requests from your clients (apps). All services are “self-hosted,” meaning that you are in complete control of your data. This means you can run your own private “cloud!” Learn more about <a href="https://docs.start9.com/latest/user-manual/overview/managing-services.html">managing services</a> and check out our currently <a href="https://marketplace.start9.com">Available Services</a>.</p>
+    <h4>What are StartOS services?</h4>
+    <p>A "service" can be any piece of software added to a Marketplace registry. Unlike “apps,” services are (usually) “server-side” software, meaning they are intended to run 24/7/365 and listen for requests from your clients (apps). All services are “self-hosted,” meaning that you are in complete control of your data. This means you can run your own private “cloud!” Learn more about <a href="https://docs.start9.com/latest/user-manual/overview/managing-services.html">managing services</a> and check out our currently <a href="https://marketplace.start9.com">Available Services</a>.</p>
 
-  <h4>Will you add "X" service to the Marketplace?</h4>
-  <p>The answer from Start9, the company, is "probably not."  Start9 is dedicated to building a powerful and reliable foundation for Sovereign Computing in the form of StartOS.  Start9 will always maintain a small set of "official" services, which allow for a wide range of features that the average user would need.  The bulk of the responsibility for StartOS service packaging therefore, will fall on community and upstream software developers.  Check out <a href="https://blog.start9.com/start9-marketplace-strategy/">this blog post</a> for more details on this strategy.  If you'd like to show demand for a particular service, you can upvote it or add it to this <a href="https://embassyos.fans/">unofficial feedback forum</a>.
+    <h4>Will you add "X" service to the Marketplace?</h4>
+    <p>The answer from Start9, the company, is "probably not."  Start9 is dedicated to building a powerful and reliable foundation for Sovereign Computing in the form of StartOS.  Start9 will always maintain a small set of "official" services, which allow for a wide range of features that the average user would need.  The bulk of the responsibility for StartOS service packaging therefore, will fall on community and upstream software developers.  Check out <a href="https://blog.start9.com/start9-marketplace-strategy/">this blog post</a> for more details on this strategy.  If you'd like to show demand for a particular service, you can upvote it or add it to this <a href="https://embassyos.fans/">unofficial feedback forum</a>.
   <br>
   We strive to make it as easy as possible to add a service to StartOS, and we do not want to limit this ability to those with extensive development skills.  This will be a process that evolves a lot over the coming years.  Please check out our <a href="https://docs.start9.com/latest/developer-docs">Developer Docs</a> to learn more.</p>
 
-  <h4>Does Start9 have access to my server's encryption keys or data?</h4>
-  <p>Absolutely not.  Start9 has extremely little insight into your device, and no insight whatsoever into your data or keys.  The only information Start9 can glean is that certain IP addresses are downloading certain services from our Official Registry.  Discovering who you are based on your IP address would require collusion with your ISP.  Using any registry is opt-in, and furthermore you can mask your IP address from Start9 entirely by using a VPN if you choose.</p>
+    <h4>Does Start9 have access to my server's encryption keys or data?</h4>
+    <p>Absolutely not.  Start9 has extremely little insight into your device, and no insight whatsoever into your data or keys.  The only information Start9 can glean is that certain IP addresses are downloading certain services from our Official Registry.  Discovering who you are based on your IP address would require collusion with your ISP.  Using any registry is opt-in, and furthermore you can mask your IP address from Start9 entirely by using a VPN if you choose.</p>
 
-  <h4>How does StartOS compare to "X"?</h4>
-  <p>There are several "home server" competitors, and there are distinct trade-offs to each platform, but we are definitely moving toward the same future, which is a win for everyone!
+    <h4>How does StartOS compare to "X"?</h4>
+    <p>There are several "home server" competitors, and there are distinct trade-offs to each platform, but we are definitely moving toward the same future, which is a win for everyone!
   <br>
   One difference with Start9 is that we created an easy-to-use OS for general-purpose, sovereign hosting of server-side software. No other project (that we know of) started this way, but several are pivoting (often poorly) in this direction. There's also no reason you can't use more than one device. As an example, some users prefer StartOS for their data (passwords, documents, photos) and RoninDojo for their Bitcoin stack.
   <br>
   Some other things that StartOS offers that others do not:
   <li>Graphical configuration of services (no CLI or config files)</li>
-    <li>System backups (pretty important)</li>
-    <li>Encrypted connection over the home network (https)</li>
-    <li>Health Checks for quick-glance understanding of the status of your services</li>
-    <li>Unique user experiences created by service-packagers, including “Actions” (custom commands at the click of a button!)</li>
-    <br>
+      <li>System backups (pretty important)</li>
+      <li>Encrypted connection over the home network (https)</li>
+      <li>Health Checks for quick-glance understanding of the status of your services</li>
+      <li>Unique user experiences created by service-packagers, including “Actions” (custom commands at the click of a button!)</li>
+      <br>
   From an architectural perspective, StartOS is a true operating system (Linux-based), giving you the ability to understand and control what is going on. Many other systems are black boxes offering little insight or agency to you. If something goes wrong, you'll have to put on your engineer hat and go command line diving. Lastly, our team is very responsive and helpful. We pride ourselves on providing fantastic customer support and education.</p>
-</section>
+  </section>
 
-<section id="usage">
-  <h2>Usage</h2>
-  <div class="section__image">
-    <img src="/assets/images/news-hero.png" alt="creators section hero: a television" title="creators section hero: a television"/>
-    <img class="img-shadow" src="/assets/images/news-hero.png" alt=""/>
-  </div>
+  <section id="usage">
+    <h2>Usage</h2>
+    <div class="section__image">
+      <img src="/assets/images/news-hero.png" alt="creators section hero: a television" title="creators section hero: a television"/>
+      <img class="img-shadow" src="/assets/images/news-hero.png" alt=""/>
+    </div>
 
-  <h4>Is StartOS easy to use?</h4>
-  <p>Yes.  The whole mission of Start9 is to make personal servers accessible.  Basic use of a personal computer can be learnt in about an hour - it is about the same with a personal server.</p>
+    <h4>Is StartOS easy to use?</h4>
+    <p>Yes.  The whole mission of Start9 is to make personal servers accessible.  Basic use of a personal computer can be learnt in about an hour - it is about the same with a personal server.</p>
 
-  <h4>How does StartOS work?</h4>
-  <p>You can connect to and manage your server from your mobile device, desktop computer, or laptop computer. This is accomplished in the browser by visiting your server's private URL, which is provided at setup.
+    <h4>How does StartOS work?</h4>
+    <p>You can connect to and manage your server from your mobile device, desktop computer, or laptop computer. This is accomplished in the browser by visiting your server's private URL, which is provided at setup.
   <br>
   Once on your server's web page (the StartOS dashboard), you can choose what services to install. Then, each installed service also receives its own private URL, such that you can access it from the browser or any mobile app that supports using a StartOS service as a backend.
   <br>
   The list of services will grow rapidly over the coming months and years, such that most or all the things you currently do using cloud-based third party servers can be just as easily accomplished using your own personal cloud serving your own personal software and storing your data privately. No trusted third parties at all.</p>
 
-  <h4>What kind of Internet connection does a server require?</h4>
-  <p>In general, any modern Internet connection is usually fine. We have had reports from users on rural satellite connections with high latency (ping), and low up/download speeds who had issues accessing via Tor. You can <a href="https://speed.cloudflare.com/">check your internet connection</a> to find your ping and speed. If your ping is higher than 200ms and/or your speeds are lower than 5Mbps, you may want to locate your server somewhere with a better connection, such as at a friend's house.</p>
+    <h4>What kind of Internet connection does a server require?</h4>
+    <p>In general, any modern Internet connection is usually fine. We have had reports from users on rural satellite connections with high latency (ping), and low up/download speeds who had issues accessing via Tor. You can <a href="https://speed.cloudflare.com/">check your internet connection</a> to find your ping and speed. If your ping is higher than 200ms and/or your speeds are lower than 5Mbps, you may want to locate your server somewhere with a better connection, such as at a friend's house.</p>
 
-  <h4>I run a business, can I use StartOS for tasks such as password management and file sharing?</h4>
-  <p>Absolutely. A Start9 server would be a great addition to any business as it is easy to use and provides services that you control, with no subscription fees. You can even run your own payment processor and accept cryptocurrency payments with no third party necessary!</p>
+    <h4>I run a business, can I use StartOS for tasks such as password management and file sharing?</h4>
+    <p>Absolutely. A Start9 server would be a great addition to any business as it is easy to use and provides services that you control, with no subscription fees. You can even run your own payment processor and accept cryptocurrency payments with no third party necessary!</p>
 
-  <h4>Can I run StartOS on a VPS or VM?</h4>
+    <h4>Can I run StartOS on a VPS or VM?</h4>
 
-  <p>Yes! The <a href="https://start9.com/diy">DIY Guide</a> has some details. Also check out our <a href="https://community.start9.com">Community Hub</a> to see guides and tips from community members.</p>
+    <p>Yes! The <a href="https://start9.com/diy">DIY Guide</a> has some details. Also check out our <a href="https://community.start9.com">Community Hub</a> to see guides and tips from community members.</p>
 
-  <h4>Is it possible to use StartOS on my own hardware?</h4>
+    <h4>Is it possible to use StartOS on my own hardware?</h4>
 
-  <p>Yes! The <a href="https://start9.com/diy">DIY Guide</a> will take you through our guidelines. This option is great for people who already own some hardware or who live outside the US and want to save on shipping and customs fees.
+    <p>Yes! The <a href="https://start9.com/diy">DIY Guide</a> will take you through our guidelines. This option is great for people who already own some hardware or who live outside the US and want to save on shipping and customs fees.
 
   Additionally, StartOS is available for you to download or build from source for free. The caveat is that you will miss out on the perks that come along with purchasing from us, such as white-glove support, and others, which will grow over time.</p>
 
-  <h4>Do I plug my Start9 server into my computer?</h4>
-  <p>No. Your Start9 server only needs to be plugged into power and internet, just like your router. You can set it up right by your router and, similar to a router, generally forget about it - as all access is via your other devices.</p>
+    <h4>Do I plug my Start9 server into my computer?</h4>
+    <p>No. Your Start9 server only needs to be plugged into power and internet, just like your router. You can set it up right by your router and, similar to a router, generally forget about it - as all access is via your other devices.</p>
 
-  <h4>Do I plug in a monitor, keyboard, and mouse?</h4>
-  <p>Typically, no. It is not necessary or recommended to do this as StartOS runs in “headless” mode by default - meaning that you will access it from your computer or mobile device. However, StartOS does offer “Kiosk Mode," which allows the installation (and use) of StartOS with a monitor/keyboard/mouse.  This can be especially useful for troubleshooting.</p>
+    <h4>Do I plug in a monitor, keyboard, and mouse?</h4>
+    <p>Typically, no. It is not necessary or recommended to do this as StartOS runs in “headless” mode by default - meaning that you will access it from your computer or mobile device. However, StartOS does offer “Kiosk Mode," which allows the installation (and use) of StartOS with a monitor/keyboard/mouse.  This can be especially useful for troubleshooting.</p>
 
-  <h4>How much storage does a Start9 server have?</h4>
-  <p>Currently, Start9 servers ship with 128/256GB SD cards (Server Lite) and 1/2/4TB SSDs (Server One & Pure), but you may use a larger drive if you prefer. We advise against HDDs at this time for perfomance reasons.</p>
+    <h4>How much storage does a Start9 server have?</h4>
+    <p>Currently, Start9 servers ship with 128/256GB SD cards (Server Lite) and 1/2/4TB SSDs (Server One & Pure), but you may use a larger drive if you prefer. We advise against HDDs at this time for perfomance reasons.</p>
 
-  <h4>What if someone gets physical access to my device, can they read the contents? Is it encrypted?</h4>
-  <p>Data is currently encrypted at rest, but not in a way that would prevent a sophisticated attacker from accessing it. This is a step towards better security in the near future. At-rest encryption on servers is a serious challenge, because of the need for remote availability. For example, you may not be at home to enter an encryption password following a power outage, leaving you without access to your server.
+    <h4>What if someone gets physical access to my device, can they read the contents? Is it encrypted?</h4>
+    <p>Data is currently encrypted at rest, but not in a way that would prevent a sophisticated attacker from accessing it. This is a step towards better security in the near future. At-rest encryption on servers is a serious challenge, because of the need for remote availability. For example, you may not be at home to enter an encryption password following a power outage, leaving you without access to your server.
   <br>
   Services like Vaultwarden, however, encrypt all user data, so your passwords will not be compromised unless they know your master password.</p>
 
-  <h4>Can I run multiple Start9 servers?</h4>
-  <p>Yes, but there is currently no way to synchronize or federate them. We are working on ways to make this possible in the future.</p>
+    <h4>Can I run multiple Start9 servers?</h4>
+    <p>Yes, but there is currently no way to synchronize or federate them. We are working on ways to make this possible in the future.</p>
 
-  <h4>Can I still use my VPN?</h4>
-  <p>The short answer is yes, but sometimes they can cause some conflicts when accessing your server. If you need to troubleshoot, turning off your VPN is a good place to start. The following VPNs are known to not interfere with the proper settings enabled (please let us know if you have a VPN to add):
+    <h4>Can I still use my VPN?</h4>
+    <p>The short answer is yes, but sometimes they can cause some conflicts when accessing your server. If you need to troubleshoot, turning off your VPN is a good place to start. The following VPNs are known to not interfere with the proper settings enabled (please let us know if you have a VPN to add):
 
     <li>Mullvad - Go to “Settings -> VPN Settings -> Local Network Sharing” - enable this option to be able to access your server's .local addresses.</li>
-    <li>ProtonVPN - Go to “Preferences -> Connection -> Allow LAN Connections” - enable this option to be able to access your server's .local addresses.</li>
-    <li>iVPN - Go to “Settings -> IVPN Firewall -> LAN settings -> Allow LAN traffic when IVPN firewall is enabled” - enable this option to be able to access your server's .local addresses.</li>
-  </p>
+      <li>ProtonVPN - Go to “Preferences -> Connection -> Allow LAN Connections” - enable this option to be able to access your server's .local addresses.</li>
+      <li>iVPN - Go to “Settings -> IVPN Firewall -> LAN settings -> Allow LAN traffic when IVPN firewall is enabled” - enable this option to be able to access your server's .local addresses.</li>
+    </p>
 
-  <h4>What if I forget my StartOS Master Password?</h4>
-  <p>Please follow our <a href="https://docs.start9.com/latest/guides/reset-password">Password Reset Guide</a> to reset your password.</p>
+    <h4>What if I forget my StartOS Master Password?</h4>
+    <p>Please follow our <a href="https://docs.start9.com/latest/guides/reset-password">Password Reset Guide</a> to reset your password.</p>
 
-  <h4>Can I have multiple users on StartOS?</h4>
-  <p>Currently, StartOS itself is designed for a single user. There is no way to grant others access to your server without sharing your personal, master password, which is not recommended. There are certain services, however, such as Vaultwarden, File Browser, and Nextcloud, that do support multiple users (aka the “Uncle Jim” model) where people who trust you (and vice versa) can create their own, personal accounts for these services. This is great for families or small businesses.  Let them know that they are trusting you with their data, and that it might be preferable for them to take the final leap of sovereignty and get a server of their own.
+    <h4>Can I have multiple users on StartOS?</h4>
+    <p>Currently, StartOS itself is designed for a single user. There is no way to grant others access to your server without sharing your personal, master password, which is not recommended. There are certain services, however, such as Vaultwarden, File Browser, and Nextcloud, that do support multiple users (aka the “Uncle Jim” model) where people who trust you (and vice versa) can create their own, personal accounts for these services. This is great for families or small businesses.  Let them know that they are trusting you with their data, and that it might be preferable for them to take the final leap of sovereignty and get a server of their own.
 
   Multi-tenancy is a desired future OS feature. Stay tuned.</p>
 
-  <h4>Do I need to delete existing backups before doing a new backup? Or does a new backup override the old backup?</h4>
-  <p>No, you don't need to delete the old backups. The technology we use updates the existing backup. This is known as a “diff-based” model, where the “difference” in backups is what is recorded.</p>
+    <h4>Do I need to delete existing backups before doing a new backup? Or does a new backup override the old backup?</h4>
+    <p>No, you don't need to delete the old backups. The technology we use updates the existing backup. This is known as a “diff-based” model, where the “difference” in backups is what is recorded.</p>
 
-  <h4>Can I use apps that I previously used with cloud-hosted infrastructure, with my own server?</h4>
-  <p>It depends on the software, but there are lots of apps and ecosystems that work just as well with your own server as they do with cloud providers.  Bitwarden is an excellent example of this - you can use the browser extensions and mobile/desktop apps with your Vaultwarden service hosted on your own StartOS server!</p>
-</section>
+    <h4>Can I use apps that I previously used with cloud-hosted infrastructure, with my own server?</h4>
+    <p>It depends on the software, but there are lots of apps and ecosystems that work just as well with your own server as they do with cloud providers.  Bitwarden is an excellent example of this - you can use the browser extensions and mobile/desktop apps with your Vaultwarden service hosted on your own StartOS server!</p>
+  </section>
 
-<section id="products">
-  <h2>Products</h2>
-  <div class="section__image">
-    <img src="/assets/images/privacy-hero.png" alt="promoters section hero: a privacy ninja" title="promoters section hero: a privacy ninja"/>
-    <img class="img-shadow" src="/assets/images/privacy-hero.png" alt=""/>
-  </div>
+  <section id="products">
+    <h2>Products</h2>
+    <div class="section__image">
+      <img src="/assets/images/privacy-hero.png" alt="promoters section hero: a privacy ninja" title="promoters section hero: a privacy ninja"/>
+      <img class="img-shadow" src="/assets/images/privacy-hero.png" alt=""/>
+    </div>
 
-  <h4>Does Start9 ship worldwide?</h4>
-  <p>We ship everywhere that DHL ships. Please consider that in some countries, the VAT and Customs fees are so ridiculous that they cost as much as the server itself. You may wish to consider buying your hardware locally and building your own device, downloading StartOS from our github, and donating to us. Please see the DIY page for details.</p>
+    <h4>Does Start9 ship worldwide?</h4>
+    <p>We ship everywhere that DHL ships. Please consider that in some countries, the VAT and Customs fees are so ridiculous that they cost as much as the server itself. You may wish to consider buying your hardware locally and building your own device, downloading StartOS from our github, and donating to us. Please see the DIY page for details.</p>
 
-  <h4>Do you have international electrical plugs?</h4>
-  <p>Power supplies for the EU, AU, US, and UK standards are usually available.  Please be sure to inquire if your shipping address may not match the plug style you require.</p>
+    <h4>Do you have international electrical plugs?</h4>
+    <p>Power supplies for the EU, AU, US, and UK standards are usually available.  Please be sure to inquire if your shipping address may not match the plug style you require.</p>
 
-  <h4>Are the power supplies 220v compatible?</h4>
-  <p>Yes. Start9 server power supplies are typically rated for 100-240V.</p>
+    <h4>Are the power supplies 220v compatible?</h4>
+    <p>Yes. Start9 server power supplies are typically rated for 100-240V.</p>
 
-  <h4>Is there a product warranty?</h4>
-  <p>Yes! The full warranty for a device purchased from us is located on the insert in the box (1 year). Furthermore, Start9 commits, to the best of our ability, to serving our users. We will resolve any issue encountered with our provided hardware or software in a personalized manner. We strive to provide highly available, quality customer service.</p>
+    <h4>Is there a product warranty?</h4>
+    <p>Yes! The full warranty for a device purchased from us is located on the insert in the box (1 year). Furthermore, Start9 commits, to the best of our ability, to serving our users. We will resolve any issue encountered with our provided hardware or software in a personalized manner. We strive to provide highly available, quality customer service.</p>
 
-  <h4>What are you using for a store backend? Do you store my data?</h4>
-  <p>Here is our exact situation currently: Credit card sales are processed through Shopify, which we do not like, but it was expedient in the early days, especially for shipping, so we went with it. Aside from a master list of email addresses for those who have explicitly opted in to our mailing list, all customer credit card data is stored within Shopify. We do not duplicate it anywhere. We ask Shopify to delete our customer data, but they claim it takes upward of 3 months to comply and we of course have no guarantee the data will actually be deleted permanently.
+    <h4>What are you using for a store backend? Do you store my data?</h4>
+    <p>Here is our exact situation currently: Credit card sales are processed through Shopify, which we do not like, but it was expedient in the early days, especially for shipping, so we went with it. Aside from a master list of email addresses for those who have explicitly opted in to our mailing list, all customer credit card data is stored within Shopify. We do not duplicate it anywhere. We ask Shopify to delete our customer data, but they claim it takes upward of 3 months to comply and we of course have no guarantee the data will actually be deleted permanently.
 
   Enter our Bitcoin Store! This is hosted by Start9, only the minimum necessary shipping information is required to purchase with Bitcoin/Lightning, we offer a discount for these payment methods, and we routinely delete customer data.
 
   Finally, you can always assemble the hardware yourself and download StartOS for free.</p>
 
-  <h4>My server came with a 'product key,' or similar unique code - what is that?</h4>
-  <p>This will entitle you to white glove support as well as future benefits yet to be announced.</p>
+    <h4>My server came with a 'product key,' or similar unique code - what is that?</h4>
+    <p>This will entitle you to white glove support as well as future benefits yet to be announced.</p>
 
-  <h4>Why would I even buy this when I can just build it for free?</h4>
-  <p>
+    <h4>Why would I even buy this when I can just build it for free?</h4>
+    <p>
     1. You will get white glove support in your preferred format, from text chat to screen sharing conference calls.
     <br>
     2. Supporting the project. Buying a server from Start9 is your way of supporting the development of the project. And it's not just out of gratitude, but rather, a recognition that if the project isn't funded, the cool software stops coming.
@@ -211,53 +222,54 @@ layout: layouts/peripheral.njk
     3. Convenience. This is the big one. It's true, some people will choose to use the software without buying a server, but most will not. Very few people on Earth are comfortable using the command line, compiling code, and configuring an OS. Furthermore, hardware is necessary. Sure, some people already have a Raspberry Pi, and others may try to re-purpose an old laptop, but many people would be choosing between buying the hardware components themselves and assembling vs buying pre-assembled at a reasonable markup.
     <br>
   Bottom line… We are charging a marginal rate for something incredibly powerful, and we think the convenience of a plug-and-play device, free service marketplace, and white glove support is where the money is. Anyone could build their own couches too, but here is a reason furniture stores exist. How much is your time worth?</p>
-</section>
+  </section>
 
-<section id="bitcoin">
-  <h2>Bitcoin</h2>
-  <div class="section__image">
-    <img src="/assets/images/dev-hero.png" alt="dev section hero: terminal icon" title="dev section hero: terminal icon"/>
-    <img class="img-shadow" src="/assets/images/dev-hero.png" alt=""/>
-  </div>
+  <section id="bitcoin">
+    <h2>Bitcoin</h2>
+    <div class="section__image">
+      <img src="/assets/images/dev-hero.png" alt="dev section hero: terminal icon" title="dev section hero: terminal icon"/>
+      <img class="img-shadow" src="/assets/images/dev-hero.png" alt=""/>
+    </div>
 
-  <h4>Which wallets can I use that integrate with my Bitcoin and/or Lightning nodes?</h4>
-  <p>Please see the <a href="https://docs.start9.com/latest/guides/service-guides/bitcoin/bitcoin-integrations.html">Bitcoin Integrations</a> and <a href="https://docs.start9.com/latest/guides/service-guides/lightning/index.html">Lightning Integrations</a> for all the currently supported options.  Please <a href="https://github.com/Start9Labs/documentation/issues">submit an issue</a> with precise connection steps if you are able to connect a wallet that we have not yet listed.</p>
+    <h4>Which wallets can I use that integrate with my Bitcoin and/or Lightning nodes?</h4>
+    <p>Please see the <a href="https://docs.start9.com/latest/guides/service-guides/bitcoin/bitcoin-integrations.html">Bitcoin Integrations</a> and <a href="https://docs.start9.com/latest/guides/service-guides/lightning/index.html">Lightning Integrations</a> for all the currently supported options.  Please <a href="https://github.com/Start9Labs/documentation/issues">submit an issue</a> with precise connection steps if you are able to connect a wallet that we have not yet listed.</p>
 
-  <h4>What if I want to use a hardware wallet?</h4>
-  <p>Please see <a href="https://community.start9.com/t/how-do-i-use-a-hardware-wallet/679">this forum post</a>.</p>
+    <h4>What if I want to use a hardware wallet?</h4>
+    <p>Please see <a href="https://community.start9.com/t/how-do-i-use-a-hardware-wallet/679">this forum post</a>.</p>
 
-  <h4>Does StartOS run a full archival Bitcoin node or a pruned one?</h4>
-  <p>The option is yours. In the Bitcoin Config, find the section on pruning to prune to specified sizes, or turn pruning off entirely for a full archival node. Please keep in mind that a full archival node will take up up to 600GB of your data drive as of 2023. If you have a small disk (under 1TB), StartOS will automatically change Bitcoin's config to prune.</p>
+    <h4>Does StartOS run a full archival Bitcoin node or a pruned one?</h4>
+    <p>The option is yours. In the Bitcoin Config, find the section on pruning to prune to specified sizes, or turn pruning off entirely for a full archival node. Please keep in mind that a full archival node will take up up to 600GB of your data drive as of 2023. If you have a small disk (under 1TB), StartOS will automatically change Bitcoin's config to prune.</p>
 
-  <h4>What actions, specifically, are only possible with an archival, or 'unpruned' node?</h4>
-  <p>Generally, the more sophisticated the blockchain analysis being done is, the more index data is required, which will increase the system resources required. For example, if you wanted to run a block explorer (such as the Mempool service), you would require not only a full archival node, but also a full transaction index. So, specifically, at this time, a full archival node is required for running an Electrum server, a block explorer, and for doing advanced chain analysis in general.</p>
+    <h4>What actions, specifically, are only possible with an archival, or 'unpruned' node?</h4>
+    <p>Generally, the more sophisticated the blockchain analysis being done is, the more index data is required, which will increase the system resources required. For example, if you wanted to run a block explorer (such as the Mempool service), you would require not only a full archival node, but also a full transaction index. So, specifically, at this time, a full archival node is required for running an Electrum server, a block explorer, and for doing advanced chain analysis in general.</p>
 
-  <h4>Is it insecure to run a pruned node?</h4>
-  <p>As a user, pruned nodes and archival nodes provide you the same security. In a larger sense, if 100% of people ran pruned nodes, the security of the network could be in dire circumstances and be put at risk if no nodes kept history, as then no one could bootstrap new nodes. The reality however, is that most StartOS users are new node operators, so there is no net systemic risk introduced if users decide to run a pruned node.</p>
+    <h4>Is it insecure to run a pruned node?</h4>
+    <p>As a user, pruned nodes and archival nodes provide you the same security. In a larger sense, if 100% of people ran pruned nodes, the security of the network could be in dire circumstances and be put at risk if no nodes kept history, as then no one could bootstrap new nodes. The reality however, is that most StartOS users are new node operators, so there is no net systemic risk introduced if users decide to run a pruned node.</p>
 
-  <h4>How can I migrate from MyNode/Raspiblitz/Umbrel to StartOS and keep my lightning channels intact?</h4>
-  <p>If you have a MyNode/Raspiblitz/Umbrel and a StartOS server and they're on the same network, you can just select "Services > Lightning Network Daemon > Actions > Import from MyNode/Raspiblitz/Umbrel" in your StartOS server's web interface and your LND settings and channels will be automatically migrated!
+    <h4>How can I migrate from MyNode/Raspiblitz/Umbrel to StartOS and keep my lightning channels intact?</h4>
+    <p>If you have a MyNode/Raspiblitz/Umbrel and a StartOS server and they're on the same network, you can just select "Services > Lightning Network Daemon > Actions > Import from MyNode/Raspiblitz/Umbrel" in your StartOS server's web interface and your LND settings and channels will be automatically migrated!
   <br>
   Alternatively, or if you're migrating from another project or home build, we've created a guide that you can adapt in order to <a href="https://community.start9.com/t/howto-migrate-from-umbrel-0-5-x-to-startos/56">migrate your LND node</a>.  There has currently been no demand for CLN migrations, likely because we were the first to offer CLN, but let us know if you are looking to do this.</p>
 
-  <h4>Can I mine Bitcoin with this?</h4>
-  <p>You do <strong>not</strong> want to do this.  Mining equipment is highly specialized, and this is not that.</p>
+    <h4>Can I mine Bitcoin with this?</h4>
+    <p>You do <strong>not</strong> want to do this.  Mining equipment is highly specialized, and this is not that.</p>
 
-  <h4>Why would I want to run a lightning node?</h4>
-  <p>The Lightning Network (LN) is a second 'layer,' built on top of the Bitcoin Protocol. As a result all transactions on LN are backed up by the full security of the Bitcoin network. Lightning is designed for instant payments between nodes, but similar to running a Bitcoin node, running your own is the only way to be sovereign. When you have your own node, you will have the convenience of linking a Lightning wallet, for use on the go. It is also possible to earn an income (granted a very small one at this time), if you are willing to learn how to become a 'routing node.'</p>
+    <h4>Why would I want to run a lightning node?</h4>
+    <p>The Lightning Network (LN) is a second 'layer,' built on top of the Bitcoin Protocol. As a result all transactions on LN are backed up by the full security of the Bitcoin network. Lightning is designed for instant payments between nodes, but similar to running a Bitcoin node, running your own is the only way to be sovereign. When you have your own node, you will have the convenience of linking a Lightning wallet, for use on the go. It is also possible to earn an income (granted a very small one at this time), if you are willing to learn how to become a 'routing node.'</p>
 
-  <h4>Can I make money as a Lightning Network routing node or service provider?</h4>
-  <p>Maybe, but don't quit your day job.  This is a non-trivial exercise, which often results in trivial profits at best.  You need to do a deep dive on this to understand what you are getting into.  This is a full time job (or several full time jobs) when done at a large institution.</p>
+    <h4>Can I make money as a Lightning Network routing node or service provider?</h4>
+    <p>Maybe, but don't quit your day job.  This is a non-trivial exercise, which often results in trivial profits at best.  You need to do a deep dive on this to understand what you are getting into.  This is a full time job (or several full time jobs) when done at a large institution.</p>
 
-  <h4>I opened a Lightning channel, but my local balance is lower than I expected. Where is the remainder?</h4>
-  <p>A fee to close the channel (onchain) is set aside at opening.</p>
+    <h4>I opened a Lightning channel, but my local balance is lower than I expected. Where is the remainder?</h4>
+    <p>A fee to close the channel (onchain) is set aside at opening.</p>
 
-  <h4>How is that fee estimation calculated?</h4>
-  <p>The commitment fees are automatically negotiated every few blocks with your peer. They are on chain txs like all channel closes but they are not broadcast until you attempt to close the channel.</p>
+    <h4>How is that fee estimation calculated?</h4>
+    <p>The commitment fees are automatically negotiated every few blocks with your peer. They are on chain txs like all channel closes but they are not broadcast until you attempt to close the channel.</p>
 
-  <h4>Is it possible to run Core Lightning and LND in parallel on StartOS?</h4>
-  <p>Yes, you may run both. They will operate in their own environments and allow you to run services that depend on either.</p>
+    <h4>Is it possible to run Core Lightning and LND in parallel on StartOS?</h4>
+    <p>Yes, you may run both. They will operate in their own environments and allow you to run services that depend on either.</p>
 
-  <h4>Are my addresses, channels, and balances all stored in LND/Core Lightning, or RTL, Zeus, etc?</h4>
-  <p>This is all on your Lightning node (LND or Core Lightning), including on-chain funds, while RTL (or Zap, Zeus, etc) is just a GUI for accessing your node.</p>
-</section>
+    <h4>Are my addresses, channels, and balances all stored in LND/Core Lightning, or RTL, Zeus, etc?</h4>
+    <p>This is all on your Lightning node (LND or Core Lightning), including on-chain funds, while RTL (or Zap, Zeus, etc) is just a GUI for accessing your node.</p>
+  </section>
+</div>
