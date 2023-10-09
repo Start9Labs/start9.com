@@ -38,17 +38,26 @@ layout: layouts/peripheral.njk
       <img src="/assets/images/jobs-hero.png" alt="techs section hero: open laptop" title="techs section hero: open laptop"/>
       <img class="img-shadow" src="/assets/images/jobs-hero.png" alt=""/>
     </div>
+    {% for item in faq %}
     <div class="wrap-collabsible">
-      <input id="collapsible" class="toggle" type="checkbox">
-      <label for="collapsible" class="toggle">
-        <h4>What is Start9 Labs?</h4>
+      <input id="{{ item.title }}" class="toggle" type="checkbox">
+      <label for="{{ item.title }}" class="toggle">
+        <h4>{{ item.title }}</h4>
       </label>
       <div class="collapsible-content">
         <div class="content-inner">
-          <p>Start9 Labs is a company composed of a global team of builders, based in Denver, USA.  Start9 is the lead development team behind StartOS, and sells plug-and-play personal servers.  Learn more on our <a href="https://start9.com/about">About Page</a>.</p>
+          <p>{{ item.answer }}</p>
+          {% if item.additional|length > 0%}
+          <ul>
+            {% for detail in item.additional %}
+            <li>{{ detail }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </div>
       </div>
     </div>
+    {% endfor %}
 
     <h4>What is a personal server?</h4>
     <p>"The Cloud" is just someone else's computer, but it doesn't have to be.  You can think of a personal server as your own private cloud.  Most things that you normally do using Big Tech services, such as file storage, photo sharing, video conferencing, hosting a blog, consuming your favorite media, Bitcoin transactions, and much more can be done on your own server.  Before StartOS, running a personal server was a daunting task, but now anybody can do it, and nobody can stop it!</p>

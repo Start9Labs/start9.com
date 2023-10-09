@@ -599,7 +599,7 @@ input[type='checkbox'] {
 }
 
 .toggle:hover {
-  color: var(--c-text-primary);
+  opacity: 75%;
 }
 
 .toggle::after {
@@ -623,7 +623,7 @@ input[type='checkbox'] {
 }
 
 .toggle:checked+.toggle+.collapsible-content {
-  max-height: 350px;
+  max-height: 100vh;
 }
 
 .toggle:checked+.toggle {
