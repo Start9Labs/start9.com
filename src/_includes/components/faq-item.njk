@@ -1,0 +1,21 @@
+<div class="wrap-collabsible">
+  <input id="{{ item.question }}" class="toggle" type="checkbox">
+  <label for="{{ item.question }}" class="toggle">
+    <span>{{ item.question }}</span>
+  </label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>{{ item.answer | safe }}</p>
+      {% if item.bullets|length > 0 %}
+      <ul>
+        {% for detail in item.bullets %}
+        <li>{{ detail | safe }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if item.additional|length > 0 %}
+        <p>{{ item.additional | safe }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
