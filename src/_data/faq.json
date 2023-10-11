@@ -26,16 +26,16 @@
     },
     {
       "question": "Where can I get help?",
-      "answer": "Start9 has built a strong reputation around accessible, helpful humans to guide you on your Sovereign Computing journey!  The first place to check is our <a href=\"https://community.start9.com\" target=\"_blank\" rel=\"noopener noreferrer\">Community Hub</a> - be sure to do a search, as your inquiry has likely already been answered.<br/><br/>If you still have a problem, or need a concept explained, jump into one of our other <a href=\"https://start9.com/contact\" target=\"_blank\" rel=\"noopener noreferrer\">Community Channels</a> - be sure to do a search in your channel of choice first!<br/><br/>If you need help with a service that you have installed on StartOS, you might like to <a href=\"https://docs.start9.com/latest/support/external-support\" target=\"_blank\" rel=\"noopener noreferrer\">go to their team directly</a>, as they will be the foremost experts on that software.",
+      "answer": "Start9 has built a strong reputation around accessible, helpful humans to guide you on your Sovereign Computing journey!  The first place to check is our <a href=\"https://community.start9.com\" target=\"_blank\" rel=\"noopener noreferrer\">Community Hub</a> - be sure to do a search, as your inquiry has likely already been answered.<br/><br/>If you still have a problem, or need a concept explained, jump into one of our other <a href=\"https://start9.com/contact\" target=\"_blank\" rel=\"noopener noreferrer\">Community Channels</a> - again, be sure to do a search first!<br/><br/>If you need help with a service that you have installed on StartOS, you might like to <a href=\"https://docs.start9.com/latest/support/external-support\" target=\"_blank\" rel=\"noopener noreferrer\">go to their team directly</a>, as they will be the foremost experts on that software.",
       "bullets": [],
       "additional": ""
     },
     {
       "question": "What is StartOS?",
-      "answer": "StartOS is a new kind of Linux-based Operating System (OS). It is a built from the ground up to allow anyone to easily run a private “cloud,” become independent from Big Tech, and own their own data.  All operation is done from your client devices (mobile/laptop/desktop) using a beautiful UI.  You can also integrate many popular native apps, such as Bitwarden, Matrix, Nextcloud, Bitcoin wallets, and more!<br/>StartOS contains a suite of tools which make it easy to:",
+      "answer": "StartOS is a new kind of Linux-based Operating System (OS). It is built from the ground up to allow anyone to easily run a private “cloud,” become independent from Big Tech, and own their data.  All operation is done from your client devices (mobile/laptop/desktop) using a sleek and intuitive UI.  You can also integrate many popular native apps, such as Bitwarden, Matrix, Nextcloud, Bitcoin wallets, and more!<br/>StartOS contains a suite of tools which make it easy to:",
       "bullets": [
         "Install, manage, and run services that YOU own and control from a simple Marketplace registry (similar to your phone's app store)",
-        "Upgrade StartOS with the latest features and security updates",
+        "Upgrade StartOS and your services with the latest features and security updates",
         "Backup services and data, and restore from backups if needed",
         "Quickly gain insight on your services with our powerful Health Checks and Notifications systems",
         "Create your own StartOS services with our poweful developer SDK, including an “Actions” API to simplify complex operations for the common user",
@@ -89,7 +89,7 @@
     },
     {
       "question": "How does StartOS work?",
-      "answer": "You can connect to and manage your server from your mobile device, desktop computer, or laptop computer. This is accomplished in the browser by visiting your server's private URL, which is provided at setup.<br/><br/>Once on your server's web page (the StartOS dashboard), you can choose what services to install. Then, each installed service also receives its own private URL, such that you can access it from the browser or any mobile app that supports using a StartOS service as a backend.<br/><br/>The list of services will grow rapidly over the coming months and years, such that most or all the things you currently do using cloud-based third party servers can be just as easily accomplished using your own personal cloud serving your own personal software and storing your data privately. No trusted third parties at all.",
+      "answer": "You can connect to and manage your server from your mobile device, desktop computer, or laptop computer. This is accomplished in the browser by visiting your server's private URL, which is provided at setup.<br/><br/>Once on your server's web page (the StartOS dashboard), you can choose what services to install. Then, each installed service also receives its own private URL, such that you can access it from the browser or any mobile app that supports using the service as a backend.<br/><br/>The list of services will grow rapidly over the coming months and years, such that most or all the things you currently do using cloud-based third party servers can be just as easily accomplished using your own personal cloud serving your own personal software and storing your data privately. No trusted third parties at all.",
       "bullets": [],
       "additional": ""
     },
@@ -165,7 +165,7 @@
     },
     {
       "question": "Can I have multiple users on StartOS?",
-      "answer": "Currently, StartOS itself is designed for a single user. There is no way to grant others access to your server without sharing your personal, master password, which is not recommended. There are certain services, however, such as Vaultwarden, File Browser, and Nextcloud, that do support multiple users (aka the “Uncle Jim” model) where people who trust you (and vice versa) can create their own, personal accounts for these services. This is great for families or small businesses.  Let them know that they are trusting you with their data, and that it might be preferable for them to take the final leap of sovereignty and get a server of their own.<br/><br/>Multi-tenancy is a desired future OS feature. Stay tuned.",
+      "answer": "Currently, StartOS itself is designed for a single user. There is no way to grant others access to your server without sharing your personal, master password, which is not recommended. There are certain services, however, such as Vaultwarden, File Browser, and Nextcloud, that do support multiple users (aka the “Uncle Jim” model).  People who trust you (and vice versa) can create their own, personal accounts for these services. This is great for families or small businesses.  Let them know that they are trusting you with their data, and that it might be preferable for them to take the final leap of sovereignty and get a server of their own.<br/><br/>Multi-tenancy is a desired future OS feature. Stay tuned.",
       "bullets": [],
       "additional": ""
     },
@@ -177,7 +177,7 @@
     },
     {
       "question": "Can I use apps that I previously used with cloud-hosted infrastructure, with my own server?",
-      "answer": "It depends on the software, but there are lots of apps and ecosystems that work just as well with your own server as they do with cloud providers.  Bitwarden is an excellent example of this - you can use the browser extensions and mobile/desktop apps with your Vaultwarden service hosted on your own StartOS server!",
+      "answer": "It depends on the software, but there are lots of apps and ecosystems that work just as well with your own server as they do with cloud providers.  Bitwarden is an excellent example of this - you can use the browser extensions and mobile/desktop apps that you are used to with your Vaultwarden service hosted on your own StartOS server!",
       "bullets": [],
       "additional": ""
     }
@@ -185,7 +185,7 @@
   "products": [
     {
       "question": "Does Start9 ship worldwide?",
-      "answer": "We ship everywhere that DHL ships. Please consider that in some countries, the VAT and Customs fees are so ridiculous that they cost as much as the server itself. You may wish to consider buying your hardware locally and building your own device, downloading StartOS from our github, and donating to us. Please see the DIY page for details.",
+      "answer": "We ship everywhere that DHL ships. Please consider that in some countries, the VAT and Customs fees are so ridiculous that they cost as much as the server itself. You may wish to consider buying your hardware locally and building your own device, downloading StartOS from our github, and donating to us. Please see the <a href=\"https://start9.com/diy\" target=\"_blank\" rel=\"noopener noreferrer\">DIY Guide</a> for details.",
       "bullets": [],
       "additional": ""
     },
@@ -209,7 +209,7 @@
     },
     {
       "question": "What are you using for a store backend? Do you store my data?",
-      "answer": "Here is our exact situation currently: Credit card sales are processed through Shopify, which we do not like, but it was expedient in the early days, especially for shipping, so we went with it. Aside from a master list of email addresses for those who have explicitly opted in to our mailing list, all customer credit card data is stored within Shopify. We do not duplicate it anywhere. We ask Shopify to delete our customer data, but they claim it takes upward of 3 months to comply and we of course have no guarantee the data will actually be deleted permanently.<br/><br/>Enter our Bitcoin Store! This is hosted by Start9, only the minimum necessary shipping information is required to purchase with Bitcoin/Lightning, we offer a discount for these payment methods, and we routinely delete customer data.<br/><br/>Finally, you can always assemble the hardware yourself and download StartOS for free.",
+      "answer": "Credit card sales are processed through Shopify, which we do not like, but it was expedient in the early days, especially for shipping, so we went with it. Aside from a master list of email addresses for those who have explicitly opted in to our mailing list, all customer credit card data is stored within Shopify. We do not duplicate it anywhere. We ask Shopify to delete our customer data, but they claim it takes upward of 3 months to comply and we of course have no guarantee the data will actually be deleted permanently.<br/><br/>Enter our Bitcoin Store! This is hosted by Start9, only the minimum necessary shipping information is required to purchase with Bitcoin/Lightning, we offer a discount for these payment methods, and we routinely delete customer data.<br/><br/>Finally, you can always assemble the hardware yourself and download StartOS without providing any personal information.",
       "bullets": [],
       "additional": ""
     },
@@ -221,7 +221,7 @@
     },
     {
       "question": "Why would I even buy this when I can just build it for free?",
-      "answer": "This will entitle you to white glove support as well as future benefits yet to be announced.",
+      "answer": "",
       "bullets": ["You will get white glove support in your preferred format, from text chat to screen sharing conference calls.", "Supporting the project. Buying a server from Start9 is your way of supporting the development of the project. And it's not just out of gratitude, but rather, a recognition that if the project isn't funded, the cool software stops coming.", "Convenience. This is the big one. It's true, some people will choose to use the software without buying a server, but most will not. Very few people on Earth are comfortable using the command line, compiling code, and configuring an OS. Furthermore, hardware is necessary. Sure, some people already have a Raspberry Pi, and others may try to re-purpose an old laptop, but many people would be choosing between buying the hardware components themselves and assembling vs buying pre-assembled at a reasonable markup."],
       "additional": "Bottom line... We are charging a marginal rate for something incredibly powerful, and we think the convenience of a plug-and-play device, free service marketplace, and white glove support is where the money is. Anyone could build their own couches too, but here is a reason furniture stores exist. How much is your time worth?"
     }
@@ -277,7 +277,7 @@
     },
     {
       "question": "Can I make money as a Lightning Network routing node or service provider?",
-      "answer": "Maybe, but don't quit your day job. This is a non-trivial exercise, which often results in trivial profits at best. You need to do a deep dive on this to understand what you are getting into. This is a full time job (or several full time jobs) when done at a large institution.",
+      "answer": "Maybe, but don't quit your day job. This is a non-trivial exercise, which often results in trivial profits at best. You need to do a deep dive on this to understand what you are getting into.",
       "bullets": [],
       "additional": ""
     },
