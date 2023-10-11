@@ -19,6 +19,7 @@ layout: layouts/peripheral.njk
   <h4 class="text-center">Reach out on social media</h4>
   {% include "components/landing/social-media.njk" %}
   <h4 class="text-center">message us</h4>
+  <p class="text-center">For the quickest response, please join us in Matrix or Telegram (icons above).  Alternatively, use the form below and we will normally respond within 24 hours.</p>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <div id="feedback-form">form will be placed in here</div>
 
@@ -29,7 +30,7 @@ layout: layouts/peripheral.njk
     $('#feedback-form').ZammadForm({
       messageTitle: 'Start9 Contact Form',
       messageSubmit: 'Submit',
-      messageThankYou: 'Thank you for your inquiry!  For the fastest response, please come into our Matrix or Telegram channels (https://start9.com/contact).  Otherwise, we will get back to you as soon as possible, typically within 24 hours.',
+      messageThankYou: 'Thank you for your inquiry!  For the fastest response, please come into our Matrix or Telegram channels.  Otherwise, we will get back to you as soon as possible, typically within 24 hours.',
       attachmentSupport: true
     });
   });
