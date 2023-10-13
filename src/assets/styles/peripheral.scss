@@ -575,6 +575,96 @@ a.btn {
   text-align: center;
 }
 
+section#faq {
+  
+  div#general,div#usage,div#products,div#bitcoin {
+    padding: 3rem 1rem;
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  span {
+    color: var(--c-red2);
+    font-weight: bold;
+    vertical-align: text-top;
+    padding-right: 0.3rem;
+  }
+
+  .wrap-collabsible {
+    margin: 0.9rem 0;
+  
+    ul {
+      padding: 1.5rem 2.5rem;
+  
+      li {
+        list-style: square;
+        padding: 0.3rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+  
+  .toggle {
+    display: block;
+    padding: 1rem;
+    color: var(--c-text-primary);
+    background: var(--c-bkg-light-fade05);
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+  }
+  
+  .toggle:hover {
+    background: var(--c-bkg-light-fade1_75);
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  
+  .toggle::after {
+    content: ' ';
+    display: inline-block;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid currentColor;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+  }
+  
+  .toggle:checked+.toggle::after {
+    transform: rotate(90deg) translateX(-3px);
+  }
+  
+  .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+  }
+  
+  .toggle:checked+.toggle+.collapsible-content {
+    max-height: 150vh;
+  }
+  
+  .toggle:checked+.toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .collapsible-content .content-inner {
+    background: var(--c-bkg-light-fade1);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .collapsible-content p {
+    margin-bottom: 0;
+  }
+}
+
 @media only screen and (max-width: 1245px) {
   section#hero {
     flex-direction: column;
@@ -592,6 +682,16 @@ a.btn {
   section {
     --width: 40ch;
     --width-full: calc(100vw - (2 * var(--side-padding)));
+  }
+
+  section#faq {
+    padding: 3rem var(--side-padding);
+
+    .toggle::after {
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid currentColor;
+    }
   }
 
   section#mission {

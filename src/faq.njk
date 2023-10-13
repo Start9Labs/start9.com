@@ -1,0 +1,77 @@
+---
+title: FAQ
+layout: layouts/peripheral.njk
+---
+
+<section id="hero" class="hero--about">
+  <div id="hero-image" class="image-with-shadow">
+    <img src="/assets/images/about-hero.png" alt="about page hero image: a robot emerging from a server" title="about page hero image: a robot emerging from a server"/>
+    <img class="img-shadow" src="/assets/images/about-hero.png" alt=""/>
+  </div>
+  <div id="logo">
+    <h1>
+      {% include "svgs/faq.svg" %}
+      <span style="display: none;">Frequently Asked Questions</span>
+    </h1>
+    <ul id="sub-menu">
+      <li>
+        <a href="#general">General</a>
+      </li>
+      <li>
+        <a href="#usage">Usage</a>
+      </li>
+      <li>
+        <a href="#products">Products</a>
+      </li>
+      <li>
+        <a href="#bitcoin">Bitcoin</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq">
+  <div id="general">
+    <h2>General</h2>
+    <div class="section__image">
+      <img src="/assets/images/jobs-hero.png" alt="techs section hero: open laptop" title="techs section hero: open laptop"/>
+      <img class="img-shadow" src="/assets/images/jobs-hero.png" alt=""/>
+    </div>
+    {% for item in faq.general %}
+      {% include "components/faq-item.njk" %}
+    {% endfor %}
+  </div>
+
+  <div id="usage">
+    <h2>Usage</h2>
+    <div class="section__image">
+      <img src="/assets/images/news-hero.png" alt="creators section hero: a television" title="creators section hero: a television"/>
+      <img class="img-shadow" src="/assets/images/news-hero.png" alt=""/>
+    </div>
+    {% for item in faq.usage %}
+      {% include "components/faq-item.njk" %}
+    {% endfor %}
+  </div>
+
+  <div id="products">
+    <h2>Products</h2>
+    <div class="section__image">
+      <img src="/assets/images/privacy-hero.png" alt="promoters section hero: a privacy ninja" title="promoters section hero: a privacy ninja"/>
+      <img class="img-shadow" src="/assets/images/privacy-hero.png" alt=""/>
+    </div>
+    {% for item in faq.products %}
+      {% include "components/faq-item.njk" %}
+    {% endfor %}
+  </div>
+
+  <div id="bitcoin">
+    <h2>Bitcoin</h2>
+    <div class="section__image">
+      <img src="/assets/images/dev-hero.png" alt="dev section hero: terminal icon" title="dev section hero: terminal icon"/>
+      <img class="img-shadow" src="/assets/images/dev-hero.png" alt=""/>
+    </div>
+    {% for item in faq.bitcoin %}
+      {% include "components/faq-item.njk" %}
+    {% endfor %}
+  </div>
+</section>

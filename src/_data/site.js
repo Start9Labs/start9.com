@@ -43,7 +43,7 @@ module.exports = {
   },
   media: {
     // NOTE: the keys here correspond to the name of the svg logo
-    matrix: 'https://matrix.to/#/!lMnRwPWnyQvOfAoEnD:matrix.start9labs.com',
+    matrix: 'https://matrix.to/#/#start9-community:matrix.start9labs.com',
     twitter: 'https://twitter.com/start9labs',
     telegram: 'https://t.me/start9_labs',
     youtube: 'https://www.youtube.com/channel/UCGEw4HJDvOn3Oy8ykR36P7Q',
