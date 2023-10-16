@@ -311,35 +311,24 @@ a.btn {
   transform: scaleX(-1);
 }
 
-.ap-widget-container {
+section#reviews {
+  overflow: visible;
+  width: 100%;
+  z-index: 6;
+  position: relative;
   width: 90vw;
-  text-align: center;
-
-  .glider-next,
-  .glider-prev {
-    img {
-      filter: invert(1);
-    }
+  
+  img {
+    display: unset;
+    width: auto;
   }
 
-  a {
-    color: var(--c-red1);
-    font-size: 0.7rem !important;
+  .ap-widget__logo--carousel {
+    display: none;
   }
 
-  .ap-avg-rat-c {
-    // font-variant: all-small-caps;
-    text-transform: none;
-    font-size: 0.7rem !important;
-  }
-
-  .glider-slide:hover {
-    background-color: transparent !important;
-    opacity: 50%;
-  }
-
-  .glider-dots {
-    padding: 1rem;
+  p {
+    font-size: 0.9rem;
   }
 
   .glider-track {
@@ -349,54 +338,47 @@ a.btn {
     text-align: left;
   }
 
-  .ap-review {
+  .glider-dot.active {
+    background: var(--c-red1);
+  }
+
+  .ap-widget__review {
     height: 100% !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin: 0 !important;
     padding: 0 !important;
+    text-align: center;
+
+    &:hover {
+      font-size: unset;
+      opacity: 50%;
+    }
   }
 
-  .glider-dot.active {
-    background: var(--c-red1);
-  }
-
-  .glider-contain {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
-  .ap-review-author,
-  .ap-read-more {
+  .ap-widget__author, .ap-widget__prod-rating-text--carousel  {
+    font-size: 0.7rem;
     color: var(--c-gray3) !important;
-  }
 
-  .ap-logo-c {
-    display: none!important;
-  }
+    a {
+      color: var(--c-red1)!important;
 
-  .ap-rev-stars {
-    display: flex;
+      &:hover {
+        font-size: unset;
+        font-weight: bold;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
-  #hero{
-    //margin-top: 25vh;
-  }
   .line svg{
     max-height: 30vh;
   }
-  .ap-widget-container {
-    .ap-logo-c {
-      width: 65px !important;
-      border-radius: 2.7rem;
-      padding: 6px 8px !important;
-    }
 
-    .glider-contain {
-      padding: 0 40px;
-    }
+  .glider-dot {
+    height: 9px;
+    width: 9px;
   }
 }

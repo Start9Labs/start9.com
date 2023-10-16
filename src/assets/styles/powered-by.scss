@@ -76,10 +76,31 @@ svg a:visited {
 
 .ratings {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
   justify-content: center;
+  align-items: center;
   margin: 1rem;
+
+  img {
+    display: unset;
+    width: auto;
+  }
+
+  .ap-widget__logo--mini {
+    display: none;
+  }
+
+  .ap-widget__prod-rating-text--mini {
+    a {
+      color: var(--c-red1) !important;
+
+      &:hover {
+        font-size: unset;
+        font-weight: bold;
+      }
+    }
+  }
 
   &-mobile {
     display: none

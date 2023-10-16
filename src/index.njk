@@ -4,8 +4,6 @@ layout: layouts/base.njk
 ---
 
 <link rel="stylesheet" href="/@root/src/assets/styles/landing.scss">{{ __slinkity.head | safe }}
-<link rel="stylesheet" href="https://ap-widget.s3.amazonaws.com/css/glider.min.css" />
-<link rel="stylesheet" href="https://ap-widget.s3.amazonaws.com/css/widget.min.css" />
 
 {% include "components/landing/hero.njk" %}
 
@@ -55,8 +53,7 @@ layout: layouts/base.njk
 
 {% include "components/landing/community.njk" %}
 
-<script type="text/javascript" src="https://ap-widget.s3.amazonaws.com/glider.min.js"></script>
-<script type="text/javascript" src="https://ap-widget.s3.amazonaws.com/widget.min.js" async></script>
+<script src="https://ap-widget-2.s3.amazonaws.com/widget.min.js" defer=""></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
