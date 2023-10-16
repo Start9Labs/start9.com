@@ -313,12 +313,15 @@ a.btn {
 
 section#reviews {
   overflow: visible;
-  width: 100%;
   z-index: 6;
   position: relative;
   width: 90vw;
   
-  img {
+  p {
+    font-size: 0.9rem;
+  }
+
+  .ap-widget__rev-stars, .ap-widget--carousel__first-row img {
     display: unset;
     width: auto;
   }
@@ -327,29 +330,12 @@ section#reviews {
     display: none;
   }
 
-  p {
-    font-size: 0.9rem;
-  }
-
-  .glider-track {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1rem;
-    text-align: left;
-  }
-
-  .glider-dot.active {
-    background: var(--c-red1);
-  }
-
   .ap-widget__review {
-    height: 100% !important;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
     margin: 0 !important;
     padding: 0 !important;
-    text-align: center;
 
     &:hover {
       font-size: unset;
@@ -370,15 +356,45 @@ section#reviews {
       }
     }
   }
+
+
+  .glider-track {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+  }
+
+  .glider-dot.active {
+    background: var(--c-red1);
+  }
+
+  .glider-next {
+    right: -30px!important;
+  }
+
+  .glider-prev {
+    left: -30px!important;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .line svg{
-    max-height: 30vh;
+    max-height: 17vh;
   }
 
-  .glider-dot {
-    height: 9px;
-    width: 9px;
+  section#reviews {
+    p {
+      font-size: 1rem;
+    }
+
+    .ap-widget__author,
+    .ap-widget__prod-rating-text--carousel {
+      font-size: 0.8rem;
+    }
+  
+    .glider-dot {
+      height: 9px;
+      width: 9px;
+    }
   }
 }
