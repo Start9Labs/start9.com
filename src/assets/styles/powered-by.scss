@@ -77,8 +77,6 @@ svg a:visited {
 .ratings {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: center;
   align-items: center;
   margin: 1rem;
 
@@ -102,11 +100,11 @@ svg a:visited {
     }
   }
 
-  &-mobile {
-    display: none
+  &-gh-mobile {
+    display: none;
   }
 
-  &-desktop {
+  &-gh-desktop {
     display: block;
   }
 }
@@ -117,11 +115,11 @@ svg a:visited {
   }
 
   .ratings {
-    &-mobile {
+    &-gh-mobile {
       display: block;
     }
 
-    &-desktop {
+    &-gh-desktop {
       display: none;
     }
   }
