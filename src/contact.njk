@@ -16,23 +16,40 @@ layout: layouts/peripheral.njk
 </section>
 
 <section id="contact">
-  <h4 class="text-center">Reach out on social media</h4>
-  {% include "components/landing/social-media.njk" %}
-  <h4 class="text-center">message us</h4>
-  <p class="text-center">For the quickest response, please join us in Matrix or Telegram (icons above).  Alternatively, use the form below and we will normally respond within 24 hours.</p>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <div id="feedback-form">form will be placed in here</div>
+  <ul id="contact-community">
+    <li>
+      <h3>Community Forum</h3>
+      <p>Our Community forum offers a wealth of information. Search through existing questions or submit new questions and get fast responses from the Start9 community.</p>
+      <a href="{{ site.media.discourse }}" class="btn" rel="noopener noreferrer" target="_blank">Go to Forum</a>
+    </li>
+    <li>
+      <h3>Community Telegram</h3>
+      <p>Our community Telegram is a great place for StartOS users to interact and get help.</p>
+      <a href="{{ site.media.telegram }}" class="btn" rel="noopener noreferrer" target="_blank">Chat on Telegram</a>
+    </li>
+    <li>
+      <h3>Community Matrix</h3>
+      <p>Our community Matrix is for StartOS users, StartOS developers, and package developers to interact and collaborate.</p>
+      <a href="{{ site.media.matrix }}" class="btn" rel="noopener noreferrer" target="_blank">Chat on Matrix</a>
+    </li>
+    <li>
+      <h3>Message Us</h3>
+      <p>Response times are usually between 24-48 hours. For faster support, use one of the options above</p>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <div id="feedback-form">form will be placed in here</div>
 
-  <script id="zammad_form_script" src="https://support.start9.com/assets/form/form.js"></script>
+      <script id="zammad_form_script" src="https://support.start9.com/assets/form/form.js"></script>
 
-  <script>
-  $(function() {
-    $('#feedback-form').ZammadForm({
-      messageTitle: 'Start9 Contact Form',
-      messageSubmit: 'Submit',
-      messageThankYou: 'Thank you for your inquiry!  For the fastest response, please come into our Matrix or Telegram channels.  Otherwise, we will get back to you as soon as possible, typically within 24 hours.',
-      attachmentSupport: true
-    });
-  });
-  </script>
+      <script>
+      $(function() {
+        $('#feedback-form').ZammadForm({
+          messageTitle: 'Start9 Contact Form',
+          messageSubmit: 'Submit',
+          messageThankYou: 'Inquiry received! We will get back to you ASAP.',
+          attachmentSupport: true
+        });
+      });
+      </script>
+    </li>
+  </ul>
 </section>
