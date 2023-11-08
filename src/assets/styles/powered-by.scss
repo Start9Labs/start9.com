@@ -99,14 +99,6 @@ svg a:visited {
       }
     }
   }
-
-  &-gh-mobile {
-    display: none;
-  }
-
-  &-gh-desktop {
-    display: block;
-  }
 }
 
 @media only screen and (max-width: 500px) {
