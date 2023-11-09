@@ -348,16 +348,23 @@ nav {
   font-family: var(--f-accent);
   font-weight: 300;
   line-height: 1;
-  text-transform: uppercase;
   padding: var(--padding);
   display: flex;
   justify-content: space-between;
+
+  .gh-btn {
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    z-index: 100;
+  }
 
   ul {
     margin: 0;
     padding: 0;
     display: flex;
     gap: 1rem;
+    text-transform: uppercase;
     li {
       list-style: none;
       display: flex;
@@ -484,6 +491,10 @@ nav {
     li a {
       font-size: 2rem;
     }
+  }
+  .gh-btn {
+    top: 5.5rem !important;
+    right: 2rem !important;
   }
 }
 
