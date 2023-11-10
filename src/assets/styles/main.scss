@@ -130,6 +130,10 @@ html {
       opacity: 1 !important;
       filter: blur(0px) !important;
     }
+
+    .gh-btn {
+      display: none;
+    }
   }
 }
 
@@ -356,7 +360,11 @@ nav {
     position: absolute;
     top: 5rem;
     right: 2.5rem;
-    z-index: 100;
+    display: block;
+  }
+
+  .hidden {
+    display: none;
   }
 
   ul {
