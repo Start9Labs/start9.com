@@ -8,7 +8,7 @@ section#powered-by {
   h1 {
     margin-bottom: 16px;
     display: inline-block;
-    max-width: min(16ch,64vw);
+    max-width: min(16ch, 64vw);
   }
 
   .logo {
@@ -17,10 +17,10 @@ section#powered-by {
     margin: auto;
   }
 
-  .inline+p {
+  .inline + p {
     margin-top: -1.5rem;
   }
-  
+
   svg {
     --width: min(45rem, (100vw - 12rem));
     width: --width;
@@ -30,7 +30,7 @@ section#powered-by {
     height: calc((679 / 843) * var(--width)); // forcing aspect ratio for iOS
   }
 
-  a.source-link{
+  a.source-link {
     margin-top: 5rem;
     display: flex;
     align-items: center;
@@ -40,28 +40,27 @@ section#powered-by {
     line-height: 1;
     gap: 1rem;
     margin-bottom: -2rem;
-    img{
+    img {
       width: 10rem;
     }
-    span{
+    span {
       background-color: var(--c-text-accent);
       border-radius: 999px;
-      padding: .15em .6em;
-    transition: var(--t-simple);
+      padding: 0.15em 0.6em;
+      transition: var(--t-simple);
       white-space: nowrap;
     }
-    &:hover{
+    &:hover {
       transform: scale(1.05);
-      span{
+      span {
         background-color: var(--c-text-primary);
         color: var(--c-text-accent);
       }
     }
-    &.source-link--floated{
+    &.source-link--floated {
       position: absolute;
     }
   }
-
 }
 svg a:link,
 svg a:visited {
@@ -74,46 +73,9 @@ svg a:visited {
   justify-content: center;
 }
 
-.ratings {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-
-  img {
-    display: unset;
-    width: auto;
-  }
-
-  .ap-widget__logo--mini {
-    display: none;
-  }
-
-  .ap-widget__prod-rating-text--mini {
-    a {
-      color: var(--c-red1) !important;
-
-      &:hover {
-        font-size: unset;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 500px) {
   .container {
     width: 100vw;
-  }
-
-  .ratings {
-    &-gh-mobile {
-      display: block;
-    }
-
-    &-gh-desktop {
-      display: none;
-    }
   }
 
   section#powered-by .inline img {

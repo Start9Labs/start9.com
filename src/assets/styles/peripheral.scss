@@ -533,26 +533,6 @@ section#creators {
   }
 }
 
-.video-container {
-  width: 70vw;
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  height: 0;
-
-  iframe {
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 a.btn {
   position: relative;
   padding: 0.7rem 1.7rem;
@@ -572,7 +552,7 @@ a.btn {
   }
 }
 
-.center {
+.text-center {
   text-align: center;
 }
 
@@ -670,12 +650,6 @@ section#faq {
   section#hero {
     flex-direction: column;
     margin-bottom: 6rem;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .video-container {
-    width: 90vw;
   }
 }
 
