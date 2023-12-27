@@ -1,4 +1,12 @@
 [
+  { 
+    "title": "The Importance of Sovereign Computing",
+    "date": "December 7, 2023",
+    "link": "https://www.youtube.com/watch?v=hgAJwZv86XQ",
+    "image": "https://img.youtube.com/vi/hgAJwZv86XQ/maxresdefault.jpg",
+    "anchor": "Denver BitDevs",
+    "description": "Recording of a live talk at the Denver BitDevs meetup on 12/7/2023, featuring Matt Hill, CEO of Start9."
+  },
   {
     "title": "Matt Hill - Bitcoin and Sovereign Computing",
     "date": "November 1, 2023",
