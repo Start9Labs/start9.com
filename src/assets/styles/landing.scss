@@ -115,6 +115,8 @@ nav {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 4rem;
+
   svg {
     width: 20rem;
     margin-top: 0.6rem;
@@ -182,7 +184,8 @@ nav {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-bottom: calc(-1 * (50vh - 4.5rem - (min(32.385rem, 58.3vw) / 2)));
+  padding-top: 15rem;
+  margin-bottom: 4rem;
 }
 
 h1 {
@@ -408,7 +411,7 @@ section#reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 4rem;
 
   &-box {
     align-self: end;
@@ -417,6 +420,10 @@ section#reviews {
   img {
     display: unset;
     width: auto;
+  }
+
+  .ap-widget--mini {
+    padding-top: 0;
   }
 
   .ap-widget__logo--mini {
@@ -457,7 +464,8 @@ section#reviews {
 
 @media screen and (max-width: 500px) {
   #hero {
-    margin-bottom: calc(-1 * (21vh - 4.5rem - (min(32.385rem, 58.3vw) / 2)));
+    margin-bottom: -20rem;
+    padding-top: 0;
   }
 
   .line svg {

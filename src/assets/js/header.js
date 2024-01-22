@@ -8,7 +8,7 @@ gsap.to("header", {
   scrollTrigger: {
     trigger: "#hero",
     scrub: true,
-    start: "center top", // "triggerElement page"
+    start: "top top", // "triggerElement page"
     end: "bottom top", // "triggerElement page"
   },
 });
@@ -20,7 +20,7 @@ gsap.to(".header__logo", {
   scrollTrigger: {
     trigger: "#hero",
     scrub: true,
-    start: "center top", // "triggerElement page"
+    start: "top top", // "triggerElement page"
     end: "bottom top", // "triggerElement page"
   },
 });
