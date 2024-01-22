@@ -1,17 +1,17 @@
-@use 'pitch';
-@use 'products';
-@use 'infographics';
-@use 'bitcoin';
-@use 'be-your-own';
-@use 'powered-by';
-@use 'support';
-@use 'dev';
-@use 'community';
-
+@use "pitch";
+@use "products";
+@use "infographics";
+@use "bitcoin";
+@use "be-your-own";
+@use "powered-by";
+@use "support";
+@use "dev";
+@use "community";
 
 body {
   margin: 0;
-  background: linear-gradient(0deg, var(--c-bkg), var(--c-bkg)), url("/assets/images/bkg.jpg");
+  background: linear-gradient(0deg, var(--c-bkg), var(--c-bkg)),
+    url("/assets/images/bkg.jpg");
   background-blend-mode: color, normal;
   background-size: cover;
   background-attachment: fixed;
@@ -19,29 +19,29 @@ body {
 }
 
 @supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */ 
-  body{
+  /* CSS specific to iOS devices */
+  body {
     background: none;
     position: relative;
   }
-  body::after{
-    content:'';
+  body::after {
+    content: "";
     position: fixed;
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    top:0;
+    top: 0;
     left: 0;
-    background: linear-gradient(0deg, var(--c-bkg), var(--c-bkg)), url("/assets/images/bkg.jpg");
+    background: linear-gradient(0deg, var(--c-bkg), var(--c-bkg)),
+      url("/assets/images/bkg.jpg");
     background-blend-mode: color, normal;
     background-size: auto 100vh;
     background-repeat: no-repeat;
   }
-
 }
 
 main {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -52,25 +52,25 @@ section {
   // padding: 0 var(--section-padding);
 }
 
-.subsection{
-  
+.subsection {
 }
 
 .line {
-  padding: 1.8rem 0 1.4rem 0;
+  // padding: 1.8rem 0 1.4rem 0;
+  padding: 4rem 0 3.8rem 0;
 }
 
-.line-primary path{
+.line-primary path {
   stroke: var(--c-line-primary);
   stroke-width: 1px;
   vector-effect: non-scaling-stroke;
 }
 
-.svg-primary{
+.svg-primary {
   fill: var(--c-text-primary);
 }
 
-.svg-secondary{
+.svg-secondary {
   fill: var(--c-bkg);
 }
 
@@ -78,26 +78,27 @@ section {
   box-shadow: var(--c-shadow-1) 0 3rem 3rem;
 }
 
-.section--inverse{
+.section--inverse {
   background-color: var(--c-bkg-light-fade2);
   backdrop-filter: blur(1rem);
-  h1, p {
+  h1,
+  p {
     color: var(--c-bkg);
   }
-  .svg-primary{
+  .svg-primary {
     fill: var(--c-bkg);
   }
-  .svg-secondary{
+  .svg-secondary {
     fill: var(--c-text-primary);
   }
 }
 
-.section--subtle{
+.section--subtle {
   background-color: var(--c-bkg-dark-fade2);
   backdrop-filter: blur(1rem);
 }
 
-.line svg{
+.line svg {
   width: calc(100vw - (2 * 6rem));
   max-width: 40vw;
   max-height: 40vh;
@@ -122,7 +123,7 @@ nav {
     padding-top: 1rem;
     text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: .1ch;
+    letter-spacing: 0.1ch;
   }
   @keyframes fadeIn {
     0% {
@@ -134,24 +135,44 @@ nav {
     }
   }
   @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
@@ -166,7 +187,7 @@ nav {
 
 h1 {
   font-family: var(--f-hero);
-  font-size: min(3.8rem,171px);
+  font-size: min(3.8rem, 171px);
   //text-transform: uppercase;
   line-height: 1;
   font-weight: 400;
@@ -245,12 +266,12 @@ a.btn {
   box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
   border-radius: 34px;
 
-  &:hover{
+  &:hover {
     transform: scale(1.03);
     filter: brightness(120%);
   }
 
-  &.btn--subtle{
+  &.btn--subtle {
     color: var(--c-gray3);
     font-size: 1.2rem;
     &::before {
@@ -307,21 +328,26 @@ a.btn {
 }
 
 // flipping some lines horizontally
-#bitcoin-to-be, #be-to-powered, #powered-to-support, #support-to-dev {
+#bitcoin-to-be,
+#be-to-powered,
+#powered-to-support,
+#support-to-dev {
   transform: scaleX(-1);
 }
 
 section#reviews {
+  padding: 2.5rem 0 1rem 0;
   overflow: visible;
   z-index: 6;
   position: relative;
   width: 90vw;
-  
+
   p {
     font-size: 0.9rem;
   }
 
-  .ap-widget__rev-stars, .ap-widget--carousel__first-row img {
+  .ap-widget__rev-stars,
+  .ap-widget--carousel__first-row img {
     display: unset;
     width: auto;
   }
@@ -334,6 +360,7 @@ section#reviews {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
     margin: 0 !important;
     padding: 0 !important;
 
@@ -343,12 +370,13 @@ section#reviews {
     }
   }
 
-  .ap-widget__author, .ap-widget__prod-rating-text--carousel  {
+  .ap-widget__author,
+  .ap-widget__prod-rating-text--carousel {
     font-size: 0.7rem;
     color: var(--c-gray3) !important;
 
     a {
-      color: var(--c-red1)!important;
+      color: var(--c-red1) !important;
 
       &:hover {
         font-size: unset;
@@ -356,7 +384,6 @@ section#reviews {
       }
     }
   }
-
 
   .glider-track {
     display: grid;
@@ -369,16 +396,71 @@ section#reviews {
   }
 
   .glider-next {
-    right: -30px!important;
+    right: -30px !important;
   }
 
   .glider-prev {
-    left: -30px!important;
+    left: -30px !important;
+  }
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+
+  &-box {
+    align-self: end;
+  }
+
+  img {
+    display: unset;
+    width: auto;
+  }
+
+  .ap-widget__logo--mini {
+    display: none;
+  }
+
+  .ap-widget__prod-rating-text--mini {
+    a {
+      color: var(--c-red1) !important;
+
+      &:hover {
+        font-size: unset;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.video-container {
+  width: 70vw;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+
+  iframe {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .line svg{
+  #hero {
+    margin-bottom: calc(-1 * (21vh - 4.5rem - (min(32.385rem, 58.3vw) / 2)));
+  }
+
+  .line svg {
     max-height: 17vh;
   }
 
@@ -391,10 +473,26 @@ section#reviews {
     .ap-widget__prod-rating-text--carousel {
       font-size: 0.8rem;
     }
-  
+
     .glider-dot {
       height: 9px;
       width: 9px;
     }
+  }
+
+  .ratings {
+    &-gh-mobile {
+      display: block;
+    }
+
+    &-gh-desktop {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .video-container {
+    width: 90vw;
   }
 }
