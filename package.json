@@ -18,7 +18,7 @@
     "p2p"
   ],
   "author": "Start9",
-  "license": "START9 NON-COMMERCIAL LICENSE v1",
+  "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-img": "^2.0.1",
