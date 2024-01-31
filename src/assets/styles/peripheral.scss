@@ -501,38 +501,6 @@ section#creators {
   }
 }
 
-#pro-tagline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-
-  .btn {
-    text-align: center;
-    padding: 1rem 1.3rem;
-    color: var(--c-text-bright);
-    background-color: var(--c-accent);
-    border: 0;
-    font-family: var(--f-accent);
-    font-weight: 300;
-    font-size: 1.2rem;
-    text-decoration: none;
-    box-shadow: 0 1rem 1rem -0.5rem var(--c-shadow-3);
-    border-radius: 34px;
-
-    &:hover {
-      transform: scale(1.03);
-      filter: brightness(120%);
-    }
-  }
-
-  p {
-    text-align: center;
-    margin: 0;
-    font-size: 1.4rem;
-  }
-}
-
 a.btn {
   position: relative;
   padding: 0.7rem 1.7rem;
@@ -686,16 +654,6 @@ section#faq {
 
     .section__double-image .section__image {
       top: -148%;
-    }
-  }
-
-  #pro-tagline {
-    .btn {
-      font-size: 1.5rem;
-    }
-
-    p {
-      font-size: 1.7rem;
     }
   }
 }
