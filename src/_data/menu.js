@@ -103,7 +103,7 @@ module.exports = [
     "inFooter": true,
     "items": [
       {
-        "name": "Podcasts",
+        "name": "News",
         "slug": "news",
         "url": "/news",
         "target": "",
