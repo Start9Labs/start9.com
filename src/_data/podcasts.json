@@ -1,5 +1,21 @@
 [
   {
+    "title": "Self-hosting, Start9, and StartOS",
+    "date": "May 17, 2024",
+    "link": "https://serve.podhome.fm/episodepage/CitadelDispatch/cd134-self-hosting-start9-and-startos-with-matt-hill--cofounder",
+    "image": "https://assets.podhome.fm/8029725b-0319-44b9-4793-08dc404e83a4/638475670208679180CITADELDISPATCH.jpeg",
+    "anchor": "Citadel Dispatch",
+    "description": "Matt Hill joins Matt Odell in discussing self hosting, start9 vs startos, and running a profitable open source business."
+  },
+  {
+    "title": "Why Michael Saylor Believes Bitcoin Will 100x | EP 985",
+    "date": "May 7, 2024",
+    "link": "https://www.youtube.com/live/93X1BuvFVGE",
+    "image": "https://i.ytimg.com/vi/93X1BuvFVGE/maxresdefault.jpg",
+    "anchor": "Simply Bitcoin",
+    "description": "At the Bitcoin for Corporations event Michael Saylor makes the case why he believes Bitcoin still has at least 100x from where it is today. With guest Matt Hill."
+  },
+  {
     "title": "Sovereign Computing with Matt Hill from Start9",
     "date": "April 8, 2024",
     "link": "https://www.freedomfootprintshow.com/matt-hill-start9/",
@@ -115,7 +131,7 @@
     "title": "Why Are We Bullish?",
     "date": "December 2, 2022",
     "link": "https://www.youtube.com/watch?v=Ct0sS9UmjG0",
-    "image": "https://pbs.twimg.com/profile_banners/2298103730/1575064829/1080x360",
+    "image": "https://i.ytimg.com/vi/Ct0sS9UmjG0/hqdefault.jpg",
     "anchor": "BTC Sessions: Bullish Bit",
     "description": "Dread, Jason Maier, Urban Hacker."
   },
@@ -179,7 +195,7 @@
     "title": "How Bitcoin Nodes End Censorship on the Internet",
     "date": "September 7, 2022",
     "link": "https://bitcointv.com/w/hJcvVJEf5CEbXaTdKghjsw",
-    "image": "https://simplybitcoin.tv/assets/images/image01.png",
+    "image": "https://bitcointv.com/lazy-static/previews/3582bb05-929f-41cf-bc8b-b23b560bc8a5.jpg",
     "anchor": "Simply Bitcoin",
     "description": "Matt Hill - The future of computing, decentralizing the internet, censorship, and sovereign computing"
   },
@@ -251,7 +267,7 @@
     "title": "Anarchast Episode 566",
     "date": "October 5, 2021",
     "link": "https://odysee.com/@Anarchast:2/Become-a-Digital-Sovereign-with-Start9:f",
-    "image": "https://i1.sndcdn.com/avatars-h52MnISbZ9tcP7DC-4nV1iQ-t500x500.jpg",
+    "image": "https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://spee.ch/1/2fe7596a18d1f793.jpg",
     "anchor": "Anarchast",
     "description": "Today we are introduced to David from Start9 to get a demo of their potentially world changing project -- the Start9 Server!  Become a Digital Sovereign with Start9"
   },
@@ -282,8 +298,8 @@
   {
     "title": "Matt Odell, @raspiblitz, @ronindojoui, @mynodebtc, @nodl_it, and @start9labs",
     "date": "June 15, 2021",
-    "link": "https://citadeldispatch.com/cd26/",
-    "image": "https://citadeldispatch.com/wp-content/uploads/2021/04/cropped-cit2color.png",
+    "link": "https://serve.podhome.fm/episodepage/CitadelDispatch/cd26-using-a-bitcoin-node-with-raspiblitz-ronindojoui-mynodebtc-start9labs-and-nodlit",
+    "image": "https://assets.podhome.fm/8029725b-0319-44b9-4793-08dc404e83a4/638475670208679180CITADELDISPATCH.jpeg",
     "anchor": "Citadel Dispatch",
     "description": "Citadel Dispatch e0.2.6 - Using a Bitcoin Node, Bitcoin node projects, tradeoffs, software licenses, and monetization"
   },
@@ -298,8 +314,8 @@
   {
     "title": "Matt Odell, Keagan McClelland, and Paul Miller",
     "date": "April 13, 2021",
-    "link": "https://citadeldispatch.com/cd17/",
-    "image": "https://citadeldispatch.com/wp-content/uploads/2021/04/cropped-cit2color.png",
+    "link": "https://serve.podhome.fm/episodepage/CitadelDispatch/cd17-bitcoin-nodes-and-self-hosting-with-futurepaul-and-proofofkeags",
+    "image": "https://assets.podhome.fm/8029725b-0319-44b9-4793-08dc404e83a4/638475670208679180CITADELDISPATCH.jpeg",
     "anchor": "Citadel Dispatch",
     "description": "Citadel Dispatch e0.1.7 - Bitcoin nodes and self hosting with @futurepaul and @proofofkeags"
   },
