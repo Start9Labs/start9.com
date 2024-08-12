@@ -29,6 +29,7 @@
     "slinkity": "^0.8.3"
   },
   "dependencies": {
+    "esbuild-darwin-64": "^0.15.18",
     "rss-parser": "^3.12.0"
   },
   "browserslist": [
