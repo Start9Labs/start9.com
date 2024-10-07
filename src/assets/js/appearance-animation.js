@@ -128,6 +128,30 @@ if (document.querySelector("#infographics .subsection--control")) {
   });
 }
 
+// line animation
+gsap.from("#bitcoin-to-be path:first-child", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#bitcoin-to-be",
+    scrub: true,
+    start: "top 75%",
+    end: "bottom 75%",
+  },
+});
+
+// line animation
+gsap.from("#be-to-powered path", {
+  drawSVG: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#be-to-powered path",
+    scrub: true,
+    start: "top 75%",
+    end: "bottom 75%",
+  },
+});
+
 //////////////////////////////////////////
 // POWERED
 
