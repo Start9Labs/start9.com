@@ -128,35 +128,6 @@ if (document.querySelector("#infographics .subsection--control")) {
   });
 }
 
-//////////////////////////////////////////
-// BITCOIN
-
-// object animation
-gsap.from("#bitcoin .subsection--bitcoin", {
-  duration: 1,
-  opacity: 0,
-  filter: "blur(10px)",
-  y: "5rem",
-  scrollTrigger: {
-    trigger: "#bitcoin .subsection--bitcoin",
-    start: "top bottom", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
-
-// object animation
-gsap.from("#bitcoin .subsection--lightning", {
-  duration: 1,
-  opacity: 0,
-  filter: "blur(10px)",
-  y: "-5rem",
-  scrollTrigger: {
-    trigger: "#bitcoin .subsection--lightning",
-    start: "top bottom", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
-
 // line animation
 gsap.from("#bitcoin-to-be path:first-child", {
   drawSVG: 0,
@@ -166,46 +137,6 @@ gsap.from("#bitcoin-to-be path:first-child", {
     scrub: true,
     start: "top 75%",
     end: "bottom 75%",
-  },
-});
-
-//////////////////////////////////////////
-// BE YOUR OWN
-
-// object animation
-gsap.from("#be-your-own h1", {
-  duration: 0.5,
-  y: "5rem",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#be-your-own",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
-
-// object animation
-gsap.from("#be-your-own p", {
-  duration: 0.5,
-  y: "5rem",
-  filter: "blur(10px)",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#be-your-own h1",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
-  },
-});
-
-// object animation
-gsap.from("#be-your-own #ticker", {
-  duration: 1.5,
-  filter: "blur(20px)",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#be-your-own #ticker",
-    start: "top 75%", // "triggerElement page"
-    toggleActions: defaultActions,
   },
 });
 
