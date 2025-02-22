@@ -1,0 +1,42 @@
+---
+title: World News
+layout: layouts/peripheral.njk
+---
+
+<section id="hero">
+  <div id="hero-image" class="image-with-shadow">
+    <img src="/assets/images/news-hero.png" alt="world news page hero: tv emerging from a server" title="world news page hero: tv emerging from a server"/>
+    <img class="img-shadow" src="/assets/images/news-hero.png" alt=""/>
+  </div>
+  <div id="logo">
+    <h1>
+        <span>World News</span>
+    </h1>
+  </div>
+</section>
+
+<section id="news">
+  <ul class="podcasts">
+    {% for item in foreign %}
+    <li class="podcast">
+      <a href="{{ item.link }}" rel="noopener noreferrer" target="_blank">
+        {% if item.anchor %}
+        <span class="creator">{{ item.anchor }}</span>
+        {% endif %}
+        {% if item.anchor %}
+        <img src="{{ item.image }}" alt=""/>
+        {% endif %}
+        {% if item.title %}
+        <h3>{{ item.title }}</h3>
+        {% endif %}
+        {% if item.date %}
+        <time datetime="{{ item.date }}">{{ item.date }}</time>
+        {% endif %}
+        {% if item.description %}
+        <p>{{ item.description }}</p>
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
