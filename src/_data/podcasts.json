@@ -1,5 +1,13 @@
 [
   {
+    "title": "You need to run your own Node",
+    "date": "February 7, 2025",
+    "link": "https://www.youtube.com/watch?v=9ExNmkltmc0",
+    "image": "https://i.ytimg.com/vi/9ExNmkltmc0/hqdefault.jpg",
+    "anchor": "Want Clue",
+    "description": "How easy it is to setup your very own Bitcoin Node."
+  },
+  {
     "title": "Own Your Data With Start9 A Sovereign Computing Revolution",
     "date": "December 30, 2024",
     "link": "https://www.youtube.com/watch?v=x1po7kY9qYg",
@@ -8,7 +16,39 @@
     "description": "In this episode of the Build-a-Mine podcast, your host Trevor Bello dives deep into the transformative world of sovereign computing with Matt Hill, founder of Start9."
   },
   {
-    "title": "Starting Fresh with Start 9 | The Confab 06: Matt Hill",
+    "title": "Why you should run a node",
+    "date": "December 2, 2024",
+    "link": "https://rumble.com/v5v9i52-microstrategy-just-forced-microsoft-to-adopt-bitcoin-ep-1130.html",
+    "image": "https://1a-1791.com/video/fw/s8/1/w/C/N/j/wCNjv.qR4e-small-Microstrategy-JUST-FORCED-M.jpg",
+    "anchor": "Simply Bitcoin",
+    "description": "Michael Saylor pitches Microsoft on Microstrategy's Bitcoin playbook and why they should buy Bitcoin to ad value to their shareholders. With Matt Hill on why you should run a node."
+  },
+  {
+    "title": "Talking with Matt Hill: Empowering Sovereignty w/ Bitcoin Nodes, Privacy, and El Salvador’s Future",
+    "date": "October 1, 2024",
+    "link": "https://www.youtube.com/watch?v=n5YDfUSXoes",
+    "image": "https://i.ytimg.com/vi/n5YDfUSXoes/maxresdefault.jpg",
+    "anchor": "BitCorner Podcast",
+    "description": "In this episode, we welcome Matt Hill, CEO of Start9, to discuss how sovereign computing can enhance privacy, self-sovereignty, and Bitcoin adoption. We explore Node Nation in El Salvador, where students are running Bitcoin nodes in public schools, and how this could shape the future of financial education."
+  },
+  {
+    "title": "How Big Tech uses your data to control your digital life | Anjan Katta & Matt Hill",
+    "date": "September 13, 2024",
+    "link": "https://www.youtube.com/watch?v=DSCm0ysCCA0",
+    "image": "https://yt3.googleusercontent.com/g6gSfDl2VrTwL_YKZseffOPUA_ZSi_qRDFjBzjySE081v5ThH8po7PRVwE0liGMKSySgbjcZUQ=s900-c-k-c0x00ffffff-no-rj",
+    "anchor": "Decentralized Radio",
+    "description": "This talk discusses the shrinking wold of online freedom, censorship and ownership over your personal online presence. Today's guest Matt Hill is Founder of Start 9 Sovereign Computing whose mission it is to end the need for trusted third parties creating a more decentralized future for  all! Here on the podcast we're all about taking control of your health and wealth and Matt Hill is fueling the fire for individualized approaches to achieving these goals."
+  },
+  {
+    "title": "Matt Hill and Craig LeBlanc",
+    "date": "October 3, 2024",
+    "link": "https://www.youtube.com/watch?v=ibuDqIBSryU&t=1618s",
+    "image": "https://i.ytimg.com/vi/ibuDqIBSryU/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgYChFMA8=&rs=AOn4CLB_Eu-QSzMplJgjE4UeUc9qA0myuQ",
+    "anchor": "The Bitcoin Daily Show",
+    "description": "Matt Hill of Start9 Interviewed By Craig LeBlanc The DoorMan w The Bitcoin Daily Show."
+  },
+  {
+    "title": "Starting Fresh with Start 9",
     "date": "August 7, 2024",
     "link": "https://www.youtube.com/watch?v=fLQ6V-NTTk8",
     "image": "https://i.ytimg.com/vi/fLQ6V-NTTk8/maxresdefault.jpg",
@@ -24,12 +64,20 @@
     "description": "Matt Hill joins Matt Odell in discussing self hosting, start9 vs startos, and running a profitable open source business."
   },
   {
-    "title": "Why Michael Saylor Believes Bitcoin Will 100x | EP 985",
+    "title": "Bitcoin Culture with Matt Hill",
     "date": "May 7, 2024",
     "link": "https://www.youtube.com/live/93X1BuvFVGE",
     "image": "https://i.ytimg.com/vi/93X1BuvFVGE/maxresdefault.jpg",
     "anchor": "Simply Bitcoin",
     "description": "At the Bitcoin for Corporations event Michael Saylor makes the case why he believes Bitcoin still has at least 100x from where it is today. With guest Matt Hill."
+  },
+  {
+    "title": "Why Are We Bullish?",
+    "date": "April 26, 2024",
+    "link": "https://www.youtube.com/watch?v=ZM5QJKrgQAY",
+    "image": "https://i.ytimg.com/vi/ZM5QJKrgQAY/maxresdefault.jpg",
+    "anchor": "BTC Sessions",
+    "description": "A chat with Adam O’Brien, Matt Hill, and Danny Baer."
   },
   {
     "title": "Sovereign Computing with Matt Hill from Start9",
@@ -120,7 +168,7 @@
     "description": "Danny, Chris, and Michael on the Crypto Panel at the Mariposa Freedom Festival"
   },
   {
-    "title": "P.A.Z.NIA Second Realm Assembly 3, Department of Technology 1",
+    "title": "P.A.Z.NIA Department of Technology",
     "date": "January 12, 2023",
     "link": "https://odysee.com/@VonuPodcast:a/TVP-174-Video-v2:8",
     "image": "https://ad-store.sgp1.digitaloceanspaces.com/VONU/2023/01/TVP174FeaturedImage.png",
@@ -136,7 +184,7 @@
     "description": "Matt Hill is the current CEO and co-founder of Start9, a Sovereign Computing company that is leading the paradigm shift of placing data back into the hands of the individual."
   },
   {
-    "title": "LIVE: African Bitcoin Conference w/ Dread",
+    "title": "African Bitcoin Conference with Dread",
     "date": "December 7, 2022",
     "link": "https://www.youtube.com/watch?v=00cdk9kAhdI",
     "image": "https://deow9bq0xqvbj.cloudfront.net/image-logo/8790485/Copy_of_image_podcast_cover_1400_1400_px__j5c7bk.png",
@@ -160,7 +208,7 @@
     "description": "Today's guest is Matt Hill, co-founder and CEO of Start9 Labs, a leading pioneer in what he calls 'Sovereign Computing.'"
   },
   {
-    "title": "Sovereign Computing, Decentralizing the Internet, and Owning your Data with Matt and Aiden from Start9",
+    "title": "Sovereign Computing with Matt and Aiden from Start9",
     "date": "November 30, 2022",
     "link": "https://anchor.fm/thecafebitcoinpodcast/episodes/Sovereign-Computing--Decentralizing-the-Internet-and-Owning-your-Data-with-Matt-Hill-and-Aiden-from-Start-9---November-30th--2022-e1ri6ij",
     "image": "https://production.listennotes.com/podcasts/the-caf%C3%A9-bitcoin-podcast-swan-bitcoin-vfMdjJWuGln-sjScmZtdiR_.1400x1400.jpg",
@@ -200,7 +248,7 @@
     "description": "In episode 87, we're back with Matt Hill, who builds Sovereign computers for individuals over at Start9."
   },
   {
-    "title": "RaspiFUD or fact? Bitcoin nodes and security",
+    "title": "Bitcoin nodes and security",
     "date": "September 16, 2022",
     "link": "https://stephanlivera.com/episode/414/",
     "image": "https://i0.wp.com/stephanlivera.com/wp-content/uploads/2022/09/SLP414-1.png",
@@ -224,7 +272,7 @@
     "description": "David Croisant - Building a New Internet with Personal Servers from Start9 Labs"
   },
   {
-    "title": "Episode #3052",
+    "title": "Total Digital Sovereignty",
     "date": "March 14, 2022",
     "link": "https://www.thesurvivalpodcast.com/digital-sovereign",
     "image": "http://survivalpodcast.net/store/images/tspmsblogo.png",
@@ -240,7 +288,7 @@
     "description": "David Croisant (Start9 Labs) comes on to talk about StartOS version 0.3.0, 'self-hosting,' freedom tech, 'Uncle Jim' model, rebuilding the Internet, pirate communications, etc..."
   },
   {
-    "title": "SLP352 Matt Hill",
+    "title": "Matt Hill",
     "date": "February 24, 2022",
     "link": "https://stephanlivera.com/episode/352/",
     "image": "https://i0.wp.com/stephanlivera.com/wp-content/uploads/2022/02/SLP352-WP-Thumbnail.png",
@@ -256,7 +304,7 @@
     "description": "Start9 demo the latest version of StartOS"
   },
   {
-    "title": "Episode #101: Securing your own data with Matt Hill of Start9",
+    "title": "Securing your own data with Matt Hill of Start9",
     "date": "November 29, 2021",
     "link": "https://www.agoristnexus.com/securing-your-own-data-with-matt-hill-of-start9-episode-101/",
     "image": "https://www.agoristnexus.com/wp-content/uploads/2021/11/paste-147-750x450.png",
@@ -264,12 +312,12 @@
     "description": "In this episode Brandon and Dag speak with Matt Hill of Start9 Labs about securing your own data with a Start9 server"
   },
   {
-    "title": "Episode #287: StartOS v0.3.0, building out the independent stack, and philosophy with Matt Hill",
+    "title": "StartOS v0.3.0 with Matt Hill",
     "date": "November 22, 2021",
     "link": "https://talesfromthecrypt.libsyn.com/287-embassyos-v030-building-out-the-independent-stack-and-philosophy-with-matt-hill",
     "image": "https://assets.libsyn.com/secure/content/63745304",
     "anchor": "Tales From The Crypt",
-    "description": "Join Marty as he sits down with Matt Hill, co-founder of Start9 Labs"
+    "description": "Join Marty as he sits down with Matt Hill, co-founder of Start9 Labs, on building out the independent stack."
   },
   {
     "title": "Matt Hill on Sovereign Computing, The Private Web, & Truly Owning Your Own Data",
@@ -280,15 +328,15 @@
     "description": "Matt Hill sits down with Cedric to discuss Start9, building technology for the individual, the Start9 personal server, and how you can leverage the dark net for private Bitcoin, Lightning Network, data, messaging and social media"
   },
   {
-    "title": "Anarchast Episode 566",
+    "title": "Become a Digital Sovereign",
     "date": "October 5, 2021",
     "link": "https://odysee.com/@Anarchast:2/Become-a-Digital-Sovereign-with-Start9:f",
     "image": "https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://spee.ch/1/2fe7596a18d1f793.jpg",
     "anchor": "Anarchast",
-    "description": "Today we are introduced to David from Start9 to get a demo of their potentially world changing project -- the Start9 Server!  Become a Digital Sovereign with Start9"
+    "description": "Today we are introduced to David from Start9 to get a demo of their potentially world changing project -- the Start9 Server! Become a Digital Sovereign with Start9"
   },
   {
-    "title": "The Survival Podcast Episode 2937",
+    "title": "True Digital Sovereignty",
     "date": "August 18, 2021",
     "link": "http://www.thesurvivalpodcast.com/true-digital-sovereignty-c",
     "image": "http://survivalpodcast.net/store/images/tspmsblogo.png",
@@ -312,7 +360,7 @@
     "description": "Bitcoin Takeover S4 E5: Matt Hill on the Philosophy of Sovereignty"
   },
   {
-    "title": "Matt Odell, @raspiblitz, @ronindojoui, @mynodebtc, @nodl_it, and @start9labs",
+    "title": "Bitcoin node projects",
     "date": "June 15, 2021",
     "link": "https://serve.podhome.fm/episodepage/CitadelDispatch/cd26-using-a-bitcoin-node-with-raspiblitz-ronindojoui-mynodebtc-start9labs-and-nodlit",
     "image": "https://assets.podhome.fm/8029725b-0319-44b9-4793-08dc404e83a4/638475670208679180CITADELDISPATCH.jpeg",

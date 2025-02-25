@@ -111,6 +111,14 @@ module.exports = [
         "class": ""
       },
       {
+        "name": "World",
+        "slug": "world-news",
+        "url": "/world-news",
+        "target": "",
+        "order": 1,
+        "class": ""
+      },
+      {
         "name": "Videos",
         "slug": "videos",
         "url": site.media.youtube,
