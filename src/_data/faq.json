@@ -26,7 +26,7 @@
     },
     {
       "question": "Where can I get help?",
-      "answer": "Start9 has built a strong reputation around accessible, helpful humans to guide you on your Sovereign Computing journey!  The first place to check is our <a href=\"https://community.start9.com\" target=\"_blank\" rel=\"noopener noreferrer\">Community Hub</a> - be sure to do a search, as your inquiry has likely already been answered.<br/><br/>If you still have a problem, or need a concept explained, jump into one of our other <a href=\"https://start9.com/contact\" target=\"_blank\" rel=\"noopener noreferrer\">Community Channels</a> - again, be sure to do a search first!<br/><br/>If you need help with a service that you have installed on StartOS, you might like to <a href=\"https://docs.start9.com/latest/support/external-support\" target=\"_blank\" rel=\"noopener noreferrer\">go to their team directly</a>, as they will be the foremost experts on that software.",
+      "answer": "Start9 has built a strong reputation around accessible, helpful humans to guide you on your Sovereign Computing journey!  The first place to check is our <a href=\"https://community.start9.com\" target=\"_blank\" rel=\"noopener noreferrer\">Community Hub</a> - be sure to do a search, as your inquiry has likely already been answered.<br/><br/>If you still have a problem, or need a concept explained, jump into one of our other <a href=\"https://start9.com/contact\" target=\"_blank\" rel=\"noopener noreferrer\">Community Channels</a> - again, be sure to do a search first!<br/><br/>If you need help with a service that you have installed on StartOS, you might go to their team directly, as they will be the foremost experts on that software.",
       "bullets": [],
       "additional": ""
     },
@@ -51,13 +51,13 @@
     },
     {
       "question": "What are StartOS services?",
-      "answer": "A \"service\" can be any piece of software added to a Marketplace registry. Unlike “apps,” services are (usually) “server-side” software, meaning they are intended to run 24/7/365 and listen for requests from your clients (apps). All services are “self-hosted,” meaning that you are in complete control of your data. This means you can run your own private “cloud!” Learn more about <a href=\"https://docs.start9.com/latest/user-manual/overview/managing-services.html\" target=\"_blank\" rel=\"noopener noreferrer\">managing services</a> and check out our currently <a href=\"https://marketplace.start9.com\" target=\"_blank\" rel=\"noopener noreferrer\">Available Services</a>.",
+      "answer": "A \"service\" can be any piece of software added to a Marketplace registry. Unlike “apps,” services are (usually) “server-side” software, meaning they are intended to run 24/7/365 and listen for requests from your clients (apps). All services are “self-hosted,” meaning that you are in complete control of your data. This means you can run your own private “cloud!” Learn more about <a href=\"https://docs.start9.com/0.3.5.x/user-manual/managing-services\" target=\"_blank\" rel=\"noopener noreferrer\">managing services</a> and check out our currently <a href=\"https://marketplace.start9.com\" target=\"_blank\" rel=\"noopener noreferrer\">Available Services</a>.",
       "bullets": [],
       "additional": ""
     },
     {
       "question": "Will you add \"X\" service to the Marketplace?",
-      "answer": "The answer from Start9, the company, is \"probably not.\"  Start9 is dedicated to building a powerful and reliable foundation for Sovereign Computing in the form of StartOS.  Start9 will always maintain a small set of \"official\" services, which allow for a wide range of features that the average user would need.  The bulk of the responsibility for StartOS service packaging therefore, will fall on community and upstream software developers.  Check out <a href=\"https://blog.start9.com/start9-marketplace-strategy/\" target=\"_blank\" rel=\"noopener noreferrer\">this blog post</a> for more details on this strategy.  If you'd like to show demand for a particular service, you can upvote it or add it to this <a href=\"https://startos.fans/\" target=\"_blank\" rel=\"noopener noreferrer\">unofficial feedback forum</a>.<br/><br/>We strive to make it as easy as possible to add a service to StartOS, and we do not want to limit this ability to those with extensive development skills.  This will be a process that evolves a lot over the coming years.  Please check out our <a href=\"https://docs.start9.com/latest/developer-docs\" target=\"_blank\" rel=\"noopener noreferrer\">Developer Docs</a> to learn more.",
+      "answer": "The answer from Start9, the company, is \"probably not.\"  Start9 is dedicated to building a powerful and reliable foundation for Sovereign Computing in the form of StartOS.  Start9 will always maintain a small set of \"official\" services, which allow for a wide range of features that the average user would need.  The bulk of the responsibility for StartOS service packaging therefore, will fall on community and upstream software developers.  Check out <a href=\"https://blog.start9.com/start9-marketplace-strategy/\" target=\"_blank\" rel=\"noopener noreferrer\">this blog post</a> for more details on this strategy.  If you'd like to show demand for a particular service, you can upvote it or add it to this <a href=\"https://startos.fans/\" target=\"_blank\" rel=\"noopener noreferrer\">unofficial feedback forum</a>.<br/><br/>We strive to make it as easy as possible to add a service to StartOS, and we do not want to limit this ability to those with extensive development skills.  This will be a process that evolves a lot over the coming years.  Please check out our <a href=\"https://docs.start9.com/0.3.5.x/developer-docs\" target=\"_blank\" rel=\"noopener noreferrer\">Developer Docs</a> to learn more.",
       "bullets": [],
       "additional": ""
     },
@@ -159,7 +159,7 @@
     },
     {
       "question": "What if I forget my StartOS Master Password?",
-      "answer": "Please follow our <a href=\"https://docs.start9.com/latest/guides/reset-password\" target=\"_blank\" rel=\"noopener noreferrer\">Password Reset Guide</a> to reset your password.",
+      "answer": "Please follow our <a href=\"https://docs.start9.com/0.3.5.x/misc-guides/reset-password#reset-password\" target=\"_blank\" rel=\"noopener noreferrer\">Password Reset Guide</a> to reset your password.",
       "bullets": [],
       "additional": ""
     },
@@ -229,7 +229,7 @@
   "bitcoin": [
     {
       "question": "Which wallets can I use that integrate with my Bitcoin and/or Lightning nodes?",
-      "answer": "Please see the <a href=\"https://docs.start9.com/0.3.5.x/service-guides/bitcoin/bitcoin-integrations\" target=\"_blank\" rel=\"noopener noreferrer\">Bitcoin Integrations</a> and <a href=\"https://docs.start9.com/0.3.5.x/service-guides/lightning/index\" target=\"_blank\" rel=\"noopener noreferrer\">Lightning Integrations</a> for all the currently supported options.  Please <a href=\"https://github.com/Start9Labs/documentation/issues\" target=\"_blank\" rel=\"noopener noreferrer\">submit an issue</a> with precise connection steps if you are able to connect a wallet that we have not yet listed.",
+      "answer": "Please see the <a href=\"https://docs.start9.com/0.3.5.x/service-guides/bitcoin/bitcoin-integrations\" target=\"_blank\" rel=\"noopener noreferrer\">Bitcoin Integrations</a> and <a href=\"https://docs.start9.com/0.3.5.x/service-guides/lightning/\" target=\"_blank\" rel=\"noopener noreferrer\">Lightning Integrations</a> for all the currently supported options.  Please <a href=\"https://github.com/Start9Labs/documentation/issues\" target=\"_blank\" rel=\"noopener noreferrer\">submit an issue</a> with precise connection steps if you are able to connect a wallet that we have not yet listed.",
       "bullets": [],
       "additional": ""
     },

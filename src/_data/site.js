@@ -2,12 +2,12 @@ module.exports = {
   url: 'https://start9.com',
   torUrl: 'http://privacy34kn4ez3y3nijweec6w4g54i3g54sdv7r5mr6soma3w4begyd.onion',
   pitch: {
-    url: '#infographics' //'https://start9.com/latest/learn/index'
+    url: '#infographics'
   },
   banner: false,
   products: {
     buyUrl: 'https://store.start9.com',
-    diyUrl: 'https://docs.start9.com/latest/diy',
+    diyUrl: 'https://docs.start9.com/0.3.5.x/diy',
     servers: 'https://store.start9.com/collections/servers',
     gear: 'https://store.start9.com/collections/apparel'
   },
@@ -22,13 +22,13 @@ module.exports = {
     url: 'https://github.com/Start9Labs/start-os'
   },
   support: {
-    url: 'https://docs.start9.com/latest/support'
+    url: 'https://docs.start9.com/0.3.5.x/support'
   },
   docs: {
     url: 'https://docs.start9.com'
   },
   dev: {
-    docs: 'https://docs.start9.com/latest/developer-docs',
+    docs: 'https://docs.start9.com/0.3.5.x/developer-docs',
     github: 'https://github.com/Start9Labs',
     marketplace: 'https://marketplace.start9.com'
   },
