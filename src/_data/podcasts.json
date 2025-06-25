@@ -1,5 +1,21 @@
 [
   {
+    "title": "Power to the Nodes",
+    "date": "June 14, 2025",
+    "link": "https://youtu.be/W933axQ_FkY",
+    "image": "https://i.ytimg.com/vi/W933axQ_FkY/maxresdefault.jpg",
+    "anchor": "The Bitcoin Conference",
+    "description": "Matt Hill, CEO of Start9, breaks down the true political power of running a Bitcoin node. From user sovereignty to censorship resistance, this talk explores why nodes matter more than you think."
+  },
+  {
+    "title": "Coinbase Hack",
+    "date": "May 16, 2025",
+    "link": "https://www.youtube.com/live/Dblp9tX65rk",
+    "image": "https://i.ytimg.com/vi/Dblp9tX65rk/hqdefault.jpg",
+    "anchor": "BTC Sessions",
+    "description": "A major Coinbase hack & cover-up has just been exposed, and it's worse than you think. Matt Hill, Brian De Mint, and Ant join BTC Sessions to break down what happened."
+  },
+  {
     "title": "You need to run your own Node",
     "date": "February 7, 2025",
     "link": "https://www.youtube.com/watch?v=9ExNmkltmc0",
