@@ -35,19 +35,65 @@ layout: layouts/peripheral.njk
     <li>
       <h3>Message Us</h3>
       <p>Response times are usually between 24-48 hours. For faster support, use one of the options above</p>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <div id="feedback-form">form will be placed in here</div>
-
-      <script id="zammad_form_script" src="https://zammad.start9labs.com/assets/form/form.js"></script>
-
+      <div class="contact-form">
+        <form id="contact-form">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" class="form-control" type="text" placeholder="Your name" required />
+          <label for="contact-email">Email</label>
+          <input id="contact-email" class="form-control" type="email" placeholder="Your email" required />
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" class="form-control" rows="5" placeholder="How can we help?" required></textarea>
+          <label data-mcaptcha_url="{{ site.mcaptcha.widgetUrl }}" for="mcaptcha__token" id="mcaptcha__token-label"></label>
+          <div id="mcaptcha__widget-container"></div>
+          <input type="hidden" name="mcaptcha__token" id="mcaptcha__token" />
+          <button type="submit">Submit</button>
+        </form>
+        <script src="https://unpkg.com/@mcaptcha/vanilla-glue@0.1.0-rc2/dist/index.js"></script>
+        <div id="contact-success" class="form-alert form-alert--success"></div>
+        <div id="contact-error" class="form-alert form-alert--error"></div>
+      </div>
       <script>
-      $(function() {
-        $('#feedback-form').ZammadForm({
-          messageTitle: 'Start9 Contact Form',
-          messageSubmit: 'Submit',
-          messageThankYou: 'Inquiry received! We will get back to you ASAP.',
-          attachmentSupport: true
-        });
+      document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const success = document.getElementById('contact-success');
+        const error = document.getElementById('contact-error');
+
+        success.classList.remove('form-alert--visible');
+        error.classList.remove('form-alert--visible');
+
+        const captchaToken = document.getElementById('mcaptcha__token').value;
+        if (!captchaToken) {
+          error.textContent = 'Please complete the captcha.';
+          error.classList.add('form-alert--visible');
+          return;
+        }
+
+        const body = {
+          name: document.getElementById('contact-name').value,
+          email: document.getElementById('contact-email').value,
+          message: document.getElementById('contact-message').value,
+          mcaptcha__token: captchaToken,
+        };
+
+        try {
+          const res = await fetch('https://start9.me/_api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+          });
+
+          if (res.ok) {
+            form.reset();
+            success.textContent = 'Inquiry received! We will get back to you within 24 hours.';
+            success.classList.add('form-alert--visible');
+          } else {
+            throw new Error();
+          }
+        } catch {
+          error.innerHTML = "Something went wrong. If this persists, try us on <a href='https://matrix.to/#/#general:start9.me' rel='noopener noreferrer' target='_blank'>Matrix</a> instead.";
+          error.classList.add('form-alert--visible');
+        }
       });
       </script>
     </li>
