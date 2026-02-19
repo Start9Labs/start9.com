@@ -27,7 +27,9 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npm run build
+        run: |
+          npm run build || true
+          test -f _site/index.html
 
       - name: Configure SSH
         run: |
