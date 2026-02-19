@@ -36,7 +36,7 @@ layout: layouts/peripheral.njk
       <h3>Message Us</h3>
       <p>Response times are usually between 24-48 hours. For faster support, use one of the options above</p>
       <div class="contact-form">
-        <form id="contact-form">
+        <form id="contact-form" autocomplete="off">
           <label for="contact-name">Name</label>
           <input id="contact-name" class="form-control" type="text" placeholder="Your name" required />
           <label for="contact-email">Email</label>
@@ -53,6 +53,16 @@ layout: layouts/peripheral.njk
         <div id="contact-error" class="form-alert form-alert--error"></div>
       </div>
       <script>
+      // Clear captcha token on page load (browser may restore it on refresh)
+      document.getElementById('mcaptcha__token').value = '';
+
+      function resetCaptchaWidget() {
+        var container = document.getElementById('mcaptcha__widget-container');
+        var iframe = container.querySelector('iframe');
+        if (iframe) iframe.src = iframe.src;
+        document.getElementById('mcaptcha__token').value = '';
+      }
+
       document.getElementById('contact-form').addEventListener('submit', async function(e) {
         e.preventDefault();
         const form = e.target;
@@ -85,6 +95,7 @@ layout: layouts/peripheral.njk
 
           if (res.ok) {
             form.reset();
+            resetCaptchaWidget();
             success.textContent = 'Inquiry received! We will get back to you within 24 hours.';
             success.classList.add('form-alert--visible');
           } else {
