@@ -11,6 +11,7 @@ const NOT_FOUND_PATH = "_site/404.html";
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/images/');
   eleventyConfig.addPassthroughCopy('./src/assets/videos/');
+  eleventyConfig.addPassthroughCopy('./src/assets/proxy.pac');
   eleventyConfig.addPassthroughCopy('public')
 
   // plugins
