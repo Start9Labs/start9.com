@@ -1,0 +1,40 @@
+{
+  "name": "start9-site",
+  "private": true,
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "server:dev": "npm run dev -w @start9/server",
+    "web:dev": "npm run start -w @start9/web",
+    "server:build": "npm run build -w @start9/server",
+    "web:build": "npm run build -w @start9/web",
+    "check": "npm run check -w @start9/web",
+    "prepare": "cd .. && husky site/.husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,html,md,json}": "prettier --write"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "arrowParens": "avoid",
+    "trailingComma": "all",
+    "htmlWhitespaceSensitivity": "ignore",
+    "tabWidth": 2,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  }
+}
