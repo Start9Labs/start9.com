@@ -31,6 +31,11 @@ jobs:
           npm run build || true
           test -f _site/index.html
 
+      - name: Copy passthrough files missed by broken Slinkity build
+        run: |
+          mkdir -p _site/assets
+          cp src/assets/proxy.pac _site/assets/proxy.pac
+
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
