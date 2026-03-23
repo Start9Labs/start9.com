@@ -1,0 +1,351 @@
+// ── Cyberpunk palette ──
+$neon-cyan: #00fff0;
+$neon-magenta: #ff2a6d;
+$neon-purple: #b537f2;
+$neon-blue: #05d9e8;
+$dark-bg: #0a0a12;
+$card-bg: rgba(10, 10, 22, 0.85);
+$border-color: rgba(0, 255, 240, 0.15);
+
+// Hide site chrome — this page is a standalone invitation
+header, #menu, footer, .banner {
+  display: none !important;
+}
+
+main {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: hidden !important;
+  background-color: $dark-bg !important;
+}
+$text-dim: #a8b2d1;
+$text-bright: #e6f1ff;
+
+// ── Scanline overlay ──
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 240, 0.015) 2px,
+    rgba(0, 255, 240, 0.015) 4px
+  );
+}
+
+// ── Page wrapper ──
+.demo-page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba($neon-purple, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba($neon-cyan, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba($neon-magenta, 0.05) 0%, transparent 40%),
+    $dark-bg;
+}
+
+// ── Invite card ──
+.invite-card {
+  position: relative;
+  max-width: 680px;
+  width: 100%;
+  background: $card-bg;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  padding: 3.5rem 3rem;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 40px rgba($neon-cyan, 0.05),
+    inset 0 0 60px rgba($neon-cyan, 0.02);
+
+  // Corner accents
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: $neon-cyan;
+    border-style: solid;
+  }
+
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-width: 2px 0 0 2px;
+  }
+
+  &::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 2px 2px 0;
+  }
+}
+
+// ── Card border glow animation ──
+.card-border {
+  position: absolute;
+  inset: -1px;
+  border-radius: 2px;
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background:
+      linear-gradient($card-bg, $card-bg) padding-box,
+      linear-gradient(135deg, $neon-cyan, transparent 40%, transparent 60%, $neon-magenta) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+}
+
+// ── Header section ──
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  font-family: var(--f-button, monospace);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: $neon-cyan;
+  border: 1px solid rgba($neon-cyan, 0.3);
+  padding: 0.4rem 1.6rem;
+  margin-bottom: 2rem;
+  background: rgba($neon-cyan, 0.05);
+  text-shadow: 0 0 10px rgba($neon-cyan, 0.5);
+}
+
+.demo-page .invite-card h1 {
+  font-family: var(--f-bold, sans-serif);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: $text-bright;
+  display: inline-block !important;
+  margin: 0 0 0.3rem !important;
+  padding: 0 !important;
+  width: auto !important;
+  text-align: center !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em;
+
+  .glow {
+    color: $neon-cyan;
+    text-shadow: 0 0 20px rgba($neon-cyan, 0.6), 0 0 40px rgba($neon-cyan, 0.3);
+  }
+}
+
+.subtitle {
+  font-family: var(--f-button, monospace);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: $neon-magenta;
+  font-weight: 700;
+  margin: 0.4rem 0 1.5rem;
+  text-shadow: 0 0 12px rgba($neon-magenta, 0.4);
+}
+
+.tagline {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: $text-dim;
+  max-width: 46ch;
+  margin: 0 auto;
+}
+
+// ── Divider ──
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+
+  span {
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba($neon-cyan, 0.25),
+      rgba($neon-magenta, 0.25),
+      transparent
+    );
+  }
+}
+
+// ── Detail grid ──
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.detail-item {
+  padding: 1.5rem;
+  border: 1px solid rgba($neon-cyan, 0.08);
+  background: rgba($neon-cyan, 0.02);
+  border-radius: 2px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    border-color: rgba($neon-cyan, 0.2);
+    background: rgba($neon-cyan, 0.04);
+  }
+}
+
+.detail-label {
+  font-family: var(--f-button, monospace);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: $neon-cyan;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 0 8px rgba($neon-cyan, 0.3);
+}
+
+.detail-item p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: $text-dim;
+  margin: 0;
+
+  strong {
+    color: $text-bright;
+  }
+
+  a {
+    color: $neon-cyan;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($neon-cyan, 0.3);
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: $neon-cyan;
+      text-shadow: 0 0 8px rgba($neon-cyan, 0.4);
+    }
+  }
+}
+
+// ── Info blocks ──
+.info-block {
+  text-align: left;
+  margin-bottom: 1.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-family: var(--f-button, monospace);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $neon-magenta;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 0 8px rgba($neon-magenta, 0.3);
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: $text-dim;
+    margin: 0 0 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: $text-bright;
+    }
+
+    a {
+      color: $neon-cyan;
+      text-decoration: none;
+      border-bottom: 1px solid rgba($neon-cyan, 0.3);
+      transition: border-color 0.2s ease;
+
+      &:hover {
+        border-color: $neon-cyan;
+      }
+    }
+  }
+
+  &.contact {
+    text-align: center;
+
+    p {
+      color: $text-dim;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// ── Footer logo ──
+.card-footer {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+
+  svg {
+    width: 80px;
+    height: auto;
+    opacity: 1;
+
+    path[fill="#F0F0F0"] {
+      fill: #f0f0f0;
+    }
+
+    path[fill="#FF4961"] {
+      fill: #ff4961;
+    }
+  }
+}
+
+// ── Responsive ──
+@media only screen and (max-width: 600px) {
+  .demo-page {
+    padding: 2rem 1rem;
+  }
+
+  .invite-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

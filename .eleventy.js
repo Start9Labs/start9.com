@@ -6,7 +6,7 @@ const slinkity = require("slinkity");
 
 // for 404 callback
 const fs = require("fs");
-const NOT_FOUND_PATH = "_site/404.html";
+const NOT_FOUND_PATH = "_site/public/404.html";
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/proxy.pac");
