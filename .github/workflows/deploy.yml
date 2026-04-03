@@ -35,6 +35,7 @@ jobs:
         run: |
           mkdir -p _site/assets
           cp src/assets/proxy.pac _site/assets/proxy.pac
+          cp -r src/assets/images _site/assets/images
 
       - name: Configure SSH
         run: |
